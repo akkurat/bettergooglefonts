@@ -1,0 +1,1299 @@
+{
+  "fonts/ofl/cantarell": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/alumnisans": {
+    "e-angle": "horizontal",
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/ibmplexsans": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/montserrat": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/bahianita": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/hindkochi": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/paytoneone": {
+    "Kk-shape": "other"
+  },
+  "fonts/ofl/kronaone": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/englebert": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/carlito": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/aronesans": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/karlatamilupright": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/pathwayextreme": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/gothica1": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/encodesanssemicondensed": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/arya": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/pangolin": {
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/archivo": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/khmer": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/cabin": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/anybody": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/bizudgothic": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/newscycle": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mallanna": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/notosansbalinese": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/parisienne": {
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/montserratalternates": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/chauphilomeneone": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/capriola": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/fahkwang": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/asul": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/bacasimeantique": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/alumnisansinlineone": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/nobile": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/changa": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/lekton": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/bebasneue": {
+    "M-tip": "baseline"
+  },
+  "fonts/ofl/inder": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/miriamlibre": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/alegreya": {
+    "g-shape": "classical (double story)",
+    "M-stems": "angled",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/plusjakartasans": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/meerainimai": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/kufam": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/battambang": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/notosansadlam": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/kulimpark": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/jura": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/inclusivesans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/catamaran": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/francoisone": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/arsenal": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/manjari": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/mplus2": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/chathura": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/bricolagegrotesque": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/kodemono": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/dongle": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/lexendexa": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/ibmplexsanshebrew": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/amethysta": {
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/asapcondensed": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/b612mono": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/blinker": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/antic": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/otomanopeeone": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/metrophobic": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/basic": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/anaheim": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/ojuju": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/candal": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/adlamdisplay": {
+    "e-angle": "angled",
+    "g-shape": "modern (single story)"
+  },
+  "fonts/ofl/portlligatsans": {
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/gidugu": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/commissioner": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/alice": {
+    "g-shape": "classical (double story)",
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/almendrasc": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/livvic": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/koho": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/murecho": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/bevietnampro": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/almendradisplay": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/dohyeon": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/ekmukta": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/hind": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/paprika": {
+    "x-height": "reasonable",
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/akshar": {
+    "e-angle": "~horizontal",
+    "g-shape": "modern (single story)"
+  },
+  "fonts/ofl/gotu": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/anekmalayalam": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/hammersmithone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/darkergrotesque": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/notosansadlamunjoined": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/amaticsc": {
+    "x-height": "neutra"
+  },
+  "fonts/ofl/barlowcondensed": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/adamina": {
+    "e-angle": "angled",
+    "x-height": "reasonable",
+    "g-shape": "classical (double story)"
+  },
+  "fonts/ofl/aboreto": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/mplus1": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/ibmplexsansthailooped": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/almendra": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/gfsneohellenic": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/karlatamilinclined": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/krub": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/alexandria": {
+    "g-shape": "modern (single story)",
+    "e-angle": "angled",
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/assistant": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/encodesanscondensed": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/mousememoirs": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/preahvihear": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/balthazar": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/baijamjuree": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/imprima": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/afacad": {
+    "e-angle": "~vertical",
+    "g-shape": "modern (single story)"
+  },
+  "fonts/ofl/gayathri": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/allison": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/anekodia": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/josefinsans": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/kdamthmorpro": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/barlow": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/figtree": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/alfaslabone": {
+    "g-shape": "modern (single story)",
+    "x-height": "neutra",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/armata": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/anektelugu": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/kanit": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/acme": {
+    "e-angle": "angled",
+    "x-height": "reasonable",
+    "g-shape": "classical (double story)"
+  },
+  "fonts/ofl/comme": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mooli": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/economica": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/lexendpeta": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/pragatinarrow": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/anekdevanagari": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/mako": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/cantoraone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/muktamahee": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/orbit": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/familjengrotesk": {
+    "Kk-shape": "other",
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/aladin": {
+    "l-shape": "helvetica",
+    "g-shape": "modern (single story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/encodesans": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/pavanam": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/martelsans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/allertastencil": {
+    "e-angle": "angled",
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/federo": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/merriweathersans": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/notosansbassavah": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/georama": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/gasoekone": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/nats": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/allerta": {
+    "g-shape": "modern (single story)",
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "a-shape": "double story",
+    "e-angle": "angled",
+    "x-height": "reasonable",
+    "G-shape": "Univers",
+    "R-shape": "straight",
+    "M-tip": "above",
+    "M-stems": "parallel",
+    "W-tip": "on tip",
+    "l-shape": "akkurat"
+  },
+  "fonts/ofl/cabincondensed": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/heebo": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/exo2": {
+    "Kk-shape": "other",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/asar": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/alegreyasans": {
+    "g-shape": "classical (double story)",
+    "M-tip": "above",
+    "e-angle": "angled",
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/adventpro": {
+    "e-angle": "~vertical",
+    "g-shape": "modern (single story)"
+  },
+  "fonts/ofl/kantumruypro": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/hubballi": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/alegreyasanssc": {
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/publicsans": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/carme": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/averialibre": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/mada": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/bizudpgothic": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/lexendzetta": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/benchnine": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/kiteone": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/aguafinascript": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/ibmplexsansthai": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/anekbangla": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/abel": {
+    "e-angle": "horizontal",
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/aldrich": {
+    "g-shape": "modern (single story)",
+    "e-angle": "vertical",
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/dorsa": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/carroisgothic": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/prozalibre": {
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/averiagruesalibre": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/ptsansnarrow": {
+    "Kk-shape": "other"
+  },
+  "fonts/ofl/geologica": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/badscript": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/instrumentsans": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/astloch": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/orienta": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/encodesansexpanded": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/notosansbengali": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/ibmplexsansarabic": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/andika": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/bagelfatone": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/bubblerone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/alumnisanscollegiateone": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/madimione": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/alkalami": {
+    "g-shape": "classical (double story)",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/istokweb": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/doppioone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/hindcolombo": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/librefranklin": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/anta": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/autourone": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/actor": {
+    "e-angle": "~vertical",
+    "x-height": "reasonable",
+    "g-shape": "modern (single story)"
+  },
+  "fonts/ofl/notosansarmenian": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/pathwaygothicone": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/outfit": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/akatab": {
+    "e-angle": "~vertical",
+    "g-shape": "classical (double story)"
+  },
+  "fonts/ofl/farro": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/golostext": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/epilogue": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/dotgothic16": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/anektamil": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/encodesanssemiexpanded": {
+    "Kk-shape": "other",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/muktavaani": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/finlandica": {
+    "Kk-shape": "other",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/dmsans": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/durusans": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/chivo": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/belleza": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/magra": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/akayakanadaka": {
+    "e-angle": "angled",
+    "g-shape": "classical (double story)"
+  },
+  "fonts/ofl/gowundodum": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/cuprum": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/nuosusil": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/galdeano": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/alumnisanspinstripe": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/firasansextracondensed": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/hindguntur": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/alkatra": {
+    "g-shape": "modern (single story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/anekkannada": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/pattaya": {
+    "Kk-shape": "other"
+  },
+  "fonts/ofl/lexend": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/convergence": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mingzat": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/play": {
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/alef": {
+    "g-shape": "classical (double story)",
+    "e-angle": "~vertical",
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/hedvigletterssans": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/alata": {
+    "g-shape": "modern (single story)",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/b612": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/hermeneusone": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/molengo": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/aneklatin": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/qahiri": {
+    "Kk-shape": "other"
+  },
+  "fonts/ofl/allan": {
+    "g-shape": "modern (single story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/asap": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/poppins": {
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/harmattan": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/azeretmono": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/oswald": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/cagliostro": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/dhyana": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/belanosima": {
+    "M-tip": "above",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/cambay": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/archivoblack": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/mina": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/notosansbatak": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/overpass": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/abhayalibre": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/mitr": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/daysone": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/braahone": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/notosansavestan": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/average": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/pontanosans": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/muktamalar": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mpluscodelatin": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/prompt": {
+    "e-angle": "vertical",
+    "g-shape": "classical (double story)",
+    "x-height": "reasonable",
+    "l-shape": "akkurat",
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/kodchasan": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/atkinsonhyperlegible": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/akayatelivigala": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/audiowide": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/michroma": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/passionone": {
+    "x-height": "reasonable",
+    "g-shape": "classical (double story)",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/bakbakone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/allura": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/atomicage": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/inriasans": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/marmelad": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/notosansbamum": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/karla": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/fjallaone": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/glory": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/fresca": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/dosis": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/geo": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/lunasima": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/didactgothic": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/jockeyone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/homenaje": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/mergeone": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/ballet": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mavenpro": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/amaranth": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/balsamiqsans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/aleo": {
+    "g-shape": "classical (double story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/lexendgiga": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/firasans": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/manrope": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/biryani": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/lexenddeca": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/chakrapetch": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/moulpali": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/baskervville": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/amiko": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/anekgurmukhi": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/asset": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/lohittamil": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/ibmplexsanskr": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/baumans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/hankengrotesk": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/albertsans": {
+    "g-shape": "modern (single story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/oxygen": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/khand": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/denkone": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/gafata": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/chivomono": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/amarante": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/averiaseriflibre": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/gruppo": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/monda": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/hindsiliguri": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/bayon": {
+    "M-tip": "above"
+  },
+  "fonts/ofl/elmessiri": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/notokufiarabic": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/philosopher": {
+    "Kk-shape": "univers/frutiger (symmetric)"
+  },
+  "fonts/ofl/firasanscondensed": {
+    "Kk-shape": "univers/frutiger (symmetric)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/exo": {
+    "Kk-shape": "other",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/jost": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/lalezar": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/mohave": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/notosansarabic": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/mplus1p": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/inter": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/genos": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/opensans": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/onest": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/laila": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/alike": {
+    "g-shape": "classical (double story)",
+    "x-height": "neutra"
+  },
+  "fonts/ofl/hindmysuru": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/lato": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/averiasanslibre": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/leaguegothic": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/gantari": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/niramit": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/ibmplexsanscondensed": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/alexbrush": {
+    "g-shape": "modern (single story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/gudea": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/intertight": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/alikeangular": {
+    "g-shape": "classical (double story)",
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/mochiypoppone": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/almarai": {
+    "e-angle": "horizontal",
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/alatsi": {
+    "g-shape": "modern (single story)",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/ibmplexsansjp": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/agdasima": {
+    "e-angle": "horizontal",
+    "g-shape": "classical (double story)"
+  },
+  "fonts/ofl/k2d": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/marvel": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/cairo": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/blackhansans": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/anuphan": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/akronim": {
+    "g-shape": "modern (single story)",
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/mochiypopone": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mandali": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/babylonica": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/baloo2": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/athiti": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/antonio": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/khula": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/nunitosans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/puritan": {
+    "Kk-shape": "helvetica/grotesk"
+  },
+  "fonts/ofl/dhurjati": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/leaguespartan": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/jaldi": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/nokora": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/abeezee": {
+    "e-angle": "angled",
+    "x-height": "reasonable"
+  },
+  "fonts/ofl/atma": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/averagesans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/barlowsemicondensed": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/notomusic": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/monomaniacone": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/lohitbengali": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/notosansanatolianhieroglyphs": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/archivonarrow": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/cairoplay": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/martianmono": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/gemunulibre": {
+    "Kk-shape": "other",
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/ptsans": {
+    "Kk-shape": "other"
+  },
+  "fonts/ofl/hindmadurai": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/hindvadodara": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/jua": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/lexendmega": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/ibmplexsansdevanagari": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/barriecito": {
+    "e-angle": "~vertical"
+  },
+  "fonts/ofl/abyssinicasil": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/electrolize": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/fragmentmono": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/anton": {
+    "e-angle": "horizontal"
+  },
+  "fonts/ofl/inconsolata": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/hindjalandhar": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/agbalumo": {
+    "g-shape": "modern (single story)",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/notosans": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/aubrey": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/mulish": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/abrilfatface": {
+    "e-angle": "~horizontal"
+  },
+  "fonts/ofl/kumbhsans": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/anekgujarati": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/lexendtera": {
+    "e-angle": "angled"
+  },
+  "fonts/ofl/ptsanscaption": {
+    "Kk-shape": "other"
+  },
+  "fonts/ofl/orbitron": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/nanumgothic": {
+    "e-angle": "vertical"
+  },
+  "fonts/ofl/fredoka": {
+    "Kk-shape": "helvetica/grotesk",
+    "e-angle": "angled"
+  },
+  "fonts/ofl/mukta": {
+    "e-angle": "~vertical"
+  }
+}
