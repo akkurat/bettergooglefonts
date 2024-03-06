@@ -6,16 +6,16 @@ const LOCALSTORAGE_PREFIX = 'fontquestionnaire_'
 
 // TODO: Common? Specific for Serif?
 // naaa... too complex.. could make sense but let's stick to one type of question so far
-// 
+// TODO: separate description and key 
 export const fontParamsSans = {
   "e-angle": { a: ["horizontal", "~horizontal", "angled", "~vertical", "vertical"], s: "ea" },
   "x-height": { a: ["neutra", "reasonable"], s: "Hx7" },
-  "g-shape": { a: ["modern (single story)", "classical (double story)"], s: "g" },
+  "g-shape": { a: ["modern (single story)", "classical (double story)", "both"], s: "g" },
   "l-shape": { a: ["helvetica", "akkurat"], s: "l" },
   "Kk-shape": { a: ["helvetica/grotesk", "univers/frutiger (symmetric)", "other"], s: "K k" },
   "a-shape": { a: ["double story", "double story extensive tail", "single story"], s: "a" },
   "G-shape": { a: ["Helvetica", "Univers"], s: "G" },
-  "R-shape": { a: ["helvetica/univers (curved)", "straight"], s: "R" },
+  "R-shape": { a: ["curved", "straight"], s: "R" },
   "M-tip": { a: ["baseline", "above"], s: "M" },
   "M-stems": { a: ["parallel", "angled"], s: "M" },
   "W-tip": { a: ["one tip", "crossed", "other"], s: "W" },
@@ -39,7 +39,7 @@ export class ClassificationService {
 
   private _http = inject(HttpClient)
   importIntoLocalStorage() {
-    return this._http.get('/assets/classification.json')
+    return this._http.get('assets/classification.json')
       .pipe(
         map(Object.entries),
         map(e => { e.forEach(([f, qa]) => this.saveAllAnswers(f, qa)); return e.length }))

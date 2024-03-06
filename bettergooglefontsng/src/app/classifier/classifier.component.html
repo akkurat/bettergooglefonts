@@ -2,6 +2,7 @@
 
     <div class="specimen-wide" [style]="{fontFamily: font?.meta?.name}">
         ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789
+        &excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
     </div>
     @if(answers) {
     <div>
@@ -28,8 +29,8 @@
     </div>
     }
     <div>
-        <!-- todo angular 17 routerLink -->
-        <div class="prev"><a [href]="'/classify/'+encode(fontPrev?.dir)">Previous Font: {{fontPrev?.meta?.name}}</a></div>
-        <div class="next"><a [href]="'/classify/'+encode(fontNext?.dir)">Next Font: {{fontNext?.meta?.name}}</a></div>
+        <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
+        <div class="prev"><a [href]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font: {{fontPrev?.meta?.name}}</a></div>
+        <div class="next"><a [href]="'/classify/'+encode(fontNext?.meta?.name)">Next Font: {{fontNext?.meta?.name}}</a></div>
     </div>
 </div>

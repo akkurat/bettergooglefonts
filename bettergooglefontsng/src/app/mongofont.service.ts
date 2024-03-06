@@ -43,7 +43,7 @@ export class MongofontService {
     this.http.get('assets/fontmeta.json').pipe(combineLatestWith(this.http.get('assets/classification.json')))
       .subscribe(([metas, classification]) => {
         for (const meta of (metas as FontInfo[])) {
-          meta['classification'] = classification[meta['dir']]
+          meta['classification'] = classification[meta.meta.name]
         }
         this.db.collections['fonts'].upsert(metas,
           (docs) => { console.log(docs.length); this.dbready.next(true) },
@@ -89,11 +89,24 @@ export class MongofontService {
     return selector
   }
 
-  getFontByName(name: string): Observable<FontInfo> {
+  getFontByFolderName(name: string): Observable<FontInfo> {
     const sub = new Subject<FontInfo>()
     this.dbready.subscribe(ready => {
       if (ready) {
         this.db.collections['fonts'].findOne({ dir: name }).then(f => {
+          sub.next(f)
+        })
+      }
+    })
+
+    return sub.asObservable();
+  }
+
+  getFontByName(name: string): Observable<FontInfo> {
+    const sub = new Subject<FontInfo>()
+    this.dbready.subscribe(ready => {
+      if (ready) {
+        this.db.collections['fonts'].findOne({ 'meta.name': name }).then(f => {
           sub.next(f)
         })
       }
@@ -173,6 +186,11 @@ export class MongofontService {
 
 export function getUrlForFirstFont(d: FontInfo) {
   return `assets/gf-subsets/ascii_us/${d.meta.fonts[0].filename.replace(/\.ttf$/, "-subset.woff2")}`;
+  return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
+}
+
+export function getTtfUrlForFirstFont(d: FontInfo) {
+  return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
   return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
 }
 

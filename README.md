@@ -5,11 +5,17 @@
 # How to Run
 ## installation
 
-Clone this repo and the subrepo fonts (which is google fonts itself)
+```bash
+git clone https://github.com/akkurat/bettergooglefonts.git
 ```
+
+Cloning the submodule is only necessary for creating a new woff2-subset updating meta infos
+
+```bash
 git clone --recurse-submodules https://github.com/akkurat/bettergooglefonts.git
 ```
-(submodule will take it's time as it is ~1GB to clone)
+
+(submodule will take it's time as it is >1GB to clone)
 
 
 
@@ -29,15 +35,14 @@ ng serve
 
 # Roadmap
 ## Bugish
-* Axes to not trigger filter when added
+* questionnaire based on font name (and not directory)
 
 ## Reasonable TODOs
-* Questionaire: Initialize localstorage from classification.json. could be even done automatically for keys that exist only locally or in .json. 
 * Questionaire: Characterizations for Serif fonts
 * Checkbox to in- or exclude fonts without the respective axis availabe
 * Map standard axis to discrete values (e.g. weight, width, slant/ italic angle)
 * Detailview of font with something like this [https://www.axis-praxis.org/specimens/__DEFAULT__] -> Quickwin: Link to google fonts for now
-* Custom specimen text
+* Custom specimen text -> Sofar only Ascii letters possible (due to subset woff) -> load ttf from github raw?
 * Grid/List view
 * Size / Width/ Weight Waterfall
 
@@ -46,14 +51,13 @@ ng serve
 * Show number filtered Fonts due to Range or Selection Filter
 * [Sankey Diagram](https://en.wikipedia.org/wiki/Sankey_diagram) for filtering path
 * [Venn Diagram](https://en.wikipedia.org/wiki/Venn_diagram) for font properties (e.g. which fonts have a helvetica like K, double story g and and are real italics)
-* woff generator
 
 
 
 
 # Limitations
-* Scrolling through all fonts results in a traffic of roughly 1GB as all fonts are taken directly from the repo as ttf/otf without web optimization. Hence it's not possible yet to serve it remotely due to bad performance and unbeareable traffic costs -> Github page ftw!
-
+* Size matters: All ttf fonts originally are 1.7 GB. Subsetting them for only ASCII and converting to woff2 results in a reasonable 60MB in total
+* Preview for a specific font is now going to the original google page. The font tester is actually quite ok. 
 
 # Structure
 

@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClassificationService, FontQuestion, fontParamsSans } from '../classification.service';
 import { appendStyleTag, generateFontCss } from '../FontNameUrl';
-import { FontInfo, MongofontService, getUrlForFirstFont } from '../mongofont.service';
+import { FontInfo, MongofontService, getTtfUrlForFirstFont, getUrlForFirstFont } from '../mongofont.service';
 import { NgModel, FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -37,7 +37,7 @@ export class ClassifierComponent implements OnInit {
       // so far probably a memoryleak -> reuse the same subject at service... but how?
       this.fontService.getFontByName(p['name']).subscribe(f => {
         this.font = f
-        const url = getUrlForFirstFont(f)
+        const url = getTtfUrlForFirstFont(f)
         const css = generateFontCss({ name: f.meta.name, url })
         appendStyleTag(css)
         this.fontService.getFontBySkip(
@@ -74,7 +74,7 @@ export class ClassifierComponent implements OnInit {
 
   private navigateToPreviousFont() {
     if (this.fontPrev)
-      this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontPrev?.dir));
+      this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontPrev?.meta.name));
   }
 
   private _snackBar = inject(MatSnackBar)
@@ -85,7 +85,7 @@ export class ClassifierComponent implements OnInit {
 
   private navigateToNextFont() {
     if (this.fontNext) {
-      this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontNext?.dir));
+      this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontNext?.meta.name));
     }
   }
   encode(part: string | undefined) {
