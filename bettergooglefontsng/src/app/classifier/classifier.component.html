@@ -31,8 +31,8 @@
     }
     <div>
         <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
-        <div class="prev"><a [href]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font: {{fontPrev?.meta?.name}}</a></div>
-        <div class="next"><a [href]="'/classify/'+encode(fontNext?.meta?.name)">Next Font: {{fontNext?.meta?.name}}</a></div>
+        <div class="prev"><a [routerLink]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font: {{fontPrev?.meta?.name}}</a></div>
+        <div class="next"><a [routerLink]="'/classify/'+encode(fontNext?.meta?.name)">Next Font: {{fontNext?.meta?.name}}</a></div>
     </div>
 } @else { 
     Font not found

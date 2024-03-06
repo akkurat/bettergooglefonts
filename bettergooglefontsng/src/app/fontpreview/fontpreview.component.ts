@@ -1,13 +1,14 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { appendStyleTag, FontNameUrl, generateFontCss } from '../FontNameUrl';
 import { NgFor } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-fontpreview',
     templateUrl: './fontpreview.component.html',
     styleUrls: ['./fontpreview.component.scss'],
     standalone: true,
-    imports: [NgFor]
+    imports: [NgFor, RouterModule]
 })
 export class FontpreviewComponent implements OnChanges {
 

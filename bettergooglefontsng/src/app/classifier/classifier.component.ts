@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, HostListener, OnInit, inject } from '@angular/core';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ClassificationService, FontQuestion, fontParamsSans } from '../classification.service';
 import { appendStyleTag, generateFontCss } from '../FontNameUrl';
 import { FontInfo, MongofontService, getTtfUrlForFirstFont, getUrlForFirstFont } from '../mongofont.service';
@@ -16,7 +16,7 @@ import { MatSnackBar, MatSnackBarModule, MatSnackBarRef } from '@angular/materia
   templateUrl: './classifier.component.html',
   styleUrls: ['./classifier.component.scss'],
   standalone: true,
-  imports: [MatSlideToggleModule, FormsModule, NgFor, MatRadioModule, MatButtonModule, MatToolbarModule, MatSnackBarModule]
+  imports: [MatSlideToggleModule, FormsModule, NgFor, MatRadioModule, MatButtonModule, MatToolbarModule, MatSnackBarModule, RouterModule]
 })
 export class ClassifierComponent implements OnInit {
   questions: FontQuestion[] = [];
@@ -72,15 +72,15 @@ export class ClassifierComponent implements OnInit {
     }
   }
 
-  private navigateToPreviousFont() {
-    if (this.fontPrev)
-      this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontPrev?.meta.name));
-  }
-
   private _snackBar = inject(MatSnackBar)
   public importToLocalStorage(ev: any) {
     this.classifierService.importIntoLocalStorage()
       .subscribe(a => this._snackBar.open(`imported ${a} fonts`))
+  }
+
+  private navigateToPreviousFont() {
+    if (this.fontPrev)
+      this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontPrev?.meta.name));
   }
 
   private navigateToNextFont() {
@@ -88,7 +88,8 @@ export class ClassifierComponent implements OnInit {
       this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontNext?.meta.name));
     }
   }
+  
   encode(part: string | undefined) {
-    return part && encodeURIComponent(part)
+    return part
   }
 }
