@@ -1,4 +1,5 @@
 <div class="classifier">
+    @if(font) {
 
     <div class="specimen-wide" [style]="{fontFamily: font?.meta?.name}">
         ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789
@@ -33,4 +34,7 @@
         <div class="prev"><a [href]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font: {{fontPrev?.meta?.name}}</a></div>
         <div class="next"><a [href]="'/classify/'+encode(fontNext?.meta?.name)">Next Font: {{fontNext?.meta?.name}}</a></div>
     </div>
+} @else { 
+    Font not found
+} 
 </div>
