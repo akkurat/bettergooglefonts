@@ -1,21 +1,49 @@
-.specimen-wide {
-    font-size: 40pt;
-    overflow: hidden;
-    overflow-wrap: break-word;
-    letter-spacing: 10pt;
-    width: 50vw;
-}
+.scrollwrap {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-.classifier {
-    display: flex;
-    direction: row;
-    li {
-        list-style: none;
+    .classifier {
         display: flex;
-        .question {
-            display: flex;
-            flex-flow: column wrap;
+        flex-flow: row wrap;
+        min-height: 100%;
+
+        .specimen-wide {
+            font-size: 40pt;
+            overflow-y: visible;
+            overflow-x: hidden;
+            overflow-wrap: break-word;
+            letter-spacing: 10pt;
+            max-width: 450px;
+            flex-grow: 0.2;
+        }
+
+
+        .questions {
+            flex-grow: 0.8;
+            display: grid;
+            grid-template-columns: min(300px) 1fr;
+
+            li.question {
+                display: contents;
+                list-style: none;
+            }
+
+            .sample {
+                align-self: center;
+                justify-self: right;
+                grid-column: 1 / 2;
+                font-size: 100px;
+                line-height: 100px;
+            }
+
+            .question-text {
+                align-self: center;
+                justify-self: left;
+                grid-column: 2 / 3;
+            }
+
+
         }
     }
 }
-

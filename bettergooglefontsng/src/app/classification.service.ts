@@ -8,10 +8,10 @@ const LOCALSTORAGE_PREFIX = 'fontquestionnaire_'
 // naaa... too complex.. could make sense but let's stick to one type of question so far
 // TODO: separate description and key 
 export const fontParamsSans = {
-  "e-angle": { a: ["horizontal", "~horizontal", "angled", "~vertical", "vertical"], s: "ea" },
-  "x-height": { a: ["neutra", "reasonable"], s: "Hx7" },
-  "g-shape": { a: ["modern (single story)", "classical (double story)", "both"], s: "g" },
-  "l-shape": { a: ["helvetica", "akkurat"], s: "l" },
+  "e-angle": { a: ["horizontal", "~horizontal", "angled", "~vertical", "vertical", "other"], s: "ea" },
+  "g-shape": { a: ["modern (single story)", "classical (double story)", "both", "other"], s: "g" },
+  "l-shape": { a: ["helvetica", "akkurat", "mono", "other"], s: "l" },
+  "ij-dot-shape": { a: ["square", "round", "other"], s: "ij" },
   "Kk-shape": { a: ["helvetica/grotesk", "univers/frutiger (symmetric)", "other"], s: "K k" },
   "a-shape": { a: ["double story", "double story extensive tail", "single story"], s: "a" },
   "G-shape": { a: ["Helvetica", "Univers"], s: "G" },
@@ -19,6 +19,7 @@ export const fontParamsSans = {
   "M-tip": { a: ["baseline", "above"], s: "M" },
   "M-stems": { a: ["parallel", "angled"], s: "M" },
   "W-tip": { a: ["one tip", "crossed", "other"], s: "W" },
+  "x-height": { a: ["neutra", "reasonable"], s: "EARae" },
 
 }
 const fontQuestions = Object.entries(fontParamsSans)
@@ -41,7 +42,7 @@ export class ClassificationService {
   importIntoLocalStorage() {
     return this._http.get('assets/classification.json')
       .pipe(
-        map(Object.entries),
+        // @ts-ignore
         map(e => { e.forEach(([f, qa]) => this.saveAllAnswers(f, qa)); return e.length }))
   }
   getQuestions(): FontQuestion[] {
@@ -91,7 +92,7 @@ export class ClassificationService {
     return {}
   }
 
-  getAllAnswers(): { [k: string]: string[] } {
+  getAllAnswers(): { [k: string]: { [v: string]: string } } {
     const lookup = {}
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i)

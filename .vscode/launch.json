@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
 
         {
             "type": "pwa-node",
@@ -13,6 +14,16 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/gf.js",
+            "args": ["${workspaceFolder}/bettergooglefontsng/src/assets/"]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "collect questionnaire",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/conv-questionnaire.js",
             "args": ["${workspaceFolder}/bettergooglefontsng/src/assets/"]
         },
     ]

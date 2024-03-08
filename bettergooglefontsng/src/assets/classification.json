@@ -1,1299 +1,5178 @@
-{
-    "Cantarell": {
-        "e-angle": "~vertical"
-    },
-    "Alumni Sans": {
-        "e-angle": "horizontal",
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "IBM Plex Sans": {
-        "e-angle": "~horizontal"
-    },
-    "Montserrat": {
-        "e-angle": "angled"
-    },
-    "Bahianita": {
-        "e-angle": "horizontal"
-    },
-    "Hind Kochi": {
-        "e-angle": "vertical"
-    },
-    "Paytone One": {
-        "Kk-shape": "other"
-    },
-    "Krona One": {
-        "e-angle": "~vertical"
-    },
-    "Englebert": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "~horizontal"
-    },
-    "Carlito": {
-        "e-angle": "angled"
-    },
-    "AR One Sans": {
-        "e-angle": "~vertical"
-    },
-    "Karla Tamil Upright": {
-        "e-angle": "angled"
-    },
-    "Pathway Extreme": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Gothic A1": {
-        "e-angle": "angled"
-    },
-    "Encode Sans Semi Condensed": {
-        "e-angle": "vertical"
-    },
-    "Arya": {
-        "e-angle": "horizontal"
-    },
-    "Pangolin": {
-        "x-height": "reasonable"
-    },
-    "Archivo": {
-        "e-angle": "horizontal"
-    },
-    "Khmer": {
-        "e-angle": "angled"
-    },
-    "Cabin": {
-        "e-angle": "~vertical"
-    },
-    "Anybody": {
-        "e-angle": "~horizontal"
-    },
-    "BIZ UDGothic": {
-        "e-angle": "angled"
-    },
-    "News Cycle": {
-        "e-angle": "angled"
-    },
-    "Mallanna": {
-        "e-angle": "~vertical"
-    },
-    "Noto Sans Balinese": {
-        "e-angle": "vertical"
-    },
-    "Parisienne": {
-        "x-height": "reasonable"
-    },
-    "Montserrat Alternates": {
-        "e-angle": "angled"
-    },
-    "Chau Philomene One": {
-        "e-angle": "~vertical"
-    },
-    "Capriola": {
-        "e-angle": "~vertical"
-    },
-    "Fahkwang": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "horizontal"
-    },
-    "Asul": {
-        "e-angle": "angled"
-    },
-    "Bacasime Antique": {
-        "e-angle": "angled"
-    },
-    "Alumni Sans Inline One": {
-        "e-angle": "horizontal"
-    },
-    "Nobile": {
-        "e-angle": "angled"
-    },
-    "Changa": {
-        "e-angle": "~vertical"
-    },
-    "Lekton": {
-        "e-angle": "~vertical"
-    },
-    "Bebas Neue": {
-        "M-tip": "baseline"
-    },
-    "Inder": {
-        "e-angle": "vertical"
-    },
-    "Miriam Libre": {
-        "e-angle": "vertical"
-    },
-    "Alegreya": {
-        "g-shape": "classical (double story)",
-        "M-stems": "angled",
-        "e-angle": "angled"
-    },
-    "Plus Jakarta Sans": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Meera Inimai": {
-        "e-angle": "~horizontal"
-    },
-    "Kufam": {
-        "e-angle": "vertical"
-    },
-    "Battambang": {
-        "e-angle": "~vertical"
-    },
-    "Noto Sans Adlam": {
-        "e-angle": "vertical"
-    },
-    "Kulim Park": {
-        "e-angle": "~vertical"
-    },
-    "Jura": {
-        "e-angle": "horizontal"
-    },
-    "Inclusive Sans": {
-        "e-angle": "angled"
-    },
-    "Catamaran": {
-        "e-angle": "angled"
-    },
-    "Francois One": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Arsenal": {
-        "e-angle": "angled"
-    },
-    "Manjari": {
-        "e-angle": "~vertical"
-    },
-    "M PLUS 2": {
-        "e-angle": "horizontal"
-    },
-    "Chathura": {
-        "e-angle": "vertical"
-    },
-    "Bricolage Grotesque": {
-        "e-angle": "~horizontal"
-    },
-    "Kode Mono": {
-        "e-angle": "angled"
-    },
-    "Dongle": {
-        "e-angle": "angled"
-    },
-    "Lexend Exa": {
-        "e-angle": "angled"
-    },
-    "IBM Plex Sans Hebrew": {
-        "e-angle": "~horizontal"
-    },
-    "Amethysta": {
-        "x-height": "reasonable"
-    },
-    "Asap Condensed": {
-        "e-angle": "~vertical"
-    },
-    "B612 Mono": {
-        "e-angle": "angled"
-    },
-    "Blinker": {
-        "e-angle": "~vertical"
-    },
-    "Antic": {
-        "e-angle": "~vertical"
-    },
-    "Otomanopee One": {
-        "e-angle": "angled"
-    },
-    "Metrophobic": {
-        "e-angle": "horizontal"
-    },
-    "Basic": {
-        "e-angle": "~vertical"
-    },
-    "Anaheim": {
-        "e-angle": "~vertical"
-    },
-    "Ojuju": {
-        "e-angle": "vertical"
-    },
-    "Candal": {
-        "e-angle": "vertical"
-    },
-    "ADLaM Display": {
-        "e-angle": "angled",
-        "g-shape": "modern (single story)"
-    },
-    "Port Lligat Sans": {
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Gidugu": {
-        "e-angle": "horizontal"
-    },
-    "Commissioner": {
-        "e-angle": "vertical"
-    },
-    "Alice": {
-        "g-shape": "classical (double story)",
-        "x-height": "reasonable"
-    },
-    "Almendra SC": {
-        "e-angle": "angled"
-    },
-    "Livvic": {
-        "e-angle": "angled"
-    },
-    "KoHo": {
-        "e-angle": "angled"
-    },
-    "Murecho": {
-        "e-angle": "angled"
-    },
-    "Be Vietnam Pro": {
-        "e-angle": "horizontal"
-    },
-    "Almendra Display": {
-        "e-angle": "angled"
-    },
-    "Do Hyeon": {
-        "e-angle": "vertical"
-    },
-    "Ek Mukta": {
-        "e-angle": "~vertical"
-    },
-    "Hind": {
-        "e-angle": "vertical"
-    },
-    "Paprika": {
-        "x-height": "reasonable",
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Akshar": {
-        "e-angle": "~horizontal",
-        "g-shape": "modern (single story)"
-    },
-    "Gotu": {
-        "e-angle": "angled"
-    },
-    "Anek Malayalam": {
-        "e-angle": "vertical"
-    },
-    "Hammersmith One": {
-        "e-angle": "vertical"
-    },
-    "Darker Grotesque": {
-        "e-angle": "horizontal"
-    },
-    "Noto Sans Adlam Unjoined": {
-        "e-angle": "vertical"
-    },
-    "Amatic SC": {
-        "x-height": "neutra"
-    },
-    "Barlow Condensed": {
-        "e-angle": "~horizontal"
-    },
-    "Adamina": {
-        "e-angle": "angled",
-        "x-height": "reasonable",
-        "g-shape": "classical (double story)"
-    },
-    "Aboreto": {
-        "e-angle": "horizontal"
-    },
-    "M PLUS 1": {
-        "e-angle": "~vertical"
-    },
-    "IBM Plex Sans Thai Looped": {
-        "e-angle": "~horizontal"
-    },
-    "Almendra": {
-        "e-angle": "angled"
-    },
-    "GFS Neohellenic": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Karla Tamil Inclined": {
-        "e-angle": "angled"
-    },
-    "Krub": {
-        "e-angle": "~horizontal"
-    },
-    "Alexandria": {
-        "g-shape": "modern (single story)",
-        "e-angle": "angled",
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Assistant": {
-        "e-angle": "angled"
-    },
-    "Encode Sans Condensed": {
-        "e-angle": "vertical"
-    },
-    "Mouse Memoirs": {
-        "e-angle": "~vertical"
-    },
-    "Preahvihear": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Balthazar": {
-        "e-angle": "vertical"
-    },
-    "Bai Jamjuree": {
-        "e-angle": "horizontal"
-    },
-    "Imprima": {
-        "e-angle": "angled"
-    },
-    "Afacad": {
-        "e-angle": "~vertical",
-        "g-shape": "modern (single story)"
-    },
-    "Gayathri": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "horizontal"
-    },
-    "Allison": {
-        "e-angle": "angled"
-    },
-    "Anek Odia": {
-        "e-angle": "vertical"
-    },
-    "Josefin Sans": {
-        "e-angle": "~vertical"
-    },
-    "Kdam Thmor Pro": {
-        "e-angle": "vertical"
-    },
-    "Barlow": {
-        "e-angle": "~horizontal"
-    },
-    "Figtree": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Alfa Slab One": {
-        "g-shape": "modern (single story)",
-        "x-height": "neutra",
-        "e-angle": "vertical"
-    },
-    "Armata": {
-        "e-angle": "~vertical"
-    },
-    "Anek Telugu": {
-        "e-angle": "vertical"
-    },
-    "Kanit": {
-        "e-angle": "vertical"
-    },
-    "Acme": {
-        "e-angle": "angled",
-        "x-height": "reasonable",
-        "g-shape": "classical (double story)"
-    },
-    "Comme": {
-        "e-angle": "angled"
-    },
-    "Mooli": {
-        "e-angle": "angled"
-    },
-    "Economica": {
-        "e-angle": "vertical"
-    },
-    "Lexend Peta": {
-        "e-angle": "angled"
-    },
-    "Pragati Narrow": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Anek Devanagari": {
-        "e-angle": "vertical"
-    },
-    "Mako": {
-        "e-angle": "vertical"
-    },
-    "Cantora One": {
-        "e-angle": "vertical"
-    },
-    "Mukta Mahee": {
-        "e-angle": "angled"
-    },
-    "Orbit": {
-        "e-angle": "horizontal"
-    },
-    "Familjen Grotesk": {
-        "Kk-shape": "other",
-        "e-angle": "horizontal"
-    },
-    "Aladin": {
-        "l-shape": "helvetica",
-        "g-shape": "modern (single story)",
-        "e-angle": "angled"
-    },
-    "Encode Sans": {
-        "e-angle": "vertical"
-    },
-    "Pavanam": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Martel Sans": {
-        "e-angle": "angled"
-    },
-    "Allerta Stencil": {
-        "e-angle": "angled",
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Federo": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "vertical"
-    },
-    "Merriweather Sans": {
-        "e-angle": "~vertical"
-    },
-    "Noto Sans Bassa Vah": {
-        "e-angle": "vertical"
-    },
-    "Georama": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "~vertical"
-    },
-    "Gasoek One": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "~horizontal"
-    },
-    "NATS": {
-        "e-angle": "angled"
-    },
-    "Allerta": {
-        "g-shape": "modern (single story)",
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "a-shape": "double story",
-        "e-angle": "angled",
-        "x-height": "reasonable",
-        "G-shape": "Univers",
-        "R-shape": "straight",
-        "M-tip": "above",
-        "M-stems": "parallel",
-        "W-tip": "on tip",
-        "l-shape": "akkurat"
-    },
-    "Cabin Condensed": {
-        "e-angle": "vertical"
-    },
-    "Heebo": {
-        "e-angle": "angled"
-    },
-    "Exo 2": {
-        "Kk-shape": "other",
-        "e-angle": "vertical"
-    },
-    "Asar": {
-        "e-angle": "~vertical"
-    },
-    "Alegreya Sans": {
-        "g-shape": "classical (double story)",
-        "M-tip": "above",
-        "e-angle": "angled",
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Advent Pro": {
-        "e-angle": "~vertical",
-        "g-shape": "modern (single story)"
-    },
-    "Kantumruy Pro": {
-        "e-angle": "angled"
-    },
-    "Hubballi": {
-        "e-angle": "~vertical"
-    },
-    "Alegreya Sans SC": {
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Public Sans": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Carme": {
-        "e-angle": "vertical"
-    },
-    "Averia Libre": {
-        "e-angle": "~vertical"
-    },
-    "Mada": {
-        "e-angle": "~vertical"
-    },
-    "BIZ UDPGothic": {
-        "e-angle": "angled"
-    },
-    "Lexend Zetta": {
-        "e-angle": "~horizontal"
-    },
-    "BenchNine": {
-        "e-angle": "~horizontal"
-    },
-    "Kite One": {
-        "e-angle": "angled"
-    },
-    "Aguafina Script": {
-        "e-angle": "angled"
-    },
-    "IBM Plex Sans Thai": {
-        "e-angle": "~horizontal"
-    },
-    "Anek Bangla": {
-        "e-angle": "vertical"
-    },
-    "Abel": {
-        "e-angle": "horizontal",
-        "x-height": "reasonable"
-    },
-    "Aldrich": {
-        "g-shape": "modern (single story)",
-        "e-angle": "vertical",
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Dorsa": {
-        "e-angle": "horizontal"
-    },
-    "Carrois Gothic": {
-        "e-angle": "angled"
-    },
-    "Proza Libre": {
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Averia Gruesa Libre": {
-        "e-angle": "~vertical"
-    },
-    "PT Sans Narrow": {
-        "Kk-shape": "other"
-    },
-    "Geologica": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Bad Script": {
-        "e-angle": "~horizontal"
-    },
-    "Instrument Sans": {
-        "e-angle": "horizontal"
-    },
-    "Astloch": {
-        "e-angle": "angled"
-    },
-    "Orienta": {
-        "e-angle": "angled"
-    },
-    "Encode Sans Expanded": {
-        "e-angle": "vertical"
-    },
-    "Noto Sans Bengali": {
-        "e-angle": "vertical"
-    },
-    "IBM Plex Sans Arabic": {
-        "e-angle": "~horizontal"
-    },
-    "Andika": {
-        "e-angle": "~vertical"
-    },
-    "Bagel Fat One": {
-        "e-angle": "~vertical"
-    },
-    "Bubbler One": {
-        "e-angle": "vertical"
-    },
-    "Alumni Sans Collegiate One": {
-        "e-angle": "horizontal"
-    },
-    "Madimi One": {
-        "e-angle": "vertical"
-    },
-    "Alkalami": {
-        "g-shape": "classical (double story)",
-        "e-angle": "~vertical"
-    },
-    "Istok Web": {
-        "e-angle": "angled"
-    },
-    "Doppio One": {
-        "e-angle": "vertical"
-    },
-    "Hind Colombo": {
-        "e-angle": "vertical"
-    },
-    "Libre Franklin": {
-        "e-angle": "angled"
-    },
-    "Anta": {
-        "e-angle": "vertical"
-    },
-    "Autour One": {
-        "e-angle": "angled"
-    },
-    "Actor": {
-        "e-angle": "~vertical",
-        "x-height": "reasonable",
-        "g-shape": "modern (single story)"
-    },
-    "Noto Sans Armenian": {
-        "e-angle": "vertical"
-    },
-    "Pathway Gothic One": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Outfit": {
-        "e-angle": "angled"
-    },
-    "Akatab": {
-        "e-angle": "~vertical",
-        "g-shape": "classical (double story)"
-    },
-    "Farro": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "~vertical"
-    },
-    "Golos Text": {
-        "e-angle": "horizontal"
-    },
-    "Epilogue": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "horizontal"
-    },
-    "DotGothic16": {
-        "e-angle": "horizontal"
-    },
-    "Anek Tamil": {
-        "e-angle": "vertical"
-    },
-    "Encode Sans Semi Expanded": {
-        "Kk-shape": "other",
-        "e-angle": "vertical"
-    },
-    "Mukta Vaani": {
-        "e-angle": "angled"
-    },
-    "Finlandica": {
-        "Kk-shape": "other",
-        "e-angle": "angled"
-    },
-    "DM Sans": {
-        "e-angle": "horizontal"
-    },
-    "Duru Sans": {
-        "e-angle": "~vertical"
-    },
-    "Chivo": {
-        "e-angle": "horizontal"
-    },
-    "Belleza": {
-        "e-angle": "~vertical"
-    },
-    "Magra": {
-        "e-angle": "~vertical"
-    },
-    "Akaya Kanadaka": {
-        "e-angle": "angled",
-        "g-shape": "classical (double story)"
-    },
-    "Gowun Dodum": {
-        "e-angle": "angled"
-    },
-    "Cuprum": {
-        "e-angle": "vertical"
-    },
-    "Nuosu SIL": {
-        "e-angle": "angled"
-    },
-    "Galdeano": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "angled"
-    },
-    "Alumni Sans Pinstripe": {
-        "e-angle": "horizontal"
-    },
-    "Fira Sans Extra Condensed": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "angled"
-    },
-    "Hind Guntur": {
-        "e-angle": "vertical"
-    },
-    "Alkatra": {
-        "g-shape": "modern (single story)",
-        "e-angle": "angled"
-    },
-    "Anek Kannada": {
-        "e-angle": "vertical"
-    },
-    "Pattaya": {
-        "Kk-shape": "other"
-    },
-    "Lexend": {
-        "e-angle": "angled"
-    },
-    "Convergence": {
-        "e-angle": "angled"
-    },
-    "Mingzat": {
-        "e-angle": "horizontal"
-    },
-    "Play": {
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Alef": {
-        "g-shape": "classical (double story)",
-        "e-angle": "~vertical",
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Hedvig Letters Sans": {
-        "e-angle": "horizontal"
-    },
-    "Alata": {
-        "g-shape": "modern (single story)",
-        "e-angle": "~vertical"
-    },
-    "B612": {
-        "e-angle": "angled"
-    },
-    "Hermeneus One": {
-        "e-angle": "horizontal"
-    },
-    "Molengo": {
-        "e-angle": "~vertical"
-    },
-    "Anek Latin": {
-        "e-angle": "vertical"
-    },
-    "Qahiri": {
-        "Kk-shape": "other"
-    },
-    "Allan": {
-        "g-shape": "modern (single story)",
-        "e-angle": "angled"
-    },
-    "Asap": {
-        "e-angle": "~vertical"
-    },
-    "Poppins": {
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Harmattan": {
-        "e-angle": "~vertical"
-    },
-    "Azeret Mono": {
-        "e-angle": "horizontal"
-    },
-    "Oswald": {
-        "e-angle": "horizontal"
-    },
-    "Cagliostro": {
-        "e-angle": "angled"
-    },
-    "Dhyana": {
-        "e-angle": "angled"
-    },
-    "Belanosima": {
-        "M-tip": "above",
-        "e-angle": "angled"
-    },
-    "Cambay": {
-        "e-angle": "~vertical"
-    },
-    "Archivo Black": {
-        "e-angle": "horizontal"
-    },
-    "Mina": {
-        "e-angle": "vertical"
-    },
-    "Noto Sans Batak": {
-        "e-angle": "vertical"
-    },
-    "Overpass": {
-        "e-angle": "angled"
-    },
-    "Abhaya Libre": {
-        "e-angle": "~horizontal"
-    },
-    "Mitr": {
-        "e-angle": "angled"
-    },
-    "Days One": {
-        "e-angle": "horizontal"
-    },
-    "Braah One": {
-        "e-angle": "~vertical"
-    },
-    "Noto Sans Avestan": {
-        "e-angle": "vertical"
-    },
-    "Average": {
-        "e-angle": "angled"
-    },
-    "Pontano Sans": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Mukta Malar": {
-        "e-angle": "angled"
-    },
-    "M PLUS Code Latin": {
-        "e-angle": "vertical"
-    },
-    "Prompt": {
-        "e-angle": "vertical",
-        "g-shape": "classical (double story)",
-        "x-height": "reasonable",
-        "l-shape": "akkurat",
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Kodchasan": {
-        "e-angle": "angled"
-    },
-    "Atkinson Hyperlegible": {
-        "e-angle": "~horizontal"
-    },
-    "Akaya Telivigala": {
-        "e-angle": "angled"
-    },
-    "Audiowide": {
-        "e-angle": "vertical"
-    },
-    "Michroma": {
-        "e-angle": "horizontal"
-    },
-    "Passion One": {
-        "x-height": "reasonable",
-        "g-shape": "classical (double story)",
-        "e-angle": "vertical"
-    },
-    "Bakbak One": {
-        "e-angle": "vertical"
-    },
-    "Allura": {
-        "e-angle": "angled"
-    },
-    "Atomic Age": {
-        "e-angle": "vertical"
-    },
-    "Inria Sans": {
-        "e-angle": "~vertical"
-    },
-    "Marmelad": {
-        "e-angle": "~horizontal"
-    },
-    "Noto Sans Bamum": {
-        "e-angle": "vertical"
-    },
-    "Karla": {
-        "e-angle": "horizontal"
-    },
-    "Fjalla One": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "horizontal"
-    },
-    "Glory": {
-        "e-angle": "angled"
-    },
-    "Fresca": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Dosis": {
-        "e-angle": "angled"
-    },
-    "Geo": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "vertical"
-    },
-    "Lunasima": {
-        "e-angle": "vertical"
-    },
-    "Didact Gothic": {
-        "e-angle": "angled"
-    },
-    "Jockey One": {
-        "e-angle": "vertical"
-    },
-    "Homenaje": {
-        "e-angle": "vertical"
-    },
-    "Merge One": {
-        "e-angle": "~vertical"
-    },
-    "Ballet": {
-        "e-angle": "angled"
-    },
-    "Maven Pro": {
-        "e-angle": "vertical"
-    },
-    "Amaranth": {
-        "e-angle": "~vertical"
-    },
-    "Balsamiq Sans": {
-        "e-angle": "angled"
-    },
-    "Aleo": {
-        "g-shape": "classical (double story)",
-        "e-angle": "angled"
-    },
-    "Lexend Giga": {
-        "e-angle": "angled"
-    },
-    "Fira Sans": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "angled"
-    },
-    "Manrope": {
-        "e-angle": "~horizontal"
-    },
-    "Biryani": {
-        "e-angle": "angled"
-    },
-    "Lexend Deca": {
-        "e-angle": "angled"
-    },
-    "Chakra Petch": {
-        "e-angle": "horizontal"
-    },
-    "Moulpali": {
-        "e-angle": "vertical"
-    },
-    "Baskervville": {
-        "e-angle": "~horizontal"
-    },
-    "Amiko": {
-        "e-angle": "vertical"
-    },
-    "Anek Gurmukhi": {
-        "e-angle": "vertical"
-    },
-    "Asset": {
-        "e-angle": "horizontal"
-    },
-    "Lohit Tamil": {
-        "e-angle": "angled"
-    },
-    "IBM Plex Sans KR": {
-        "e-angle": "~horizontal"
-    },
-    "Baumans": {
-        "e-angle": "angled"
-    },
-    "Hanken Grotesk": {
-        "e-angle": "angled"
-    },
-    "Albert Sans": {
-        "g-shape": "modern (single story)",
-        "e-angle": "angled"
-    },
-    "Oxygen": {
-        "e-angle": "angled"
-    },
-    "Khand": {
-        "e-angle": "vertical"
-    },
-    "Denk One": {
-        "e-angle": "horizontal"
-    },
-    "Gafata": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "~vertical"
-    },
-    "Chivo Mono": {
-        "e-angle": "horizontal"
-    },
-    "Amarante": {
-        "e-angle": "~horizontal"
-    },
-    "Averia Serif Libre": {
-        "e-angle": "~vertical"
-    },
-    "Gruppo": {
-        "e-angle": "angled"
-    },
-    "Monda": {
-        "e-angle": "horizontal"
-    },
-    "Hind Siliguri": {
-        "e-angle": "vertical"
-    },
-    "Bayon": {
-        "M-tip": "above"
-    },
-    "El Messiri": {
-        "e-angle": "angled"
-    },
-    "Noto Kufi Arabic": {
-        "e-angle": "vertical"
-    },
-    "Philosopher": {
-        "Kk-shape": "univers/frutiger (symmetric)"
-    },
-    "Fira Sans Condensed": {
-        "Kk-shape": "univers/frutiger (symmetric)",
-        "e-angle": "angled"
-    },
-    "Exo": {
-        "Kk-shape": "other",
-        "e-angle": "vertical"
-    },
-    "Jost": {
-        "e-angle": "angled"
-    },
-    "Lalezar": {
-        "e-angle": "~vertical"
-    },
-    "Mohave": {
-        "e-angle": "horizontal"
-    },
-    "Noto Sans Arabic": {
-        "e-angle": "~vertical"
-    },
-    "M PLUS 1p": {
-        "e-angle": "horizontal"
-    },
-    "Inter": {
-        "e-angle": "~horizontal"
-    },
-    "Genos": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "vertical"
-    },
-    "Open Sans": {
-        "e-angle": "vertical"
-    },
-    "Onest": {
-        "e-angle": "horizontal"
-    },
-    "Laila": {
-        "e-angle": "angled"
-    },
-    "Alike": {
-        "g-shape": "classical (double story)",
-        "x-height": "neutra"
-    },
-    "Hind Mysuru": {
-        "e-angle": "vertical"
-    },
-    "Lato": {
-        "e-angle": "~vertical"
-    },
-    "Averia Sans Libre": {
-        "e-angle": "~vertical"
-    },
-    "League Gothic": {
-        "e-angle": "horizontal"
-    },
-    "Gantari": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Niramit": {
-        "e-angle": "angled"
-    },
-    "IBM Plex Sans Condensed": {
-        "e-angle": "~horizontal"
-    },
-    "Alex Brush": {
-        "g-shape": "modern (single story)",
-        "e-angle": "angled"
-    },
-    "Gudea": {
-        "e-angle": "~vertical"
-    },
-    "Inter Tight": {
-        "e-angle": "~horizontal"
-    },
-    "Alike Angular": {
-        "g-shape": "classical (double story)",
-        "x-height": "reasonable"
-    },
-    "Mochiy Pop P One": {
-        "e-angle": "angled"
-    },
-    "Almarai": {
-        "e-angle": "horizontal",
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Alatsi": {
-        "g-shape": "modern (single story)",
-        "e-angle": "~vertical"
-    },
-    "IBM Plex Sans JP": {
-        "e-angle": "~horizontal"
-    },
-    "Agdasima": {
-        "e-angle": "horizontal",
-        "g-shape": "classical (double story)"
-    },
-    "K2D": {
-        "e-angle": "~horizontal"
-    },
-    "Marvel": {
-        "e-angle": "~vertical"
-    },
-    "Cairo": {
-        "e-angle": "vertical"
-    },
-    "Black Han Sans": {
-        "e-angle": "~vertical"
-    },
-    "Anuphan": {
-        "e-angle": "angled"
-    },
-    "Akronim": {
-        "g-shape": "modern (single story)",
-        "e-angle": "~vertical"
-    },
-    "Mochiy Pop One": {
-        "e-angle": "angled"
-    },
-    "Mandali": {
-        "e-angle": "~vertical"
-    },
-    "Babylonica": {
-        "e-angle": "angled"
-    },
-    "Baloo 2": {
-        "e-angle": "angled"
-    },
-    "Athiti": {
-        "e-angle": "~vertical"
-    },
-    "Antonio": {
-        "e-angle": "horizontal"
-    },
-    "Khula": {
-        "e-angle": "vertical"
-    },
-    "Nunito Sans": {
-        "e-angle": "angled"
-    },
-    "Puritan": {
-        "Kk-shape": "helvetica/grotesk"
-    },
-    "Dhurjati": {
-        "e-angle": "horizontal"
-    },
-    "League Spartan": {
-        "e-angle": "angled"
-    },
-    "Jaldi": {
-        "e-angle": "angled"
-    },
-    "Nokora": {
-        "e-angle": "~vertical"
-    },
-    "ABeeZee": {
-        "e-angle": "angled",
-        "x-height": "reasonable"
-    },
-    "Atma": {
-        "e-angle": "angled"
-    },
-    "Average Sans": {
-        "e-angle": "angled"
-    },
-    "Barlow Semi Condensed": {
-        "e-angle": "~horizontal"
-    },
-    "Noto Music": {
-        "e-angle": "vertical"
-    },
-    "Monomaniac One": {
-        "e-angle": "vertical"
-    },
-    "Lohit Bengali": {
-        "e-angle": "angled"
-    },
-    "Noto Sans Anatolian Hieroglyphs": {
-        "e-angle": "vertical"
-    },
-    "Archivo Narrow": {
-        "e-angle": "horizontal"
-    },
-    "Cairo Play": {
-        "e-angle": "vertical"
-    },
-    "Martian Mono": {
-        "e-angle": "horizontal"
-    },
-    "Gemunu Libre": {
-        "Kk-shape": "other",
-        "e-angle": "vertical"
-    },
-    "PT Sans": {
-        "Kk-shape": "other"
-    },
-    "Hind Madurai": {
-        "e-angle": "vertical"
-    },
-    "Hind Vadodara": {
-        "e-angle": "vertical"
-    },
-    "Jua": {
-        "e-angle": "~vertical"
-    },
-    "Lexend Mega": {
-        "e-angle": "angled"
-    },
-    "IBM Plex Sans Devanagari": {
-        "e-angle": "~horizontal"
-    },
-    "Barriecito": {
-        "e-angle": "~vertical"
-    },
-    "Abyssinica SIL": {
-        "e-angle": "vertical"
-    },
-    "Electrolize": {
-        "e-angle": "angled"
-    },
-    "Fragment Mono": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "horizontal"
-    },
-    "Anton": {
-        "e-angle": "horizontal"
-    },
-    "Inconsolata": {
-        "e-angle": "angled"
-    },
-    "Hind Jalandhar": {
-        "e-angle": "vertical"
-    },
-    "Agbalumo": {
-        "g-shape": "modern (single story)",
-        "e-angle": "angled"
-    },
-    "Noto Sans": {
-        "e-angle": "vertical"
-    },
-    "Aubrey": {
-        "e-angle": "vertical"
-    },
-    "Mulish": {
-        "e-angle": "angled"
-    },
-    "Abril Fatface": {
-        "e-angle": "~horizontal"
-    },
-    "Kumbh Sans": {
-        "e-angle": "angled"
-    },
-    "Anek Gujarati": {
-        "e-angle": "vertical"
-    },
-    "Lexend Tera": {
-        "e-angle": "angled"
-    },
-    "PT Sans Caption": {
-        "Kk-shape": "other"
-    },
-    "Orbitron": {
-        "e-angle": "vertical"
-    },
-    "Nanum Gothic": {
-        "e-angle": "vertical"
-    },
-    "Fredoka": {
-        "Kk-shape": "helvetica/grotesk",
-        "e-angle": "angled"
-    },
-    "Mukta": {
-        "e-angle": "~vertical"
-    }
-}
+[
+    [
+        "ABeeZee",
+        {
+            "e-angle": "~vertical",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "single story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "ADLaM Display",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)"
+        }
+    ],
+    [
+        "AR One Sans",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Abel",
+        {
+            "e-angle": "horizontal",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Abhaya Libre",
+        {
+            "e-angle": "~horizontal"
+        }
+    ],
+    [
+        "Aboreto",
+        {
+            "e-angle": "horizontal"
+        }
+    ],
+    [
+        "Abril Fatface",
+        {
+            "e-angle": "~horizontal"
+        }
+    ],
+    [
+        "Abyssinica SIL",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Aclonica",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Acme",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Actor",
+        {
+            "e-angle": "~vertical",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Adamina",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)"
+        }
+    ],
+    [
+        "Advent Pro",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "helvetica",
+            "x-height": "neutra",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Afacad",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "x-height": "neutra",
+            "a-shape": "single story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Agbalumo",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Agdasima",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "helvetica",
+            "x-height": "neutra",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Aguafina Script",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Akatab",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "akkurat",
+            "x-height": "neutra",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Akaya Kanadaka",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)"
+        }
+    ],
+    [
+        "Akaya Telivigala",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Akronim",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Akshar",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Aladin",
+        {
+            "l-shape": "helvetica",
+            "g-shape": "modern (single story)",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Alata",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "~vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "single story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alatsi",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "~vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Albert Sans",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "angled",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Aldrich",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Alef",
+        {
+            "g-shape": "classical (double story)",
+            "e-angle": "~vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "akkurat",
+            "x-height": "reasonable",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alegreya Sans SC",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story extensive tail",
+            "g-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Alegreya Sans",
+        {
+            "g-shape": "classical (double story)",
+            "M-tip": "above",
+            "e-angle": "angled",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story extensive tail",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alegreya",
+        {
+            "g-shape": "classical (double story)",
+            "M-stems": "angled",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Aleo",
+        {
+            "g-shape": "classical (double story)",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Alex Brush",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Alexandria",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alfa Slab One",
+        {
+            "g-shape": "modern (single story)",
+            "x-height": "neutra",
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Alice",
+        {
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable"
+        }
+    ],
+    [
+        "Alike Angular",
+        {
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable"
+        }
+    ],
+    [
+        "Alike",
+        {
+            "g-shape": "classical (double story)",
+            "x-height": "neutra"
+        }
+    ],
+    [
+        "Alkalami",
+        {
+            "g-shape": "classical (double story)",
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Alkatra",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Allan",
+        {
+            "g-shape": "modern (single story)",
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Allerta Stencil",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "x-height": "reasonable",
+            "a-shape": "double story extensive tail",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Allerta",
+        {
+            "g-shape": "modern (single story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "G-shape": "Univers",
+            "R-shape": "straight",
+            "M-tip": "above",
+            "M-stems": "parallel",
+            "W-tip": "on tip",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Allison",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Allura",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Almarai",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "x-height": "reasonable",
+            "l-shape": "helvetica",
+            "a-shape": "double story extensive tail",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Almendra Display",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Almendra SC",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Almendra",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Alumni Sans Collegiate One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alumni Sans Inline One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alumni Sans Pinstripe",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Alumni Sans",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "x-height": "neutra",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Amarante",
+        {
+            "e-angle": "~horizontal"
+        }
+    ],
+    [
+        "Amaranth",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "x-height": "reasonable",
+            "Kk-shape": "other",
+            "a-shape": "single story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Amatic SC",
+        {
+            "x-height": "neutra"
+        }
+    ],
+    [
+        "Amethysta",
+        {
+            "x-height": "reasonable"
+        }
+    ],
+    [
+        "Amiko",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "x-height": "reasonable",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anaheim",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "x-height": "reasonable",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Andika",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "x-height": "reasonable",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "a-shape": "single story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Bangla",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Devanagari",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Gujarati",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Gurmukhi",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Kannada",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Latin",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Malayalam",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Odia",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Tamil",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anek Telugu",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anta",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "other",
+            "l-shape": "helvetica",
+            "a-shape": "single story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Antic",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anton",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Antonio",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Anuphan",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "akkurat",
+            "a-shape": "double story extensive tail",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Anybody",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "helvetica/grotesk",
+            "l-shape": "helvetica",
+            "a-shape": "double story",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Archivo Black",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story extensive tail",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Archivo Narrow",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story extensive tail",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Archivo",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story extensive tail",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Arimo",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Armata",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Arsenal",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story extensive tail",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Arya",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "helvetica/grotesk",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Asap Condensed",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Asap",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Asar",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Asset",
+        {
+            "e-angle": "horizontal"
+        }
+    ],
+    [
+        "Assistant",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Astloch",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Asul",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Athiti",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Atkinson Hyperlegible",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Atma",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Atomic Age",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Aubrey",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Audiowide",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Autour One",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Average Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Average",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Averia Gruesa Libre",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Averia Libre",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Averia Sans Libre",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Averia Serif Libre",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Azeret Mono",
+        {
+            "e-angle": "horizontal"
+        }
+    ],
+    [
+        "B612 Mono",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "B612",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "BIZ UDGothic",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "BIZ UDPGothic",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "R-shape": "curved",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Babylonica",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Bacasime Antique",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Bad Script",
+        {
+            "e-angle": "~horizontal"
+        }
+    ],
+    [
+        "Bagel Fat One",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Bahianita",
+        {
+            "e-angle": "horizontal"
+        }
+    ],
+    [
+        "Bai Jamjuree",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Bakbak One",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Ballet",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Baloo 2",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Balsamiq Sans",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Balthazar",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Barlow Condensed",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Barlow Semi Condensed",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Barlow",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Barriecito",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Basic",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story extensive tail",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Baskervville",
+        {
+            "e-angle": "~horizontal"
+        }
+    ],
+    [
+        "Battambang",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Baumans",
+        {
+            "e-angle": "angled"
+        }
+    ],
+    [
+        "Bayon",
+        {
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Be Vietnam Pro",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Bebas Neue",
+        {
+            "M-tip": "baseline",
+            "g-shape": "modern (single story)",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Belanosima",
+        {
+            "M-tip": "above",
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Belleza",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story extensive tail",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "BenchNine",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Biryani",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Black Han Sans",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Blinker",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Braah One",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Bricolage Grotesque",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "R-shape": "curved",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Bubbler One",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Cabin Condensed",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Cabin",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Cagliostro",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Cairo Play",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Cairo",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Cambay",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Candal",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Cantarell",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Cantora One",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "curved",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Capriola",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "R-shape": "curved",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Carlito",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Carme",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "R-shape": "straight",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Carrois Gothic SC",
+        {
+            "l-shape": "helvetica",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Carrois Gothic",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Catamaran",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Chakra Petch",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Changa",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Chathura",
+        {
+            "e-angle": "vertical",
+            "l-shape": "helvetica",
+            "g-shape": "modern (single story)",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Chau Philomene One",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Chivo Mono",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Chivo",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Comme",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Commissioner",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Convergence",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Cuprum",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "DM Sans",
+        {
+            "e-angle": "horizontal",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Darker Grotesque",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Days One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Denk One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Dhurjati",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Dhyana",
+        {
+            "e-angle": "angled",
+            "x-height": "neutra",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Didact Gothic",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Do Hyeon",
+        {
+            "e-angle": "vertical",
+            "x-height": "neutra",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Dongle",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "l-shape": "helvetica",
+            "g-shape": "modern (single story)",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Doppio One",
+        {
+            "e-angle": "vertical",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Dorsa",
+        {
+            "e-angle": "horizontal",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Dosis",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "DotGothic16",
+        {
+            "e-angle": "horizontal",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Duru Sans",
+        {
+            "e-angle": "~vertical",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Economica",
+        {
+            "e-angle": "vertical",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ek Mukta",
+        {
+            "e-angle": "~vertical",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "El Messiri",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Electrolize",
+        {
+            "e-angle": "angled",
+            "x-height": "neutra",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Encode Sans Condensed",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Encode Sans Expanded",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Encode Sans SC",
+        {
+            "M-tip": "above",
+            "Kk-shape": "other",
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Encode Sans Semi Condensed",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Encode Sans Semi Expanded",
+        {
+            "Kk-shape": "other",
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Encode Sans",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Englebert",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Epilogue",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Exo 2",
+        {
+            "Kk-shape": "other",
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Exo",
+        {
+            "Kk-shape": "other",
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Fahkwang",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "horizontal",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Familjen Grotesk",
+        {
+            "Kk-shape": "other",
+            "e-angle": "horizontal",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Farro",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~vertical",
+            "x-height": "neutra",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Federo",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "vertical",
+            "x-height": "neutra",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Figtree",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Finlandica",
+        {
+            "Kk-shape": "other",
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "quark",
+            "l-shape": "quark",
+            "a-shape": "quark",
+            "G-shape": "quark",
+            "R-shape": "quark",
+            "M-tip": "quark",
+            "M-stems": "parallel",
+            "W-tip": "quark",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Fira Sans Condensed",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "M-stems": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Fira Sans Extra Condensed",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Fira Sans",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "G-shape": "Helvetica",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Fjalla One",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "horizontal",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Fragment Mono",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "horizontal",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Francois One",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "M-tip": "baseline",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Fredoka",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Fresca",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "M-tip": "baseline",
+            "g-shape": "modern (single story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "GFS Neohellenic",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "R-shape": "curved",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gafata",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~vertical",
+            "M-tip": "above",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Galdeano",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "angled",
+            "M-tip": "above",
+            "M-stems": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Gantari",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "M-tip": "baseline",
+            "M-stems": "parallel",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gasoek One",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "~horizontal",
+            "M-tip": "baseline",
+            "M-stems": "parallel",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Gayathri",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "horizontal",
+            "M-tip": "baseline",
+            "M-stems": "parallel",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gemunu Libre",
+        {
+            "Kk-shape": "other",
+            "e-angle": "vertical",
+            "M-tip": "above",
+            "M-stems": "parallel",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Genos",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "vertical",
+            "M-tip": "baseline",
+            "M-stems": "parallel",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Geo",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "vertical",
+            "M-tip": "above",
+            "M-stems": "parallel",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Geologica",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "M-tip": "above",
+            "M-stems": "parallel",
+            "R-shape": "straight",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Georama",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~vertical",
+            "M-stems": "parallel",
+            "R-shape": "curved",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gidugu",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "R-shape": "straight",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Glory",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "other",
+            "R-shape": "curved",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Golos Text",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "R-shape": "straight",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gothic A1",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Gotu",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Gowun Dodum",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gruppo",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Gudea",
+        {
+            "e-angle": "~vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Hammersmith One",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Hanken Grotesk",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "M-tip": "above",
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Harmattan",
+        {
+            "e-angle": "~vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hedvig Letters Sans",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Heebo",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hermeneus One",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Colombo",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Guntur",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Jalandhar",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Kochi",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Madurai",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Mysuru",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Siliguri",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind Vadodara",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Hind",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Homenaje",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Hubballi",
+        {
+            "e-angle": "~vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans Arabic",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans Condensed",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans Devanagari",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans Hebrew",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans JP",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans KR",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans Thai Looped",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans Thai",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "IBM Plex Sans",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Imprima",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Inclusive Sans",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Inconsolata",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Inder",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Inria Sans",
+        {
+            "e-angle": "~vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Instrument Sans",
+        {
+            "e-angle": "horizontal",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Inter Tight",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Inter",
+        {
+            "e-angle": "~horizontal",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Istok Web",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Jaldi",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Jockey One",
+        {
+            "e-angle": "vertical",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Josefin Sans",
+        {
+            "e-angle": "~vertical",
+            "Kk-shape": "helvetica/grotesk",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Jost",
+        {
+            "e-angle": "angled",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Jua",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Julius Sans One",
+        {
+            "g-shape": "modern (single story)",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Jura",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "K2D",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kanit",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Kantumruy Pro",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Karla Tamil Inclined",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Karla Tamil Upright",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Karla",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Kdam Thmor Pro",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Khand",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Khmer",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Khula",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kite One",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "KoHo",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kodchasan",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kode Mono",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Kosugi Maru",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kosugi",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Krona One",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Krub",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kufam",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kulim Park",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Kumbh Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Laila",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lalezar",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lato",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "League Gothic",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "League Spartan",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lekton",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "a-shape": "double story",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Deca",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Exa",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Giga",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Mega",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Peta",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Tera",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend Zetta",
+        {
+            "e-angle": "~horizontal",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lexend",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "a-shape": "single story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Libre Franklin",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "a-shape": "double story",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Livvic",
+        {
+            "e-angle": "angled",
+            "x-height": "reasonable",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lohit Bengali",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lohit Tamil",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Lunasima",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "M PLUS 1",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "M PLUS 1p",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "M PLUS 2",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "M PLUS Code Latin",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mada",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Madimi One",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Magra",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mako",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mallanna",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mandali",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Manjari",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Manrope",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Marmelad",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Martel Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Martian Mono",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Marvel",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Maven Pro",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Meera Inimai",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Merge One",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Merriweather Sans",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Metrophobic",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Michroma",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mina",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mingzat",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Miriam Libre",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mitr",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mochiy Pop One",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mochiy Pop P One",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mohave",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Molengo",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Monda",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Monomaniac One",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Montserrat Alternates",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Montserrat Subrayada",
+        {
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Montserrat",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mooli",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Moulpali",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Mouse Memoirs",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mukta Mahee",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mukta Malar",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mukta Vaani",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mukta",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Mulish",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Murecho",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "NATS",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "NTR",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Nanum Gothic",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "News Cycle",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Niramit",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Nobile",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Nokora",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Notable",
+        {
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Noto Color Emoji",
+        {
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Noto Kufi Arabic",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Music",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Adlam Unjoined",
+        {
+            "e-angle": "vertical",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Noto Sans Adlam",
+        {
+            "e-angle": "vertical",
+            "l-shape": "helvetica"
+        }
+    ],
+    [
+        "Noto Sans Anatolian Hieroglyphs",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Arabic",
+        {
+            "e-angle": "~vertical"
+        }
+    ],
+    [
+        "Noto Sans Armenian",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Avestan",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Balinese",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Bamum",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Bassa Vah",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Batak",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Bengali UI",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Bengali",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Bhaiksuki",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Brahmi",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Buginese",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Buhid",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Canadian Aboriginal",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Carian",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Caucasian Albanian",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Chakma",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Cham",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans Cherokee",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Sans",
+        {
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Noto Traditional Nushu",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica"
+        }
+    ],
+    [
+        "Noto Znamenny Musical Notation",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica"
+        }
+    ],
+    [
+        "Numans",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Nunito Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Nunito",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Nuosu SIL",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ojuju",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Onest",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Open Sans",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Orbit",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Orbitron",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Orienta",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Oswald",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Otomanopee One",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Outfit",
+        {
+            "e-angle": "angled",
+            "a-shape": "single story",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Overpass",
+        {
+            "e-angle": "angled",
+            "a-shape": "double story",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Oxygen",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "PT Sans Caption",
+        {
+            "Kk-shape": "other",
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "PT Sans Narrow",
+        {
+            "Kk-shape": "other",
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "PT Sans",
+        {
+            "Kk-shape": "other",
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Padauk",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Palanquin Dark",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Palanquin",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Pangolin",
+        {
+            "x-height": "reasonable"
+        }
+    ],
+    [
+        "Paprika",
+        {
+            "x-height": "reasonable",
+            "Kk-shape": "helvetica/grotesk"
+        }
+    ],
+    [
+        "Parisienne",
+        {
+            "x-height": "reasonable"
+        }
+    ],
+    [
+        "Passion One",
+        {
+            "x-height": "reasonable",
+            "g-shape": "classical (double story)",
+            "e-angle": "vertical"
+        }
+    ],
+    [
+        "Pathway Extreme",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Pathway Gothic One",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Pattaya",
+        {
+            "Kk-shape": "other",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Pavanam",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Paytone One",
+        {
+            "Kk-shape": "other",
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Philosopher",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Play",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Plus Jakarta Sans",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Pontano Sans",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Poppins",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Port Lligat Sans",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Pragati Narrow",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Preahvihear",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Prompt",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "x-height": "reasonable",
+            "l-shape": "akkurat",
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Proza Libre",
+        {
+            "Kk-shape": "univers/frutiger (symmetric)",
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Public Sans",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Puritan",
+        {
+            "Kk-shape": "helvetica/grotesk",
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Qahiri",
+        {
+            "Kk-shape": "other",
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Quantico",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Quattrocento Sans",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Questrial",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Quicksand",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "REM",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Radio Canada",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Rajdhani",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Raleway",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Ramabhadra",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Rambla",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Rationale",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Readex Pro",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Recursive",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Red Hat Display",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Red Hat Mono",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Red Hat Text",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Reddit Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Reem Kufi Fun",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Reem Kufi Ink",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Reem Kufi",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Rethink Sans",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Roboto Condensed",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Roboto Flex",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Roboto",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "RocknRoll One",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ropa Sans",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Rosario",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Rubik Mono One",
+        {
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Rubik One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Rubik",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Ruda",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Ruluko",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Rum Raisin",
+        {
+            "e-angle": "other",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Russo One",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Saira Condensed",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Saira Extra Condensed",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Saira Semi Condensed",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Saira",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Sansation",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Sansita",
+        {
+            "e-angle": "other",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sarabun",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sarala",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Sarpanch",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Scada",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Schibsted Grotesk",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Secular One",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Sen",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Seymour One",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Shanti",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Share Tech",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Share",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Shippori Antique B1",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Shippori Antique",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Siemreap",
+        {
+            "e-angle": "other",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Signika Negative SC",
+        {
+            "e-angle": "other",
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Signika Negative",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Signika SC",
+        {
+            "e-angle": "other",
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Signika",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Sintony",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Six Caps",
+        {
+            "e-angle": "other",
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Smooch Sans",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Snippet",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sofia Sans Condensed",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sofia Sans Extra Condensed",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sofia Sans Semi Condensed",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sofia Sans",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sono",
+        {
+            "e-angle": "other",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sora",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Source Sans 3",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Space Grotesk",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Spinnaker",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Spline Sans Mono",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Spline Sans",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Stick No Bills",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Stick",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Strait",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Strong",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Stylish",
+        {
+            "e-angle": "other",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sulphur Point",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Sunflower",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Syncopate",
+        {
+            "e-angle": "vertical",
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Syne",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Tac One",
+        {
+            "e-angle": "other",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Tajawal",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Tauri",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Teko",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Tektur",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Telex",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Tenali Ramakrishna",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Tenor Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Text Me One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Thasadith",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Timmana",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Titillium Web",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Tomorrow",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Trispace",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Truculenta",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Tsukimi Rounded",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Tuffy",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ubuntu Condensed",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ubuntu",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Unbounded",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Urbanist",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Varela Round",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Varela",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Varta",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Vazirmatn",
+        {
+            "e-angle": "angled",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Victor Mono",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "mono",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Viga",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Voces",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Voltaire",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Wendy One",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Wire One",
+        {
+            "e-angle": "horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Wix Madefor Display",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Wix Madefor Text",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Work Sans",
+        {
+            "e-angle": "angled",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Yaldevi Colombo",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Yaldevi",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Yanone Kaffeesatz",
+        {
+            "e-angle": "vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Yantramanav",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "Ysabeau Infant",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ysabeau Office",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Ysabeau SC",
+        {
+            "e-angle": "other",
+            "g-shape": "other",
+            "l-shape": "other",
+            "ij-dot-shape": "other"
+        }
+    ],
+    [
+        "Ysabeau",
+        {
+            "e-angle": "~vertical",
+            "g-shape": "classical (double story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Yusei Magic",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "ZCOOL KuaiLe",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "square"
+        }
+    ],
+    [
+        "ZCOOL QingKe HuangYou",
+        {
+            "e-angle": "vertical",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "ZCOOL XiaoWei",
+        {
+            "e-angle": "other",
+            "g-shape": "classical (double story)",
+            "l-shape": "other",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Zen Kaku Gothic Antique",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Zen Kaku Gothic New",
+        {
+            "e-angle": "~horizontal",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Zen Kurenaido",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "akkurat",
+            "ij-dot-shape": "round"
+        }
+    ],
+    [
+        "Zen Maru Gothic",
+        {
+            "e-angle": "angled",
+            "g-shape": "modern (single story)",
+            "l-shape": "helvetica",
+            "ij-dot-shape": "round"
+        }
+    ]
+]

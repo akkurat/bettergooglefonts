@@ -1,40 +1,54 @@
-<div class="classifier">
-    @if(font) {
+<div class="scrollwrap">
 
-    <div class="specimen-wide" [style]="{fontFamily: font?.meta?.name}">
-        ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789
-        &excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+    <div class="classifier">
+        @if(font) {
+
+        <div class="specimen-wide" [style]="{fontFamily: font?.meta?.name}">
+            <h3>{{font.meta.name}}</h3>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789
+            &excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+        </div>
+        @if(questions) {
+        <div>
+            <mat-toolbar>
+                <mat-slide-toggle [(ngModel)]="autoNext">
+                    <mat-label>Auto Next</mat-label>
+                </mat-slide-toggle>
+                <mat-slide-toggle [(ngModel)]="jumpAnswered">
+                    <mat-label>Jump Answered</mat-label>
+                </mat-slide-toggle>
+                <button mat-button (click)="importToLocalStorage($event)">Import to Local Storage</button>
+
+            </mat-toolbar>
+            <ul class="questions" [formGroup]="fg">
+                @for(q of questions; track q.title) {
+                <li class="question" (click)="focus(q.title)" matTooltip="Click on anywhere in the question to focus ">
+                    <div class="sample" [style]="{fontFamily: font?.meta?.name}">{{q.samples}}</div>
+                    <div class="question-text">
+                        <h5>{{q.title}}</h5>
+                        <mat-radio-group [formControlName]="q.title" [name]="q.title">
+                            @for(option of q.items; track option) {
+
+                            <mat-radio-button [value]="option" >
+                                <b>{{$index+1}}</b> : {{option}}
+                            </mat-radio-button>
+                            }
+                        </mat-radio-group>
+                    </div>
+                </li>
+                }
+            </ul>
+        </div>
+        }
+        <div>
+            <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
+            <div class="prev"><a [routerLink]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font:
+                    {{fontPrev?.meta?.name}}</a></div>
+            <div class="next"><a [routerLink]="'/classify/'+encode(fontNext?.meta?.name)">Next Font:
+                    {{fontNext?.meta?.name}}</a></div>
+        </div>
+        } @else {
+        Font not found
+        }
     </div>
-    @if(answers) {
-    <div>
-        <mat-toolbar>
-            <mat-slide-toggle [(ngModel)]="autoNext">
-                Auto Next
-            </mat-slide-toggle>
-            <button mat-button (click)="importToLocalStorage($event)">Import to Local Storage</button>
-        </mat-toolbar>
-        <ul>
-            <li *ngFor="let q of questions">
-                <div class="sample" [style]="{fontFamily: font?.meta?.name, fontSize: '150pt', height: '100pt'}">{{q.samples}}</div>
-                <div class="question">
-                    <h5>{{q.title}}</h5>
-                    <mat-radio-group (change)="saveAnswer($event,q.title)">
-                        <mat-radio-button *ngFor="let option of q.items" [value]="option"
-                            [checked]="isSelected(q.title,option)">
-                            {{option}}
-                        </mat-radio-button>
-                    </mat-radio-group>
-                </div>
-            </li>
-        </ul>
-    </div>
-    }
-    <div>
-        <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
-        <div class="prev"><a [routerLink]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font: {{fontPrev?.meta?.name}}</a></div>
-        <div class="next"><a [routerLink]="'/classify/'+encode(fontNext?.meta?.name)">Next Font: {{fontNext?.meta?.name}}</a></div>
-    </div>
-} @else { 
-    Font not found
-} 
 </div>

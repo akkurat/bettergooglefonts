@@ -41,9 +41,10 @@ export class MongofontService {
     this.db.addCollection('fonts')
 
     this.http.get('assets/fontmeta.json').pipe(combineLatestWith(this.http.get('assets/classification.json')))
-      .subscribe(([metas, classification]) => {
+      .subscribe(([metas, classificationEntries]) => {
+        const classification = new Map((classificationEntries as[]))
         for (const meta of (metas as FontInfo[])) {
-          meta['classification'] = classification[meta.meta.name]
+          meta['classification'] = classification.get(meta.meta.name)
         }
         this.db.collections['fonts'].upsert(metas,
           (docs) => { console.log(docs.length); this.dbready.next(true) },
@@ -108,6 +109,7 @@ export class MongofontService {
       if (ready) {
         this.db.collections['fonts'].findOne({ 'meta.name': name }).then(f => {
           sub.next(f)
+          sub.complete()
         })
       }
     })
@@ -121,6 +123,7 @@ export class MongofontService {
       if (ready) {
         this.db.collections['fonts'].findOne(selector, options).then(f => {
           sub.next(f)
+          sub.complete()
         })
       }
     })
