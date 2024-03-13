@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.458334mm"
+   height="26.458334mm"
+   viewBox="0 0 26.458334 26.458334"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="e-angle-~horizontal.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.55696"
+     inkscape:cx="97.18572"
+     inkscape:cy="109.11395"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="originald"
+       linkedpaths="#text1,0,1|"
+       id="path-effect1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       inkscape:original-d="M 0,0"
+       inkscape:path-effect="#path-effect1"
+       d="M 0,0"
+       id="path2" />
+    <path
+       id="path9"
+       style="font-weight:bold;font-size:33.3242px;line-height:0.8;font-family:Anybody;-inkscape-font-specification:'Anybody Bold';text-align:center;letter-spacing:8.88641px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       d="M 13.253971 3.1569132 C 9.6105489 3.1569132 7.0392935 4.0401921 5.5397135 5.8063639 C 4.0290261 7.5725363 3.273702 10.044014 3.273702 13.220898 C 3.273702 16.331139 4.0235971 18.791757 5.5231771 20.60236 C 7.011649 22.401855 9.6219341 23.30142 13.354224 23.30142 C 15.331448 23.30142 16.897412 23.106775 18.052645 22.717993 C 19.19677 22.340324 20.179828 21.751989 21.001819 20.952209 C 21.812702 20.163543 22.340808 19.119222 22.585185 17.819584 L 17.56947 16.403133 C 17.336201 17.102935 17.064003 17.719446 16.752983 18.252633 C 16.419741 18.763598 15.97565 19.136096 15.420247 19.36936 C 14.875958 19.580413 14.187323 19.68562 13.354224 19.68562 C 11.921289 19.68562 10.788047 19.241524 9.9549479 18.352885 C 9.3097551 17.682226 8.9133214 16.52433 8.7612223 14.886947 L 23.068359 14.886947 C 23.146119 14.387084 23.184631 13.831841 23.184631 13.220898 C 23.184631 10.099555 22.468338 7.6389328 21.035409 5.8394368 C 19.591366 4.0510489 16.997371 3.1569132 13.253971 3.1569132 z M 13.253971 6.7727132 C 14.642473 6.7727132 15.720398 7.1669183 16.486849 7.9555868 C 17.053355 8.6331746 17.397672 9.8163089 17.519861 11.504724 L 8.7648397 11.504724 C 8.9202296 9.8650441 9.316077 8.7196526 9.9549479 8.0723755 C 10.810263 7.2059517 11.909906 6.7727132 13.253971 6.7727132 z " />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 11.650906,15.123424 13.198553,3.243172"
+       id="path1" />
+  </g>
+</svg>

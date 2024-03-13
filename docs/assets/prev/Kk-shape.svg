@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.458334mm"
+   height="26.458334mm"
+   viewBox="0 0 26.458334 26.458334"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="Kk-shape.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.3222004"
+     inkscape:cx="50.167935"
+     inkscape:cy="131.34094"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 2.7359723,5.7863236 H 5.3420099 V 12.562021 L 11.97177,5.7863236 h 3.210638 L 9.2406422,11.728089 15.599374,20.67201 H 12.347039 L 7.4685366,13.56274 5.3420099,15.668418 V 20.67201 H 2.7359723 Z"
+       id="text1"
+       style="font-weight:500;font-size:20.8483px;line-height:0.8;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Medium';text-align:center;letter-spacing:5.5595px;text-anchor:middle;stroke-width:2.00001;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="K" />
+    <path
+       d="m 16.152846,20.755404 h 2.063982 v -7.9849 l 6.942484,7.9849 h 2.918762 L 20.614383,12.436931 27.348384,5.7029302 H 24.492166 L 18.216828,12.290993 V 5.7029302 h -2.063982 z"
+       id="text2"
+       style="font-size:20.8483px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:5.5595px;text-anchor:middle;stroke-width:2.00001;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="K" />
+  </g>
+</svg>

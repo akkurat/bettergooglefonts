@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.458334mm"
+   height="26.458334mm"
+   viewBox="0 0 26.458334 26.458334"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="e-angle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.7702942"
+     inkscape:cx="86.452912"
+     inkscape:cy="58.477544"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 21.658993,14.733166 V 12.57929 c 0,-5.3104197 -3.045135,-9.2468144 -8.429826,-9.2468144 -5.0133333,0 -8.4298269,3.5650367 -8.4298269,9.8781224 0,7.835654 4.3820244,9.915259 8.9497279,9.915259 3.490765,0 5.384691,-1.076939 7.352888,-3.045136 l -2.933728,-2.859456 c -1.225481,1.225481 -2.265284,1.819654 -4.382024,1.819654 -2.710914,0 -4.2334815,-1.819654 -4.2334815,-4.307753 z M 16.905611,11.42808 H 9.5527225 C 9.5898583,10.573956 9.7012657,10.054055 9.9983521,9.3484751 10.518253,8.1972653 11.595191,7.3431419 13.229167,7.3431419 c 1.633975,0 2.710913,0.8541234 3.230814,2.0053332 0.297087,0.7055799 0.408494,1.2254809 0.44563,2.0796049 z"
+       id="text1"
+       style="font-weight:bold;font-size:37.1358px;line-height:0.8;font-family:DINPro;-inkscape-font-specification:'DINPro Bold';text-align:center;letter-spacing:9.90285px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="e" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 13.444977,11.939805 9.610411,9.61041"
+       id="path1" />
+  </g>
+</svg>
