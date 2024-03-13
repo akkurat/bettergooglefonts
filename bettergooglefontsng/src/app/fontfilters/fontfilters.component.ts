@@ -10,10 +10,12 @@ import { SearchableFilterlistComponent } from "./searchable-filterlist/searchabl
 import { ActiveSelectFilterComponent } from "./active-filter/active-filter.component";
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card'
 import { DomSanitizer } from '@angular/platform-browser';
 
 type Axis = {
   tag: string
+  display_name: string;
   min_value: number
   max_value: number
 }
@@ -26,6 +28,7 @@ export type FilterSelection = {
 export type AFilter = {
   type: 'select' | 'range'
   title: string
+  caption: string
   // TODO: two subclasses and factory
   items?: string[]
   min_value?: number
@@ -38,7 +41,7 @@ export type AFilter = {
   templateUrl: './fontfilters.component.html',
   styleUrls: ['./fontfilters.component.scss'],
   standalone: true,
-  imports: [NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, ActiveSelectFilterComponent]
+  imports: [NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, ActiveSelectFilterComponent, MatCardModule]
 })
 
 
@@ -47,7 +50,7 @@ export class FontfiltersComponent implements OnInit {
   @Output()
   selectionChange = new EventEmitter<FilterSelection>
   availableFilters: AFilter[] = []
-  availableFilterNames: { name: string }[] = [];
+  availableFilterNames: { name: string, caption: string }[] = [];
   // maybe rather a function and just a string for the selection
   activeFilters: AFilter[] = []
   // fg!: FormGroup<{ [x: string]: FormControl<any> | FormGroup<any>; }>;
@@ -60,10 +63,10 @@ export class FontfiltersComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) {
     // TODO: filterservice (not using classifications directly)
-    this.availableFilters = classifier.getQuestions().map(q => ({ ...q, type: 'select' }))
+    this.availableFilters = classifier.getQuestions().map(q => ({ ...q, caption: q.title, type: 'select' }))
 
     for (const filter of this.availableFilters) {
-        iconRegistry.addSvgIcon(filter.title, sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${filter.title}.svg`))
+      iconRegistry.addSvgIcon(filter.title, sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${filter.title}.svg`))
       filter.items?.forEach(item => {
         const qualifier = filter.title + '-' + item;
         iconRegistry.addSvgIcon(qualifier, sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${qualifier}.svg`))
@@ -78,12 +81,13 @@ export class FontfiltersComponent implements OnInit {
           .filter(a => a.tag.toLowerCase() === a.tag)
           .map(a => ({
             title: a.tag,
+            caption: a.display_name,
             type: 'range',
             min_value: a.min_value,
             max_value: a.max_value
           }))
         this.availableFilters.push(...axes)
-        this.availableFilterNames = this.availableFilters.map(t => ({ name: t.title }))
+        this.availableFilterNames = this.availableFilters.map(t => ({ name: t.title, caption: t.caption }))
         // better on demand
         this.fg.valueChanges.subscribe(v => this.selectionChange.emit(mapFormEvent(v)))
       }

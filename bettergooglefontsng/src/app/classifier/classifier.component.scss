@@ -6,6 +6,7 @@
     .classifier {
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-between;
         min-height: 100%;
 
         .specimen-wide {
@@ -14,8 +15,14 @@
             overflow-x: hidden;
             overflow-wrap: break-word;
             letter-spacing: 10pt;
-            max-width: 450px;
+            flex-basis: 400px;
             flex-grow: 0.2;
+            padding:20px;
+        }
+
+        .question-wrapper {
+            flex-grow: 0.8;
+            flex-basis: 450px;
         }
 
 

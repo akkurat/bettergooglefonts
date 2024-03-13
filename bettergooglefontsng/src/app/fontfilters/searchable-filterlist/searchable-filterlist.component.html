@@ -11,7 +11,7 @@
     @for (option of availableFilters; track option) {
     <mat-option [value]="option.name">
         <mat-icon [svgIcon]="option.name"></mat-icon>
-        {{option.name}}
+        {{option.caption}}
     </mat-option>
     }
 </mat-autocomplete>

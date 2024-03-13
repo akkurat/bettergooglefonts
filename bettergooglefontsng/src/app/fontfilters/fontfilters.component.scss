@@ -2,4 +2,16 @@
     display: flex;
     flex-flow: row wrap;
     list-style: none;
+    gap: 1rem;
+
+    .filter {
+        margin: 10px;
+    }
+}
+
+.stretch {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }

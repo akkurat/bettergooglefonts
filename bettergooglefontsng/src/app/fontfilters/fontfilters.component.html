@@ -1,23 +1,34 @@
 <div>
     <ul class="filters">
         <li *ngFor="let filter of activeFilters">
-            @if (filter?.type == 'select') {
-            <app-active-filter [filter]="filter" [formcontrol]="$any(fg.get(filter.title))"></app-active-filter>
-            } @else if (filter.type == 'range') {
-            <!-- todo: toggle to indclude or exclude fonts without this axis present  -> Wrap to its own component-->
-            <!-- todo: show numeric value of slider (also when not active) -->
-            <mat-label>{{filter.title}}</mat-label>
-            <mat-slider [min]="filter.min_value" [max]="filter.max_value" discrete>
-                <input matSliderStartThumb [formControl]="$any(fg.get(filter.title)?.get('min'))">
-                <input matSliderEndThumb [formControl]="$any(fg.get(filter.title)?.get('max'))">
-            </mat-slider>
+            <mat-card>
+                <mat-card-header class="stretch">
+                    <mat-card-title>{{filter.caption}}</mat-card-title>
+                    <button mat-stroked-button color="primary">
+                        <mat-icon (click)="removeFilter(filter.title)">delete</mat-icon>
+                    </button>
+                </mat-card-header>
+                @if (filter?.type == 'select') {
+                <app-active-filter [filter]="filter" [formcontrol]="$any(fg.get(filter.title))"></app-active-filter>
+                } @else if (filter.type == 'range') {
+                <div class="filter">
+                    <!-- todo: toggle to indclude or exclude fonts without this axis present  -> Wrap to its own component-->
+                    <!-- todo: show numeric value of slider (also when not active) -->
+                    <mat-slider [min]="filter.min_value" [max]="filter.max_value">
+                        <input matSliderStartThumb [formControl]="$any(fg.get(filter.title)?.get('min'))">
+                        <input matSliderEndThumb [formControl]="$any(fg.get(filter.title)?.get('max'))">
+                    </mat-slider>
 
-            }
+                    <div class="stretch">
+                        <div>{{$any(fg.get(filter.title)?.get('min')).value}}</div>
+                        <div>{{$any(fg.get(filter.title)?.get('max')).value}}</div>
+                    </div>
+                </div>
 
-            <button mat-icon-button color="primary" (click)="removeFilter(filter.title)"
-                aria-label="'Remove Filter ' + filter.title">
-                <mat-icon>delete</mat-icon>
-            </button>
+
+                }
+
+            </mat-card>
         </li>
         <app-searchable-filterlist [availableFilters]="availableFilterNames"
             (activate)="activateFilter($event)"></app-searchable-filterlist>

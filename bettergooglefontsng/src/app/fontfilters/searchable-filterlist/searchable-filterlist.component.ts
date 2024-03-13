@@ -18,7 +18,7 @@ export class SearchableFilterlistComponent implements OnInit {
   selectedFilter = new FormControl<string>('')
 
   @Input()
-  availableFilters: { name: string, icon?: string }[] = []
+  availableFilters: { name: string, caption: string, icon?: string }[] = []
 
   @Output()
   activate = new EventEmitter<string>()
