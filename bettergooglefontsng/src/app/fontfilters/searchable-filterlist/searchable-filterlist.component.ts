@@ -4,11 +4,12 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-searchable-filterlist',
   standalone: true,
-  imports: [JsonPipe, MatAutocompleteModule, MatFormFieldModule, FormsModule, ReactiveFormsModule, MatInputModule],
+  imports: [JsonPipe, MatAutocompleteModule, MatFormFieldModule, FormsModule, ReactiveFormsModule, MatInputModule, MatIconModule],
   templateUrl: './searchable-filterlist.component.html',
   styleUrl: './searchable-filterlist.component.scss'
 })

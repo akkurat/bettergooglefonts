@@ -1,22 +1,40 @@
 # Better Google Fonts
 
+
 ![Filtered view of googlefonts filtered by: Fonts containing a variable wght-axis from 100 - 900, horizontal cap of the stems (e, a) and a Helvetica like K/k ](filters.png)
 
+![All Fonts width variable weight from 350-750, modern g, square ij dots and an e angle of around 45 degrees](filters2.png)
 # How to Run
-## installation
+## Github Pages
+Go to (https://akkurat.github.io/bettergooglefonts/)
+
+### Classification
+
+In the overview click on the pencil icon for any font, e.g. (https://akkurat.github.io/bettergooglefonts/classify/ABeeZee)
+
+* Click on "Import to Local Storage" -> This copies the current state of classifications
+* Start classifying
+* Next / Previous font only consider SANS fonts at the moment as the classification has only a few properties for serif fonts (e.g. M stems / tip, W tip). However the direct URL is working
+* Publishing the classifications:
+  * go to (https://akkurat.github.io/bettergooglefonts/classify-json) 
+  * clone/fork this repo or edit only
+  * copy the contents into ```bettergooglefontsng/src/assets/classification.json```
+  * make pull request
+  * since the classifications once done won't change to much there is no intend to change the process to anything more sophisticated than a plain json. not relying on a backend means being able to publish it on github and not to worry about any db storage
+
+## Local Installation
 
 ```bash
 git clone https://github.com/akkurat/bettergooglefonts.git
 ```
 
-Cloning the submodule is only necessary for creating a new woff2-subset updating meta infos
+Cloning the submodule is only necessary for creating a new woff2-subset or updating meta infos
 
 ```bash
 git clone --recurse-submodules https://github.com/akkurat/bettergooglefonts.git
 ```
 
 (submodule will take it's time as it is >1GB to clone)
-
 
 
 ## combine all meta font data into one fat json
@@ -35,22 +53,30 @@ ng serve
 
 # Roadmap
 ## Bugish
-* questionnaire based on font name (and not directory)
+* Alignment of filters: Some sort of grouping the delete buttons with the filters would be helpful
+
 
 ## Reasonable TODOs
-* Questionaire: Characterizations for Serif fonts
+* number of fonts with this filter (trivial, lazyloading is only in dom, in js the array is already complete, just display ```.length```)
 * Checkbox to in- or exclude fonts without the respective axis availabe
 * Map standard axis to discrete values (e.g. weight, width, slant/ italic angle)
 * Detailview of font with something like this [https://www.axis-praxis.org/specimens/__DEFAULT__] -> Quickwin: Link to google fonts for now
 * Custom specimen text -> Sofar only Ascii letters possible (due to subset woff) -> load ttf from github raw?
+  * Loading ttf from github raw is already done for classification view
+  * First step however should be custom ascii preview text
 * Grid/List view
 * Size / Width/ Weight Waterfall
+  * Size waterfall is trivial
+  * Iterating through all axes (or discrete fonts) is a bit more complicated but also manageable
+* Bigger View of font (or letter maybe?) upon hovering
+* Show classifications in overview
 
 ## Fancy Todos
-(not necessarily hard to implement, but lower prio)
+(not necessarily harder to implement, but lower prio)
 * Show number filtered Fonts due to Range or Selection Filter
 * [Sankey Diagram](https://en.wikipedia.org/wiki/Sankey_diagram) for filtering path
 * [Venn Diagram](https://en.wikipedia.org/wiki/Venn_diagram) for font properties (e.g. which fonts have a helvetica like K, double story g and and are real italics)
+* Questionaire: Characterizations for Serif fonts
 
 
 

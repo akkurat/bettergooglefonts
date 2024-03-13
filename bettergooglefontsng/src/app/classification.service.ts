@@ -12,7 +12,7 @@ export const fontParamsSans = {
   "g-shape": { a: ["modern (single story)", "classical (double story)", "both", "other"], s: "g" },
   "l-shape": { a: ["helvetica", "akkurat", "mono", "other"], s: "l" },
   "ij-dot-shape": { a: ["square", "round", "other"], s: "ij" },
-  "Kk-shape": { a: ["helvetica/grotesk", "univers/frutiger (symmetric)", "other"], s: "K k" },
+  "Kk-shape": { a: ["helvetica", "univers", "other"], s: "K k" },
   "a-shape": { a: ["double story", "double story extensive tail", "single story"], s: "a" },
   "G-shape": { a: ["Helvetica", "Univers"], s: "G" },
   "R-shape": { a: ["curved", "straight"], s: "R" },

@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { combineLatestWith } from 'rxjs';
+import { MatIconRegistry } from '@angular/material/icon';
 
 
 
@@ -35,7 +36,12 @@ export class ClassifierComponent implements OnInit {
   fg: FormGroup<{}>;
   fcs: { [k: string]: FormControl };
   lastActiveQuestion: string = '';
-  constructor(private route: ActivatedRoute, private fontService: MongofontService, private router: Router, private classifierService: ClassificationService,
+  constructor(
+    private route: ActivatedRoute, 
+    private fontService: MongofontService, 
+    private router: Router, 
+    private classifierService: ClassificationService,
+    private iconRegistry: MatIconRegistry
   ) {
     this.questions = this.classifierService.getQuestions()
     this.fcs = this.questions.reduce(
@@ -44,6 +50,7 @@ export class ClassifierComponent implements OnInit {
     );
     this.fg = new FormGroup(this.fcs)
     this.fg.valueChanges.subscribe(a => this.saveAnswer(a))
+   // todo: read from json 
   }
   ngOnInit(): void {
     console.log(this.route)

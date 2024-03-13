@@ -6,7 +6,7 @@
             "x-height": "reasonable",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "single story",
             "ij-dot-shape": "round"
         }
@@ -26,7 +26,8 @@
             "Kk-shape": "other",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -36,7 +37,7 @@
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "ij-dot-shape": "square"
         }
@@ -81,7 +82,7 @@
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "ij-dot-shape": "round"
         }
@@ -92,7 +93,7 @@
             "e-angle": "~vertical",
             "x-height": "reasonable",
             "g-shape": "modern (single story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round"
@@ -111,7 +112,7 @@
         {
             "e-angle": "~vertical",
             "g-shape": "modern (single story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "helvetica",
             "x-height": "neutra",
             "a-shape": "double story",
@@ -123,7 +124,7 @@
         {
             "e-angle": "~vertical",
             "g-shape": "modern (single story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "x-height": "neutra",
             "a-shape": "single story",
@@ -142,7 +143,7 @@
         {
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "helvetica",
             "x-height": "neutra",
             "a-shape": "double story",
@@ -160,7 +161,7 @@
         {
             "e-angle": "~vertical",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "akkurat",
             "x-height": "neutra",
             "a-shape": "double story",
@@ -192,7 +193,7 @@
         {
             "e-angle": "~horizontal",
             "g-shape": "modern (single story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "double story",
@@ -212,7 +213,7 @@
         {
             "g-shape": "modern (single story)",
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "single story",
@@ -224,7 +225,7 @@
         {
             "g-shape": "modern (single story)",
             "e-angle": "~vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "double story",
@@ -248,7 +249,7 @@
         {
             "g-shape": "modern (single story)",
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "double story",
@@ -260,7 +261,7 @@
         {
             "g-shape": "classical (double story)",
             "e-angle": "~vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "akkurat",
             "x-height": "reasonable",
             "a-shape": "double story",
@@ -270,7 +271,7 @@
     [
         "Alegreya Sans SC",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "double story extensive tail",
@@ -284,7 +285,7 @@
             "g-shape": "classical (double story)",
             "M-tip": "above",
             "e-angle": "angled",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "double story extensive tail",
@@ -318,7 +319,7 @@
         {
             "g-shape": "modern (single story)",
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "helvetica",
             "x-height": "reasonable",
             "a-shape": "double story",
@@ -379,7 +380,7 @@
         "Allerta Stencil",
         {
             "e-angle": "angled",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "x-height": "reasonable",
@@ -391,7 +392,7 @@
         "Allerta",
         {
             "g-shape": "modern (single story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "e-angle": "angled",
             "x-height": "reasonable",
@@ -420,7 +421,7 @@
         "Almarai",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "x-height": "reasonable",
             "l-shape": "helvetica",
@@ -453,7 +454,7 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "x-height": "reasonable",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "ij-dot-shape": "round"
         }
@@ -465,7 +466,7 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "x-height": "reasonable",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "ij-dot-shape": "round"
         }
@@ -486,7 +487,7 @@
         "Alumni Sans",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "x-height": "neutra",
             "l-shape": "helvetica",
@@ -531,7 +532,7 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "x-height": "reasonable",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round"
         }
@@ -543,7 +544,7 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "x-height": "reasonable",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round"
         }
@@ -554,7 +555,7 @@
             "e-angle": "~vertical",
             "g-shape": "modern (single story)",
             "x-height": "reasonable",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "a-shape": "single story",
             "ij-dot-shape": "round"
@@ -688,10 +689,11 @@
         {
             "e-angle": "~vertical",
             "g-shape": "classical (double story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "a-shape": "double story",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -699,10 +701,11 @@
         {
             "e-angle": "horizontal",
             "g-shape": "modern (single story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "a-shape": "double story",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -710,10 +713,11 @@
         {
             "e-angle": "horizontal",
             "g-shape": "modern (single story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "l-shape": "helvetica",
             "a-shape": "double story",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -721,10 +725,11 @@
         {
             "e-angle": "angled",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "akkurat",
             "a-shape": "double story extensive tail",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -732,10 +737,11 @@
         {
             "e-angle": "~horizontal",
             "g-shape": "modern (single story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "l-shape": "helvetica",
             "a-shape": "double story",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -743,10 +749,11 @@
         {
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story extensive tail",
             "l-shape": "helvetica",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -754,10 +761,11 @@
         {
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story extensive tail",
             "l-shape": "helvetica",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -765,10 +773,11 @@
         {
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story extensive tail",
             "l-shape": "helvetica",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -785,10 +794,11 @@
         {
             "e-angle": "~vertical",
             "g-shape": "modern (single story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -796,10 +806,11 @@
         {
             "e-angle": "angled",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story extensive tail",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -807,10 +818,11 @@
         {
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -820,7 +832,8 @@
             "g-shape": "classical (double story)",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "other"
+            "ij-dot-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -828,10 +841,11 @@
         {
             "e-angle": "~vertical",
             "g-shape": "classical (double story)",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "other"
+            "ij-dot-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -853,7 +867,8 @@
             "g-shape": "classical (double story)",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -869,7 +884,8 @@
             "g-shape": "classical (double story)",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "other"
+            "ij-dot-shape": "other",
+            "Kk-shape": "other"
         }
     ],
     [
@@ -879,7 +895,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "other"
+            "ij-dot-shape": "other",
+            "Kk-shape": "other"
         }
     ],
     [
@@ -889,7 +906,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -929,7 +947,8 @@
             "g-shape": "classical (double story)",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -981,7 +1000,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "Kk-shape": "univers"
         }
     ],
     [
@@ -1041,7 +1061,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "akkurat",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1081,7 +1102,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1091,7 +1113,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1101,7 +1124,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1117,7 +1141,8 @@
             "g-shape": "classical (double story)",
             "a-shape": "double story extensive tail",
             "l-shape": "akkurat",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "univers"
         }
     ],
     [
@@ -1145,7 +1170,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "double story",
             "l-shape": "other",
-            "ij-dot-shape": "other"
+            "ij-dot-shape": "other",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1164,7 +1190,8 @@
             "M-tip": "baseline",
             "g-shape": "modern (single story)",
             "l-shape": "other",
-            "ij-dot-shape": "other"
+            "ij-dot-shape": "other",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1175,7 +1202,8 @@
             "g-shape": "modern (single story)",
             "a-shape": "single story",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -1382,7 +1410,7 @@
         "Carrois Gothic SC",
         {
             "l-shape": "helvetica",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "ij-dot-shape": "other"
         }
@@ -1729,7 +1757,7 @@
     [
         "Englebert",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -1739,7 +1767,7 @@
     [
         "Epilogue",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -1769,7 +1797,7 @@
     [
         "Fahkwang",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
@@ -1791,7 +1819,7 @@
     [
         "Farro",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~vertical",
             "x-height": "neutra",
             "g-shape": "modern (single story)",
@@ -1802,7 +1830,7 @@
     [
         "Federo",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "vertical",
             "x-height": "neutra",
             "g-shape": "modern (single story)",
@@ -1813,7 +1841,7 @@
     [
         "Figtree",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "modern (single story)",
@@ -1841,7 +1869,7 @@
     [
         "Fira Sans Condensed",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "x-height": "reasonable",
             "M-stems": "angled",
@@ -1853,7 +1881,7 @@
     [
         "Fira Sans Extra Condensed",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
@@ -1864,7 +1892,7 @@
     [
         "Fira Sans",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
@@ -1876,7 +1904,7 @@
     [
         "Fjalla One",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "horizontal",
             "M-tip": "above",
             "g-shape": "modern (single story)",
@@ -1887,7 +1915,7 @@
     [
         "Fragment Mono",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "M-tip": "above",
             "g-shape": "modern (single story)",
@@ -1898,7 +1926,7 @@
     [
         "Francois One",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "baseline",
             "g-shape": "classical (double story)",
@@ -1909,7 +1937,7 @@
     [
         "Fredoka",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "above",
             "g-shape": "modern (single story)",
@@ -1920,7 +1948,7 @@
     [
         "Fresca",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "baseline",
             "g-shape": "modern (single story)",
@@ -1931,7 +1959,7 @@
     [
         "GFS Neohellenic",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "R-shape": "curved",
             "g-shape": "modern (single story)",
@@ -1942,7 +1970,7 @@
     [
         "Gafata",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~vertical",
             "M-tip": "above",
             "g-shape": "classical (double story)",
@@ -1953,7 +1981,7 @@
     [
         "Galdeano",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "M-tip": "above",
             "M-stems": "angled",
@@ -1965,7 +1993,7 @@
     [
         "Gantari",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "baseline",
             "M-stems": "parallel",
@@ -1977,7 +2005,7 @@
     [
         "Gasoek One",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "~horizontal",
             "M-tip": "baseline",
             "M-stems": "parallel",
@@ -1989,7 +2017,7 @@
     [
         "Gayathri",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "M-tip": "baseline",
             "M-stems": "parallel",
@@ -2013,7 +2041,7 @@
     [
         "Genos",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "vertical",
             "M-tip": "baseline",
             "M-stems": "parallel",
@@ -2025,7 +2053,7 @@
     [
         "Geo",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "vertical",
             "M-tip": "above",
             "M-stems": "parallel",
@@ -2037,7 +2065,7 @@
     [
         "Geologica",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "above",
             "M-stems": "parallel",
@@ -2050,7 +2078,7 @@
     [
         "Georama",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~vertical",
             "M-stems": "parallel",
             "R-shape": "curved",
@@ -2063,7 +2091,7 @@
         "Gidugu",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "R-shape": "straight",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -2086,7 +2114,7 @@
         "Golos Text",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "R-shape": "straight",
             "M-tip": "above",
             "g-shape": "modern (single story)",
@@ -2098,7 +2126,7 @@
         "Gothic A1",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -2109,7 +2137,7 @@
         "Gotu",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -2120,7 +2148,7 @@
         "Gowun Dodum",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
@@ -2131,7 +2159,7 @@
         "Gruppo",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -2142,7 +2170,7 @@
         "Gudea",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -2153,7 +2181,7 @@
         "Hammersmith One",
         {
             "e-angle": "vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
@@ -2165,7 +2193,7 @@
         "Hanken Grotesk",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
@@ -2177,7 +2205,7 @@
         "Harmattan",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
             "l-shape": "helvetica",
@@ -2188,7 +2216,7 @@
         "Hedvig Letters Sans",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2198,7 +2226,7 @@
         "Heebo",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2208,7 +2236,7 @@
         "Hermeneus One",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round"
@@ -2218,7 +2246,7 @@
         "Hind Colombo",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2228,7 +2256,7 @@
         "Hind Guntur",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2238,7 +2266,7 @@
         "Hind Jalandhar",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2248,7 +2276,7 @@
         "Hind Kochi",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2258,7 +2286,7 @@
         "Hind Madurai",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2268,7 +2296,7 @@
         "Hind Mysuru",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2278,7 +2306,7 @@
         "Hind Siliguri",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2288,7 +2316,7 @@
         "Hind Vadodara",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2298,7 +2326,7 @@
         "Hind",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2308,7 +2336,7 @@
         "Homenaje",
         {
             "e-angle": "vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square"
@@ -2318,7 +2346,7 @@
         "Hubballi",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2328,7 +2356,7 @@
         "IBM Plex Sans Arabic",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2338,7 +2366,7 @@
         "IBM Plex Sans Condensed",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2348,7 +2376,7 @@
         "IBM Plex Sans Devanagari",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2358,7 +2386,7 @@
         "IBM Plex Sans Hebrew",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2368,7 +2396,7 @@
         "IBM Plex Sans JP",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2378,7 +2406,7 @@
         "IBM Plex Sans KR",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2388,7 +2416,7 @@
         "IBM Plex Sans Thai Looped",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2398,7 +2426,7 @@
         "IBM Plex Sans Thai",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2408,7 +2436,7 @@
         "IBM Plex Sans",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2418,7 +2446,7 @@
         "Imprima",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2428,7 +2456,7 @@
         "Inclusive Sans",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2438,7 +2466,7 @@
         "Inconsolata",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round"
@@ -2448,7 +2476,7 @@
         "Inder",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round"
@@ -2458,7 +2486,7 @@
         "Inria Sans",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square"
@@ -2468,7 +2496,7 @@
         "Instrument Sans",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square"
@@ -2478,7 +2506,7 @@
         "Inter Tight",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2488,7 +2516,7 @@
         "Inter",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2498,7 +2526,7 @@
         "Istok Web",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square"
@@ -2508,7 +2536,7 @@
         "Jaldi",
         {
             "e-angle": "angled",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square"
@@ -2518,7 +2546,7 @@
         "Jockey One",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square"
@@ -2528,7 +2556,7 @@
         "Josefin Sans",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -2538,7 +2566,7 @@
         "Jost",
         {
             "e-angle": "angled",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round"
@@ -3792,7 +3820,7 @@
         "Paprika",
         {
             "x-height": "reasonable",
-            "Kk-shape": "helvetica/grotesk"
+            "Kk-shape": "helvetica"
         }
     ],
     [
@@ -3812,7 +3840,7 @@
     [
         "Pathway Extreme",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -3822,7 +3850,7 @@
     [
         "Pathway Gothic One",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -3841,7 +3869,7 @@
     [
         "Pavanam",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~horizontal",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -3861,7 +3889,7 @@
     [
         "Philosopher",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "g-shape": "classical (double story)",
             "l-shape": "other",
@@ -3871,7 +3899,7 @@
     [
         "Play",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "vertical",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -3881,7 +3909,7 @@
     [
         "Plus Jakarta Sans",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -3891,7 +3919,7 @@
     [
         "Pontano Sans",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -3901,7 +3929,7 @@
     [
         "Poppins",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "horizontal",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
@@ -3911,7 +3939,7 @@
     [
         "Port Lligat Sans",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -3921,7 +3949,7 @@
     [
         "Pragati Narrow",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -3931,7 +3959,7 @@
     [
         "Preahvihear",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~horizontal",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
@@ -3945,14 +3973,14 @@
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
             "l-shape": "akkurat",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "ij-dot-shape": "round"
         }
     ],
     [
         "Proza Libre",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "vertical",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
@@ -3962,7 +3990,7 @@
     [
         "Public Sans",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
@@ -3972,7 +4000,7 @@
     [
         "Puritan",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",

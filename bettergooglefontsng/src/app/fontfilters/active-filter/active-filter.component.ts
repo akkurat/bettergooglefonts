@@ -11,7 +11,7 @@ import { NgComponentOutlet } from '@angular/common';
 @Component({
   selector: 'app-active-filter',
   standalone: true,
-  imports: [MatInputModule, MatSelectModule, FormsModule, ReactiveFormsModule,  NgComponentOutlet, MatSliderModule],
+  imports: [MatInputModule, MatSelectModule, FormsModule, ReactiveFormsModule,  NgComponentOutlet, MatSliderModule, MatIconModule],
   templateUrl: './active-filter.component.html',
   styleUrl: './active-filter.component.scss'
 })
