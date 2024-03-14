@@ -13,12 +13,14 @@ export const fontParamsSans = {
   "l-shape": { a: ["helvetica", "akkurat", "mono", "other"], s: "l" },
   "ij-dot-shape": { a: ["square", "round", "other"], s: "ij" },
   "Kk-shape": { a: ["helvetica", "univers", "other"], s: "K k" },
-  "a-shape": { a: ["double story", "double story extensive tail", "single story"], s: "a" },
-  "G-shape": { a: ["Helvetica", "Univers"], s: "G" },
+  "a-shape": { a: ["double story", "double story extensive tail", "single story", "other"], s: "a" },
+  "G-shape": { a: ["Helvetica", "Univers", "Other"], s: "G" },
   "R-shape": { a: ["curved", "straight"], s: "R" },
   "M-tip": { a: ["baseline", "above"], s: "M" },
   "M-stems": { a: ["parallel", "angled"], s: "M" },
   "W-tip": { a: ["one tip", "crossed", "other"], s: "W" },
+  "W-tip-level": { a: ["capheight", "below", "other"], s: "W" },
+  "AMW-joints": { a: ["flat", "sharp", "other"], s: "WAM"},
   "x-height": { a: ["neutra", "reasonable"], s: "EARae" },
 
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.458334mm"
+   height="26.458334mm"
+   viewBox="0 0 26.458334 26.458334"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="a-shape-double story extensive tail.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.3222004"
+     inkscape:cx="50.167935"
+     inkscape:cy="131.34094"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="42.133591"
+       y="45.848281"
+       width="16.552527"
+       height="18.44821"
+       id="rect3" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:4px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;stroke-width:7.55906;stroke-linejoin:bevel;paint-order:markers stroke fill" />
+    <path
+       d="m 20.713724,20.698539 v -1.912888 c 0,0 -0.394723,0.09109 -0.667992,0.09109 -0.516176,0 -0.850173,-0.212543 -0.850173,-1.032353 V 10.40538 c 0,-0.8805359 -0.151816,-1.6699817 -0.455449,-2.3683376 -0.728719,-1.6699815 -2.429064,-2.9452401 -5.404668,-2.9452401 -1.882524,0 -3.7043222,0.5465394 -4.7366744,1.6396182 -0.7894458,0.8198091 -1.3056219,1.821798 -1.3359852,3.2185098 h 2.5201539 c 0,-0.7590825 0.2732697,-1.3663485 0.7590827,-1.8521613 0.516176,-0.5161761 1.396712,-0.910899 2.793423,-0.910899 1.244896,0 2.003978,0.303633 2.520154,0.7894458 0.698356,0.6376293 0.789446,1.5788916 0.789446,2.3379742 v 1.123442 l -4.675948,0.27327 c -4.1901355,0.242906 -5.4653942,2.823787 -5.4653942,4.797401 0,2.368338 1.7610715,4.736675 5.2832142,4.736675 2.155794,0 4.068682,-0.971626 4.949218,-2.520154 h 0.06073 c 0,1.305622 0.850172,2.337974 2.216521,2.337974 0.637629,0 1.153805,-0.09109 1.700344,-0.364359 z m -4.068682,-6.34593 c 0,1.275258 -0.394723,2.550517 -1.305622,3.491779 -0.819809,0.850173 -1.973614,1.244896 -3.157783,1.244896 -2.1861576,0 -3.03633,-1.275259 -3.03633,-2.641607 0,-1.943252 1.821798,-2.671971 3.370326,-2.763061 l 4.129409,-0.242906 z"
+       id="text4"
+       style="font-size:30.3633px;line-height:0.8;font-family:'Akkurat Pro';-inkscape-font-specification:'Akkurat Pro';text-align:center;letter-spacing:8.09686px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="a" />
+  </g>
+</svg>

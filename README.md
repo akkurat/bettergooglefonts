@@ -53,11 +53,12 @@ ng serve
 
 # Roadmap
 ## Bugish
-* Alignment of filters: Some sort of grouping the delete buttons with the filters would be helpful
+* json files need a file hash when being modified, otherwise browser caching won't relaod the file
 
 
 ## Reasonable TODOs
 * number of fonts with this filter (trivial, lazyloading is only in dom, in js the array is already complete, just display ```.length```)
+  * part that is less trivial (but still possible) is showing number of results beforehand
 * Checkbox to in- or exclude fonts without the respective axis availabe
 * Map standard axis to discrete values (e.g. weight, width, slant/ italic angle)
 * Detailview of font with something like this [https://www.axis-praxis.org/specimens/__DEFAULT__] -> Quickwin: Link to google fonts for now
