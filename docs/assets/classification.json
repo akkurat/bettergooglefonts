@@ -6,10 +6,12 @@
             "x-height": "reasonable",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "a-shape": "single story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -29,7 +31,8 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
             "G-shape": "Univers",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -42,7 +45,9 @@
             "Kk-shape": "univers/frutiger (symmetric)",
             "a-shape": "double story",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -76,7 +81,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -89,7 +98,9 @@
             "Kk-shape": "univers/frutiger (symmetric)",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -102,7 +113,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -123,7 +136,9 @@
             "x-height": "neutra",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -136,7 +151,9 @@
             "x-height": "neutra",
             "a-shape": "single story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -156,7 +173,9 @@
             "x-height": "neutra",
             "a-shape": "double story",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -175,7 +194,9 @@
             "x-height": "neutra",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -208,7 +229,9 @@
             "x-height": "reasonable",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -229,7 +252,9 @@
             "x-height": "reasonable",
             "a-shape": "single story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -242,7 +267,9 @@
             "x-height": "reasonable",
             "a-shape": "double story",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -255,7 +282,9 @@
             "x-height": "reasonable",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -268,7 +297,9 @@
             "x-height": "reasonable",
             "a-shape": "double story",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -281,7 +312,9 @@
             "x-height": "reasonable",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -293,7 +326,9 @@
             "a-shape": "double story extensive tail",
             "g-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "other"
+            "W-tip": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -307,7 +342,9 @@
             "x-height": "reasonable",
             "a-shape": "double story extensive tail",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -342,7 +379,9 @@
             "x-height": "reasonable",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -405,7 +444,9 @@
             "x-height": "reasonable",
             "a-shape": "double story extensive tail",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -422,7 +463,8 @@
             "M-stems": "parallel",
             "W-tip": "on tip",
             "l-shape": "akkurat",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -447,7 +489,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story extensive tail",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -478,7 +522,9 @@
             "Kk-shape": "univers/frutiger (symmetric)",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -491,7 +537,9 @@
             "Kk-shape": "univers/frutiger (symmetric)",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -504,7 +552,9 @@
             "Kk-shape": "other",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -517,7 +567,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -536,7 +588,9 @@
             "Kk-shape": "other",
             "a-shape": "single story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -561,7 +615,9 @@
             "Kk-shape": "helvetica/grotesk",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -574,7 +630,9 @@
             "Kk-shape": "helvetica/grotesk",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -587,7 +645,9 @@
             "l-shape": "helvetica",
             "a-shape": "single story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -600,7 +660,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -613,7 +675,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -625,7 +689,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -637,7 +703,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -649,7 +717,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -661,7 +731,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -673,7 +745,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -685,7 +759,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -697,7 +773,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -709,7 +787,9 @@
             "l-shape": "helvetica",
             "a-shape": "double story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -721,7 +801,9 @@
             "l-shape": "helvetica",
             "a-shape": "single story",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -734,7 +816,8 @@
             "a-shape": "double story",
             "ij-dot-shape": "round",
             "G-shape": "Univers",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -747,7 +830,8 @@
             "a-shape": "double story",
             "ij-dot-shape": "square",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -760,7 +844,8 @@
             "a-shape": "double story",
             "ij-dot-shape": "square",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -773,7 +858,8 @@
             "a-shape": "double story extensive tail",
             "ij-dot-shape": "round",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -786,7 +872,8 @@
             "a-shape": "double story",
             "ij-dot-shape": "square",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -799,7 +886,8 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -812,7 +900,8 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -825,7 +914,8 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -835,7 +925,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -848,7 +942,8 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "G-shape": "Univers",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -861,7 +956,8 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -874,7 +970,8 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "G-shape": "Helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -886,7 +983,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "other",
             "G-shape": "Univers",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -899,7 +998,8 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "other",
             "G-shape": "Univers",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -923,7 +1023,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
             "G-shape": "Univers",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -941,7 +1043,9 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "other",
             "Kk-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -953,7 +1057,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "other",
             "Kk-shape": "other",
-            "W-tip": "other"
+            "W-tip": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -965,7 +1071,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1007,7 +1115,9 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1061,7 +1171,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
             "Kk-shape": "univers/frutiger (symmetric)",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1072,7 +1184,10 @@
             "a-shape": "double story",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1083,7 +1198,11 @@
             "R-shape": "curved",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1125,7 +1244,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1167,7 +1288,9 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1179,7 +1302,9 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1191,7 +1316,9 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1209,7 +1336,9 @@
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
             "Kk-shape": "univers/frutiger (symmetric)",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1239,7 +1368,9 @@
             "l-shape": "other",
             "ij-dot-shape": "other",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1250,7 +1381,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1261,7 +1395,10 @@
             "l-shape": "other",
             "ij-dot-shape": "other",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1274,7 +1411,9 @@
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
             "Kk-shape": "helvetica/grotesk",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1285,7 +1424,10 @@
             "a-shape": "double story extensive tail",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1296,7 +1438,10 @@
             "a-shape": "double story",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1307,7 +1452,10 @@
             "a-shape": "double story",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1318,7 +1466,11 @@
             "R-shape": "straight",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1329,7 +1481,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1340,7 +1496,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1351,7 +1511,11 @@
             "R-shape": "curved",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1362,7 +1526,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1373,7 +1541,11 @@
             "R-shape": "straight",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1384,7 +1556,11 @@
             "R-shape": "straight",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1395,7 +1571,11 @@
             "R-shape": "straight",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1406,7 +1586,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1417,7 +1601,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1428,7 +1616,11 @@
             "R-shape": "straight",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1439,7 +1631,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1450,7 +1646,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1461,7 +1661,11 @@
             "R-shape": "curved",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1472,7 +1676,11 @@
             "R-shape": "curved",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1483,7 +1691,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1494,7 +1706,11 @@
             "R-shape": "straight",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1504,7 +1720,10 @@
             "Kk-shape": "univers/frutiger (symmetric)",
             "g-shape": "modern (single story)",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "other",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1514,7 +1733,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1524,7 +1747,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1534,7 +1761,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1544,7 +1775,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1554,7 +1789,11 @@
             "l-shape": "helvetica",
             "g-shape": "modern (single story)",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1564,7 +1803,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1574,7 +1817,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1584,7 +1831,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1594,7 +1845,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1604,7 +1859,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1614,7 +1873,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "single story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1624,7 +1887,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1635,7 +1902,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1645,7 +1916,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1655,7 +1930,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1665,7 +1944,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1675,7 +1958,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1686,7 +1973,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1697,7 +1988,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1708,7 +2003,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1719,7 +2018,11 @@
             "l-shape": "helvetica",
             "g-shape": "modern (single story)",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "single story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1730,7 +2033,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1741,7 +2048,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1752,7 +2063,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1763,7 +2078,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1774,7 +2093,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1785,7 +2108,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1796,7 +2123,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1806,7 +2137,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1817,7 +2152,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1827,7 +2166,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1837,7 +2180,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1848,7 +2195,10 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1858,7 +2208,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1869,7 +2223,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -1879,29 +2236,39 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
         "Englebert",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "Epilogue",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1912,7 +2279,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -1923,19 +2293,25 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Fahkwang",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -1947,49 +2323,61 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Farro",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~vertical",
             "x-height": "neutra",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Federo",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "vertical",
             "x-height": "neutra",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
         "Figtree",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Finlandica",
         {
-            "Kk-shape": "other",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "quark",
@@ -2000,181 +2388,223 @@
             "M-tip": "quark",
             "M-stems": "parallel",
             "W-tip": "quark",
-            "ij-dot-shape": "square"
+            "ij-dot-shape": "square",
+            "W-tip-level": "below"
         }
     ],
     [
         "Fira Sans Condensed",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "x-height": "reasonable",
             "M-stems": "angled",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Fira Sans Extra Condensed",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Fira Sans",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "x-height": "reasonable",
             "g-shape": "classical (double story)",
             "G-shape": "Helvetica",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight"
         }
     ],
     [
         "Fjalla One",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "horizontal",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Fragment Mono",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Francois One",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "baseline",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Fredoka",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Fresca",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "other",
             "e-angle": "angled",
             "M-tip": "baseline",
             "g-shape": "modern (single story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "GFS Neohellenic",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "other",
             "e-angle": "angled",
             "R-shape": "curved",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
         "Gafata",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~vertical",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "Galdeano",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "angled",
             "M-tip": "above",
             "M-stems": "angled",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "other",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
         "Gantari",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "baseline",
             "M-stems": "parallel",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gasoek One",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "~horizontal",
             "M-tip": "baseline",
             "M-stems": "parallel",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gayathri",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "horizontal",
             "M-tip": "baseline",
             "M-stems": "parallel",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2187,39 +2617,48 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Genos",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "vertical",
             "M-tip": "baseline",
             "M-stems": "parallel",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Geo",
         {
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "e-angle": "vertical",
             "M-tip": "above",
             "M-stems": "parallel",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Geologica",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "angled",
             "M-tip": "above",
             "M-stems": "parallel",
@@ -2227,32 +2666,41 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Georama",
         {
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "e-angle": "~vertical",
             "M-stems": "parallel",
             "R-shape": "curved",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gidugu",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "R-shape": "straight",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -2265,513 +2713,646 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Golos Text",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "R-shape": "straight",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gothic A1",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Gotu",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "other",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gowun Dodum",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gruppo",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Gudea",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hammersmith One",
         {
             "e-angle": "vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
             "l-shape": "helvetica",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hanken Grotesk",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "M-tip": "above",
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Harmattan",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "classical (double story)",
             "x-height": "reasonable",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hedvig Letters Sans",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Heebo",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hermeneus One",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
         "Hind Colombo",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Guntur",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Jalandhar",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Kochi",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Madurai",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Mysuru",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Siliguri",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind Vadodara",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hind",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Homenaje",
         {
             "e-angle": "vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "Hubballi",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "IBM Plex Sans Arabic",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans Condensed",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans Devanagari",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans Hebrew",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans JP",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans KR",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans Thai Looped",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans Thai",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "IBM Plex Sans",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Imprima",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "other",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Inclusive Sans",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
         "Inconsolata",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
         "Inder",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "single story",
+            "G-shape": "Other"
         }
     ],
     [
         "Inria Sans",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
         "Instrument Sans",
         {
             "e-angle": "horizontal",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
         "Inter Tight",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
         "Inter",
         {
             "e-angle": "~horizontal",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
         "Istok Web",
         {
             "e-angle": "angled",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Jaldi",
         {
             "e-angle": "angled",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Jockey One",
         {
             "e-angle": "vertical",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
         "Josefin Sans",
         {
             "e-angle": "~vertical",
-            "Kk-shape": "helvetica/grotesk",
+            "Kk-shape": "helvetica",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
         "Jost",
         {
             "e-angle": "angled",
-            "Kk-shape": "univers/frutiger (symmetric)",
+            "Kk-shape": "univers",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2781,7 +3362,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "single story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2790,7 +3375,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -2800,7 +3389,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2810,7 +3403,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2820,7 +3417,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2830,7 +3431,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -2840,7 +3445,8 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "double story extensive tail"
         }
     ],
     [
@@ -2850,7 +3456,8 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "double story extensive tail"
         }
     ],
     [
@@ -2860,7 +3467,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -2870,7 +3481,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2880,7 +3495,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -2890,7 +3509,8 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other"
         }
     ],
     [
@@ -2900,7 +3520,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2910,7 +3534,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -2920,7 +3548,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2930,7 +3562,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2940,7 +3576,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2950,7 +3590,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2960,7 +3604,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2970,7 +3618,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "crossed"
+            "W-tip": "crossed",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2980,7 +3632,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -2990,7 +3646,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3000,7 +3660,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3010,7 +3674,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3020,7 +3688,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3030,7 +3702,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3040,7 +3716,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3050,7 +3730,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3061,7 +3745,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3072,7 +3759,10 @@
             "a-shape": "double story",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3083,7 +3773,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3094,7 +3787,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3105,7 +3801,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3116,7 +3815,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3128,7 +3830,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3140,7 +3845,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3152,7 +3860,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3163,7 +3874,10 @@
             "a-shape": "single story",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3175,7 +3889,10 @@
             "a-shape": "double story",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3186,7 +3903,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3216,7 +3937,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3226,7 +3951,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3236,7 +3965,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3246,7 +3979,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3256,7 +3993,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3266,7 +4007,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3276,7 +4021,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3286,7 +4035,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3296,7 +4049,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3306,7 +4063,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3316,7 +4077,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3326,7 +4091,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3336,7 +4105,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3346,7 +4119,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3356,7 +4133,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3366,7 +4147,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3376,7 +4161,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3386,7 +4175,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3396,7 +4189,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3406,7 +4203,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3416,7 +4217,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3426,7 +4231,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3436,7 +4245,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3446,7 +4259,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3456,7 +4273,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3466,7 +4287,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3476,7 +4301,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "single story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3486,7 +4315,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3496,7 +4329,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3506,7 +4343,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3516,7 +4357,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3526,7 +4371,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3536,7 +4385,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3546,7 +4399,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3555,7 +4412,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3565,7 +4426,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3575,7 +4440,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3585,7 +4454,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3595,7 +4468,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3605,7 +4482,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3615,7 +4496,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3625,7 +4510,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3635,7 +4524,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3645,7 +4538,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "single story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3655,7 +4552,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3665,7 +4566,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -3675,7 +4580,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3685,7 +4594,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3695,7 +4608,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3705,7 +4622,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "a-shape": "double story extensive tail",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3715,7 +4636,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -3725,7 +4650,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "a-shape": "double story",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -3734,7 +4663,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "other",
+            "W-tip-level": "capheight",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4020,7 +4953,8 @@
             "e-angle": "vertical",
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight"
         }
     ],
     [
@@ -4030,7 +4964,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4040,7 +4978,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4050,7 +4992,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4059,7 +5005,9 @@
             "e-angle": "angled",
             "g-shape": "classical (double story)",
             "l-shape": "other",
-            "ij-dot-shape": "round"
+            "ij-dot-shape": "round",
+            "Kk-shape": "other",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4069,7 +5017,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4079,7 +5031,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4089,7 +5045,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4099,7 +5059,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4109,7 +5073,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4119,7 +5087,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4129,7 +5101,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4139,7 +5115,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4150,7 +5130,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4161,7 +5144,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4171,7 +5157,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4182,7 +5172,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4193,7 +5186,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4204,7 +5200,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4214,7 +5213,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4224,7 +5227,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4234,7 +5241,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4272,7 +5283,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4283,7 +5297,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4293,7 +5310,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4304,7 +5324,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4315,7 +5338,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "a-shape": "single story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4326,7 +5352,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4337,7 +5366,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4348,7 +5380,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4359,7 +5394,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4370,7 +5408,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4381,7 +5422,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4392,7 +5436,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4403,7 +5450,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4415,7 +5465,10 @@
             "l-shape": "akkurat",
             "Kk-shape": "univers/frutiger (symmetric)",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4426,7 +5479,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4437,7 +5493,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4448,7 +5507,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4459,7 +5521,10 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4469,7 +5534,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4479,7 +5548,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4489,7 +5562,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4499,7 +5576,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4509,7 +5590,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4519,7 +5604,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4529,7 +5618,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4539,7 +5632,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "crossed"
+            "W-tip": "crossed",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4549,7 +5646,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4559,7 +5660,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4569,7 +5674,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4579,7 +5688,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4589,7 +5702,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4599,7 +5716,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4609,7 +5730,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4619,7 +5744,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4629,7 +5758,8 @@
             "g-shape": "classical (double story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other"
         }
     ],
     [
@@ -4639,7 +5769,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4649,7 +5783,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4659,7 +5797,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4669,7 +5811,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "crossed"
+            "W-tip": "crossed",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4679,7 +5825,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4689,7 +5839,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4699,7 +5853,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4709,7 +5867,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4719,7 +5881,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4729,7 +5895,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4738,7 +5908,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4748,7 +5922,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4758,7 +5936,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4768,7 +5950,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4778,7 +5964,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4788,7 +5978,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4798,7 +5992,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4808,7 +6006,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4818,7 +6020,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4828,7 +6034,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4838,7 +6048,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4848,7 +6062,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4858,7 +6076,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4868,7 +6090,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4878,7 +6104,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4888,7 +6118,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4898,7 +6132,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4908,7 +6146,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4918,7 +6160,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4928,7 +6174,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4938,7 +6188,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4948,7 +6202,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -4958,7 +6216,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4968,7 +6230,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -4978,7 +6244,10 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail"
         }
     ],
     [
@@ -4988,7 +6257,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -4998,7 +6271,8 @@
             "g-shape": "classical (double story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "a-shape": "other"
         }
     ],
     [
@@ -5008,7 +6282,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5018,7 +6296,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5028,7 +6310,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5038,7 +6324,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5048,7 +6338,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5058,7 +6352,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5068,7 +6366,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5078,7 +6380,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5088,7 +6394,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5098,7 +6408,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5108,7 +6422,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5118,7 +6436,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5128,7 +6450,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5138,7 +6464,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5148,7 +6478,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5158,7 +6492,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5168,7 +6506,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5178,7 +6520,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5188,7 +6534,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5198,7 +6548,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5208,7 +6562,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5218,7 +6576,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5228,7 +6590,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5238,7 +6604,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5248,7 +6618,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5258,7 +6632,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5268,7 +6646,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5278,7 +6660,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5288,7 +6674,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5298,7 +6688,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5308,7 +6702,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5318,7 +6716,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5328,7 +6730,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5338,7 +6744,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5348,7 +6758,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5358,7 +6772,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5368,7 +6786,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5378,7 +6800,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5388,7 +6814,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5398,7 +6828,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5408,7 +6842,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5418,7 +6856,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5428,7 +6870,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5438,7 +6884,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5448,7 +6898,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5458,7 +6912,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "a-shape": "double story",
+            "W-tip-level": "below",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5468,7 +6926,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5478,7 +6940,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5488,7 +6954,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5498,7 +6968,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5508,7 +6982,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5518,7 +6996,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5527,7 +7009,11 @@
             "e-angle": "angled",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5537,7 +7023,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "mono",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5547,7 +7037,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5557,7 +7051,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5567,7 +7065,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5577,7 +7079,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5587,7 +7093,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5597,7 +7107,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5607,7 +7121,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5617,7 +7135,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Helvetica"
         }
     ],
     [
@@ -5627,7 +7149,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5637,7 +7163,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5647,7 +7177,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5657,7 +7191,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "other",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5667,7 +7205,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5677,7 +7219,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5687,7 +7233,11 @@
             "g-shape": "other",
             "l-shape": "other",
             "ij-dot-shape": "other",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "other",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5697,7 +7247,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5707,7 +7261,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "single story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5717,7 +7275,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "square",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5727,7 +7289,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5737,7 +7303,11 @@
             "g-shape": "classical (double story)",
             "l-shape": "other",
             "ij-dot-shape": "round",
-            "W-tip": "other"
+            "W-tip": "other",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Other"
         }
     ],
     [
@@ -5747,7 +7317,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5757,7 +7331,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5767,7 +7345,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "akkurat",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "helvetica",
+            "W-tip-level": "below",
+            "a-shape": "double story",
+            "G-shape": "Univers"
         }
     ],
     [
@@ -5777,7 +7359,11 @@
             "g-shape": "modern (single story)",
             "l-shape": "helvetica",
             "ij-dot-shape": "round",
-            "W-tip": "one tip"
+            "W-tip": "one tip",
+            "Kk-shape": "univers",
+            "W-tip-level": "capheight",
+            "a-shape": "double story extensive tail",
+            "G-shape": "Univers"
         }
     ]
 ]

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.458334mm"
+   height="26.458334mm"
+   viewBox="0 0 26.458334 26.458334"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="a-shape-double story.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.3222004"
+     inkscape:cx="50.167936"
+     inkscape:cy="131.34095"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="42.133591"
+       y="45.848281"
+       width="16.552527"
+       height="18.44821"
+       id="rect3" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:4px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;stroke-width:7.55906;stroke-linejoin:bevel;paint-order:markers stroke fill" />
+    <path
+       d="m 19.335834,20.410952 c -0.200688,-1.46216 -0.229358,-3.383037 -0.229358,-3.612395 l 0.114679,-6.8807521 c 0,-0.6594054 -0.02867,-1.3474806 -0.487386,-2.2075746 -0.774085,-1.4621598 -3.010329,-2.1215652 -5.103225,-2.1215652 -1.519499,0 -3.555055,0.3440376 -4.6445073,1.5481692 -0.8314242,0.9747732 -0.9174336,1.9782162 -1.003443,2.723631 h 2.6949613 c 0.02867,-0.573396 0.172019,-2.436933 2.89565,-2.436933 0.774084,0 1.949546,0.2293584 2.494272,0.9461034 0.516057,0.6307356 0.516057,1.4048202 0.516057,3.1823473 -0.831425,-0.05734 -1.261472,-0.08601 -1.949547,-0.08601 -1.146792,0 -3.440376,0.08601 -4.9885449,0.946103 -2.1215652,1.232802 -2.5229424,3.067669 -2.5229424,4.214461 0,2.379593 1.7775276,4.24313 5.0745543,4.24313 1.204132,0 3.153678,-0.229358 4.443819,-2.608951 0,0.745414 0.05734,1.43349 0.258028,2.150235 z m -2.7523,-6.995432 c -0.05734,2.006886 -0.08601,2.809641 -0.688076,3.784414 -0.659405,1.003443 -1.691518,1.548169 -3.067668,1.548169 -2.408263,0 -2.9816593,-1.576839 -2.9816593,-2.494272 0,-2.92432 4.0997813,-2.92432 5.1892333,-2.92432 0.659406,0 1.060783,0.02867 1.54817,0.08601 z"
+       id="text1"
+       style="font-size:28.6698px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:7.64526px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="a" />
+  </g>
+</svg>
