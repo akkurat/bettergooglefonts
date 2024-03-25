@@ -140,23 +140,76 @@
   },
   "Vox-ATypI": {
     "a": [
-      "humanist serif",
+      {
+        "a": "humanist serif",
+        "f": "Rosarivo",
+        "s": "iTh Wea"
+      },
       {
         "a": "geralde",
-        "f": "EB Garamond"
+        "f": "EB Garamond",
+        "s": "iTh Wea"
       },
-      "transitional",
-      "didone",
-      "mechanistic",
-      "grotesque",
-      "neo-grotesque",
-      "geometric",
-      "humanist sans",
-      "glyphic",
-      "script",
-      "graphic",
-      "blackletter",
-      "other"
+      {
+        "a": "transitional",
+        "f": "Newsreader",
+        "s": "iTh Wea"
+      },
+      {
+        "a": "didone",
+        "f": "Bodoni Moda",
+        "s": "HiWeas"
+      },
+      {
+        "a": "mechanistic",
+        "f": "Orelega One",
+        "s": "Wgnyi"
+      },
+      {
+        "a": "grotesque",
+        "f": "Shippori Antique",
+        "s": "aGQe"
+      },
+      {
+        "a": "neo-grotesque",
+        "f": "Hedvig Letters Sans",
+        "s": "GQae"
+      },
+      {
+        "a": "geometric",
+        "f": "Outfit",
+        "s": "eQaAqB"
+      },
+      {
+        "a": "humanist sans",
+        "f": "Ysabeau",
+        "s": "Vif Schea"
+      },
+      {
+        "a": "glyphic",
+        "f": "Cinzel Decorative",
+        "s": "TH OM"
+      },
+      {
+        "a": "script",
+        "f": "Bonheur Royale",
+        "s": "Hit"
+      },
+      {
+        "a": "graphic",
+        "f": "Bangers",
+        "s": "Grrrrr!! Harrharr!!! Hmpf! Hä??"
+      },
+      {
+        "a": "blackletter",
+        "f": "UnifrakturMaguntia",
+        "s": "Fnkfrt"
+      },
+      {
+        "a": "other",
+        "f": "Libre Barcode EAN13 Text",
+        "s": "76111003"
+      }
     ],
     "s": "ESaest",
     "c": ""
