@@ -56,6 +56,7 @@ ng serve
 * json files need a file hash when being modified, otherwise browser cache won't reload the file
 * move utility scripts to folder... or at least name them all with a prefix
 * document svg generation and manual copying
+* fontsize infinit scroll and custom text
 
 
 ## Reasonable TODOs
