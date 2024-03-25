@@ -7,14 +7,13 @@
             </app-searchable-filterlist>
         </li>
         <li *ngFor="let filter of activeFilters">
-
             <div class="bg-orange-300 rounded-lg flex flex-row flex-nowrap" [formGroup]="fg">
                 @if (filter.rendering == 'select') {
                 <app-select-filter [filter]="filter" [formControlName]="filter.title"></app-select-filter>
                 } @else if (filter.rendering == 'range') {
                 <app-range-filter class="pr-4 pl-4" [filter]="filter" [formControlName]="filter.title"></app-range-filter>
                 }
-                <button class="h-7 w-7 -m-2 rounded-full bg-cyan-300 hover:bg-cyan-200 "><mat-icon class="cursor-pointer" (click)="removeFilter(filter.title)">close</mat-icon></button>
+                <button class="h-7 w-7 -m-2 rounded-full bg-cyan-900 hover:bg-cyan-700 text-orange-50"><mat-icon class="cursor-pointer" (click)="removeFilter(filter.title)">close</mat-icon></button>
             </div>
         </li>
     </ul>

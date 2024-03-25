@@ -65,13 +65,6 @@ export class FontfiltersComponent implements OnInit {
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer
   ) {
-    this.availableFilters.push({
-      type: "type",
-      title: 'type',
-      caption: "Type",
-      rendering: 'select',
-      items: ["SANS_SERIF", "SERIF", "DISPLAY", "MONOSPACE", "HANDWRITING", "SLAB_SERIF"]
-    })
   }
   ngOnInit(): void {
 

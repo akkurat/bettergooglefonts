@@ -16,10 +16,11 @@
         <li (click)="model.toggle(item)"
             class="flex flex-col items-center m-4 
             rounded-sm border-4 border-transparent 
-            bg-orange-100 hover:bg-orange-50 hover:border-orange-200"
+            bg-orange-100 hover:bg-orange-50 hover:border-orange-200
+            text-cyan-900"
             [ngClass]="{'ring-4 ring-orange-300': model.isSelected(item)}">
-            <mat-icon class="w-32 h-32" [svgIcon]="filter.title + '-' + item"></mat-icon>
-            {{item}}
+            <mat-icon class="w-32 h-32 f-primary" [svgIcon]="filter.title + '-' + item"></mat-icon>
+            <span class="font-bold uppercase">{{item}}</span>
         </li>
         }
     </ul>

@@ -69,7 +69,7 @@ export class ClassifierComponent implements OnInit {
         const url = getTtfUrlForFirstFont(f)
         const css = generateFontCss({ name: f.meta.name, url })
         appendStyleTag(css)
-        this.fstyle = `font-family: "${f.meta.name}"`
+        this.fstyle = `font-family: "${f.meta.name}", Tofu`
         this.fontService.getFontBySkip({ idx: { $lt: f.idx } }, { sort: { idx: -1 } })
           .pipe(combineLatestWith(this.fontService.getFontBySkip({ idx: { $gt: f.idx } })))
           .subscribe(([p, n]) => {

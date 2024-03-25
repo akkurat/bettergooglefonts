@@ -14,6 +14,18 @@
     src: url('assets/Shantell_Sans/ShantellSans-VariableFont_BNCE,INFM,SPAC,wght.ttf');
 }
 
+@font-face {
+    font-family: "Adobe Blank";
+    src: url("https://raw.githubusercontent.com/google/fonts/main/ofl/adobeblank/AdobeBlank-Regular.ttf");
+}
+
+/* Display missing glyphs explicitly */
+@font-face {
+    font-family: Tofu;
+    src: url("data:font/ttf;base64,AAEAAAAKAIAAAwAgT1MvMmPgY1IAAAEoAAAAYGNtYXAALvz2AAABkAAAAGRnbHlmLTUfeQAAAfwAAAIaaGVhZCe/nsoAAACsAAAANmhoZWEJgAWAAAAA5AAAACRobXR4BbUASwAAAYgAAAAGbG9jYQENAAAAAAH0AAAABm1heHAABwC3AAABCAAAACBuYW1lDgElPAAABBgAAADccG9zdHBseXQAAAT0AAAAKwABAAAAAQAAFiMNcl8PPPUAAwXcAAAAAOG7K+oAAAAA4bsr6gCI/+IEqgQ9AAAABgACAAAAAAAAAAEAAARM/84AAAUtAIgAgwSqAAEAAAAAAAAAAAAAAAAAAAABAAEAAAACALYABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABAUtAZAABQAEA88DhAAAAHEDzwOEAAACDQBLAcIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAATk9ORQDAAAAAIARM/84AAARMADIAAAABAAAAAALuBBoAAAAgAAAFLQBLAIgAAAAAAAMAAAADAAAAHAADAAEAAAAcAAMACgAAADwABAAgAAAABAAEAAEAAAAB//8AAAAB//8AAAABAAAAAAANAAAAAAAoAAAAAAAAAAIAAAACAAD+DgAAAAEAAP4QABD//wAAAAEAAAAAAQ0AAAAEAIj/4gSqBD0AOgB5AKkAtQAAAQYHBgYHBhcWFxYWFxcHBgYHBgcGFxYXFhceAjI2Njc2NzYnJicmJicnNzY3NicmJicuAyMqAgUWFxYXFhYHBgcGBwYVFBcWFxYXFgcGBgcOAyMiLgInJiYnJjc2NzY3NjU0JyYnJicmNTQ3NjcyNjIyFgcGBwYVFBYWNzA3Njc2NzYyFxYXFhYHBgYHBgYHBgYVFTM1NDY3NjY3NjY3NicmJgMGBhcWFxY3NiYnJgG3RTU9VhASDQ0kCSEHBgoaLQwOAgMzJz87RAhIaHNoSAhrTWEEAg4MLRkKEDUXHRcVeVQNFi9kXD5oQQG2NyxoGQMBAg05GTYKCjYZOQwJDhBlQgsZMlxOT1wyGQtCZRAOCQw5GTYKChISTBwLSEFbCFh6elj4VCwHHx4BCQoLExYKJgorDwQBBAUTHhAcAw4KRQgLAxYNJR4EBAoQZTcVEgcHGB8VEwkYEwQ9Bxwfa0JGREA2DSYGBQkYRyQrLmBTPyckCQEBAQEBAQ5NYYsuKiRHGAkQNkVZWlN7FwQEAQFGBBc2cw88EU44GiAGAQEGIBo4TTU2QGEPAwMBAQEBAwMPYUA2NU04GiAGAQEGCwwyUiQqZ0hBBwEBuwpZDQIBDg0BFBMLEwYCAgspCyQLDxgeEB0FFCciGxQaIBEEGA0kMR8dHzY5/g8IIxYYBwkVEzIMCgAAAAAAAAYATgADAAEECQABAAgAAAADAAEECQACAA4ACAADAAEECQADAC4AFgADAAEECQAEABgARAADAAEECQAFABoAXAADAAEECQAGABgAdgBUAG8AZgB1AFIAZQBnAHUAbABhAHIAMQAuADAAMAAwADsATgBPAE4ARQA7AFQAbwBmAHUALQBSAGUAZwB1AGwAYQByAFQAbwBmAHUAIABSAGUAZwB1AGwAYQByAFYAZQByAHMAaQBvAG4AIAAxAC4AMAAwADAAVABvAGYAdQAtAFIAZQBnAHUAbABhAHIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAABAgR0b2Z1AA==");
+}
+
+
 @import '@angular/cdk/overlay-prebuilt.css';
 @tailwind base;
 @tailwind components;
@@ -22,6 +34,11 @@
 
 
 @layer base {
+
+    body {
+        font-family: 'Shantell Sans';
+    }
+
 
     a:hover {
         filter: brightness(1.5);
@@ -73,6 +90,8 @@ input[type=checkbox]:focus-visible::before {
         left: 2px;
         @apply bg-orange-400
     }
+
+
 }
 
 @layer components {
@@ -82,6 +101,12 @@ input[type=checkbox]:focus-visible::before {
         @apply bg-slate-200 font-bold py-2 px-3 rounded h-8 flex flex-row items-center;
     }
 
+    /* Use for buttons determined by inner size (e.g. an icon, image */
+    .btn-big {
+        @apply bg-slate-200 font-bold py-2 px-3 rounded flex flex-col items-center;
+    }
+
+    .btn-big:hover,
     .btn:hover {
         @apply bg-slate-100;
     }
@@ -95,4 +120,12 @@ input[type=checkbox]:focus-visible::before {
             "BNCE" -40,
             "INFM" 100
     }
+}
+
+.f-accent {
+    @apply fill-orange-400 mix-blend-multiply
+}
+
+.f-primary {
+    @apply fill-cyan-900 mix-blend-multiply
 }
