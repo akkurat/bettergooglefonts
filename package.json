@@ -12,9 +12,12 @@
     "csv-parse": "^5.5.3",
     "express": "^4.18.2",
     "glyphhanger": "^5.0.0",
-    "minimongo": "^6.18.1",
     "nodemon": "^3.1.0",
     "protobufjs": "^7.2.6",
     "protobufjs-textformat": "^1.1.1"
+  },
+  "devDependencies": {
+    "minimongo": "^6.18.2",
+    "text-to-svg": "^3.1.5"
   }
 }

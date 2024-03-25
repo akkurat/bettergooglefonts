@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 @Component({
     selector: 'app-fontpreview',
     templateUrl: './fontpreview.component.html',
-    styleUrls: ['./fontpreview.component.scss'],
     standalone: true,
     imports: [NgFor, RouterModule]
 })

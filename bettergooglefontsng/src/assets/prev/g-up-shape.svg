@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="100"
+   viewBox="0 0 200 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="g-up-shape.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.9639528"
+     inkscape:cx="117.87453"
+     inkscape:cy="83.759652"
+     inkscape:window-width="1800"
+     inkscape:window-height="1097"
+     inkscape:window-x="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="42.133591"
+       y="45.848282"
+       width="16.552526"
+       height="18.44821"
+       id="rect3" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:4px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;stroke-width:7.55906;stroke-linejoin:bevel;paint-order:markers stroke fill" />
+    <path
+       d="m 82.590995,78.813366 2.663514,9.482007 h 6.392366 V 48.236581 h -33.34682 v 8.523148 h 24.290969 q 0.212064,5.220424 -1.384908,9.801618 -1.598059,4.47467 -4.794258,7.883926 -3.089636,3.302716 -7.670824,5.220412 -4.581212,1.917775 -10.547418,1.917775 -6.392361,0 -11.293156,-2.450378 -4.794281,-2.556943 -8.096995,-6.712 -3.30271,-4.261572 -5.007338,-9.69507 -1.704634,-5.540047 -1.704634,-11.506252 0,-6.072745 1.491488,-11.825871 1.491483,-5.859663 4.581183,-10.334315 3.196195,-4.581195 8.09699,-7.351218 5.007371,-2.770023 11.932412,-2.770023 4.261573,0 7.990469,1.065406 3.835418,0.958862 6.818521,2.983102 2.983098,2.024241 5.007333,5.220429 2.024355,3.089641 2.770012,7.457755 h 10.121263 q -1.065488,-6.712076 -4.048591,-11.399808 -2.876561,-4.79427 -7.24468,-7.88391 -4.261572,-3.089641 -9.801614,-4.474651 -5.433498,-1.491538 -11.612795,-1.491538 -9.055824,0 -15.874345,3.409257 -6.712,3.30272 -11.293184,8.949305 -4.47464,5.646588 -6.818521,13.210881 -2.237227,7.457755 -2.237227,15.767824 0,7.457755 2.450373,14.382819 2.450373,6.925047 7.138133,12.252002 4.687732,5.326983 11.399705,8.523177 6.711972,3.089618 15.235121,3.089618 6.712,0 13.317424,-2.556943 6.605441,-2.663519 11.080088,-8.629697 z"
+       id="text1"
+       style="font-size:3.96875px;line-height:0.8;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;letter-spacing:1.05833px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="G" />
+    <path
+       d="m 177.71019,30.455553 c -0.2119,-2.983091 -0.53249,-7.457754 -5.11393,-12.252029 -7.35121,-7.457754 -16.62012,-8.2035255 -22.69286,-8.2035255 -3.83544,0 -13.85012,0.3196045 -21.41439,5.4335025 -14.59593,9.801623 -16.51362,27.913311 -16.51362,35.584147 0,10.867013 3.19617,21.6275 10.76049,29.298335 5.43348,5.540046 13.74356,9.588527 27.91328,9.588527 13.10436,0 22.90598,-3.196167 27.38063,-4.687732 V 47.288772 H 149.7969 v 8.842768 h 17.57895 v 22.79943 c -2.45035,0.745739 -7.99043,2.450368 -16.72669,2.450368 -7.67081,0 -15.44819,-1.811205 -20.4555,-7.564293 -5.64664,-6.711972 -7.03162,-17.685538 -7.03162,-24.184436 0,-7.244671 1.49148,-17.259374 8.20354,-24.717129 4.04843,-4.581195 10.12123,-6.498897 17.3659,-6.498897 10.44089,0 16.19396,4.900811 17.36589,12.038948 z"
+       id="text1-2"
+       style="font-size:3.96875px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:1.05833px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="G" />
+  </g>
+</svg>

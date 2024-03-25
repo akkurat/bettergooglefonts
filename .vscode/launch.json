@@ -26,5 +26,15 @@
             "program": "${workspaceFolder}/conv-questionnaire.js",
             "args": ["${workspaceFolder}/bettergooglefontsng/src/assets/"]
         },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "create svgs",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/create_svgs.mjs",
+            "args": ["${workspaceFolder}/bettergooglefontsng/src/assets/"]
+        },
     ]
 }

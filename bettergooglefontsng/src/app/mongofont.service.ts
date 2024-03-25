@@ -20,6 +20,8 @@ export type FontInfo = {
   idx: number
   dir: string
   meta: {
+    category: string[];
+    stroke?: string;
     name: string
     fonts: { filename: string }[]
     axes: { tag: string, min_value: number, max_value: number }[]
@@ -42,16 +44,19 @@ export class MongofontService {
 
     this.http.get('assets/fontmeta.json').pipe(combineLatestWith(this.http.get('assets/classification.json')))
       .subscribe(([metas, classificationEntries]) => {
-        const classification = new Map((classificationEntries as[]))
+        const types = new Set()
+        const classification = new Map((classificationEntries as []))
         for (const meta of (metas as FontInfo[])) {
           meta['classification'] = classification.get(meta.meta.name)
+          meta['type'] = meta.meta.stroke || meta.meta.category[0]
+          types.add(meta['type'])
         }
         this.db.collections['fonts'].upsert(metas,
           (docs) => { console.log(docs.length); this.dbready.next(true) },
           (err) => { console.log(err); }
         )
+        console.log(types)
       })
-
   }
 
   getFonts(filterS?: FilterSelection): Observable<FontNameUrl[]> {
@@ -62,11 +67,15 @@ export class MongofontService {
 
     this.dbready.pipe(filter<boolean>(v => v))
       .subscribe((dbready) => {
-        if (filterS?.toggles) {
-          selector = { ...selector, ...this.getClassificationSelector(filterS.toggles) }
+        // ... maybe create a anbstract class for filter implementation
+        if (filterS?.classification) {
+          selector = { ...selector, ...this.getClassificationSelector(filterS.classification) }
         }
-        if (filterS?.ranges) {
-          selector = { ...selector, ...this.getSelectorForAxes(filterS.ranges) }
+        if (filterS?.axis) {
+          selector = { ...selector, ...this.getSelectorForAxes(filterS.axis) }
+        }
+        if (filterS?.type) {
+          selector = { ...selector, ...this.getSelectorForType(filterS.type) }
         }
         this.db.collections['fonts'].find(selector).fetch(docs => {
           // const fmeta = docs.map()
@@ -130,6 +139,14 @@ export class MongofontService {
     return sub.asObservable();
   }
 
+  getSelectorForType(toggles: any) {
+    const selector = {}
+    for (const [name, values] of Object.entries(toggles)) {
+      selector['type'] = { $in: values }
+    }
+    return selector
+  }
+
   getSelectorForAxes(ranges: { [k in string]: { min: number, max: number } }) {
     const selector = {}
     const variationInfos = []
@@ -137,11 +154,11 @@ export class MongofontService {
       selector['meta.axes'] = { $elemMatch: { tag: param } } // cutting off 'a_'
       if (value) {
         const { min, max } = value
-        if (min) {
+        if (isFinite(min)) {
           selector['meta.axes']['$elemMatch']['min_value'] = { $lte: min }
           // variationInfos.push({ name: min })
         }
-        if (max) {
+        if (isFinite(max)) {
           selector['meta.axes']['$elemMatch']['max_value'] = { $gte: max }
           // variationInfos.push({ name: max })
         }

@@ -1,5 +1,4 @@
 .fontOverview {
-    height: 100vh;
     display: flex;
     flex-flow: column nowrap;
 
@@ -17,14 +16,14 @@
 }
 
 .fontViewport {
-    height: 100%;
 
     .fontGrid {
         display: flex;
         flex-flow: row wrap;
+        gap: 20px;
 
         .gridElement {
-            width: 300px;
+            width: 400px;
             word-wrap: break-word;
             overflow: hidden;
         }

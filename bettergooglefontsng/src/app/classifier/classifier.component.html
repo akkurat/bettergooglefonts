@@ -1,52 +1,55 @@
-<div class="scrollwrap">
-
-    <div class="classifier">
+<div>
+    <div class="flex flex-row flex-wrap">
         @if(font) {
-
-        <div class="specimen-wide" [style]="{fontFamily: font?.meta?.name}">
-            <h3>{{font.meta.name}}</h3>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789
-            &excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
-        </div>
         @if(questions) {
-        <div class="question-wrapper">
-            <mat-toolbar>
-                <mat-slide-toggle [(ngModel)]="autoNext">
-                    <mat-label>Auto Next</mat-label>
-                </mat-slide-toggle>
-                <mat-slide-toggle [(ngModel)]="jumpAnswered">
-                    <mat-label>Jump Answered</mat-label>
-                </mat-slide-toggle>
-                <button mat-button (click)="importToLocalStorage($event)">Import to Local Storage</button>
+        <div class="flex-1 basis-full md:basis-[800px] shrink-0 ">
+            <div class="flex flex-row flex-wrap justify-around gap-4 items-center">
+                <label>
+                    <input type="checkbox" [(ngModel)]="autoNext" />
+                    Auto Next
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="jumpAnswered" />
+                    Jump Answered
+                </label>
+                <button class="btn" (click)="importToLocalStorage($event)">Import to Local Storage</button>
 
-                <div>
-                    <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
-                    <div class="prev"><a [routerLink]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font:
-                            {{fontPrev?.meta?.name}}</a></div>
-                    <div class="next"><a [routerLink]="'/classify/'+encode(fontNext?.meta?.name)">Next Font:
-                            {{fontNext?.meta?.name}}</a></div>
-                </div>
-            </mat-toolbar>
-            <ul class="questions" [formGroup]="fg">
+                <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
+                <div class="prev"><a [routerLink]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font:
+                        {{fontPrev?.meta?.name}}</a></div>
+                <div class="next"><a [routerLink]="'/classify/'+encode(fontNext?.meta?.name)">Next Font:
+                        {{fontNext?.meta?.name}}</a></div>
+            </div>
+            <ul class="grid grid-cols-3 lg:grid-cols-5 gap-5" [formGroup]="fg">
                 @for(q of questions; track q.title) {
-                <li class="question" (click)="focus(q.title)" matTooltip="Click on anywhere in the question to focus ">
-                    <div class="sample" [style]="{fontFamily: font?.meta?.name}">{{q.samples}}</div>
-                    <div class="question-text">
-                        <h5>{{q.title}}</h5>
-                        <mat-radio-group [formControlName]="q.title" [name]="q.title">
+                <li class="contents" (click)="focus(q.title)" title="Click on anywhere in the question to focus ">
+                    <div class="text-7xl self-center justify-self-end"
+                        [style]="'font-family: \''+ font?.meta?.name+'\''">{{q.samples}}</div>
+                    <fieldset class="col-span-2 lg:col-span-4 justify-self-stretch">
+                        <legend> {{q.title}}</legend>
+                        <div class="flex flex-row flex-wrap">
                             @for(option of q.items; track option) {
-
-                            <mat-radio-button [value]="option">
+                            <label class="w-[200px]">
+                                <input #qradio type="radio" [formControlName]="q.title" [value]="option" />
                                 <b>{{$index+1}}</b> : {{option}}
-                            </mat-radio-button>
+                            </label>
                             }
-                        </mat-radio-group>
-                    </div>
+                        </div>
+                    </fieldset>
                 </li>
                 }
             </ul>
         </div>
         }
+        <div class=" flex-1 basis-[300px] shrink-0 text-5xl break-words break-all" [style]="fstyle">
+            <h3 class="text-8xl">{{font.meta.name}}</h3>
+            <hr />
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð0123456789&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
+        </div>
         } @else {
         Font not found
         }

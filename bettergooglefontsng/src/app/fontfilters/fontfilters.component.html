@@ -1,36 +1,21 @@
 <div>
     <ul class="filters">
-        <li *ngFor="let filter of activeFilters">
-            <mat-card>
-                <mat-card-header class="stretch">
-                    <mat-card-title>{{filter.caption}}</mat-card-title>
-                    <button mat-stroked-button color="primary">
-                        <mat-icon (click)="removeFilter(filter.title)">delete</mat-icon>
-                    </button>
-                </mat-card-header>
-                @if (filter?.type == 'select') {
-                <app-active-filter [filter]="filter" [formcontrol]="$any(fg.get(filter.title))"></app-active-filter>
-                } @else if (filter.type == 'range') {
-                <div class="filter">
-                    <!-- todo: toggle to indclude or exclude fonts without this axis present  -> Wrap to its own component-->
-                    <!-- todo: show numeric value of slider (also when not active) -->
-                    <mat-slider [min]="filter.min_value" [max]="filter.max_value">
-                        <input matSliderStartThumb [formControl]="$any(fg.get(filter.title)?.get('min'))">
-                        <input matSliderEndThumb [formControl]="$any(fg.get(filter.title)?.get('max'))">
-                    </mat-slider>
-
-                    <div class="stretch">
-                        <div>{{$any(fg.get(filter.title)?.get('min')).value}}</div>
-                        <div>{{$any(fg.get(filter.title)?.get('max')).value}}</div>
-                    </div>
-                </div>
-
-
-                }
-
-            </mat-card>
+        <li>
+            <app-searchable-filterlist [availableFilters]="availableFilterNames"
+                (activate)="activateFilter($event)">
+                <mat-icon class="cursor-pointer">filter_list</mat-icon>
+            </app-searchable-filterlist>
         </li>
-        <app-searchable-filterlist [availableFilters]="availableFilterNames"
-            (activate)="activateFilter($event)"></app-searchable-filterlist>
+        <li *ngFor="let filter of activeFilters">
+
+            <div class="bg-orange-300 rounded-lg flex flex-row flex-nowrap" [formGroup]="fg">
+                @if (filter.rendering == 'select') {
+                <app-select-filter [filter]="filter" [formControlName]="filter.title"></app-select-filter>
+                } @else if (filter.rendering == 'range') {
+                <app-range-filter class="pr-4 pl-4" [filter]="filter" [formControlName]="filter.title"></app-range-filter>
+                }
+                <button class="h-7 w-7 -m-2 rounded-full bg-cyan-300 hover:bg-cyan-200 "><mat-icon class="cursor-pointer" (click)="removeFilter(filter.title)">close</mat-icon></button>
+            </div>
+        </li>
     </ul>
 </div>
