@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="100"
+   viewBox="0 0 200 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="R-shape.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.9630932"
+     inkscape:cx="136.26455"
+     inkscape:cy="49.666517"
+     inkscape:window-width="1800"
+     inkscape:window-height="1097"
+     inkscape:window-x="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="42.133591"
+       y="45.848282"
+       width="16.552526"
+       height="18.44821"
+       id="rect3" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.7152183,-7.262217)">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:4px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;stroke-width:7.55906;stroke-linejoin:bevel;paint-order:markers stroke fill" />
+    <path
+       d="M 31.307553,17.262217 V 97.262131 H 41.86879 V 63.088484 h 25.791643 q 3.890984,0 6.225574,1.232595 2.33459,1.120519 3.779787,3.137256 1.445264,1.904799 2.112257,4.59381 0.66706,2.576996 1.1117,5.490203 0.55605,2.913174 0.66706,5.938377 0.111077,3.025197 0.222154,5.71427 0.111077,2.576994 0.444973,4.705895 0.444972,2.128952 1.556407,3.361327 H 95.564473 Q 93.896856,95.245341 93.007509,92.668374 92.229305,89.979301 91.784665,87.066153 91.339693,84.152974 91.228616,81.127776 91.117539,78.102572 90.895385,75.189398 90.562154,72.276252 89.894828,69.587179 89.338779,66.8981 88.004925,64.769261 86.782015,62.528504 84.558614,60.959723 82.446358,59.39117 79.000047,58.718973 v -0.223028 q 7.226118,-2.016877 10.450075,-7.507018 3.3351,-5.490175 3.3351,-12.773086 0,-9.747881 -6.447847,-15.350133 -6.336771,-5.602226 -17.676206,-5.602226 z M 63.880626,54.124909 H 41.86879 V 26.225791 h 26.23633 q 7.448484,0 10.783584,3.809511 3.335101,3.809531 3.335101,9.859932 0,4.369737 -1.556341,7.170867 -1.445263,2.689072 -4.00216,4.369736 -2.445787,1.568553 -5.780901,2.128954 -3.335127,0.560152 -7.003777,0.560152 z"
+       id="text1"
+       style="font-size:3.96875px;line-height:0.8;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';text-align:center;letter-spacing:1.05833px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="R" />
+    <path
+       d="M 123.86832,97.038083 V 17.486351 h 33.79598 q 5.22501,0 9.56066,2.24075 4.33566,2.128954 7.55962,5.826327 3.22395,3.58543 5.00271,8.17924 1.77876,4.481788 1.77876,9.187683 0,5.490202 -2.11239,10.420165 -2.00111,4.929969 -5.78085,8.403348 -3.66866,3.473378 -8.67131,4.817918 l 19.12138,30.47616 H 172.7834 L 154.77377,68.466549 h -20.90014 v 28.571394 z m 10.00537,-37.534975 h 23.90175 q 4.11331,0 7.11491,-2.24075 3.11282,-2.352834 4.78037,-6.162451 1.77876,-3.809537 1.77876,-8.179275 0,-4.481786 -2.00118,-8.179267 -2.00112,-3.809511 -5.22501,-6.050401 -3.22395,-2.241038 -7.11491,-2.241038 h -23.23475 z"
+       id="text1-3"
+       style="font-weight:500;font-size:3.96875px;line-height:0.8;font-family:Raleway;-inkscape-font-specification:'Raleway Medium';text-align:center;letter-spacing:1.05833px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       aria-label="R" />
+  </g>
+</svg>
