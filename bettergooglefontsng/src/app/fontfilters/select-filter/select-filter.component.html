@@ -1,4 +1,4 @@
-<button class="hover:brightness-150" (click)="toggle()" cdkOverlayOrigin #trigger="cdkOverlayOrigin" >
+<button class="hover:brightness-150" (click)="toggle()" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
     @if(!model.selected.length) {
     {{filter.caption}}:
     }
@@ -11,10 +11,13 @@
     @if(!model.selected) {
     {{filter.title}}
     }
-    <ul class="flex flex-row flex-wrap">
+    <ul class="flex flex-row flex-wrap bg-orange-50 backdrop-blur-sm">
         @for (item of filter.items; track item) {
-        <li (click)="model.toggle(item)" class="flex flex-col bg-slate-400 hover:border-cyan-300"
-            [ngClass]="{'border-cyan-600 border-4': model.isSelected(item)}">
+        <li (click)="model.toggle(item)"
+            class="flex flex-col items-center m-4 
+            rounded-sm border-4 border-transparent 
+            bg-orange-100 hover:bg-orange-50 hover:border-orange-200"
+            [ngClass]="{'ring-4 ring-orange-300': model.isSelected(item)}">
             <mat-icon class="w-32 h-32" [svgIcon]="filter.title + '-' + item"></mat-icon>
             {{item}}
         </li>

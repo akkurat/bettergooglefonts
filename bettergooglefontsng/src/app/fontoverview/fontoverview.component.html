@@ -1,10 +1,16 @@
-<div class="fontOverview ">
-  <app-fontfilters class="fontFilters" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
-  <ul class="fontGridWrapper">
-    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="20" class="fontViewport">
-      <div class="fontGrid">
-        <div *cdkVirtualFor="let font of fonts" class="gridElement">
-          <app-fontpreview [font]="font"></app-fontpreview>
+<div class="flex flex-col flex-nowrap gap-4">
+  <app-fontfilters (selectionChange)="trackFilterChange($event)"></app-fontfilters>
+  <div class="flex flex-row items-center gap-2">
+    <input [(ngModel)]="customText" (ngModelChange)="customTextChanged($event)" type="text" placeholder="Custom Lorem" />
+    <button class="btn" (click)="customText=''">
+      <mat-icon>settings_backup_restore</mat-icon>
+      </button>
+  </div>
+  <ul class="flex-grow">
+    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="20">
+      <div class="flex flex-row flex-wrap">
+        <div *cdkVirtualFor="let font of fonts" class="w-[400px] break-all">
+          <app-fontpreview [font]="font" [customText]="customText"></app-fontpreview>
         </div>
       </div>
     </cdk-virtual-scroll-viewport>

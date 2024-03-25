@@ -52,8 +52,10 @@ ng serve
 ```
 
 # Roadmap
-## Bugish
-* json files need a file hash when being modified, otherwise browser caching won't relaod the file
+## Bugish / Cleanup
+* json files need a file hash when being modified, otherwise browser cache won't reload the file
+* move utility scripts to folder... or at least name them all with a prefix
+* document svg generation and manual copying
 
 
 ## Reasonable TODOs

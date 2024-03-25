@@ -27,6 +27,15 @@
         filter: brightness(1.5);
     }
 
+    input {
+        border-radius: 5px;
+        @apply border-2 border-cyan-800 outline-none
+    }
+
+    input:focus-visible {
+        @apply outline-none ring-2 ring-orange-300
+    }
+
     input[type=radio],
     input[type=checkbox] {
         width: 20px;

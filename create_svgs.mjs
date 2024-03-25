@@ -6,29 +6,12 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 
 console.log(__filename)
-export const fontParamsSans = {
-  "e-angle": { a: ["horizontal", "~horizontal", "angled", "~vertical", "vertical", "other"], s: "ea", c: "lower case e Angle" },
-  "g-shape": { a: ["modern (single story)", "classical (double story)", "both", "other"], s: "g", c: "lower case g shape" },
-  "l-shape": { a: ["helvetica", "akkurat", "mono", "other"], s: "l", c: "lower case l shape" },
-  "ij-dot-shape": { a: ["square", "round", "other"], s: "ij", c: "dot shape of lower case i & j" },
-  "Kk-shape": { a: ["helvetica", "univers", "other"], s: "K k", c: "shape of upper and lower case k / K" },
-  "a-shape": { a: ["double story", "double story extensive tail", "single story", "other"], s: "a", c: "shape of lower case a" },
-  "g-up-shape": { a: ["Helvetica", "Univers", "Other"], s: "G", c: "shape of uppercase G" },
-  "R-shape": { a: ["curved", "straight"], s: "R", c: "shape of uppercase R" },
-  "M-tip": { a: ["baseline", "above"], s: "M", c: "position of tip of uppercase M" },
-  "M-stems": { a: ["parallel", "angled"], s: "M", c: "angle of outer stems of uppercase M" },
-  "W-tip": { a: ["one tip", "crossed", "other"], s: "W", c: "shape of uppercase w tip" },
-  "W-tip-level": { a: ["capheight", "below", "other"], s: "W", c: "position of uppercase W tip" },
-  "AMW-joints": { a: ["flat", "sharp", "other"], s: "WAM", c: "shape of outer joins of uppercase A / W / M" },
-  "x-height": { a: ["neutra", "reasonable"], s: "EAR\nae", c: "x height and center of uppercase A" },
-  "coarse-classification": { a: ["sans", "serif", "handwriting", "script", "mono"], s: "sAp", c: "General Classification" },
-  "Vox-ATypI": { a: ["humanist serif", "geralde", "transitional", "didone", "mechanistic", "grotesque", "neo-grotesque", "geometric", "humanist sans", "glyphic", "script", "graphic", "blackletter", "other"], s: "ESaest", c: "" }
 
-}
 
 const db = new MemoryDb();
 db.addCollection('fonts')
 
+const fontParamsSans = JSON.parse(readFileSync('bettergooglefontsng/src/assets/classification_questions.json'))
 const metas = JSON.parse(readFileSync('bettergooglefontsng/src/assets/fontmeta.json'))
 const classificationEntries = JSON.parse(readFileSync('bettergooglefontsng/src/assets/classification.json'))
 const classification = new Map(classificationEntries)
@@ -50,8 +33,20 @@ async function createSvgs(db) {
 
         const letters = []
 
-        for (const value of v.a) {
-            const firstMatch = await db.fonts.findOne({ ['classification.' + k]: value })
+        for (const _value of v.a) {
+            let firstMatch, value, sample
+            // specific font / sample letters per attribute
+            if (typeof _value === 'object') {
+                const fontName = _value.f
+                firstMatch = await db.fonts.findOne({ 'meta.name': fontName })
+                value = _value.a
+                sample = _value.s || v.s;
+            } else { // first match
+                value = _value
+                sample = v.s
+                firstMatch = await db.fonts.findOne({ ['classification.' + k]: value })
+            }
+
             if (!firstMatch) {
                 continue
             }
@@ -67,17 +62,17 @@ async function createSvgs(db) {
 
             const fs = 50
 
-            const metrics = textToSVG.getMetrics(v.s, { fontSize: fs })
+            const metrics = textToSVG.getMetrics(sample, { fontSize: fs })
 
             const scale = 100 / metrics.height;
             const options = { x: 50, y: 50, fontSize: fs * scale, attributes: attributes, anchor: 'center middle' };
 
-            // const svg = textToSVG.getSVG(v.s, {...options,y: -metrics.y});
-            const path = textToSVG.getPath(v.s, options)
+            // const svg = textToSVG.getSVG(sample, {...options,y: -metrics.y});
+            const path = textToSVG.getPath(sample, options)
 
             const svg = svgHeaderSquare(path)
 
-            letters.push({ textToSVG, letter: v.s, width: metrics.width * scale, fontSize: fs * scale })
+            letters.push({ textToSVG, letter: sample, width: metrics.width * scale, fontSize: fs * scale })
             writeFileSync(join('prevsvgs', prevsvgname), svg)
 
         }
