@@ -25,13 +25,14 @@
      inkscape:document-units="mm"
      inkscape:zoom="2.5738286"
      inkscape:cx="89.555303"
-     inkscape:cy="22.923049"
-     inkscape:window-width="1512"
-     inkscape:window-height="916"
+     inkscape:cy="22.728786"
+     inkscape:window-width="1800"
+     inkscape:window-height="1097"
      inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:window-y="44"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
      id="defs1" />
   <g
@@ -44,8 +45,8 @@
        id="text1"
        aria-label="e" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linejoin:bevel;stroke-opacity:1;paint-order:markers stroke fill;stroke-dasharray:none"
-       d="m 23.653285,15.218276 v 8.506391"
-       id="path1" />
+       d="m 22.652344,15.21875 v 8.505859 h 2 V 15.21875 Z"
+       id="path1"
+       class="f-accent" />
   </g>
 </svg>

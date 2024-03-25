@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      inkscape:zoom="2.5738286"
      inkscape:cx="89.555303"
-     inkscape:cy="22.923049"
-     inkscape:window-width="1512"
-     inkscape:window-height="916"
+     inkscape:cy="22.728786"
+     inkscape:window-width="1800"
+     inkscape:window-height="1097"
      inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:window-y="44"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -38,16 +38,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:36.0636px;line-height:0.8;font-family:Herculanum;-inkscape-font-specification:'Herculanum Bold';text-align:center;letter-spacing:9.61694px;text-anchor:middle;fill:#000000;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
-       x="13.465618"
-       y="23.651546"
-       id="text1"><tspan
-         sodipodi:role="line"
-         id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Herculanum;-inkscape-font-specification:'Herculanum Bold';stroke-width:2"
-         x="18.274088"
-         y="23.651546">e</tspan></text>
+    <path
+       d="m 17.919491,12.111195 h -4.868586 q -0.540954,0 -0.937654,0.180318 -0.396699,0.144254 -0.685208,0.396699 0.144254,-2.7047694 0.613081,-4.4358221 0.468827,-1.7310528 1.117972,-2.7047699 0.685208,-1.0097808 1.478607,-1.3704168 0.829463,-0.360636 1.694989,-0.360636 h 2.127753 q 0.685208,0 0.685208,-0.7933991 0,-0.6130812 -0.540954,-0.8294628 -0.540954,-0.2524452 -2.055625,-0.2524452 -1.514671,0 -2.957215,0.6491448 -1.40648,0.6130812 -2.488388,2.1277523 -1.081908,1.4786075 -1.7671168,3.9309322 -0.6491447,2.4162616 -0.6491447,6.0226206 0,1.009781 0.072127,2.127753 0.072127,1.117971 0.360636,2.235943 0.2885087,1.081908 0.8294627,2.091689 0.5770176,0.973717 1.5507346,1.731052 0.973717,0.757336 2.416261,1.190099 1.442544,0.468827 3.498169,0.468827 1.370417,0 1.911371,-0.288509 0.540954,-0.288509 0.540954,-0.577018 0,-0.468826 -0.288509,-0.613081 -0.252445,-0.144254 -1.045844,-0.144254 -3.714551,0 -5.40954,-2.163816 -1.694989,-2.19988 -1.694989,-6.527511 1.081908,-0.03606 2.452325,-0.03606 1.40648,-0.03606 3.029342,-0.180318 0.180318,0 0.432763,-0.180318 0.288509,-0.180318 0.577018,-0.432763 0.288509,-0.252445 0.468827,-0.468827 0.216381,-0.252445 0.216381,-0.360636 0,-0.432763 -0.685208,-0.432763 z"
+       id="text1"
+       aria-label="e" />
   </g>
 </svg>

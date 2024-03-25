@@ -23,14 +23,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.2820962"
-     inkscape:cx="63.567774"
-     inkscape:cy="32.758853"
-     inkscape:window-width="1248"
-     inkscape:window-height="406"
+     inkscape:zoom="2.6916844"
+     inkscape:cx="32.507525"
+     inkscape:cy="65.200808"
+     inkscape:window-width="1800"
+     inkscape:window-height="1097"
      inkscape:window-x="0"
-     inkscape:window-y="38"
-     inkscape:window-maximized="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
@@ -48,5 +48,15 @@
        id="text1-9"
        style="font-weight:500;font-size:31.0704px;line-height:0.8;font-family:DINPro;-inkscape-font-specification:'DINPro Medium';text-align:center;letter-spacing:8.2854px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
        aria-label="l" />
+    <path
+       d="m 10.551759,16.902232 c -2.6175445,0 -4.7524908,2.134945 -4.7524908,4.752489 0,2.617543 2.1349463,4.752177 4.7524908,4.752177 2.617545,0 4.752178,-2.134634 4.752178,-4.752177 0,-2.617544 -2.134633,-4.752489 -4.752178,-4.752489 z m 0,1.202022 c 1.967889,0 3.550157,1.582578 3.550157,3.550467 0,1.967889 -1.582268,3.550155 -3.550157,3.550155 -1.9678898,0 -3.5504673,-1.582266 -3.5504673,-3.550155 0,-1.967889 1.5825775,-3.550467 3.5504673,-3.550467 z"
+       id="path3"
+       class="f-accent"
+       style="stroke-width:1" />
+    <path
+       d="m 19.547589,16.902232 c -2.617545,0 -4.752491,2.134945 -4.752491,4.752489 0,2.617543 2.134946,4.752177 4.752491,4.752177 2.617545,0 4.752178,-2.134634 4.752178,-4.752177 0,-2.617544 -2.134633,-4.752489 -4.752178,-4.752489 z m 0,1.202022 c 1.967889,0 3.550157,1.582578 3.550157,3.550467 0,1.967889 -1.582268,3.550155 -3.550157,3.550155 -1.96789,0 -3.550468,-1.582266 -3.550468,-3.550155 0,-1.967889 1.582578,-3.550467 3.550468,-3.550467 z"
+       id="path1"
+       class="f-accent"
+       style="stroke-width:1" />
   </g>
 </svg>

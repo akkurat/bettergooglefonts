@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.9890627"
-     inkscape:cx="101.30399"
-     inkscape:cy="143.03219"
+     inkscape:zoom="3.3701149"
+     inkscape:cx="93.320261"
+     inkscape:cy="109.93691"
      inkscape:window-width="1800"
      inkscape:window-height="1097"
      inkscape:window-x="0"
@@ -65,5 +65,10 @@
        id="text2"
        style="font-size:111.111px;line-height:0.8;font-family:'Univers LT Std';-inkscape-font-specification:'Univers LT Std';text-align:center;letter-spacing:29.6297px;text-anchor:middle;stroke-width:7.55903;stroke-linejoin:bevel;paint-order:markers stroke fill"
        aria-label="a" />
+    <path
+       d="m 118.13792,60.171248 c -10.53187,0 -19.121974,8.590095 -19.121974,19.121964 0,10.531869 8.590104,19.120717 19.121974,19.120717 10.53187,0 19.12071,-8.588848 19.12071,-19.120717 0,-10.531869 -8.58884,-19.121964 -19.12071,-19.121964 z m 0,4.836416 c 7.91793,0 14.2843,6.367609 14.2843,14.285548 0,7.91794 -6.36637,14.284298 -14.2843,14.284298 -7.91794,0 -14.28555,-6.366358 -14.28555,-14.284298 0,-7.917939 6.36761,-14.285548 14.28555,-14.285548 z"
+       id="path2"
+       class="f-accent"
+       style="stroke-width:1" />
   </g>
 </svg>

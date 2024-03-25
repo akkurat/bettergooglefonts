@@ -26,11 +26,11 @@
      inkscape:zoom="2.7702942"
      inkscape:cx="86.452912"
      inkscape:cy="58.477544"
-     inkscape:window-width="1512"
-     inkscape:window-height="916"
+     inkscape:window-width="1248"
+     inkscape:window-height="426"
      inkscape:window-x="0"
-     inkscape:window-y="38"
-     inkscape:window-maximized="1"
+     inkscape:window-y="44"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
@@ -41,11 +41,12 @@
     <path
        d="M 21.658993,14.733166 V 12.57929 c 0,-5.3104197 -3.045135,-9.2468144 -8.429826,-9.2468144 -5.0133333,0 -8.4298269,3.5650367 -8.4298269,9.8781224 0,7.835654 4.3820244,9.915259 8.9497279,9.915259 3.490765,0 5.384691,-1.076939 7.352888,-3.045136 l -2.933728,-2.859456 c -1.225481,1.225481 -2.265284,1.819654 -4.382024,1.819654 -2.710914,0 -4.2334815,-1.819654 -4.2334815,-4.307753 z M 16.905611,11.42808 H 9.5527225 C 9.5898583,10.573956 9.7012657,10.054055 9.9983521,9.3484751 10.518253,8.1972653 11.595191,7.3431419 13.229167,7.3431419 c 1.633975,0 2.710913,0.8541234 3.230814,2.0053332 0.297087,0.7055799 0.408494,1.2254809 0.44563,2.0796049 z"
        id="text1"
-       style="font-weight:bold;font-size:37.1358px;line-height:0.8;font-family:DINPro;-inkscape-font-specification:'DINPro Bold';text-align:center;letter-spacing:9.90285px;text-anchor:middle;stroke-width:2;stroke-linejoin:bevel;paint-order:markers stroke fill"
        aria-label="e" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       d="m 13.444977,11.939805 9.610411,9.61041"
-       id="path1" />
+       d="m 13.798828,10.525391 -0.53125,0.529297 -1.236328,1.238281 10.669922,10.671875 1.767578,-1.767578 z"
+       id="path4"
+       class="f-accent" />
   </g>
+  <style
+     id="style2">.f-accent: {&#10;fill: red;&#10;&#10;}</style>
 </svg>
