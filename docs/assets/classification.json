@@ -131,7 +131,7 @@
       "R-shape": "straight",
       "coarse-classification": "sans",
       "M-tip": "above",
-      "Vox-ATypI": "humanist sans"
+      "Vox-ATypI": "script"
     }
   ],
   [
@@ -2030,7 +2030,7 @@
       "e-angle": "~horizontal",
       "coarse-classification": "serif",
       "M-tip": "baseline",
-      "Vox-ATypI": "didone"
+      "Vox-ATypI": "transitional"
     }
   ],
   [
@@ -4541,7 +4541,7 @@
       "W-tip-level": "capheight",
       "G-shape": "Helvetica",
       "coarse-classification": "sans",
-      "Vox-ATypI": "humanist serif"
+      "Vox-ATypI": "humanist sans"
     }
   ],
   [
@@ -15728,7 +15728,7 @@
     "jsMath cmbx10",
     {
       "coarse-classification": "serif",
-      "Vox-ATypI": "didone"
+      "Vox-ATypI": "mechanistic"
     }
   ],
   [
