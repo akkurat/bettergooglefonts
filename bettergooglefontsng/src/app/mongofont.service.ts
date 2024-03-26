@@ -23,7 +23,11 @@ export type FontInfo = {
     category: string[];
     stroke?: string;
     name: string
-    fonts: { filename: string }[]
+    fonts: {
+      style: any;
+      weight: number;
+      filename: string
+    }[]
     axes: { tag: string, min_value: number, max_value: number }[]
   }
 }
@@ -59,31 +63,25 @@ export class MongofontService {
       })
   }
 
-  getFonts(filterS?: FilterSelection): Observable<FontNameUrl[]> {
+  getFonts(selector): Observable<FontNameUrl[]> {
 
     const sub = new Subject<FontNameUrl[]>()
 
-    let selector = {}
 
     this.dbready.pipe(filter<boolean>(v => v))
       .subscribe((dbready) => {
         // ... maybe create a anbstract class for filter implementation
-        if (filterS?.classification) {
-          selector = { ...selector, ...this.getClassificationSelector(filterS.classification) }
-        }
-        if (filterS?.axis) {
-          selector = { ...selector, ...this.getSelectorForAxes(filterS.axis) }
-        }
-        if (filterS?.type) {
-          selector = { ...selector, ...this.getSelectorForType(filterS.type) }
-        }
+        // and move it away from the service
         this.db.collections['fonts'].find(selector).fetch(docs => {
           // const fmeta = docs.map()
           // TODO: map filename already in meta?
           const metafonts: FontNameUrl[] = docs.map((d: FontInfo) => ({
             name: d.meta.name,
             url: getUrlForFirstFont(d),
-            axes: d.meta.axes
+            axes: d.meta.axes,
+            weights: d.meta.fonts.map(f => f.weight),
+            italics: d.meta.fonts.map(f => f.style)
+
           }))
           sub.next(metafonts)
         }, err => console.log(err))
@@ -91,13 +89,6 @@ export class MongofontService {
     return sub.asObservable()
   }
 
-  getClassificationSelector(toggles) {
-    const selector = {}
-    for (const [name, values] of Object.entries(toggles)) {
-      selector['classification.' + name] = { $in: values }
-    }
-    return selector
-  }
 
   getFontByFolderName(name: string): Observable<FontInfo> {
     const sub = new Subject<FontInfo>()
@@ -139,33 +130,7 @@ export class MongofontService {
     return sub.asObservable();
   }
 
-  getSelectorForType(toggles: any) {
-    const selector = {}
-    for (const [name, values] of Object.entries(toggles)) {
-      selector['type'] = { $in: values }
-    }
-    return selector
-  }
 
-  getSelectorForAxes(ranges: { [k in string]: { min: number, max: number } }) {
-    const selector = {}
-    const variationInfos = []
-    for (const [param, value] of Object.entries(ranges)) {
-      selector['meta.axes'] = { $elemMatch: { tag: param } } // cutting off 'a_'
-      if (value) {
-        const { min, max } = value
-        if (isFinite(min)) {
-          selector['meta.axes']['$elemMatch']['min_value'] = { $lte: min }
-          // variationInfos.push({ name: min })
-        }
-        if (isFinite(max)) {
-          selector['meta.axes']['$elemMatch']['max_value'] = { $gte: max }
-          // variationInfos.push({ name: max })
-        }
-      }
-    }
-    return selector
-  }
 
 
   /**
@@ -213,4 +178,3 @@ export function getTtfUrlForFirstFont(d: FontInfo) {
   return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
   return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
 }
-

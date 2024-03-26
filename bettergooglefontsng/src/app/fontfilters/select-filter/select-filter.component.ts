@@ -55,6 +55,10 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
 
   ngAfterViewInit() {
     this.model.changed.subscribe(v => { console.log(v, this.model); this.onChange.next(v.source.selected) })
+    if(this.filter.items?.length == 1) {
+      this.isOpen = false
+      this.model.select(this.filter.items[0])
+    }
   }
 
 }

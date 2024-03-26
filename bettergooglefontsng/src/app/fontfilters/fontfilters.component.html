@@ -1,5 +1,5 @@
 <div>
-    <ul class="filters">
+    <ul class="flex flew-row flex-wrap justify-around items-center gap-4">
         <li>
             <app-searchable-filterlist [availableFilters]="availableFilterNames"
                 (activate)="activateFilter($event)">
@@ -10,6 +10,8 @@
             <div class="bg-orange-300 rounded-lg flex flex-row flex-nowrap" [formGroup]="fg">
                 @if (filter.rendering == 'select') {
                 <app-select-filter [filter]="filter" [formControlName]="filter.title"></app-select-filter>
+                }@else if (filter.rendering == 'rangeflag') {
+                <app-range-filter class="pr-4 pl-4" [filter]="filter" flag="'Include discrete weights'" [formControlName]="filter.title"></app-range-filter>
                 } @else if (filter.rendering == 'range') {
                 <app-range-filter class="pr-4 pl-4" [filter]="filter" [formControlName]="filter.title"></app-range-filter>
                 }

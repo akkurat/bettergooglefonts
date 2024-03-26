@@ -62,10 +62,8 @@ ng serve
 ## Reasonable TODOs
 * number of fonts with this filter (trivial, lazyloading is only in dom, in js the array is already complete, just display ```.length```)
   * part that is less trivial (but still possible) is showing number of results beforehand
-* Checkbox to in- or exclude fonts without the respective axis availabe
-* Map standard axis to discrete values (e.g. weight, width, slant/ italic angle)
 * Detailview of font with something like this [https://www.axis-praxis.org/specimens/__DEFAULT__] -> Quickwin: Link to google fonts for now
-* Custom specimen text -> Sofar only Ascii letters possible (due to subset woff) -> load ttf from github raw?
+* ~~Custom specimen text -> Sofar only Ascii letters possible (due to subset woff)~~ -> load ttf from github raw?
   * Loading ttf from github raw is already done for classification view
   * First step however should be custom ascii preview text
 * Grid/List view
@@ -73,6 +71,7 @@ ng serve
   * Size waterfall is trivial
   * Iterating through all axes (or discrete fonts) is a bit more complicated but also manageable
 * Bigger View of font (or letter maybe?) upon hovering
+  * Bigger view for single letters. good enough for now
 * Show classifications in overview
 
 ## Fancy Todos

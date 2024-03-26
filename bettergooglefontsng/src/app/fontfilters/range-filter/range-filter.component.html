@@ -1,4 +1,5 @@
-<button (click)="toggle()" cdkOverlayOrigin #trigger="cdkOverlayOrigin" class="hover:brightness-150 text-cyan-950 flex flex-row flex-nowrap items-center">
+<button (click)="toggle()" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
+    class="hover:brightness-150 text-cyan-950 flex flex-row flex-nowrap items-center">
     <div>
         {{filter.caption}}
     </div>
@@ -12,9 +13,17 @@
     <div class="bg-slate-50 p-3 grid grid-cols-5 w-[450px] place-items-center gap-y-4 gap-x-1">
         <!-- todo: toggle to indclude or exclude fonts without this axis present  -> Wrap to its own component-->
         <!-- todo: show numeric value of slider (also when not active) -->
-            <app-maybe-slider class="contents" caption="max" [initValue]="filter.max_value" [min]="filter.min_value"
-                [max]="filter.max_value" [(val)]="max"></app-maybe-slider>
-            <app-maybe-slider class="contents" caption="min" [initValue]="filter.min_value" [min]="filter.min_value"
-                [max]="filter.max_value" [(val)]="min"></app-maybe-slider>
+        <app-maybe-slider class="contents" caption="min" [initValue]="filter.max_value" [min]="filter.min_value"
+            [max]="filter.max_value" [(val)]="max"></app-maybe-slider>
+        <app-maybe-slider class="contents" caption="max" [initValue]="filter.min_value" [min]="filter.min_value"
+            [max]="filter.max_value" [(val)]="min"></app-maybe-slider>
+        @if(flag) {
+        <div class="col-span-5">
+            <label>
+                <input type="checkbox" [(ngModel)]="flagValue" />
+                {{flag}}
+            </label>
+        </div>
+        }
     </div>
 </ng-template>

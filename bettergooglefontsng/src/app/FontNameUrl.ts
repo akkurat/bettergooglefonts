@@ -1,7 +1,9 @@
 export type FontNameUrl = {
   name: string;
   url: string;
-  axes: any[];
+  axes?: any[];
+  weights: number[];
+  italics: string[];
 };
 
 export function generateFontCss(font: {name: string, url: string}) {

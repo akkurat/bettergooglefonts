@@ -1,16 +1,16 @@
 <div class="flex flex-col flex-nowrap gap-4">
-  <app-fontfilters (selectionChange)="trackFilterChange($event)"></app-fontfilters>
-  <div class="flex flex-row items-center gap-2">
-    <input [(ngModel)]="customText" (ngModelChange)="customTextChanged($event)" type="text" placeholder="Custom Lorem" />
-    <button class="btn" (click)="customText=''">
-      <mat-icon>settings_backup_restore</mat-icon>
+  <div class="sticky top-0 basis-20 z-50 p-2 lg:p-9  bg-slate-50 flex flex-row flex-wrap items-center gap-2">
+      <input [formControl]="fc" type="text" placeholder="Custom Lorem" />
+      <button class="btn" (click)="fc.setValue('')">
+        <mat-icon>settings_backup_restore</mat-icon>
       </button>
-  </div>
-  <ul class="flex-grow">
-    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="20">
+      <app-fontfilters class="px-2" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
+    </div>
+  <ul class="flex-grow p-2 lg:p-9">
+    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="20" >
       <div class="flex flex-row flex-wrap">
-        <div *cdkVirtualFor="let font of fonts" class="w-[400px] break-all">
-          <app-fontpreview [font]="font" [customText]="customText"></app-fontpreview>
+        <div *cdkVirtualFor="let font of fonts; trackBy: trackBy " class="w-[400px] h-[200px] break-all">
+          <app-fontpreview [font]="font" [customText]="debouncedCustomText|async"></app-fontpreview>
         </div>
       </div>
     </cdk-virtual-scroll-viewport>

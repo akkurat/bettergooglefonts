@@ -20,7 +20,7 @@ import { CdkOverlayOrigin, OverlayModule } from '@angular/cdk/overlay';
               <span class="" >{{caption}}</span>
               <button class="btn" (click)="reset()"><mat-icon> settings_backup_restore </mat-icon></button>
               <input  class="w-30 col-span-2" type="range" [min]="min" [max]="max" [(ngModel)]="val" (ngModelChange)="emitChange()">
-              <input class="w-12" type="number" [(ngModel)]="val">
+              <input class="w-12" type="number" [(ngModel)]="val" (ngModelChange)="emitChange()">
             } @else {
               <button class="btn col-span-5" (click)="val=initValue;emitChange()">Add {{caption}}</button>
             }
@@ -75,6 +75,25 @@ export class MaybeSliderComponent {
 })
 
 export class RangeFilterComponent implements ControlValueAccessor {
+  @Input({ required: true })
+  filter
+
+  @Input()
+  flag: string | undefined = undefined
+
+  get flagValue() {
+    return this._flagValue
+  }
+
+  set flagValue(value) {
+    this._flagValue = value
+    this.emitChange()
+  }
+
+  get max() {
+    return this._max
+  }
+
   set max(value: number) {
     this._max = value
     if (this._max < this._min) {
@@ -83,16 +102,8 @@ export class RangeFilterComponent implements ControlValueAccessor {
     this.emitChange()
   }
 
-  get max() {
-    return this._max
-  }
-
   get min() {
     return this._min
-  }
-
-  isNumber(val) {
-    return !isNaN(val)
   }
 
   set min(value: number) {
@@ -102,8 +113,6 @@ export class RangeFilterComponent implements ControlValueAccessor {
     }
     this.emitChange()
   }
-  @Input()
-  filter
 
   writeValue(obj: any): void {
   }
@@ -118,14 +127,19 @@ export class RangeFilterComponent implements ControlValueAccessor {
   setDisabledState?(isDisabled: boolean): void {
   }
 
+  isNumber(val) {
+    return !isNaN(val)
+  }
+
   isOpen = true
   private _onChange = ({ }) => { }
   _min = NaN
   _max = NaN
+  _flagValue = undefined
 
   emitChange() {
     console.log(this._min, this._max)
-    this._onChange({ min: this._min, max: this._max })
+    this._onChange({ min: this._min, max: this._max, flag: this._flagValue })
   }
 
   toggle() {
