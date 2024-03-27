@@ -1,10 +1,8 @@
-import { AfterViewInit, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormControl, FormGroup, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
+import { AfterViewInit, Component, EventEmitter, Input } from '@angular/core';
+import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 
-import { MatInputModule } from '@angular/material/input';
-import { MatSelect, MatSelectModule } from '@angular/material/select';
-import { MatSliderModule } from '@angular/material/slider';
+import { MatSelectModule } from '@angular/material/select';
 import { AFilter } from '../fontfilters.component';
 import { NgComponentOutlet, NgClass } from '@angular/common';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -28,6 +26,7 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
   onChange = new EventEmitter()
 
   writeValue(selection: string[]): void {
+    
   }
 
   registerOnChange(fn: any): void {

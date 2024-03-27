@@ -1,20 +1,24 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject, combineLatest, combineLatestWith, filter, from, map, Observable, ObservableInput, ReplaySubject } from 'rxjs';
-import { FontNameUrl } from './FontNameUrl';
-import { MemoryDb, MinimongoCollection, MinimongoLocalDb } from 'minimongo';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, combineLatestWith, filter, Observable } from 'rxjs';
+import { FontByWeight, FontNameUrlMulti } from './FontNameUrl';
+import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
-import { FilterSelection } from './fontfilters/fontfilters.component';
 
-export type AxesInfo = {
+export type AxesInfo = Map<string,{count:number, min:number, max:number}>
 
-}
 
 export type FontFilter = {
   name: string
   min?: number
   max?: number
 }
+
+export type AxisInfo = {
+  tag: string;
+  min_value: number;
+  max_value: number;
+};
 
 export type FontInfo = {
   idx: number
@@ -24,11 +28,11 @@ export type FontInfo = {
     stroke?: string;
     name: string
     fonts: {
-      style: any;
+      style: 'italic'|'normal';
       weight: number;
       filename: string
     }[]
-    axes: { tag: string, min_value: number, max_value: number }[]
+    axes: AxisInfo[]
   }
 }
 
@@ -63,25 +67,25 @@ export class MongofontService {
       })
   }
 
-  getFonts(selector): Observable<FontNameUrl[]> {
+  getFonts(selector): Observable<FontNameUrlMulti[]> {
 
-    const sub = new Subject<FontNameUrl[]>()
+    const sub = new Subject<FontNameUrlMulti[]>()
 
 
     this.dbready.pipe(filter<boolean>(v => v))
-      .subscribe((dbready) => {
+      .subscribe((/*dbready*/) => {
         // ... maybe create a anbstract class for filter implementation
         // and move it away from the service
         this.db.collections['fonts'].find(selector).fetch(docs => {
           // const fmeta = docs.map()
           // TODO: map filename already in meta?
-          const metafonts: FontNameUrl[] = docs.map((d: FontInfo) => ({
+          const metafonts: FontNameUrlMulti[] = docs.map((d: FontInfo) => ({
             name: d.meta.name,
             url: getUrlForFirstFont(d),
             axes: d.meta.axes,
             weights: d.meta.fonts.map(f => f.weight),
-            italics: d.meta.fonts.map(f => f.style)
-
+            italics: d.meta.fonts.map(f => f.style),
+            fonts: groupFonts(d.meta.fonts)
           }))
           sub.next(metafonts)
         }, err => console.log(err))
@@ -138,8 +142,8 @@ export class MongofontService {
    * @returns Axes based on fonts
    */
   // todo add selector as parameter
-  getAxes(): Observable<AxesInfo[]> {
-    const sub = new Subject<AxesInfo[]>()
+  getAxes(): Observable<AxesInfo> {
+    const sub = new Subject<AxesInfo>()
     this.dbready.subscribe(names => {
       if (names) {
         this.db.collections['fonts'].find({ 'meta.axes': { $exists: true } }, { fields: 'meta.axes' })
@@ -148,7 +152,7 @@ export class MongofontService {
             for (const doc of docs) {
               for (const axe of doc.meta.axes) {
                 if (!axes.has(axe.tag)) {
-                  axes.set(axe.tag, { count: 0, min: 1000, max: 0 })
+                  axes.set(axe.tag, { count: 0, min: 1000, max: -1000 })
                 }
                 const axstat = axes.get(axe.tag)
                 axstat.count++
@@ -162,6 +166,7 @@ export class MongofontService {
 
               }
             }
+            sub.next(axes)
           })
       }
     })
@@ -170,11 +175,38 @@ export class MongofontService {
 }
 
 export function getUrlForFirstFont(d: FontInfo) {
-  return `assets/gf-subsets/ascii_us/${d.meta.fonts[0].filename.replace(/\.ttf$/, "-subset.woff2")}`;
+  const filename = d.meta.fonts[0].filename;
+  return getUrlForFont(filename);
   return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
+}
+
+function getUrlForFont(filename: string) {
+  return `assets/gf-subsets/ascii_us/${filename.replace(/\.ttf$/, "-subset.woff2")}`;
 }
 
 export function getTtfUrlForFirstFont(d: FontInfo) {
   return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
   return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
 }
+
+function groupFonts(fonts: { style: 'italic' | 'normal'; weight: number; filename: string; }[]): FontByWeight[] {
+  const normalMap = new Map() 
+  const italicMap = new Map()
+  for( const font of fonts ) {
+    if(font.style === 'italic') {
+      italicMap.set(font.weight, getUrlForFont(font.filename))
+    }
+    else if(font.style === 'normal') {
+      normalMap.set(font.weight, getUrlForFont(font.filename))
+    }
+  }
+
+  const out: FontByWeight[] = []
+
+  for( const [weight,url] of normalMap.entries() )
+  {
+    out.push({weight, url, italicUrl: italicMap.get(weight)})
+  }
+  return out
+}
+

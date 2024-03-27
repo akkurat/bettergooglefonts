@@ -1,9 +1,19 @@
-export type FontNameUrl = {
-  name: string;
+import { AxisInfo } from "./mongofont.service";
+
+
+export type FontByWeight = {
+  weight: number;
   url: string;
-  axes?: any[];
+  italicUrl?: string;
+};
+
+export type FontNameUrlMulti = {
+  axes?: AxisInfo[];
   weights: number[];
   italics: string[];
+  name: string;
+  url: string;
+  fonts: FontByWeight[] 
 };
 
 export function generateFontCss(font: {name: string, url: string}) {
@@ -11,6 +21,15 @@ export function generateFontCss(font: {name: string, url: string}) {
     font-family: "${font.name}";
     src: url("${font.url}");
   }`;
+}
+export function generateFontCssWeight(font: {name: string, url: string, weight: string|number, style: string}) {
+  return `@font-face {
+    font-family: "${font.name}";
+    src: url("${font.url}");
+    font-weight: ${font.weight};
+    font-style: ${font.style};
+  }
+  `;
 }
 export function appendStyleTag(css: string) {
   const head = document.getElementsByTagName('head')[0];

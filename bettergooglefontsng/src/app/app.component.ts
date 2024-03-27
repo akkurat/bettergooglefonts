@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FontNameUrl } from './FontNameUrl';
-import { MongofontService } from './mongofont.service';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

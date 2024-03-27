@@ -35,9 +35,8 @@ export class ClassificationService {
 
 
   importIntoLocalStorage() {
-    return this._http.get('assets/classification.json')
+    return this._http.get<[string, Record<string, string>][]>('assets/classification.json')
       .pipe(
-        // @ts-ignore
         map(e => { e.forEach(([f, qa]) => this.saveAllAnswers(f, qa)); return e.length }))
   }
   getQuestions(): Observable<FontQuestion[]> {
@@ -75,7 +74,7 @@ export class ClassificationService {
     localStorage.setItem(this.storageKey(fontName), JSON.stringify(answers))
   }
 
-  answersFor(fontName: string) {
+  answersFor(fontName: string): { [v: string]: string } {
     const answers_str = this.getLocalStorageItem(fontName)
     if (answers_str) {
       const answers = JSON.parse(answers_str)

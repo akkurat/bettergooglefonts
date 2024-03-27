@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ClassificationService, FontQuestion } from '../classification.service';
@@ -29,10 +29,10 @@ export class ClassifierComponent implements OnInit {
   fontPrev: FontInfo | undefined;
   fontNext: FontInfo | undefined;
   fontNameByRouting = ''
-  answers: any
   autoNext = true
+  answers?: Record<string,string>;
   jumpAnswered = true
-  fg: FormGroup<{}> = new FormGroup({})
+  fg: FormGroup = new FormGroup({})
   fcs: { [k: string]: FormControl; } = {}
   lastActiveQuestion: string = '';
   fstyle = '';
@@ -94,7 +94,7 @@ export class ClassifierComponent implements OnInit {
   }
 
   saveAnswer(selection) {
-    const values = Object.entries(selection).reduce((out, [k, v]) => { if (v) { out[k] = v; }; return out; }, {});
+    const values = Object.entries(selection).reduce((out, [k, v]) => { if (v) { out[k] = v; } return out; }, {});
     this.classifierService.saveAllAnswers(this.fontNameByRouting, values)
     if (this.autoNext) {
       // puh... not exactly sure how this helps...
@@ -133,14 +133,14 @@ export class ClassifierComponent implements OnInit {
 
   private getQuestionInFocus() {
     const activeElement = document.activeElement;
-    return this.questionByRadio(activeElement);
+    return this.questionByRadio(activeElement) || ''; 
   }
 
   private questionByRadio(activeElement: Element | null) {
     return activeElement?.getAttribute('ng-reflect-form-control-name');
   }
 
-  public importToLocalStorage(ev: any) {
+  public importToLocalStorage() {
     this.classifierService.importIntoLocalStorage()
       .subscribe(a => this._snackBar.open(`imported ${a} fonts`))
   }
@@ -154,7 +154,6 @@ export class ClassifierComponent implements OnInit {
 
   private navigateToNextFont() {
     if (this.fontNext) {
-      // @ts-ignore
       this.lastActiveQuestion = this.getQuestionInFocus()
       this.router.navigateByUrl('/classify/' + encodeURIComponent(this.fontNext?.meta.name));
     }
@@ -167,7 +166,7 @@ export class ClassifierComponent implements OnInit {
     const _values = {}
     if (this.fcs) {
       for (const k of Object.keys(this.fcs)) {
-        _values[k] = this.answers[k] || null
+        _values[k] = this.answers?.[k] || null
       }
       this.fg?.setValue(_values, { emitEvent: false })
     }

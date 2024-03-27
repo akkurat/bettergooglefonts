@@ -1,16 +1,31 @@
 <div class="flex flex-col flex-nowrap gap-4">
-  <div class="sticky top-0 basis-20 z-50 p-2 lg:p-9  bg-slate-50 flex flex-row flex-wrap items-center gap-2">
+  <div class="sticky top-0 basis-20 z-50 p-2 lg:p-9 bg-slate-50 flex flex-row flex-wrap ">
+    <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2  rounded">
       <input [formControl]="fc" type="text" placeholder="Custom Lorem" />
       <button class="btn" (click)="fc.setValue('')">
         <mat-icon>settings_backup_restore</mat-icon>
       </button>
-      <app-fontfilters class="px-2" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
+      <label>
+        <input type="checkbox" [(ngModel)]="showWaterfall" />Waterfall
+      </label>
+      <label>
+        <input type="checkbox" [(ngModel)]="showItalics" />Italics
+      </label>
+      <label>
+        <input type="checkbox" [(ngModel)]="specimenOnly" />No Meta
+      </label>
     </div>
+    <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2 rounded">
+      <app-fontfilters class="contents" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
+    </div>
+  </div>
   <ul class="flex-grow p-2 lg:p-9">
-    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="20" >
+    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="10">
       <div class="flex flex-row flex-wrap">
-        <div *cdkVirtualFor="let font of fonts; trackBy: trackBy " class="w-[400px] h-[200px] break-all">
-          <app-fontpreview [font]="font" [customText]="debouncedCustomText|async"></app-fontpreview>
+        <div *cdkVirtualFor="let font of fonts; trackBy: trackBy"
+          [class]="'break-all ' + (specimenOnly ? 'min-h-10' : 'w-[400px] h-[200px]')">
+          <app-fontpreview [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
+            [showItalics]="showItalics" [specimenOnly]="specimenOnly"></app-fontpreview>
         </div>
       </div>
     </cdk-virtual-scroll-viewport>

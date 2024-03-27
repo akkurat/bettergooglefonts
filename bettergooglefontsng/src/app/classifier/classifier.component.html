@@ -12,7 +12,7 @@
                     <input type="checkbox" [(ngModel)]="jumpAnswered" />
                     Jump Answered
                 </label>
-                <button class="btn" (click)="importToLocalStorage($event)">Import to Local Storage</button>
+                <button class="btn" (click)="importToLocalStorage()">Import to Local Storage</button>
 
                 <!-- todo angular 17 routerLink / common object for shortcuts... but hell who cares-->
                 <div class="prev"><a [routerLink]="'/classify/'+encode(fontPrev?.meta?.name)">Previous Font:

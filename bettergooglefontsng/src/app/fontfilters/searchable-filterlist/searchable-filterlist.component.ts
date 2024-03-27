@@ -1,11 +1,9 @@
 import { JsonPipe } from '@angular/common';
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild, ViewContainerRef, inject } from '@angular/core';
-import { PortalModule, TemplatePortal, CdkPortal } from '@angular/cdk/portal'
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PortalModule } from '@angular/cdk/portal'
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { Overlay, OverlayModule, OverlayPositionBuilder, ScrollStrategyOptions } from '@angular/cdk/overlay'
+import { OverlayModule } from '@angular/cdk/overlay'
 
 @Component({
   selector: 'app-searchable-filterlist',

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, EventEmitter, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClassificationService } from '../classification.service';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
@@ -13,6 +13,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card'
 import { DomSanitizer } from '@angular/platform-browser';
 import { RangeFilterComponent } from "./range-filter/range-filter.component";
+import { MongoSelector } from '../fontoverview/fontoverview.component';
 
 type Axis = {
   tag: string
@@ -42,7 +43,6 @@ export type AFilter = {
 @Component({
   selector: 'app-fontfilters',
   templateUrl: './fontfilters.component.html',
-  styleUrls: ['./fontfilters.component.scss'],
   standalone: true,
   imports: [NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, SelectFilterComponent, MatCardModule, RangeFilterComponent]
 })
@@ -51,7 +51,7 @@ export type AFilter = {
 export class FontfiltersComponent implements OnInit {
 
   @Output()
-  selectionChange = new EventEmitter<any>
+  selectionChange = new EventEmitter<MongoSelector>
   availableFilters: AFilter[] = []
   availableFilterNames: { name: string, caption: string }[] = [];
   // maybe rather a function and just a string for the selection
@@ -187,7 +187,7 @@ function getClassificationSelector(toggles) {
 
 function getSelectorForAxes(ranges: { [k in string]: { min: number, max: number } }) {
   const selector = {}
-  const variationInfos = []
+  // const variationInfos = []
   for (const [param, value] of Object.entries(ranges)) {
     selector['meta.axes'] = { $elemMatch: { tag: param } } // cutting off 'a_'
     if (value) {
@@ -205,22 +205,22 @@ function getSelectorForAxes(ranges: { [k in string]: { min: number, max: number 
   return selector
 }
 
-function getSelectorForType(toggles: any) {
+function getSelectorForType(toggles ) {
   const selector = {}
-  for (const [name, values] of Object.entries(toggles)) {
+  for (const values of Object.values(toggles)) {
     selector['type'] = { $in: values }
   }
   return selector
 }
 
-function getSelectorForWeight(values) {
+function getSelectorForWeight(values: {min:number, max:number, flag:boolean}) {
   if (!values) {
     return {}
   }
   const rangeSelector = getSelectorForAxes({ 'wght': values })
   const selectors = [rangeSelector]
   if (values.flag) {
-    const discreteWeights: any = []
+    const discreteWeights: MongoSelector[] = []
     if (isFinite(values.max)) {
       discreteWeights.push({ 'meta.fonts': { $elemMatch: { 'weight': { $gte: values.max } } } })
     }
