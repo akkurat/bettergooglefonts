@@ -1,16 +1,41 @@
 # Better Google Fonts
 
 
-![Filtered view of googlefonts filtered by: Fonts containing a variable wght-axis from 100 - 900, horizontal cap of the stems (e, a) and a Helvetica like K/k ](filters.png)
+![All fonts with having variable or discrete weights at least between 300 and 600, including discrete fonts](filters.png)
+All fonts with having variable or discrete weights at least between 300 and 600, including discrete fonts
 
-![All Fonts width variable weight from 350-750, modern g, square ij dots and an e angle of around 45 degrees](filters2.png)
+***
+
+![All Fonts with Vox classification as Neogrotesque or Geometric, a single story "a" and having italics](filters2.png)
+All Fonts with Vox classification as Neogrotesque or Geometric, a single story "a" and having italics
+
+***
+
+![Showing only fonts and no meta](fontcloud.png)
+Showing only fonts without meta info
+
+
+
+# Features 
+
+* Filters
+  * Font weights (variable / discrete)
+  * [Vox Classes](https://en.wikipedia.org/wiki/Vox-ATypI_classification "Vox Class")
+  * Some detailed features (e angle, a type, g type, etc.)
+* Preview
+  * Waterfall: All weights
+  * Custom Specimen
+  * Preview italic style (if available)
+  * Dense view without meta data
+
+
 # How to Run
 ## Github Pages
-Go to (https://akkurat.github.io/bettergooglefonts/)
+Go to <https://akkurat.github.io/bettergooglefonts/>
 
 ### Classification
 
-In the overview click on the pencil icon for any font, e.g. (https://akkurat.github.io/bettergooglefonts/classify/ABeeZee)
+In the overview click on the pencil icon for any font, e.g. <https://akkurat.github.io/bettergooglefonts/classify/ABeeZee>
 
 * Click on "Import to Local Storage" -> This copies the current state of classifications
 * Start classifying

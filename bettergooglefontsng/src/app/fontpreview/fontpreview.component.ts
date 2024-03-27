@@ -47,7 +47,6 @@ export class FontpreviewComponent implements OnChanges {
   // Why is this on Changes and not on viewInit? probably only tried with OnInit when template is not yet rendered
   // but @ipnuts should already be available? hm....
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('eco', changes)
 
     // todo: function
     if (changes['font']) {

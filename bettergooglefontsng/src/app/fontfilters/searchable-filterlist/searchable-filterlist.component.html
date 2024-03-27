@@ -1,13 +1,14 @@
-<button class="btn" cdkOverlayOrigin #trigger="cdkOverlayOrigin" (click)="toggle()" type="button">
+<button class="btn" (click)="openDialag(content)" type="button">
     <ng-content></ng-content>
 </button>
 
 <!-- TODO: filter field... -->
-<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
-    (overlayOutsideClick)="$event.stopPropagation(); isOpen=false" cdkConnectedOverlayPanelClass="">
-    <ul class="p-3 bg-orange-100 flex flex-row flex-wrap gap-3">
+<ng-template #content>    
+    <ul class="p-3 bg-orange-100 flex flex-row flex-wrap gap-3 justify-center max-w-[80vw] overflow-y-auto">
         @for (option of availableFilters; track option) {
-        <button class="w-64 flex flex-col p-2 rounded mix-blend-multiply text-cyan-800 bg-orange-200 hover:bg-orange-50 " (click)="select(option.name)">
+        <button
+            class="w-64 flex flex-col p-2 rounded mix-blend-multiply text-cyan-800 bg-orange-200 hover:bg-orange-50 "
+            (click)="select(option.name)">
             <mat-icon class="w-64 h-32" [svgIcon]="option.name"></mat-icon>
             {{option.caption}}
         </button>

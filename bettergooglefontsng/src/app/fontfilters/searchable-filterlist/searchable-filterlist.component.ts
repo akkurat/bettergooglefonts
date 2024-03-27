@@ -1,24 +1,19 @@
 import { JsonPipe } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { PortalModule } from '@angular/cdk/portal'
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, inject } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { OverlayModule } from '@angular/cdk/overlay'
+import { FullscreenOverlayContainer, OverlayContainer } from '@angular/cdk/overlay'
+import { Dialog, DialogModule } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-searchable-filterlist',
   standalone: true,
-  imports: [JsonPipe, FormsModule,
-    ReactiveFormsModule, MatIconModule, OverlayModule, PortalModule],
+  imports: [JsonPipe, FormsModule, MatIconModule, DialogModule],
   templateUrl: './searchable-filterlist.component.html',
-  styleUrl: './searchable-filterlist.component.scss'
-})
-export class SearchableFilterlistComponent implements OnInit {
-  toggle() {
-    this.isOpen = !this.isOpen
-  }
+  providers: [{ provide: OverlayContainer, useClass: FullscreenOverlayContainer }]
 
-  selectedFilter = new FormControl<string>('')
+})
+export class SearchableFilterlistComponent {
 
   @Input()
   availableFilters: { name: string, caption: string, icon?: string }[] = []
@@ -26,22 +21,22 @@ export class SearchableFilterlistComponent implements OnInit {
   @Output()
   activate = new EventEmitter<string>()
 
-  isOpen = false
+  @ViewChild('trigger', { read: ElementRef })
 
-  ngOnInit(): void {
-    this.selectedFilter.valueChanges
+  protected isOpen = false
 
-      .subscribe(value => {
-        if (value) {
-          this.activate.next(value)
-          this.selectedFilter.setValue(null)
-        }
-      })
+  private readonly dialogService = inject(Dialog)
+
+  openDialag(tref) {
+    this.dialogService.open(tref, {
+      maxHeight: '98vh',
+      panelClass: 'overflow-y-scroll',
+    })
   }
 
   select(value) {
     this.activate.next(value)
-    this.isOpen = false
+    this.dialogService.closeAll()
   }
 
 }
