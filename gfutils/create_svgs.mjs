@@ -11,19 +11,18 @@ console.log(__filename)
 const db = new MemoryDb();
 db.addCollection('fonts')
 
-const fontParamsSans = JSON.parse(readFileSync('bettergooglefontsng/src/assets/classification_questions.json'))
-const metas = JSON.parse(readFileSync('bettergooglefontsng/src/assets/fontmeta.json'))
-const classificationEntries = JSON.parse(readFileSync('bettergooglefontsng/src/assets/classification.json'))
+const fontParamsSans = JSON.parse(readFileSync('../bettergooglefontsng/src/assets/classification_questions.json'))
+const metas = JSON.parse(readFileSync('../bettergooglefontsng/src/assets/fontmeta.json'))
+const classificationEntries = JSON.parse(readFileSync('../bettergooglefontsng/src/assets/classification.json'))
 const classification = new Map(classificationEntries)
 
 for (const meta of metas) {
     meta['classification'] = classification.get(meta.meta.name)
 }
 
-
 db.collections['fonts'].upsert(metas,
     (docs) => { console.log(docs.length), createSvgs(db) },
-    (err) => { console.log(err); }
+    (err) => { console.log(err) }
 )
 
 async function createSvgs(db) {
@@ -50,22 +49,23 @@ async function createSvgs(db) {
             if (!firstMatch) {
                 continue
             }
+
             console.log(firstMatch)
 
-            const prevsvgname = `${k}-${value}.svg`;
+            const prevsvgname = `${k}-${value}.svg`
             console.log(prevsvgname)
 
-            const textToSVG = TextToSVG.loadSync(join(firstMatch.dir, firstMatch.meta.fonts[0].filename))
+            const textToSVG = TextToSVG.loadSync(join('..', firstMatch.dir, firstMatch.meta.fonts[0].filename))
             // const textToSVG = TextToSVG.loadSync()
 
-            const attributes = { fill: 'black' };
+            const attributes = { fill: 'black' }
 
             const fs = 50
 
             const metrics = textToSVG.getMetrics(sample, { fontSize: fs })
 
-            const scale = 100 / metrics.height;
-            const options = { x: 50, y: 50, fontSize: fs * scale, attributes: attributes, anchor: 'center middle' };
+            const scale = 100 / metrics.height
+            const options = { x: 50, y: 50, fontSize: fs * scale, attributes: attributes, anchor: 'center middle' }
 
             // const svg = textToSVG.getSVG(sample, {...options,y: -metrics.y});
             const path = textToSVG.getPath(sample, options)
