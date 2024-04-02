@@ -15,7 +15,7 @@
     }
 
     <div class="">
-    <div (click)="isOpen=false" class="md:hidden  p-2 text-center bg-cyan-700">close</div>
+    <div (click)="isOpen=false" class="cursor-pointer md:hidden  p-2 text-center bg-cyan-700">close</div>
     <ul class="overflow-auto max-h-full max-w-full flex flex-row flex-wrap justify-center bg-orange-50 backdrop-blur-sm">
         @for (item of filter.items; track item) {
         <li (click)="model.toggle(item)" class="flex flex-col items-center m-4 

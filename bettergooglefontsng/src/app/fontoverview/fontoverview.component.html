@@ -20,14 +20,23 @@
     </div>
   </div>
   <ul class="flex-grow p-2 lg:p-9">
-    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="10">
-      <div class="flex flex-row flex-wrap">
-        <div *cdkVirtualFor="let font of fonts; trackBy: trackBy"
-          [class]="'break-all ' + (specimenOnly ? 'min-h-10' : 'w-[400px] h-[200px]')">
-          <app-fontpreview [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
-            [showItalics]="showItalics" [specimenOnly]="specimenOnly"></app-fontpreview>
+    <div class=""
+      [ngClass]="specimenOnly ? 'grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(50px,250px))] gap-2' : 'grid grid-flow-row auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
+      <div #gridElems *ngFor="let font of fonts|async; trackBy: trackBy" [ngClass]="{contents: specimenOnly}">
+        @if(isInViewport(gridElems)) {
+        <app-fontpreview [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
+          [showItalics]="showItalics" [specimenOnly]="specimenOnly"
+          [ngClass]="{contents: specimenOnly}"></app-fontpreview>
+        } @else {
+        @if(specimenOnly) {
+        {{debouncedCustomText|async }}
+        } @else {
+        <div>
+          {{font.name}}
         </div>
+        }
+        }
       </div>
-    </cdk-virtual-scroll-viewport>
+    </div>
   </ul>
 </div>

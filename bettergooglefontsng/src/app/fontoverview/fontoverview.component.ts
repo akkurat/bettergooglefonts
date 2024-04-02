@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { Observable, debounceTime } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, debounceTime, first, map, shareReplay, startWith, tap, throttleTime } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { FontpreviewComponent } from '../fontpreview/fontpreview.component';
-import { NgFor, AsyncPipe } from '@angular/common';
+import { NgFor, AsyncPipe, NgClass } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { Timer } from '../helpers';
 
 export type inor = '$or' | '$and' | '$in'
 export type MongoSelector = {
@@ -18,21 +19,80 @@ export type MongoSelector = {
   selector: 'app-fontoverview',
   templateUrl: './fontoverview.component.html',
   standalone: true,
-  imports: [FontfiltersComponent, NgFor, FontpreviewComponent, AsyncPipe, ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule]
+  imports: [NgClass, FontfiltersComponent, NgFor, FontpreviewComponent, AsyncPipe, ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule]
 })
 
-export class FontoverviewComponent {
-  fonts: Observable<FontNameUrlMulti[]>
+export class FontoverviewComponent implements AfterViewInit {
 
+  ngAfterViewInit() {
+
+    this.gridElems.changes.subscribe(ev => {
+      console.log(ev)
+      this.onWScroll.next('')
+    })
+  }
+
+  isInViewport(element: HTMLDivElement) {
+    return this.visiblePreviews.includes(element)
+  }
+
+  @ViewChildren('gridElems')
+  gridElems!: QueryList<ElementRef<HTMLDivElement>>
+
+  fonts: Observable<FontNameUrlMulti[]>
   fc = new FormControl('')
 
-  debouncedCustomText: Observable<string | null>;
+  debouncedCustomText: Observable<string>;
   showItalics = false;
   showWaterfall = true;
   specimenOnly = false;
-  constructor(private fontService: MongofontService) {
+  visiblePreviews: HTMLDivElement[] = [];
+  constructor(private fontService: MongofontService, private el: ElementRef) {
     this.fonts = this.fontService.getFonts({})
-    this.debouncedCustomText = this.fc.valueChanges.pipe(debounceTime(300))
+    this.debouncedCustomText = this.fc.valueChanges.pipe(
+      startWith(''),
+      shareReplay(1),
+      map(v => v ? v : 'abcdg'))
+
+
+    this.onWScroll.pipe(throttleTime(500)).subscribe(ev => {
+
+      const inViewport = (element: HTMLDivElement) => {
+        const rect = element.getBoundingClientRect()
+        const html = document.documentElement;
+        return (
+          rect.top + 300 >= 0 &&
+          rect.left + 300 >= 0 &&
+          rect.bottom - 300 <= (window.innerHeight || html.clientHeight) &&
+          rect.right - 300 <= (window.innerWidth || html.clientWidth)
+        )
+      }
+
+      const vis: HTMLDivElement[] = []
+
+      const timer = new Timer()
+      for (const elem of this.gridElems) {
+
+        if (inViewport(elem.nativeElement)) {
+          vis.push(elem.nativeElement)
+        }
+      }
+      // obviously enough performant for now
+      // ways to improve: estimate position of current element linearly
+      // start a few elements before... stop after first one is false (by the assumption of continuity)
+
+      console.log(vis, `vieport iterationg takes ${timer.measure()}ms`)
+
+      this.visiblePreviews = vis
+    })
+
+
+
+    // if(visible) {
+    //   console.debug(this.font.name)
+
+    // }
+
   }
 
   trackFilterChange(selector: MongoSelector) {
@@ -41,5 +101,21 @@ export class FontoverviewComponent {
   trackBy(i, f) {
     return f.idx
   }
+
+
+  onWScroll = new Subject()
+
+  @HostListener('window:scroll', ['$event'])
+  _onWScroll($event) {
+    // console.debug($event)
+    // idea for a more effienct boundary on where the viewport ends
+
+    this.onWScroll.next($event)
+
+  }
+
+
+
+
 
 }
