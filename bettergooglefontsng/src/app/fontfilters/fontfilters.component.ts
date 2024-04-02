@@ -5,7 +5,7 @@ import { ClassificationService } from '../classification.service';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { NgFor } from '@angular/common';
+import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
 import { SearchableFilterlistComponent } from "./searchable-filterlist/searchable-filterlist.component";
 import { SelectFilterComponent } from "./select-filter/select-filter.component";
 import { MatSliderModule } from '@angular/material/slider';
@@ -14,6 +14,9 @@ import { MatCardModule } from '@angular/material/card'
 import { DomSanitizer } from '@angular/platform-browser';
 import { RangeFilterComponent } from "./range-filter/range-filter.component";
 import { MongoSelector } from '../fontoverview/fontoverview.component';
+import { MongofontService } from '../mongofont.service';
+import { from } from 'rxjs';
+import { BoxplotComponent } from '../boxplot/boxplot.component';
 
 type Axis = {
   tag: string
@@ -33,7 +36,7 @@ export type AFilter = {
   rendering: 'select' | 'range' | 'rangeflag'
   title: string
   caption: string
-  // TODO: two subclasses and factory
+  // TODO: multiple subclasses and factory
   items?: string[]
   min_value?: number
   max_value?: number
@@ -44,7 +47,7 @@ export type AFilter = {
   selector: 'app-fontfilters',
   templateUrl: './fontfilters.component.html',
   standalone: true,
-  imports: [NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, SelectFilterComponent, MatCardModule, RangeFilterComponent]
+  imports: [BoxplotComponent, JsonPipe, AsyncPipe, NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, SelectFilterComponent, MatCardModule, RangeFilterComponent]
 })
 
 
@@ -63,7 +66,8 @@ export class FontfiltersComponent implements OnInit {
     private http: HttpClient,
     private classifier: ClassificationService,
     private iconRegistry: MatIconRegistry,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private fontService: MongofontService
   ) {
   }
   ngOnInit(): void {
@@ -117,11 +121,6 @@ export class FontfiltersComponent implements OnInit {
     )
   }
 
-  private updateAvailableFilterNames() {
-    this.availableFilterNames = this.availableFilters
-      .filter(av => !this.activeFilters.some(ac => ac.title === av.title))
-      .map(t => ({ name: t.title, caption: t.caption }));
-  }
 
   activateFilter(name: string) {
     const filter = this.availableFilters.find(v => v.title === name)
@@ -174,7 +173,13 @@ export class FontfiltersComponent implements OnInit {
     return selector
 
   }
+  protected percentileLookup$ = this.fontService.percentilesByRange()
 
+  private updateAvailableFilterNames() {
+    this.availableFilterNames = this.availableFilters
+      .filter(av => !this.activeFilters.some(ac => ac.title === av.title))
+      .map(t => ({ name: t.title, caption: t.caption }));
+  }
 }
 
 function getClassificationSelector(toggles) {
@@ -185,18 +190,18 @@ function getClassificationSelector(toggles) {
   return selector
 }
 
-function getSelectorForAxes(ranges: { [k in string]: { min: number, max: number } }) {
+function getSelectorForAxes(ranges: { [k in string]: { min?: number, max?: number } }) {
   const selector = {}
   // const variationInfos = []
   for (const [param, value] of Object.entries(ranges)) {
     selector['meta.axes'] = { $elemMatch: { tag: param } } // cutting off 'a_'
     if (value) {
       const { min, max } = value
-      if (isFinite(min)) {
+      if (min && isFinite(min)) {
         selector['meta.axes']['$elemMatch']['min_value'] = { $lte: min }
         // variationInfos.push({ name: min })
       }
-      if (isFinite(max)) {
+      if (max && isFinite(max)) {
         selector['meta.axes']['$elemMatch']['max_value'] = { $gte: max }
         // variationInfos.push({ name: max })
       }
@@ -205,7 +210,7 @@ function getSelectorForAxes(ranges: { [k in string]: { min: number, max: number 
   return selector
 }
 
-function getSelectorForType(toggles ) {
+function getSelectorForType(toggles) {
   const selector = {}
   for (const values of Object.values(toggles)) {
     selector['type'] = { $in: values }
@@ -213,7 +218,8 @@ function getSelectorForType(toggles ) {
   return selector
 }
 
-function getSelectorForWeight(values: {min:number, max:number, flag:boolean}) {
+
+export function getSelectorForWeight(values: { min?: number, max?: number, flag: boolean }) {
   if (!values) {
     return {}
   }
@@ -221,10 +227,10 @@ function getSelectorForWeight(values: {min:number, max:number, flag:boolean}) {
   const selectors = [rangeSelector]
   if (values.flag) {
     const discreteWeights: MongoSelector[] = []
-    if (isFinite(values.max)) {
+    if (values.max && isFinite(values.max)) {
       discreteWeights.push({ 'meta.fonts': { $elemMatch: { 'weight': { $gte: values.max } } } })
     }
-    if (isFinite(values.min)) {
+    if (values.min && isFinite(values.min)) {
       discreteWeights.push({ 'meta.fonts': { $elemMatch: { 'weight': { $lte: values.min } } } })
     }
     if (discreteWeights.length > 0) {

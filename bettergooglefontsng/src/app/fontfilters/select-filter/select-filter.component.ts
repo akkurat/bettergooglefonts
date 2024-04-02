@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, EventEmitter, Input } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, inject } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 
 import { MatSelectModule } from '@angular/material/select';
 import { AFilter } from '../fontfilters.component';
 import { NgComponentOutlet, NgClass } from '@angular/common';
-import { OverlayModule } from '@angular/cdk/overlay';
+import { Overlay, OverlayModule, ScrollStrategy } from '@angular/cdk/overlay';
 import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
@@ -23,10 +23,12 @@ import { SelectionModel } from '@angular/cdk/collections';
 })
 export class SelectFilterComponent implements AfterViewInit, ControlValueAccessor {
 
+
   onChange = new EventEmitter()
+  sr = inject(Overlay).scrollStrategies.reposition()
 
   writeValue(selection: string[]): void {
-    
+
   }
 
   registerOnChange(fn: any): void {
@@ -54,7 +56,7 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
 
   ngAfterViewInit() {
     this.model.changed.subscribe(v => { console.log(v, this.model); this.onChange.next(v.source.selected) })
-    if(this.filter.items?.length == 1) {
+    if (this.filter.items?.length == 1) {
       this.isOpen = false
       this.model.select(this.filter.items[0])
     }

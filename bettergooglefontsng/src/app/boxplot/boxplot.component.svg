@@ -1,0 +1,7 @@
+<svg viewBox="0 0 400 200" width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+@for(box of normAndTransform(); track $index) {
+    <rect class="fill-orange-400" [attr.x]="box.low*400" [attr.y]="200-box.rangeCnt*200" width="40" [attr.height]="box.rangeCnt*200" />
+    <rect class="fill-cyan-500" [attr.x]="box.low*400" [attr.y]="200-box.discreteCnt*200-box.rangeCnt*200" width="10" [attr.height]="box.discreteCnt*200" />
+}
+
+</svg>

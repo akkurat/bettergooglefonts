@@ -80,6 +80,10 @@ export class RangeFilterComponent implements ControlValueAccessor {
   @Input()
   flag: string | undefined = undefined
 
+  @Input()
+  percentileLookup?: (count: number) => {start: number, label:string}[]
+
+
   get flagValue() {
     return this._flagValue
   }
@@ -144,5 +148,7 @@ export class RangeFilterComponent implements ControlValueAccessor {
   toggle() {
     this.isOpen = !this.isOpen
   }
+
+
 
 }

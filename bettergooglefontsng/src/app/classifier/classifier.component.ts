@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ClassificationService, FontQuestion } from '../classification.service';
 import { appendStyleTag, generateFontCss } from '../FontNameUrl';
-import { FontInfo, MongofontService, getTtfUrlForFirstFont } from '../mongofont.service';
+import { FontFamilyInfo, MongofontService, getTtfUrlForFirstFont } from '../mongofont.service';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { JsonPipe, NgFor } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -25,9 +25,9 @@ import { MatIconRegistry } from '@angular/material/icon';
 })
 export class ClassifierComponent implements OnInit {
   questions: FontQuestion[] = [];
-  font: FontInfo | undefined;
-  fontPrev: FontInfo | undefined;
-  fontNext: FontInfo | undefined;
+  font: FontFamilyInfo | undefined;
+  fontPrev: FontFamilyInfo | undefined;
+  fontNext: FontFamilyInfo | undefined;
   fontNameByRouting = ''
   autoNext = true
   answers?: Record<string,string>;
