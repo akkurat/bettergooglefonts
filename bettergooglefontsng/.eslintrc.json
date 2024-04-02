@@ -33,7 +33,7 @@
         ],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/member-ordering": "warn"
+        "@typescript-eslint/member-ordering": "warn",
       }
     },
     {
@@ -45,6 +45,8 @@
         "plugin:@angular-eslint/template/accessibility"
       ],
       "rules": {
+        "@angular-eslint/template/click-events-have-key-events": "warn",
+        "@angular-eslint/template/interactive-supports-focus": "warn"
         // Note: you must disable the base rule as it can report incorrect errors
       }
     }

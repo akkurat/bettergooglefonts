@@ -24,8 +24,38 @@ import { SelectionModel } from '@angular/cdk/collections';
 export class SelectFilterComponent implements AfterViewInit, ControlValueAccessor {
 
 
+  constructor(private overlayService: Overlay) {
+
+
+  }
   onChange = new EventEmitter()
-  sr = inject(Overlay).scrollStrategies.reposition()
+  sr = this.overlayService.scrollStrategies.reposition()
+
+  createPosStrat(origin) {
+    console.debug(origin)
+    return this.overlayService.position().flexibleConnectedTo(origin.elementRef)
+      .withPositions([
+        {
+          originX: 'center',
+          originY: 'bottom',
+          overlayX: 'center',
+          overlayY: 'top'
+        },
+        {
+          originX: 'start',
+          originY: 'bottom',
+          overlayX: 'start',
+          overlayY: 'top'
+        },
+        {
+          originX: 'end',
+          originY: 'bottom',
+          overlayX: 'end',
+          overlayY: 'top'
+        },
+      ])
+
+  }
 
   writeValue(selection: string[]): void {
 
