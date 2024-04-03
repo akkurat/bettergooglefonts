@@ -55,19 +55,40 @@ export class FontpreviewComponent implements AfterViewInit {
     // Fontface rule is only possible in css and not in embedded styles. a style tag is appended to the header
     // angular is doing the some for the scoped css outputs
     // having 2000 different fonts in one app is a very special case so it's ok that angular has no way of doing it in an angular way
+    // new FontAPI FTW
     let css = '';
 
+    let fontfaces: FontFace[] = []
 
     for (const f of font.fonts) {
       const weights = weightAxis ? `${weightAxis.min_value} ${weightAxis.max_value}` : f.weight;
+
+      fontfaces.push(new FontFace(font.name, `url(${f.url})`, { weight: weights, style: 'normal' }))
       css += generateFontCssWeight({ name: font.name, url: f.url, weight: weights, style: 'normal' });
       if (f.italicUrl) {
+        fontfaces.push(new FontFace(font.name, `url(${f.italicUrl})`, { weight: weights, style: 'italic' }))
         css += generateFontCssWeight({ name: font.name, url: f.italicUrl, weight: weights, style: 'italic' });
       }
     }
-    appendStyleTag(css);
 
-    this.style = `font-synthesis: none; font-family: '${font.name}', Tofu;`, 100 
+    // document.fonts.addEventListener('loadingdone', ffs => {
+    // })
+    // @ts-expect-error
+    fontfaces.forEach(ff => { document.fonts.add(ff); })
+
+    // Waiting until font is loaded
+    Promise.all(fontfaces.map(ff => ff.load()))
+      .then(all => {
+        console.log(all)
+        this.style = `font-synthesis: none; font-family: '${font.name}', Tofu;`
+      })
+      .catch(e => console.error(e, font, fontfaces))
+
+
+
+
+    // appendStyleTag(css);
+
     // todo: italics
     // ) +(showItalics ? '; font-style: italic':'')">
   }
