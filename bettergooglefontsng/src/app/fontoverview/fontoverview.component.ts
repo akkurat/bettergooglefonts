@@ -32,12 +32,12 @@ export class FontoverviewComponent implements AfterViewInit {
     })
   }
 
-  isInViewport(element: HTMLDivElement) {
+  isInViewport(element: HTMLElement) {
     return this.visiblePreviews.includes(element)
   }
 
   @ViewChildren('gridElems')
-  gridElems!: QueryList<ElementRef<HTMLDivElement>>
+  gridElems!: QueryList<ElementRef<HTMLElement>>
 
   fonts: Observable<FontNameUrlMulti[]>
   fc = new FormControl('')
@@ -46,10 +46,11 @@ export class FontoverviewComponent implements AfterViewInit {
   showItalics = false;
   showWaterfall = true;
   specimenOnly = false;
-  visiblePreviews: HTMLDivElement[] = [];
+  visiblePreviews: HTMLElement[] = [];
   constructor(private fontService: MongofontService, private el: ElementRef) {
     this.fonts = this.fontService.getFonts({})
     this.debouncedCustomText = this.fc.valueChanges.pipe(
+      throttleTime(200),
       startWith(''),
       shareReplay(1),
       map(v => v ? v : 'abcdg'))
@@ -57,7 +58,7 @@ export class FontoverviewComponent implements AfterViewInit {
 
     this.onWScroll.pipe(throttleTime(500)).subscribe(ev => {
 
-      const inViewport = (element: HTMLDivElement) => {
+      const inViewport = (element: HTMLElement) => {
         const rect = element.getBoundingClientRect()
         const html = document.documentElement;
         return (
@@ -68,11 +69,10 @@ export class FontoverviewComponent implements AfterViewInit {
         )
       }
 
-      const vis: HTMLDivElement[] = []
+      const vis: HTMLElement[] = []
 
       const timer = new Timer()
       for (const elem of this.gridElems) {
-
         if (inViewport(elem.nativeElement)) {
           vis.push(elem.nativeElement)
         }

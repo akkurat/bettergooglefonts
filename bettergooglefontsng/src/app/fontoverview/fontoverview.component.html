@@ -21,22 +21,27 @@
   </div>
   <ul class="flex-grow p-2 lg:p-9">
     <div class=""
-      [ngClass]="specimenOnly ? 'grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(50px,250px))] gap-2' : 'grid grid-flow-row auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
-      <div #gridElems *ngFor="let font of fonts|async; trackBy: trackBy" [ngClass]="{contents: specimenOnly}">
+      [ngClass]="specimenOnly ? 'block' : 'grid grid-flow-row-dense auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
+      @for(font of fonts|async; track trackBy) {
+      <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
+      <span #gridElems
+        [ngClass]="{ 'col-span-2': showWaterfall && font.fonts.length >1, 'col-span-3': showWaterfall && (font.fonts.length>3 || font.axes)}">
+
         @if(isInViewport(gridElems)) {
-        <app-fontpreview [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
+        <app-fontpreview #fp [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
           [showItalics]="showItalics" [specimenOnly]="specimenOnly"
           [ngClass]="{contents: specimenOnly}"></app-fontpreview>
         } @else {
         @if(specimenOnly) {
-        {{debouncedCustomText|async }}
+        <span class="text-xl"><span style="font-size: 40px;"> {{debouncedCustomText|async }}</span></span>
         } @else {
         <div>
           {{font.name}}
         </div>
         }
         }
-      </div>
+      </span>
+      }
     </div>
   </ul>
 </div>

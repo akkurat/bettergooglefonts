@@ -36,12 +36,12 @@
     </h5>
     }
         <!-- TODO : move hardcoded stuff into ts -->
-        <span class="contents text-xl" [title]="font.name" [ngClass]="{'break-all': !specimenOnly}"
+        <span class="contents text-xl" [title]="font.name"
             [style]="'font-synthesis: none; font-family: \''+font.name+'\', \'Tofu\';'+(showItalics ? 'font-style: italic':'')">
             @if(waterfall) {
             @for(vweight of vweights; track vweight) {
             <span [style]="{fontWeight: vweight, fontSize: '40px'}">
-                <span>{{customText}}</span>
+                <span  [ngClass]="{'break-all': true}">{{customText}}</span>
             </span>
             }
             }@else {
