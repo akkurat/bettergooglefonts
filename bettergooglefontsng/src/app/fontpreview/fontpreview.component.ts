@@ -1,18 +1,22 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../FontNameUrl';
-import { NgClass, NgFor } from '@angular/common';
+import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { BehaviorSubject, delay } from 'rxjs';
 
 @Component({
   selector: 'app-fontpreview',
   templateUrl: './fontpreview.component.html',
   standalone: true,
-  imports: [NgFor, RouterModule, NgClass],
+  imports: [AsyncPipe, NgFor, NgIf, RouterModule, NgClass],
 })
-export class FontpreviewComponent implements OnChanges {
+export class FontpreviewComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    // console.log(this.font?.weightInfo?.virtualWeights)
+  }
 
   @Input()
-  font: FontNameUrlMulti = { name: '', url: '', weights: [], italics: [], fonts: [], hasItalics: false, weightInfo: {max_value:400, min_value:400, virtualWeights:[400]} }
+  font?: FontNameUrlMulti
   @Input()
   waterfall = false
   @Input()
@@ -21,65 +25,51 @@ export class FontpreviewComponent implements OnChanges {
   specimenOnly = false;
 
   _wasInViewport = false
-  inViewPort() {
-    if (!this._wasInViewport) {
-      this._wasInViewport = true
-      this.initAll()
-    }
-  }
-
-  weightInfo?: { min_value: number; max_value: number; all?: number[]; virtualWeights: number[] };
-  /**
-   * List of weights supported by this font
-   * variable -> steps of 100 between min / max
-   * 
-   */
-  hasItalics = false
+  private _isInViewPort: any;
 
   @Input()
-  set customText(value: string | null) {
-    if (value && value.length < 20) {
-      const fs = 100 / value.length + 50
-      this.customStyle = `font-size: ${fs}px; line-height: ${fs}px`
+  set inViewPort(value) {
+    if (value) {
+      if (!this._wasInViewport) {
+        this._wasInViewport = true
+        if (this.font) {
+          this.initAll(this.font)
+        } else {
+          throw new Error('font not initialized')
+        }
+      }
     }
-    this._customText = value
-  }
-  get customText() {
-    return this._customText
+    this._isInViewPort = value;
   }
 
-  _customText: string | null = null
-  customStyle = ''
+  @Input()
+  customText = ''
 
-  // Why is this on Changes and not on viewInit? probably only tried with OnInit when template is not yet rendered
-  // but @ipnuts should already be available? hm....
-  ngOnChanges(changes: SimpleChanges): void {
+  style = "font-synthesis: none; font-family: 'Shantell Sans';"
 
-    // todo: function
-    if (changes['font']) {
-      this.initAll();
-    }
-  }
 
-  private initAll() {
-    const weightAxis = this.font.axes?.find(a => a.tag === 'wght');
+
+  private initAll(font) {
+    const weightAxis = font.axes?.find(a => a.tag === 'wght');
     // let css = generateFontCssWeight({ ...this.font, weight: 400, style: 'normal' })
     // Fontface rule is only possible in css and not in embedded styles. a style tag is appended to the header
     // angular is doing the some for the scoped css outputs
     // having 2000 different fonts in one app is a very special case so it's ok that angular has no way of doing it in an angular way
     let css = '';
 
-    for (const f of this.font.fonts) {
+
+    for (const f of font.fonts) {
       const weights = weightAxis ? `${weightAxis.min_value} ${weightAxis.max_value}` : f.weight;
-      css += generateFontCssWeight({ name: this.font.name, url: f.url, weight: weights, style: 'normal' });
+      css += generateFontCssWeight({ name: font.name, url: f.url, weight: weights, style: 'normal' });
       if (f.italicUrl) {
-        css += generateFontCssWeight({ name: this.font.name, url: f.italicUrl, weight: weights, style: 'italic' });
+        css += generateFontCssWeight({ name: font.name, url: f.italicUrl, weight: weights, style: 'italic' });
       }
     }
     appendStyleTag(css);
 
-    this.hasItalics = this.font.hasItalics
-    this.weightInfo = this.font.weightInfo
+    this.style = `font-synthesis: none; font-family: '${font.name}', Tofu;`, 100 
+    // todo: italics
+    // ) +(showItalics ? '; font-style: italic':'')">
   }
 }
 

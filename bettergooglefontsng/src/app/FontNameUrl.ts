@@ -30,6 +30,7 @@ export function generateFontCssWeight(font: {name: string, url: string, weight: 
     src: url("${font.url}");
     font-weight: ${font.weight};
     font-style: ${font.style};
+    font-display: swap;
   }
   `;
 }

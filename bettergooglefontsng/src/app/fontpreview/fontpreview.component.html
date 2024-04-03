@@ -1,58 +1,57 @@
-    @if(!specimenOnly) {
-    <h5 class="text-2xl font-semibold mb-2 ">
-        <a class="variation-wild text-cyan-700"
-            [href]="'https://fonts.google.com/specimen/'+font.name+'/tester'">{{font.name}}</a>
-        <!-- <span class="axes"> -->
-        @if( weightInfo?.all; as all  ) {
-        <div class="align-text-bottom ml-2 text-sm inline-flex flex-row items-center bg-cyan-300 rounded-md"
-            [title]="weightInfo?.all">
-            @if(all?.length; as length) {
-            <span class="p-1"><b>{{length}}</b> Weights</span>
+@if(font) {
+@if(!specimenOnly) {
+<h5 class="text-2xl font-semibold mb-2 ">
+    <a class="variation-wild text-cyan-700"
+        [href]="'https://fonts.google.com/specimen/'+font.name+'/tester'">{{font.name}}</a>
+    <!-- <span class="axes"> -->
+    @if( font.weightInfo.all; as all ) {
+    <div class="align-text-bottom ml-2 text-sm inline-flex flex-row items-center bg-cyan-300 rounded-md" [title]="all">
+        @if(all?.length; as length) {
+        <span class="p-1"><b>{{length}}</b> Weights</span>
+        }
+        @else {
+        <span class="p-1">Weight: </span>
+        }
+        <div class="p-1 text-xs leading-none font-extrabold flex flex-col justify-stretch">
+            <b>{{font.weightInfo.max_value}}</b>
+            @if(font.weightInfo.max_value !== font.weightInfo.min_value; ) {
+            <b>{{font.weightInfo.min_value}}</b>
             }
-            @else {
-            <span class="p-1">Weight: </span>
-            }
-            <div class="p-1 text-xs leading-none font-extrabold flex flex-col justify-stretch">
-                <b>{{weightInfo?.max_value}}</b>
-                @if(weightInfo?.max_value !== weightInfo?.min_value; ) {
-                <b>{{weightInfo?.min_value}}</b>
-                }
-            </div>
         </div>
-        }
-        @if( hasItalics ) {
-        <span class="ml-2 px-2 bg-cyan-300 rounded-md " title="Supports Italics"><i>i</i></span>
-        }
-        @for( axis of font.axes; track axis.tag) {
-        <div class="align-text-bottom ml-2 text-sm inline-flex flex-row items-center bg-orange-300 rounded-md">
-            <span class="p-1">{{axis.tag}}</span>
-            <div class="p-1 text-xs leading-none font-extrabold flex flex-col justify-stretch">
-                <b>{{axis.max_value}}</b>
-                <b>{{axis.min_value}}</b>
-            </div>
-        </div>
-        }
-        <!-- </span> -->
-    </h5>
+    </div>
     }
-        <!-- TODO : move hardcoded stuff into ts -->
-        <span class="contents text-xl" [title]="font.name"
-            [style]="'font-synthesis: none; font-family: \''+font.name+'\', \'Tofu\';'+(showItalics ? 'font-style: italic':'')">
-            @if(waterfall) {
-            @for(vweight of weightInfo?.virtualWeights; track vweight) {
-            <span [style]="{fontWeight: vweight, fontSize: '40px'}">
-                <span  [ngClass]="{'break-all': true}">{{customText}}</span>
-            </span>
-            }
-            }@else {
-            @if(customText) {
-            <span [style]="customStyle">{{customText}}</span>
-            } @else {
-            &excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;
-            }
-            }
-        </span>
-    @if(!specimenOnly) {
-    <a [routerLink]="'classify/'+font.name"><i class="material-icons">mode_edit</i></a>
+    @if( font.hasItalics ) {
+    <span class="ml-2 px-2 bg-cyan-300 rounded-md " title="Supports Italics"><i>i</i></span>
+    }
+    @for( axis of font.axes; track axis.tag) {
+    <div class="align-text-bottom ml-2 text-sm inline-flex flex-row items-center bg-orange-300 rounded-md">
+        <span class="p-1">{{axis.tag}}</span>
+        <div class="p-1 text-xs leading-none font-extrabold flex flex-col justify-stretch">
+            <b>{{axis.max_value}}</b>
+            <b>{{axis.min_value}}</b>
+        </div>
+    </div>
+    }
+    <!-- </span> -->
+</h5>
+}
+<span class="contents text-xl" [title]="font.name" [style]="style">
+    @if(waterfall) {
+    @for( vweight of font.weightInfo.virtualWeights; track vweight) {
+    <span [style]="{fontWeight: vweight, fontSize: '40px'}">
+        <span [ngClass]="{'break-all': true}">{{customText}}</span>
+    </span>
+    }
+    } @else {
+    @if(customText) {
+    <span>{{customText}}</span>
+    }
+    }
+</span>
+@if(!specimenOnly) {
+<a [routerLink]="'classify/'+font.name"><i class="material-icons">mode_edit</i></a>
 
-    }
+}
+} @else {
+loading font...
+}

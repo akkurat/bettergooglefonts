@@ -24,26 +24,17 @@
       [ngClass]="specimenOnly ? 'block' : 'grid grid-flow-row-dense auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
       @for(font of fonts|async; track trackBy) {
       <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
-      <span #gridElems
-        [ngClass]="{ 
-          'col-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
-          'col-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
-          'col-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
+      <!-- concatenation of css classes is not possible with tailwind -->
+      <span #gridElems [ngClass]="{ 
+          'row-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
+          'row-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
+          'lg:row-span-2 lg:col-span-2 row-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
           }">
 
-        @if(isInViewport(gridElems)) {
-        <app-fontpreview #fp [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
-          [showItalics]="showItalics" [specimenOnly]="specimenOnly"
+
+        <app-fontpreview [inViewPort]="isInViewport(gridElems)" [font]="font" [customText]="debouncedCustomText"
+          [waterfall]="showWaterfall" [showItalics]="showItalics" [specimenOnly]="specimenOnly"
           [ngClass]="{contents: specimenOnly}"></app-fontpreview>
-        } @else {
-        @if(specimenOnly) {
-        <span class="text-xl"><span style="font-size: 40px;"> {{debouncedCustomText|async }}</span></span>
-        } @else {
-        <div>
-          {{font.name}}
-        </div>
-        }
-        }
       </span>
       }
     </div>
