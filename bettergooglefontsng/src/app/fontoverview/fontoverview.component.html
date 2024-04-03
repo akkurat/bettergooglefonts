@@ -25,7 +25,11 @@
       @for(font of fonts|async; track trackBy) {
       <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
       <span #gridElems
-        [ngClass]="{ 'col-span-2': showWaterfall && font.fonts.length >1, 'col-span-3': showWaterfall && (font.fonts.length>3 || font.axes)}">
+        [ngClass]="{ 
+          'col-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
+          'col-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
+          'col-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
+          }">
 
         @if(isInViewport(gridElems)) {
         <app-fontpreview #fp [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"

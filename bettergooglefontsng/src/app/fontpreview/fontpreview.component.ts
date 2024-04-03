@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 export class FontpreviewComponent implements OnChanges {
 
   @Input()
-  font: FontNameUrlMulti = { name: '', url: '', weights: [], italics: [], fonts: [] }
+  font: FontNameUrlMulti = { name: '', url: '', weights: [], italics: [], fonts: [], hasItalics: false, weightInfo: {max_value:400, min_value:400, virtualWeights:[400]} }
   @Input()
   waterfall = false
   @Input()
@@ -20,22 +20,20 @@ export class FontpreviewComponent implements OnChanges {
   @Input()
   specimenOnly = false;
 
-  _wasInViewport=false
+  _wasInViewport = false
   inViewPort() {
-    if(!this._wasInViewport)
-    {
+    if (!this._wasInViewport) {
       this._wasInViewport = true
       this.initAll()
     }
   }
 
-  weights?: { min_value: number; max_value: number; all: number[]; };
+  weightInfo?: { min_value: number; max_value: number; all?: number[]; virtualWeights: number[] };
   /**
    * List of weights supported by this font
    * variable -> steps of 100 between min / max
    * 
    */
-  vweights: number[] = [];
   hasItalics = false
 
   @Input()
@@ -80,23 +78,9 @@ export class FontpreviewComponent implements OnChanges {
     }
     appendStyleTag(css);
 
-    this.hasItalics = this.font.italics.includes('italic');
-    if (!weightAxis) {
-      this.weights = {
-        min_value: Math.min(...this.font.weights),
-        max_value: Math.max(...this.font.weights),
-        all: [...new Set(this.font.weights)]
-      };
-      this.vweights = this.weights.all;
-    } else {
-      // or only change upon initial, but this would be an assumption again
-      this.weights = undefined;
-      // due to the exception step with one and range functions it is easier this way....
-      this.vweights = [1, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
-        .filter(w => w >= weightAxis.min_value && w <= weightAxis.max_value);
-    }
+    this.hasItalics = this.font.hasItalics
+    this.weightInfo = this.font.weightInfo
   }
-  // TODO: maybe global service
-
 }
+
 

@@ -76,7 +76,7 @@ export class MongofontService {
 
 
 
-    const [start, ...rest] = [0,50, 150, 250, 350, 450, 550, 650, 750, 850, 950, 1050]
+    const [start, ...rest] = [0, 50, 150, 250, 350, 450, 550, 650, 750, 850, 950, 1050]
     let lastVal = start
 
     const out: FontByWeightRange[] = []
@@ -143,14 +143,43 @@ export class MongofontService {
         this.db.collections['fonts'].find(selector).fetch(docs => {
           // const fmeta = docs.map()
           // TODO: map filename already in meta?
-          const metafonts: FontNameUrlMulti[] = docs.map((d: FontFamilyInfo) => ({
-            name: d.meta.name,
-            url: getUrlForFirstFont(d),
-            axes: d.meta.axes,
-            weights: d.meta.fonts.map(f => f.weight),
-            italics: d.meta.fonts.map(f => f.style),
-            fonts: groupFonts(d.meta.fonts)
-          }))
+          const metafonts: FontNameUrlMulti[] = docs.map((d: FontFamilyInfo) => {
+            const italics = d.meta.fonts.map(f => f.style);
+
+            const weights = d.meta.fonts.map(f => f.weight);
+            const weightAxis = d.meta.axes?.find(a => a.tag === 'wght');
+            let weightInfo
+            if (weightAxis) {
+              const virtualWeights = [1, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+                .filter(w => w >= weightAxis.min_value && w <= weightAxis.max_value);
+              weightInfo = {
+                min_value: weightAxis.min_value,
+                max_value: weightAxis.max_value,
+                all: undefined,
+                virtualWeights
+              }
+
+            } else {
+
+              weightInfo = {
+                min_value: Math.min(...weights),
+                max_value: Math.max(...weights),
+                all: [...new Set(weights)],
+                virtualWeights: [...new Set(weights)]
+              }
+            }
+
+            return ({
+              name: d.meta.name,
+              url: getUrlForFirstFont(d),
+              axes: d.meta.axes,
+              weights: weights,
+              weightInfo,
+              italics,
+              hasItalics: italics.includes('italic'),
+              fonts: groupFonts(d.meta.fonts),
+            });
+          })
           sub.next(metafonts)
         }, err => console.log(err))
       })

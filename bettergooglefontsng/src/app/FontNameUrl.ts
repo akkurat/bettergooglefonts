@@ -10,7 +10,9 @@ export type FontByWeight = {
 export type FontNameUrlMulti = {
   axes?: AxisInfo[];
   weights: number[];
+  weightInfo: {min_value:number, max_value:number, all?: number[], virtualWeights: number[]};
   italics: string[];
+  hasItalics: boolean;
   name: string;
   url: string;
   fonts: FontByWeight[] 
