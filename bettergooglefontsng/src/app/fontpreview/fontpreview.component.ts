@@ -2,13 +2,15 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostList
 import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BehaviorSubject, delay } from 'rxjs';
+import { BehaviorSubject, delay, from } from 'rxjs';
+import {Platform, PlatformModule} from '@angular/cdk/platform';
+
 
 @Component({
   selector: 'app-fontpreview',
   templateUrl: './fontpreview.component.html',
   standalone: true,
-  imports: [AsyncPipe, NgFor, NgIf, RouterModule, NgClass],
+  imports: [AsyncPipe, NgFor, NgIf, RouterModule, NgClass, PlatformModule],
 })
 export class FontpreviewComponent implements AfterViewInit {
   ngAfterViewInit(): void {
@@ -38,15 +40,34 @@ export class FontpreviewComponent implements AfterViewInit {
           throw new Error('font not initialized')
         }
       }
+
+      if (this._customText.dirty) {
+        this.specimentText = this._customText.value
+        this._customText.dirty = false
+      }
     }
     this._isInViewPort = value;
   }
 
   @Input()
-  customText = ''
+  set customText(value: string) {
+    if (this._isInViewPort) {
+      this._customText.value = value
+      this._customText.dirty = false
+      this.specimentText = value
+    } else {
+      this._customText.value = value
+      this._customText.dirty = true
+    }
+  }
+
+  _customText = { value: '', dirty: false }
+
+  specimentText = ''
 
   style = "font-synthesis: none; font-family: 'Shantell Sans';"
 
+  platform = inject(Platform)
 
 
   private initAll(font) {
@@ -60,13 +81,25 @@ export class FontpreviewComponent implements AfterViewInit {
 
     let fontfaces: FontFace[] = []
 
+    if (font.name.startsWith('Baloo')) {
+      console.log('jubajuba')
+    }
+
+
+
+    // Webkit seems to add quotes around
+    // firefox does not
+    const qt = this.platform.FIREFOX ? "'" : ""
+
+
     for (const f of font.fonts) {
       const weights = weightAxis ? `${weightAxis.min_value} ${weightAxis.max_value}` : f.weight;
 
-      fontfaces.push(new FontFace(font.name, `url(${f.url})`, { weight: weights, style: 'normal' }))
+      const fontFace = new FontFace(`${qt}${font.name}${qt}`, `url('${f.url}')`, { weight: weights, style: 'normal' });
+      fontfaces.push(fontFace)
       css += generateFontCssWeight({ name: font.name, url: f.url, weight: weights, style: 'normal' });
       if (f.italicUrl) {
-        fontfaces.push(new FontFace(font.name, `url(${f.italicUrl})`, { weight: weights, style: 'italic' }))
+        fontfaces.push(new FontFace(`${qt}${font.name}${qt}`, `url('${f.italicUrl}')`, { weight: weights, style: 'italic' }))
         css += generateFontCssWeight({ name: font.name, url: f.italicUrl, weight: weights, style: 'italic' });
       }
     }
@@ -77,12 +110,12 @@ export class FontpreviewComponent implements AfterViewInit {
     fontfaces.forEach(ff => { document.fonts.add(ff); })
 
     // Waiting until font is loaded
-    Promise.all(fontfaces.map(ff => ff.load()))
-      .then(all => {
-        console.log(all)
+
+    from(Promise.all(fontfaces.map(ff => ff.load())))
+      // .pipe( delay(Math.random()*1000))
+      .subscribe(all => {
         this.style = `font-synthesis: none; font-family: '${font.name}', Tofu;`
-      })
-      .catch(e => console.error(e, font, fontfaces))
+      }, e => console.error(e, font, fontfaces))
 
 
 

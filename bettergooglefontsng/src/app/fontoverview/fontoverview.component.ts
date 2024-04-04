@@ -52,7 +52,6 @@ export class FontoverviewComponent implements AfterViewInit {
   constructor(private fontService: MongofontService, private el: ElementRef) {
     this.fonts = this.fontService.getFonts({})
     this.fc.valueChanges.pipe(
-      auditTime(200),
       startWith(''),
       shareReplay(1),
       map(v => v ? v : this.specimen || ''))
@@ -60,16 +59,16 @@ export class FontoverviewComponent implements AfterViewInit {
       )
 
 
-    this.onWScroll.pipe(auditTime(200)).subscribe(ev => {
+    this.onWScroll.pipe(auditTime(1000)).subscribe(ev => {
 
       const inViewport = (element: HTMLElement) => {
         const rect = element.getBoundingClientRect()
         const html = document.documentElement;
+
+
         return (
-          rect.top + 300 >= 0 &&
-          rect.left + 300 >= 0 &&
-          rect.bottom - 300 <= (window.innerHeight || html.clientHeight) &&
-          rect.right - 300 <= (window.innerWidth || html.clientWidth)
+          rect.bottom + window.innerHeight >= 0 &&
+          rect.top - window.innerHeight  <= 2* window.innerHeight 
         )
       }
 
@@ -86,8 +85,8 @@ export class FontoverviewComponent implements AfterViewInit {
       // start a few elements before... stop after first one is false (by the assumption of continuity)
 
       console.log(vis, `vieport iterationg takes ${timer.measure()}ms`)
-
       this.visiblePreviews = vis
+
     })
 
 

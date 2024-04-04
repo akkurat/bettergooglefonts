@@ -30,8 +30,8 @@ export class ClassifierComponent implements OnInit {
   fontNext: FontFamilyInfo | undefined;
   fontNameByRouting = ''
   autoNext = true
+  jumpAnswered = false
   answers?: Record<string,string>;
-  jumpAnswered = true
   fg: FormGroup = new FormGroup({})
   fcs: { [k: string]: FormControl; } = {}
   lastActiveQuestion: string = '';

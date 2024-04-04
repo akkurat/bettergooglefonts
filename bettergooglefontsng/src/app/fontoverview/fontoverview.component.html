@@ -26,6 +26,7 @@
       <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
       <!-- concatenation of css classes is not possible with tailwind -->
       <span #gridElems [ngClass]="{ 
+        'overflow-clip': !specimenOnly,
           'row-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
           'row-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
           'lg:row-span-2 lg:col-span-2 row-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
