@@ -155,6 +155,7 @@
   "M-tip": {
     "a": [
       "baseline",
+      "~baseline",
       "above"
     ],
     "s": "M",
@@ -163,6 +164,7 @@
   "M-stems": {
     "a": [
       "parallel",
+      "~parallel",
       "angled"
     ],
     "s": "M",
