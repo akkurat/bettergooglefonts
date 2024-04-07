@@ -6,6 +6,7 @@ import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
 import { getSelectorForWeight } from './fontfilters/fontfilters.component';
 import { AssetServiceService } from './asset-service.service';
+import { environment } from 'src/environments/environment.development';
 
 export type AxesInfo = Map<string, { count: number, min: number, max: number }>
 
@@ -299,7 +300,10 @@ function getUrlForFont(filename: string) {
  * @returns 
  */
 export function getTtfUrlForFirstFont(d: FontFamilyInfo) {
-  // return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
+
+  if(environment.production) {
+    return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
+  }
   return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
 }
 

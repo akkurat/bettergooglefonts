@@ -32,6 +32,8 @@
         </div>
     </div>
     }
+    <a [routerLink]="'classify/'+font.name"><i class="material-icons">mode_edit</i></a>
+
     <!-- </span> -->
 </h5>
 }
@@ -48,10 +50,6 @@
         </span>
     }
 </a>
-@if(!specimenOnly) {
-<a [routerLink]="'classify/'+font.name"><i class="material-icons">mode_edit</i></a>
-
-}
 } @else {
 loading font...
 }

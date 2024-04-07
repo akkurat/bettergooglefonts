@@ -8,12 +8,10 @@ import * as staticAssetsList from '../assets.json'
 export class AssetServiceService {
   constructor() { }
 
-  bustUrl(urlString: string | URL) {
+  bustUrl(urlString: string ) {
 
     const url: URL = new URL(urlString, window.document.baseURI)
-    const pathName = url.pathname
-
-    const hash = staticAssetsList[pathName.substring(1)]
+    const hash = staticAssetsList[urlString]
 
     if (hash) {
       url.searchParams.append('hash', hash)

@@ -112,6 +112,7 @@ export class FontpreviewComponent implements AfterViewInit {
       // .pipe( delay(Math.random()*1000))
       .subscribe(all => {
         this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
+        this.font
       }, e => console.error(e, font, fontfaces))
 
 
