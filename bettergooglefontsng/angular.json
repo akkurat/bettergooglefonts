@@ -38,6 +38,9 @@
           },
           "configurations": {
             "production": {
+              "scripts": [
+                
+              ],
               "budgets": [
                 {
                   "type": "initial",

@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^17.2.3",
     "@angular/platform-browser-dynamic": "^17.2.3",
     "@angular/router": "^17.2.3",
+    "@sitelintcode/angular-static-assets-hash": "^0.0.22",
     "minimongo": "^6.18.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
