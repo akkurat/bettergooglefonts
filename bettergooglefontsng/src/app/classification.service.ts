@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, map, shareReplay, tap } from 'rxjs';
+import { AssetServiceService } from './asset-service.service';
 
 const LOCALSTORAGE_PREFIX = 'fontquestionnaire_'
 
@@ -19,8 +20,9 @@ export class ClassificationService {
 
 
   private _http = inject(HttpClient)
+  private _assetService = inject(AssetServiceService)
 
-  private fontQuestions = this._http.get('assets/classification_questions.json')
+  private fontQuestions = this._http.get(this._assetService.bustUrl('assets/classification_questions.json').toString())
     .pipe(
       map(q => Object.entries(q)
         .map(([title, value]) => ({

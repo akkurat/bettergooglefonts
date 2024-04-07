@@ -128,7 +128,7 @@ ng serve
 * All FONTMETA.pb files (protobuf files) are parse by the nodescript gf.js and wrote into ```bettergooglefontsng/src/assets/fontmeta.json``` (parameter of the script)
 * All *.pb files in the axisregistry/data are merged into ```bettergooglefontsng/src/assets/axismeta.json```
 * classification.json is copied from 'http://localhost:4200/classify-json' 
-* converting ttf fonts to woff2 with only ascii for the preview: ```glyphhanger --subset="fonts/**/*.ttf" --output=gf-subsets/ascii_us --US_ASCII --formats=woff2```
+* converting ttf fonts to woff2 with only ascii for the preview: ```glyphhanger --subset="fonts/**/*.ttf" --output=bettergooglefontsng/src/assets/gf-subsets/ascii_us --US_ASCII --formats=woff2```
 
 ### App 
 * At startup an in-memory minimongo db is setup with the contents of fontmeta.json and classification.json merged together

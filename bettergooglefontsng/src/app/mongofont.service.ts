@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject, combineLatestWith, filter, first, firstValueFrom, from, Observable, skipUntil, skipWhile } from 'rxjs';
 import { FontByWeight, FontNameUrlMulti } from './FontNameUrl';
 import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
 import { getSelectorForWeight } from './fontfilters/fontfilters.component';
+import { AssetServiceService } from './asset-service.service';
 
 export type AxesInfo = Map<string, { count: number, min: number, max: number }>
 
@@ -50,71 +51,19 @@ export type FontByWeightRange = {
   providedIn: 'root'
 })
 export class MongofontService {
-  /**
-   * 
-   * @param options 
-   * percentiles: boundaries.
-   * [2,5,9] maps to the two brackets [2<=x, x<5][5<=x,x<9]
-   * 
-   * [0,50][50,200][200,1000]
-   */
-  async percentilesByRange(): Promise<FontByWeightRange[]> {
-
-    await firstValueFrom(this.dbready.pipe(skipWhile(e => !e)))
-
-    const selector = getSelectorForWeight({ flag: false })
-    const _d1: { meta: { axes: AxisInfo[] } }[] = await this.db.collections['fonts'].find(selector, { fields: { 'meta.axes': 1 } }).fetch()
-    const d2: { meta: { fonts: FontInfo[] } }[] = await this.db.collections['fonts'].find({ $nor: [selector] }, { fields: { 'meta.fonts': 1 } }).fetch()
-
-    const d1: AxisInfo[] = []
-    for (const d of _d1) {
-      // hm.... maybe we could make fontmeta.json a bit more friendly already
-      d.meta.axes
-        .filter(a => a.tag === 'wght')
-        .forEach(a => d1.push(a))
-    }
-
-
-
-    const [start, ...rest] = [0, 50, 150, 250, 350, 450, 550, 650, 750, 850, 950, 1050]
-    let lastVal = start
-
-    const out: FontByWeightRange[] = []
-
-    for (const max of rest) {
-      const min = lastVal
-      lastVal = max
-
-      let discreteCnt = 0
-      for (const d of d2) {
-        discreteCnt += d.meta.fonts.filter(f => min < f.weight && f.weight <= max).length
-      }
-      let rangeCnt = 0
-      for (const d of d1) {
-        const avg = (max + min) / 2;
-        if (d.min_value <= avg && avg <= d.max_value) {
-          rangeCnt++
-        }
-      }
-      out.push({ range: [min, max], count: discreteCnt + rangeCnt, discreteCnt, rangeCnt })
-
-    }
-
-    return out
-
-
-  }
 
   db: MinimongoLocalDb
   filters: BehaviorSubject<FontFilter[]> = new BehaviorSubject([] as FontFilter[])
-  // EventsEmitter?
   dbready: BehaviorSubject<boolean> = new BehaviorSubject(false)
 
   constructor(private http: HttpClient) {
     this.db = new MemoryDb();
     this.db.addCollection('fonts')
 
-    this.http.get('assets/fontmeta.json').pipe(combineLatestWith(this.http.get('assets/classification.json')))
+    const aS = inject(AssetServiceService);
+
+    this.http.get((aS.bustUrl('assets/fontmeta.json')).toString())
+    .pipe(combineLatestWith(this.http.get(aS.bustUrl('assets/classification.json').toString())))
       .subscribe(([metas, classificationEntries]) => {
         const types = new Set()
         const classification = new Map((classificationEntries as []))
@@ -130,6 +79,17 @@ export class MongofontService {
         console.log(types)
       })
   }
+  /**
+   * 
+   * @param options 
+   * percentiles: boundaries.
+   * [2,5,9] maps to the two brackets [2<=x, x<5][5<=x,x<9]
+   * 
+   * [0,50][50,200][200,1000]
+   */
+
+  // EventsEmitter?
+
 
   getFonts(selector): Observable<FontNameUrlMulti[]> {
 
@@ -264,6 +224,53 @@ export class MongofontService {
       }
     })
     return sub
+  }
+
+  async percentilesByRange(): Promise<FontByWeightRange[]> {
+
+    await firstValueFrom(this.dbready.pipe(skipWhile(e => !e)))
+
+    const selector = getSelectorForWeight({ flag: false })
+    const _d1: { meta: { axes: AxisInfo[] } }[] = await this.db.collections['fonts'].find(selector, { fields: { 'meta.axes': 1 } }).fetch()
+    const d2: { meta: { fonts: FontInfo[] } }[] = await this.db.collections['fonts'].find({ $nor: [selector] }, { fields: { 'meta.fonts': 1 } }).fetch()
+
+    const d1: AxisInfo[] = []
+    for (const d of _d1) {
+      // hm.... maybe we could make fontmeta.json a bit more friendly already
+      d.meta.axes
+        .filter(a => a.tag === 'wght')
+        .forEach(a => d1.push(a))
+    }
+
+
+
+    const [start, ...rest] = [0, 50, 150, 250, 350, 450, 550, 650, 750, 850, 950, 1050]
+    let lastVal = start
+
+    const out: FontByWeightRange[] = []
+
+    for (const max of rest) {
+      const min = lastVal
+      lastVal = max
+
+      let discreteCnt = 0
+      for (const d of d2) {
+        discreteCnt += d.meta.fonts.filter(f => min < f.weight && f.weight <= max).length
+      }
+      let rangeCnt = 0
+      for (const d of d1) {
+        const avg = (max + min) / 2;
+        if (d.min_value <= avg && avg <= d.max_value) {
+          rangeCnt++
+        }
+      }
+      out.push({ range: [min, max], count: discreteCnt + rangeCnt, discreteCnt, rangeCnt })
+
+    }
+
+    return out
+
+
   }
 }
 
