@@ -22,7 +22,9 @@ import { SettingsStore } from '../helpers';
   selector: 'app-classifier',
   templateUrl: './classifier.component.html',
   standalone: true,
-  imports: [MatSlideToggleModule, FormsModule, NgFor, MatRadioModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, MatSnackBarModule, RouterModule, ReactiveFormsModule, MatTooltipModule, JsonPipe],
+  imports: [MatSlideToggleModule, FormsModule, NgFor,
+    MatRadioModule, MatFormFieldModule, MatButtonModule, MatToolbarModule,
+    MatSnackBarModule, RouterModule, ReactiveFormsModule, MatTooltipModule, JsonPipe],
   providers: [{ provide: SettingsStore, useClass: SettingsStore }]
 })
 export class ClassifierComponent implements OnInit {
@@ -33,7 +35,7 @@ export class ClassifierComponent implements OnInit {
   fontNext: FontFamilyInfo | undefined;
   fontNameByRouting = ''
   get autoNext() { return this._settingsStore.getBoolSetting('classifier/autoNext', true) }
-  set autoNext(value) { this._settingsStore.storeBoolSetting('classifier/autoNext', value)}
+  set autoNext(value) { this._settingsStore.storeBoolSetting('classifier/autoNext', value) }
   get jumpAnswered() { return this._settingsStore.getBoolSetting('classifier/jumpAnswered', false) }
   set jumpAnswered(value) { this._settingsStore.storeBoolSetting('classifier/jumpAnswered', value) }
   answers?: Record<string, string>;
