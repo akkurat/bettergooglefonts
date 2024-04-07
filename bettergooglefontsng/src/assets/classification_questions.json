@@ -75,6 +75,16 @@
     "s": "ESaest",
     "c": ""
   },
+  "contrast": {
+    "a": [
+      {"a":"none", "f":"Podkova", "s": "M"},
+      {"a":"medium", "f": "EB Garamond", "s": "M"},
+      {"a":"strong", "f":"Bodoni Moda", "s": "M"}
+    ],
+    "s": "AHeMa",
+    "c": "Contrast between line thicknesses"
+
+  },
   "e-angle": {
     "a": [
       "horizontal",
@@ -91,8 +101,8 @@
     "a": [
       "modern (single story)",
       "classical (double story)",
-      "both",
-      "other"
+      "other",
+      "both"
     ],
     "s": "g",
     "c": "lower case g shape"
@@ -155,6 +165,7 @@
   "M-tip": {
     "a": [
       "baseline",
+      "~baseline",
       "above"
     ],
     "s": "M",
@@ -163,6 +174,7 @@
   "M-stems": {
     "a": [
       "parallel",
+      "~parallel",
       "angled"
     ],
     "s": "M",

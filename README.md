@@ -82,6 +82,8 @@ ng serve
 * move utility scripts to folder... or at least name them all with a prefix
 * document svg generation and manual copying
 * fontsize infinit scroll and custom text
+* infite scroll and sticky header not really working
+* layout of overlays (why tf is there a padding to the right?)
 
 
 ## Reasonable TODOs

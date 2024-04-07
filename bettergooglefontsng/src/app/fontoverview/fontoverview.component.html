@@ -20,14 +20,24 @@
     </div>
   </div>
   <ul class="flex-grow p-2 lg:p-9">
-    <cdk-virtual-scroll-viewport appendOnly scrollWindow itemSize="10">
-      <div class="flex flex-row flex-wrap">
-        <div *cdkVirtualFor="let font of fonts; trackBy: trackBy"
-          [class]="'break-all ' + (specimenOnly ? 'min-h-10' : 'w-[400px] h-[200px]')">
-          <app-fontpreview [font]="font" [customText]="debouncedCustomText|async" [waterfall]="showWaterfall"
-            [showItalics]="showItalics" [specimenOnly]="specimenOnly"></app-fontpreview>
-        </div>
-      </div>
-    </cdk-virtual-scroll-viewport>
+    <div class=""
+      [ngClass]="specimenOnly ? 'block' : 'grid grid-flow-row-dense auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
+      @for(font of fonts|async; track trackBy) {
+      <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
+      <!-- concatenation of css classes is not possible with tailwind -->
+      <span #gridElems [ngClass]="{ 
+        'overflow-clip': !specimenOnly,
+          'row-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
+          'row-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
+          'lg:row-span-2 lg:col-span-2 row-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
+          }">
+
+
+        <app-fontpreview [inViewPort]="isInViewport(gridElems)" [font]="font" [customText]="debouncedCustomText"
+          [waterfall]="showWaterfall" [showItalics]="showItalics" [specimenOnly]="specimenOnly"
+          [ngClass]="{contents: specimenOnly}"></app-fontpreview>
+      </span>
+      }
+    </div>
   </ul>
 </div>

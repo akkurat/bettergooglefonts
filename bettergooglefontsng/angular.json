@@ -23,13 +23,7 @@
             "inlineStyleLanguage": "css",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "followSymlinks": true,
-                "glob": "**/*.woff2",
-                "input": "src/assets/gf-subsets",
-                "output": "/assets/gf-subsets"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -58,7 +52,16 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "assets": [
+                "src/favicon.ico",
+                {
+                  "followSymlinks": true,
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "/assets"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"

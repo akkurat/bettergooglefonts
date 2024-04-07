@@ -6289,7 +6289,7 @@
     },
     {
         "meta": {
-            "name": "Baloo 2",
+            "name": "Baloo2",
             "designer": "Ek Type",
             "license": "OFL",
             "category": [
@@ -6298,7 +6298,7 @@
             "date_added": "2016-01-20",
             "fonts": [
                 {
-                    "name": "Baloo 2",
+                    "name": "Baloo2",
                     "style": "normal",
                     "weight": 400,
                     "filename": "Baloo2[wght].ttf",

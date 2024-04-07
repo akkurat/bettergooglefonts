@@ -10,7 +10,9 @@ export type FontByWeight = {
 export type FontNameUrlMulti = {
   axes?: AxisInfo[];
   weights: number[];
+  weightInfo: {min_value:number, max_value:number, all?: number[], virtualWeights: number[]};
   italics: string[];
+  hasItalics: boolean;
   name: string;
   url: string;
   fonts: FontByWeight[] 
@@ -28,6 +30,7 @@ export function generateFontCssWeight(font: {name: string, url: string, weight: 
     src: url("${font.url}");
     font-weight: ${font.weight};
     font-style: ${font.style};
+    font-display: swap;
   }
   `;
 }
