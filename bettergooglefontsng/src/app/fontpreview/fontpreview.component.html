@@ -35,17 +35,19 @@
     <!-- </span> -->
 </h5>
 }
-<span class="contents text-xl" [title]="font.name" [style]="style">
+<a [href]="'https://fonts.google.com/specimen/'+font.name+'/tester'" class="contents text-5xl" [title]="font.name" [style]="style">
     @if(waterfall) {
     @for( vweight of font.weightInfo.virtualWeights; track vweight) {
-    <span [style]="{fontWeight: vweight, fontSize: '40px'}">
+    <span [style]="{fontWeight: vweight}">
         <span [ngClass]="{'break-all': true}">{{specimentText}}</span>
     </span>
     }
     } @else {
+        <span class="break-all">
     {{specimentText}}
+        </span>
     }
-</span>
+</a>
 @if(!specimenOnly) {
 <a [routerLink]="'classify/'+font.name"><i class="material-icons">mode_edit</i></a>
 

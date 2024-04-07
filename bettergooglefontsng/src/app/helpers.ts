@@ -23,3 +23,21 @@ const lesNumbres = {
 export const replaceNumbersByText = (s: string) => s.replaceAll(
     / \d/, m => ' ' + lesNumbres[m]
 )
+
+/// factory...
+export class SettingsStore {
+    getBoolSetting(key: string, fallback: boolean) {
+        const value = localStorage.getItem(key)
+        if (value === 'true') {
+            return true
+        }
+        if (value === 'false') {
+            return false
+        }
+        return fallback
+
+    }
+    storeBoolSetting(key: string, value: boolean) {
+        localStorage.setItem(key, value ? 'true' : 'false')
+    }
+}

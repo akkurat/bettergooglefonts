@@ -14,6 +14,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { combineLatestWith } from 'rxjs';
 import { MatIconRegistry } from '@angular/material/icon';
+import { SettingsStore } from '../helpers';
 
 
 
@@ -21,17 +22,21 @@ import { MatIconRegistry } from '@angular/material/icon';
   selector: 'app-classifier',
   templateUrl: './classifier.component.html',
   standalone: true,
-  imports: [MatSlideToggleModule, FormsModule, NgFor, MatRadioModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, MatSnackBarModule, RouterModule, ReactiveFormsModule, MatTooltipModule, JsonPipe]
+  imports: [MatSlideToggleModule, FormsModule, NgFor, MatRadioModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, MatSnackBarModule, RouterModule, ReactiveFormsModule, MatTooltipModule, JsonPipe],
+  providers: [{ provide: SettingsStore, useClass: SettingsStore }]
 })
 export class ClassifierComponent implements OnInit {
+  private _settingsStore = inject(SettingsStore)
   questions: FontQuestion[] = [];
   font: FontFamilyInfo | undefined;
   fontPrev: FontFamilyInfo | undefined;
   fontNext: FontFamilyInfo | undefined;
   fontNameByRouting = ''
-  autoNext = true
-  jumpAnswered = false
-  answers?: Record<string,string>;
+  get autoNext() { return this._settingsStore.getBoolSetting('classifier/autoNext', true) }
+  set autoNext(value) { this._settingsStore.storeBoolSetting('classifier/autoNext', value)}
+  get jumpAnswered() { return this._settingsStore.getBoolSetting('classifier/jumpAnswered', false) }
+  set jumpAnswered(value) { this._settingsStore.storeBoolSetting('classifier/jumpAnswered', value) }
+  answers?: Record<string, string>;
   fg: FormGroup = new FormGroup({})
   fcs: { [k: string]: FormControl; } = {}
   lastActiveQuestion: string = '';
@@ -114,7 +119,7 @@ export class ClassifierComponent implements OnInit {
       this.navigateToNextFont();
     }
     else {
-      if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].map(k => 'Digit'+k).includes(event.code)) {
+      if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].map(k => 'Digit' + k).includes(event.code)) {
         const questionName = this.getQuestionInFocus()
         if (questionName) {
           const idx = parseInt(event.code.substring('Digit'.length)) - 1 + (event.shiftKey ? 10 : 0)
@@ -133,7 +138,7 @@ export class ClassifierComponent implements OnInit {
 
   private getQuestionInFocus() {
     const activeElement = document.activeElement;
-    return this.questionByRadio(activeElement) || ''; 
+    return this.questionByRadio(activeElement) || '';
   }
 
   private questionByRadio(activeElement: Element | null) {

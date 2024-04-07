@@ -267,18 +267,32 @@ export class MongofontService {
   }
 }
 
+/**
+ * 
+ * @param d 
+ * @returns woff subset filename relative to serving dir
+ */
 export function getUrlForFirstFont(d: FontFamilyInfo) {
   const filename = d.meta.fonts[0].filename;
   return getUrlForFont(filename);
-  return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
 }
 
+/**
+ * 
+ * @param d 
+ * @returns woff subset filename relative to serving dir
+ */
 function getUrlForFont(filename: string) {
   return `assets/gf-subsets/ascii_us/${filename.replace(/\.ttf$/, "-subset.woff2")}`;
 }
 
+/**
+ * 
+ * @param d 
+ * @returns 
+ */
 export function getTtfUrlForFirstFont(d: FontFamilyInfo) {
-  return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
+  // return `https://raw.githubusercontent.com/google/fonts/main/${d.dir.substring(6)}/${d.meta.fonts[0].filename}`;
   return `assets/${d.dir}/${d.meta.fonts[0].filename}`;
 }
 

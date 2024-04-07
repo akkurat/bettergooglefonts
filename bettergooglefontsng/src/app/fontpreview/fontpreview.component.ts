@@ -3,7 +3,7 @@ import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeigh
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BehaviorSubject, delay, from } from 'rxjs';
-import {Platform, PlatformModule} from '@angular/cdk/platform';
+import { Platform, PlatformModule } from '@angular/cdk/platform';
 
 
 @Component({
@@ -65,7 +65,7 @@ export class FontpreviewComponent implements AfterViewInit {
 
   specimentText = ''
 
-  style = "font-synthesis: none; font-family: 'Shantell Sans';"
+  style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans';"
 
   platform = inject(Platform)
 
@@ -85,12 +85,9 @@ export class FontpreviewComponent implements AfterViewInit {
       console.log('jubajuba')
     }
 
-
-
     // Webkit seems to add quotes around
     // firefox does not
     const qt = this.platform.FIREFOX ? "'" : ""
-
 
     for (const f of font.fonts) {
       const weights = weightAxis ? `${weightAxis.min_value} ${weightAxis.max_value}` : f.weight;
@@ -114,7 +111,7 @@ export class FontpreviewComponent implements AfterViewInit {
     from(Promise.all(fontfaces.map(ff => ff.load())))
       // .pipe( delay(Math.random()*1000))
       .subscribe(all => {
-        this.style = `font-synthesis: none; font-family: '${font.name}', Tofu;`
+        this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
       }, e => console.error(e, font, fontfaces))
 
 
