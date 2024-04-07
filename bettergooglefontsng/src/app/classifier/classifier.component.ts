@@ -1,17 +1,11 @@
 import { Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ClassificationService, FontQuestion } from '../classification.service';
 import { appendStyleTag, generateFontCss } from '../FontNameUrl';
 import { FontFamilyInfo, MongofontService, getTtfUrlForFirstFont } from '../mongofont.service';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { JsonPipe, NgFor } from '@angular/common';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { combineLatestWith } from 'rxjs';
 import { MatIconRegistry } from '@angular/material/icon';
 import { SettingsStore } from '../helpers';
@@ -22,9 +16,7 @@ import { SettingsStore } from '../helpers';
   selector: 'app-classifier',
   templateUrl: './classifier.component.html',
   standalone: true,
-  imports: [MatSlideToggleModule, FormsModule, NgFor,
-    MatRadioModule, MatFormFieldModule, MatButtonModule, MatToolbarModule,
-    MatSnackBarModule, RouterModule, ReactiveFormsModule, MatTooltipModule, JsonPipe],
+  imports: [FormsModule, NgFor, MatSnackBarModule, RouterModule, ReactiveFormsModule, JsonPipe],
   providers: [{ provide: SettingsStore, useClass: SettingsStore }]
 })
 export class ClassifierComponent implements OnInit {
