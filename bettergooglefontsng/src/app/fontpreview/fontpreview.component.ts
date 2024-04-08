@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { AfterRenderPhase, AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, ViewChild, ViewRef, afterNextRender, inject } from '@angular/core';
 import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -13,6 +13,20 @@ import { Platform, PlatformModule } from '@angular/cdk/platform';
   imports: [AsyncPipe, NgFor, NgIf, RouterModule, NgClass, PlatformModule],
 })
 export class FontpreviewComponent implements AfterViewInit {
+  intersectionObserver: IntersectionObserver | null = null
+  @ViewChild('contents')
+  contentRef!: ElementRef<HTMLDivElement | HTMLSpanElement>
+  constructor() {
+    afterNextRender(() => {
+      this.intersectionObserver = new IntersectionObserver((entries) => {
+        console.log('Content intersected', entries);
+      }, { threshold: 0.1 });
+
+      this.intersectionObserver.observe(this.contentRef.nativeElement);
+    }, { phase: AfterRenderPhase.Write });
+  }
+
+
   ngAfterViewInit(): void {
     // console.log(this.font?.weightInfo?.virtualWeights)
   }
@@ -81,9 +95,6 @@ export class FontpreviewComponent implements AfterViewInit {
 
     let fontfaces: FontFace[] = []
 
-    if (font.name.startsWith('Baloo')) {
-      console.log('jubajuba')
-    }
 
     // Webkit seems to add quotes around
     // firefox does not

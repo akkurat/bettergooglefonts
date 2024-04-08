@@ -25,50 +25,40 @@ export type MongoSelector = {
 
 export class FontoverviewComponent implements AfterViewInit {
 
-  specimen = inject(DomSanitizer).sanitize(SecurityContext.HTML, '&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;');
-
-  ngAfterViewInit() {
-
-    this.gridElems.changes.subscribe(ev => {
-      this.onWScroll.next('')
-    })
-  }
-
-  isInViewport(element: HTMLElement) {
-    return this.visiblePreviews.includes(element)
-  }
-
   @ViewChildren('gridElems')
   gridElems!: QueryList<ElementRef<HTMLElement>>
+
+  specimen = inject(DomSanitizer).sanitize(SecurityContext.HTML, '&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;');
 
   fonts: Observable<FontNameUrlMulti[]>
   fc = new FormControl('')
 
-  debouncedCustomText = ''
-  showItalics = false;
-  showWaterfall = true;
-  specimenOnly = false;
+  viewSettings = {
+    debouncedCustomText: '',
+    showItalics: false,
+    showWaterfall: true,
+    specimenOnly: false,
+  }
   visiblePreviews: HTMLElement[] = [];
+  onWScroll = new Subject()
+
   constructor(private fontService: MongofontService, private el: ElementRef) {
     this.fonts = this.fontService.getFonts({})
     this.fc.valueChanges.pipe(
       startWith(''),
       shareReplay(1),
       map(v => v ? v : this.specimen || ''))
-      .subscribe(v => this.debouncedCustomText = v
+      .subscribe(v => this.viewSettings.debouncedCustomText = v
       )
 
-
-    this.onWScroll.pipe(auditTime(1000)).subscribe(ev => {
+    this.onWScroll.pipe(auditTime(300)).subscribe(ev => {
 
       const inViewport = (element: HTMLElement) => {
         const rect = element.getBoundingClientRect()
-        const html = document.documentElement;
-
 
         return (
-          rect.bottom + window.innerHeight >= 0 &&
-          rect.top - window.innerHeight  <= 2* window.innerHeight 
+          rect.bottom >= 0 &&
+          rect.top - window.innerHeight <= 2 * window.innerHeight
         )
       }
 
@@ -83,19 +73,18 @@ export class FontoverviewComponent implements AfterViewInit {
       // obviously enough performant for now
       // ways to improve: estimate position of current element linearly
       // start a few elements before... stop after first one is false (by the assumption of continuity)
+      // TODO: better use native Intersect / Resize API 
 
       console.log(vis, `vieport iterationg takes ${timer.measure()}ms`)
       this.visiblePreviews = vis
-
     })
+  }
 
-
-
-    // if(visible) {
-    //   console.debug(this.font.name)
-
-    // }
-
+  @HostListener('window:scroll', ['$event'])
+  _onWScroll($event) {
+    // console.debug($event)
+    // idea for a more effienct boundary on where the viewport ends
+    this.onWScroll.next($event)
   }
 
   trackFilterChange(selector: MongoSelector) {
@@ -105,20 +94,14 @@ export class FontoverviewComponent implements AfterViewInit {
     return f.idx
   }
 
-
-  onWScroll = new Subject()
-
-  @HostListener('window:scroll', ['$event'])
-  _onWScroll($event) {
-    // console.debug($event)
-    // idea for a more effienct boundary on where the viewport ends
-
-    this.onWScroll.next($event)
-
+  ngAfterViewInit() {
+    this.gridElems.changes.subscribe(ev => {
+      this.onWScroll.next('')
+    })
   }
 
-
-
-
+  isInViewport(element: HTMLElement) {
+    return this.visiblePreviews.includes(element)
+  }
 
 }

@@ -52,7 +52,6 @@ export class ClassifierComponent implements OnInit {
 
       this.fg.valueChanges.subscribe(a => this.saveAnswer(a))
     })
-    // todo: read from json 
   }
   ngOnInit(): void {
     console.log(this.route)

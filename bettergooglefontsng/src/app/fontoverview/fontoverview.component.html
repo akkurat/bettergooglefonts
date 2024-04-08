@@ -6,13 +6,13 @@
         <mat-icon>settings_backup_restore</mat-icon>
       </button>
       <label>
-        <input type="checkbox" [(ngModel)]="showWaterfall" />Waterfall
+        <input type="checkbox" [(ngModel)]="viewSettings.showWaterfall" />Waterfall
       </label>
       <label>
-        <input type="checkbox" [(ngModel)]="showItalics" />Italics
+        <input type="checkbox" [(ngModel)]="viewSettings.showItalics" />Italics
       </label>
       <label>
-        <input type="checkbox" [(ngModel)]="specimenOnly" />No Meta
+        <input type="checkbox" [(ngModel)]="viewSettings.specimenOnly" />No Meta
       </label>
     </div>
     <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2 rounded">
@@ -21,21 +21,23 @@
   </div>
   <ul class="flex-grow p-2 lg:p-9">
     <div class=""
-      [ngClass]="specimenOnly ? 'block' : 'grid grid-flow-row-dense auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
+      [ngClass]="viewSettings.specimenOnly ? 'block' : 'grid grid-flow-row-dense auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
       @for(font of fonts|async; track trackBy) {
       <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
       <!-- concatenation of css classes is not possible with tailwind -->
       <span #gridElems [ngClass]="{ 
-        'overflow-clip': !specimenOnly,
-          'row-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
-          'row-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
-          'lg:row-span-2 lg:col-span-2 row-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
+        'overflow-clip': !viewSettings.specimenOnly,
+          'row-span-2': viewSettings.showWaterfall && font.weightInfo.virtualWeights.length >2, 
+          'row-span-3': viewSettings.showWaterfall && font.weightInfo.virtualWeights.length >4, 
+          'lg:row-span-2 lg:col-span-2 row-span-4': viewSettings.showWaterfall && font.weightInfo.virtualWeights.length >6, 
           }">
 
 
-        <app-fontpreview [inViewPort]="isInViewport(gridElems)" [font]="font" [customText]="debouncedCustomText"
-          [waterfall]="showWaterfall" [showItalics]="showItalics" [specimenOnly]="specimenOnly"
-          [ngClass]="{contents: specimenOnly}"></app-fontpreview>
+        <!-- todo: hand down complete object -->
+        <app-fontpreview [inViewPort]="isInViewport(gridElems)" [font]="font"
+          [customText]="viewSettings.debouncedCustomText" [waterfall]="viewSettings.showWaterfall"
+          [showItalics]="viewSettings.showItalics" [specimenOnly]="viewSettings.specimenOnly"
+          [ngClass]="{contents: viewSettings.specimenOnly}"></app-fontpreview>
       </span>
       }
     </div>
