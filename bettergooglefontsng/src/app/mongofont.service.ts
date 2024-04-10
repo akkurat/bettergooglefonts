@@ -74,10 +74,10 @@ export class MongofontService {
           types.add(meta['type'])
         }
         this.db.collections['fonts'].upsert(metas,
-          (docs) => { console.log(docs.length); this.dbready.next(true) },
-          (err) => { console.log(err); }
+          (docs) => { console.debug(docs.length); this.dbready.next(true) },
+          (err) => { console.debug(err); }
         )
-        console.log(types)
+        console.debug(types)
       })
   }
   /**
@@ -142,7 +142,7 @@ export class MongofontService {
             });
           })
           sub.next(metafonts)
-        }, err => console.log(err))
+        }, err => console.debug(err))
       })
     return sub.asObservable()
   }

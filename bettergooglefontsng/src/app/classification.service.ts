@@ -30,7 +30,7 @@ export class ClassificationService {
           items: value.a.map(i => typeof i === 'string' ? i : i.a),
           samples: value.s
         }))),
-      tap(console.log),
+      tap(console.debug),
       shareReplay(1)
     )
 

@@ -1,15 +1,16 @@
 import { AfterViewInit, Component, ElementRef, HostListener, QueryList, SecurityContext, ViewChildren, inject } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { BehaviorSubject, Observable, Subject, auditTime, debounceTime, first, map, shareReplay, startWith, tap, throttleTime } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject, auditTime, combineLatest, combineLatestAll, connect, connectable, debounceTime, first, map, merge, multicast, publishBehavior, publishReplay, share, shareReplay, startWith, tap, throttleTime } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
-import { FontpreviewComponent } from '../fontpreview/fontpreview.component';
-import { NgFor, AsyncPipe, NgClass } from '@angular/common';
+import { FontpreviewComponent } from './fontpreview/fontpreview.component';
+import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { Timer } from '../helpers';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PreviewInfoBarComponent } from './preview-info-bar/preview-info-bar.component';
 
 export type inor = '$or' | '$and' | '$in'
 export type MongoSelector = {
@@ -20,7 +21,8 @@ export type MongoSelector = {
   selector: 'app-fontoverview',
   templateUrl: './fontoverview.component.html',
   standalone: true,
-  imports: [NgClass, FontfiltersComponent, NgFor, FontpreviewComponent, AsyncPipe, ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule]
+  imports: [NgClass, FontfiltersComponent, NgFor, FontpreviewComponent, AsyncPipe, JsonPipe,
+    ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule, PreviewInfoBarComponent]
 })
 
 export class FontoverviewComponent implements AfterViewInit {
@@ -28,68 +30,57 @@ export class FontoverviewComponent implements AfterViewInit {
   @ViewChildren('gridElems')
   gridElems!: QueryList<ElementRef<HTMLElement>>
 
-  specimen = inject(DomSanitizer).sanitize(SecurityContext.HTML, '&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;');
+  defaultSpecimen = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
 
-  fonts: Observable<FontNameUrlMulti[]>
-  fc = new FormControl('')
+  $fonts: Subject<FontNameUrlMulti[]> = new BehaviorSubject([] as FontNameUrlMulti[])
 
-  viewSettings = {
-    debouncedCustomText: '',
+  viewSettings = inject(FormBuilder).nonNullable.group({
+    customText: '____',
     showItalics: false,
     showWaterfall: true,
     specimenOnly: false,
-  }
+  })
+
+  debouncedViewSettings = this.viewSettings.value
+
   visiblePreviews: HTMLElement[] = [];
   onWScroll = new Subject()
 
-  constructor(private fontService: MongofontService, private el: ElementRef) {
-    this.fonts = this.fontService.getFonts({})
-    this.fc.valueChanges.pipe(
-      startWith(''),
-      shareReplay(1),
-      map(v => v ? v : this.specimen || ''))
-      .subscribe(v => this.viewSettings.debouncedCustomText = v
-      )
+  selectedFilters = new BehaviorSubject('')
 
-    this.onWScroll.pipe(auditTime(300)).subscribe(ev => {
+  constructor(private fontService: MongofontService, private router: Router, private activatedRoute: ActivatedRoute) {
 
-      const inViewport = (element: HTMLElement) => {
-        const rect = element.getBoundingClientRect()
+    this.viewSettings.valueChanges
+      .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
+      .subscribe(v => this.debouncedViewSettings = v)
 
-        return (
-          rect.bottom >= 0 &&
-          rect.top - window.innerHeight <= 2 * window.innerHeight
-        )
-      }
-
-      const vis: HTMLElement[] = []
-
-      const timer = new Timer()
-      for (const elem of this.gridElems) {
-        if (inViewport(elem.nativeElement)) {
-          vis.push(elem.nativeElement)
+    activatedRoute.data.subscribe(console.log)
+    activatedRoute.queryParams.subscribe(
+      qp => {
+        console.log(qp, router.navigated)
+        if (!router.navigated) {
+          const { view, filters } = qp
+          this.viewSettings.setValue(JSON.parse(view))
         }
-      }
-      // obviously enough performant for now
-      // ways to improve: estimate position of current element linearly
-      // start a few elements before... stop after first one is false (by the assumption of continuity)
-      // TODO: better use native Intersect / Resize API 
+      })
 
-      console.log(vis, `vieport iterationg takes ${timer.measure()}ms`)
-      this.visiblePreviews = vis
+    this.fontService.getFonts({}).subscribe(this.$fonts)
+
+    combineLatest([
+      this.viewSettings.valueChanges,
+      this.selectedFilters]
+    ).subscribe(([values, filters]) => {
+      this.router.navigate(['browse'],
+        { queryParams: { view: JSON.stringify(values), filters: JSON.stringify(filters) } })
     })
-  }
 
-  @HostListener('window:scroll', ['$event'])
-  _onWScroll($event) {
-    // console.debug($event)
-    // idea for a more effienct boundary on where the viewport ends
-    this.onWScroll.next($event)
   }
 
   trackFilterChange(selector: MongoSelector) {
-    this.fonts = this.fontService.getFonts(selector)
+    this.selectedFilters.next(JSON.stringify(selector))
+    this.fontService.getFonts(selector).subscribe(this.$fonts)
   }
+
   trackBy(i, f) {
     return f.idx
   }

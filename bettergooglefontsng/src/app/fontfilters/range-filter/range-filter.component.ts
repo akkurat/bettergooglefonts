@@ -141,7 +141,7 @@ export class RangeFilterComponent implements ControlValueAccessor {
   _flagValue = undefined
 
   emitChange() {
-    console.log(this._min, this._max)
+    console.debug(this._min, this._max)
     this._onChange({ min: this._min, max: this._max, flag: this._flagValue })
   }
 

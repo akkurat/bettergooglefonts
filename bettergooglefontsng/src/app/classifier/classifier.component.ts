@@ -54,7 +54,7 @@ export class ClassifierComponent implements OnInit {
     })
   }
   ngOnInit(): void {
-    console.log(this.route)
+    console.debug(this.route)
 
     this.route.params.subscribe(params => {
       // FIXME: angular has some kind of issue
@@ -78,7 +78,7 @@ export class ClassifierComponent implements OnInit {
               if (this.lastActiveQuestion) {
                 if (this?.fg?.get((this.lastActiveQuestion))?.value) {
                   setTimeout(() => {
-                    console.log('jumping font:' + this.font?.meta.name)
+                    console.debug('jumping font:' + this.font?.meta.name)
                     this.navigateToNextFont()
                   })
                 }
@@ -86,7 +86,7 @@ export class ClassifierComponent implements OnInit {
             }
           })
       },
-        err => console.log("sad error noises", err)
+        err => console.debug("sad error noises", err)
       )
     })
   }

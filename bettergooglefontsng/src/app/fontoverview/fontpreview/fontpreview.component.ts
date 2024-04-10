@@ -1,10 +1,9 @@
-import { AfterRenderPhase, AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, ViewChild, ViewRef, afterNextRender, inject } from '@angular/core';
-import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../FontNameUrl';
+import { AfterRenderPhase, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, ViewChild, ViewRef, afterNextRender, inject } from '@angular/core';
+import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BehaviorSubject, delay, from } from 'rxjs';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
-
 
 @Component({
   selector: 'app-fontpreview',
@@ -12,39 +11,61 @@ import { Platform, PlatformModule } from '@angular/cdk/platform';
   standalone: true,
   imports: [AsyncPipe, NgFor, NgIf, RouterModule, NgClass, PlatformModule],
 })
-export class FontpreviewComponent implements AfterViewInit {
-  intersectionObserver: IntersectionObserver | null = null
+export class FontpreviewComponent implements OnChanges {
+
+  @Input()
+  font?: FontNameUrlMulti
+
+  @Input()
+  waterfall? = false
+
+  @Input()
+  showItalics? = false
+
+
   @ViewChild('contents')
   contentRef!: ElementRef<HTMLDivElement | HTMLSpanElement>
+
+  intersectionObserver: IntersectionObserver | null = null
+
+  _specimenTextBuffer = { incomingValue: '', currentValue: '' }
+
+
+  style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans';"
+
+  platform = inject(Platform)
+
+  private _wasInViewport = false
+  private _isInViewport = false
+  private _changeDetectorRef: ChangeDetectorRef = inject(ChangeDetectorRef)
+
   constructor() {
     afterNextRender(() => {
       this.intersectionObserver = new IntersectionObserver((entries) => {
-        console.log('Content intersected', entries);
-      }, { threshold: 0.1 });
+        console.debug(this.font?.name, entries[0].isIntersecting)
+        this.setInViewPort(entries[0].isIntersecting)
+      }, { threshold: 0, rootMargin: '10px 0px 200px 0px' });
 
       this.intersectionObserver.observe(this.contentRef.nativeElement);
     }, { phase: AfterRenderPhase.Write });
   }
 
+  @Input()
+  set specimenText(value: string | undefined) { }
 
-  ngAfterViewInit(): void {
-    // console.log(this.font?.weightInfo?.virtualWeights)
+  ngOnChanges(changes: SimpleChanges): void {
+
+    const { specimenText: specimenTextChange } = changes
+    if (specimenTextChange) {
+      if (this._isInViewport || specimenTextChange.firstChange) {
+        this._specimenTextBuffer.currentValue = this._specimenTextBuffer.incomingValue = specimenTextChange.currentValue
+      } else {
+        this._specimenTextBuffer.incomingValue = specimenTextChange.currentValue
+      }
+    }
   }
 
-  @Input()
-  font?: FontNameUrlMulti
-  @Input()
-  waterfall = false
-  @Input()
-  showItalics = false
-  @Input()
-  specimenOnly = false;
-
-  _wasInViewport = false
-  private _isInViewPort: any;
-
-  @Input()
-  set inViewPort(value) {
+  private setInViewPort(value) {
     if (value) {
       if (!this._wasInViewport) {
         this._wasInViewport = true
@@ -54,35 +75,12 @@ export class FontpreviewComponent implements AfterViewInit {
           throw new Error('font not initialized')
         }
       }
-
-      if (this._customText.dirty) {
-        this.specimentText = this._customText.value
-        this._customText.dirty = false
-      }
+      this._specimenTextBuffer.currentValue = this._specimenTextBuffer.incomingValue
+          this._changeDetectorRef.detectChanges()
     }
-    this._isInViewPort = value;
+    this._isInViewport = value;
+    console.debug(this.font?.name, 'setInViewPort', value)
   }
-
-  @Input()
-  set customText(value: string) {
-    if (this._isInViewPort) {
-      this._customText.value = value
-      this._customText.dirty = false
-      this.specimentText = value
-    } else {
-      this._customText.value = value
-      this._customText.dirty = true
-    }
-  }
-
-  _customText = { value: '', dirty: false }
-
-  specimentText = ''
-
-  style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans';"
-
-  platform = inject(Platform)
-
 
   private initAll(font) {
     const weightAxis = font.axes?.find(a => a.tag === 'wght');
@@ -114,23 +112,19 @@ export class FontpreviewComponent implements AfterViewInit {
 
     // document.fonts.addEventListener('loadingdone', ffs => {
     // })
-    // @ts-expect-error
+    // @ts-expect-error Bug in TS (add does exist on FontFaceSet)
     fontfaces.forEach(ff => { document.fonts.add(ff); })
 
     // Waiting until font is loaded
-
     from(Promise.all(fontfaces.map(ff => ff.load())))
-      // .pipe( delay(Math.random()*1000))
-      .subscribe(all => {
-        this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
-        this.font
-      }, e => console.error(e, font, fontfaces))
-
-
-
-
+      .subscribe({
+        next: all => {
+          this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
+          console.debug("style set")
+          this._changeDetectorRef.detectChanges()
+        }, error: e => console.error(e, font, fontfaces)
+      })
     // appendStyleTag(css);
-
     // todo: italics
     // ) +(showItalics ? '; font-style: italic':'')">
   }
