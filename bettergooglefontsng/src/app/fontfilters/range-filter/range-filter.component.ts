@@ -1,12 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatOptionModule } from '@angular/material/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSliderModule } from '@angular/material/slider';
 import { SearchableFilterlistComponent } from '../searchable-filterlist/searchable-filterlist.component';
 import { SelectFilterComponent } from '../select-filter/select-filter.component';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -62,7 +57,7 @@ export class MaybeSliderComponent {
 @Component({
   selector: 'app-range-filter',
   standalone: true,
-  imports: [MaybeSliderComponent, NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, SelectFilterComponent, MatCardModule, OverlayModule],
+  imports: [NgFor, FormsModule, ReactiveFormsModule, SearchableFilterlistComponent, SelectFilterComponent, OverlayModule, MaybeSliderComponent],
   templateUrl: './range-filter.component.html',
   providers: [
     {
@@ -81,7 +76,7 @@ export class RangeFilterComponent implements ControlValueAccessor {
   flag: string | undefined = undefined
 
   @Input()
-  percentileLookup?: (count: number) => {start: number, label:string}[]
+  percentileLookup?: (count: number) => { start: number, label: string }[]
 
 
   get flagValue() {

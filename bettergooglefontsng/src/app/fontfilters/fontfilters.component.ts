@@ -2,20 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClassificationService } from '../classification.service';
-import { MatOptionModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
 import { SearchableFilterlistComponent } from "./searchable-filterlist/searchable-filterlist.component";
 import { SelectFilterComponent } from "./select-filter/select-filter.component";
-import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card'
 import { DomSanitizer } from '@angular/platform-browser';
 import { RangeFilterComponent } from "./range-filter/range-filter.component";
 import { MongoSelector } from '../fontoverview/fontoverview.component';
 import { MongofontService } from '../mongofont.service';
-import { from } from 'rxjs';
 import { BoxplotComponent } from '../boxplot/boxplot.component';
 
 type Axis = {
@@ -47,7 +41,9 @@ export type AFilter = {
   selector: 'app-fontfilters',
   templateUrl: './fontfilters.component.html',
   standalone: true,
-  imports: [BoxplotComponent, JsonPipe, AsyncPipe, NgFor, MatFormFieldModule, MatIconModule, MatSliderModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatOptionModule, SearchableFilterlistComponent, SelectFilterComponent, MatCardModule, RangeFilterComponent]
+  imports: [BoxplotComponent, JsonPipe, AsyncPipe, NgFor,
+    MatIconModule, FormsModule, ReactiveFormsModule,
+    SearchableFilterlistComponent, SelectFilterComponent, RangeFilterComponent]
 })
 
 

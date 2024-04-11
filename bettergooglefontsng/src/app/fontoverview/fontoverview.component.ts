@@ -6,7 +6,7 @@ import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { FontpreviewComponent } from './fontpreview/fontpreview.component';
 import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormsModule, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -34,14 +34,15 @@ export class FontoverviewComponent implements AfterViewInit {
 
   $fonts: Subject<FontNameUrlMulti[]> = new BehaviorSubject([] as FontNameUrlMulti[])
 
-  viewSettings = inject(FormBuilder).nonNullable.group({
-    customText: '____',
-    showItalics: false,
-    showWaterfall: true,
-    specimenOnly: false,
-  })
+  viewSettings = inject(FormBuilder).nonNullable
+    .group({
+      customText: '',
+      showItalics: false,
+      showWaterfall: true,
+      specimenOnly: false,
+    })
 
-  debouncedViewSettings = this.viewSettings.value
+  transformedViewSettings?: typeof this.viewSettings.value
 
   visiblePreviews: HTMLElement[] = [];
   onWScroll = new Subject()
@@ -52,7 +53,9 @@ export class FontoverviewComponent implements AfterViewInit {
 
     this.viewSettings.valueChanges
       .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
-      .subscribe(v => this.debouncedViewSettings = v)
+      .subscribe(v => this.transformedViewSettings = v)
+
+    this.viewSettings.reset()
 
     activatedRoute.data.subscribe(console.log)
     activatedRoute.queryParams.subscribe(

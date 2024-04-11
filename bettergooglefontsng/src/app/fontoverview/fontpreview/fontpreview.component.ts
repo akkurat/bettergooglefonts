@@ -1,8 +1,8 @@
-import { AfterRenderPhase, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, Input, OnChanges, SimpleChanges, ViewChild, ViewRef, afterNextRender, inject } from '@angular/core';
+import { AfterRenderPhase, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild, ViewRef, afterNextRender, inject } from '@angular/core';
 import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BehaviorSubject, delay, from } from 'rxjs';
+import { BehaviorSubject, Subject, bufferTime, combineLatest, debounceTime, delay, first, firstValueFrom, from, skipUntil, skipWhile } from 'rxjs';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
 
 @Component({
@@ -26,63 +26,65 @@ export class FontpreviewComponent implements OnChanges {
   @ViewChild('contents')
   contentRef!: ElementRef<HTMLDivElement | HTMLSpanElement>
 
-  intersectionObserver: IntersectionObserver | null = null
+  protected style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans';"
+  protected _specimenText = '___'
 
-  _specimenTextBuffer = { incomingValue: '', currentValue: '' }
-
-
-  style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans';"
-
-  platform = inject(Platform)
-
-  private _wasInViewport = false
-  private _isInViewport = false
+  private platform = inject(Platform)
   private _changeDetectorRef: ChangeDetectorRef = inject(ChangeDetectorRef)
+  private $intersection = new BehaviorSubject(false)
+  private $specimen = new Subject<SimpleChange>()
+
+  private intersectionObserver: IntersectionObserver | null = null
 
   constructor() {
     afterNextRender(() => {
       this.intersectionObserver = new IntersectionObserver((entries) => {
         console.debug(this.font?.name, entries[0].isIntersecting)
-        this.setInViewPort(entries[0].isIntersecting)
-      }, { threshold: 0, rootMargin: '10px 0px 200px 0px' });
+        this.$intersection.next(entries[0].isIntersecting)
+      }, { threshold: 0, rootMargin: '10px 0px 100% 0px' });
 
       this.intersectionObserver.observe(this.contentRef.nativeElement);
     }, { phase: AfterRenderPhase.Write });
+
+
+    combineLatest([
+      this.$intersection,
+      this.$specimen
+    ]).subscribe(([i, s]) => {
+      if (i || s.isFirstChange()) {
+        this._specimenText = s.currentValue
+        this._changeDetectorRef.detectChanges()
+      }
+    })
+
+
   }
+
+
 
   @Input()
   set specimenText(value: string | undefined) { }
 
   ngOnChanges(changes: SimpleChanges): void {
 
-    const { specimenText: specimenTextChange } = changes
+    const { specimenText: specimenTextChange, font: fontChange } = changes
+
     if (specimenTextChange) {
-      if (this._isInViewport || specimenTextChange.firstChange) {
-        this._specimenTextBuffer.currentValue = this._specimenTextBuffer.incomingValue = specimenTextChange.currentValue
-      } else {
-        this._specimenTextBuffer.incomingValue = specimenTextChange.currentValue
-      }
+      this.$specimen.next(specimenTextChange)
+    }
+
+    if (fontChange && fontChange.firstChange) {
+      // TODO: if font already loaded, do not wait
+      this.$intersection.pipe(
+        skipWhile(v => !v),
+        debounceTime(1500),
+        first(v => v)
+      ).subscribe(v => this.initFont(fontChange.currentValue))
     }
   }
 
-  private setInViewPort(value) {
-    if (value) {
-      if (!this._wasInViewport) {
-        this._wasInViewport = true
-        if (this.font) {
-          this.initAll(this.font)
-        } else {
-          throw new Error('font not initialized')
-        }
-      }
-      this._specimenTextBuffer.currentValue = this._specimenTextBuffer.incomingValue
-          this._changeDetectorRef.detectChanges()
-    }
-    this._isInViewport = value;
-    console.debug(this.font?.name, 'setInViewPort', value)
-  }
 
-  private initAll(font) {
+  private initFont(font) {
     const weightAxis = font.axes?.find(a => a.tag === 'wght');
     // let css = generateFontCssWeight({ ...this.font, weight: 400, style: 'normal' })
     // Fontface rule is only possible in css and not in embedded styles. a style tag is appended to the header

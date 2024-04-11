@@ -19,15 +19,16 @@
       <app-fontfilters class="contents" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
     </div>
   </div>
+  @if( transformedViewSettings; as debouncedViewSettings ) {
   @if( debouncedViewSettings.specimenOnly ) {
-    <div class="block text-9xl">
-      @for(font of $fonts|async; track trackBy) {
-        <app-fontpreview [font]="font"
-          [specimenText]="debouncedViewSettings.customText" [waterfall]="debouncedViewSettings.showWaterfall"
-          [showItalics]="debouncedViewSettings.showItalics" [ngClass]="{contents: debouncedViewSettings.specimenOnly}">
-        </app-fontpreview>
-      }
-    </div>
+  <div class="block text-9xl">
+    @for(font of $fonts|async; track trackBy) {
+    <app-fontpreview [font]="font" [specimenText]="debouncedViewSettings.customText"
+      [waterfall]="debouncedViewSettings.showWaterfall" [showItalics]="debouncedViewSettings.showItalics"
+      [ngClass]="{contents: debouncedViewSettings.specimenOnly}">
+    </app-fontpreview>
+    }
+  </div>
   } @else {
   <ul class="flex-grow p-2 lg:p-9">
     <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fill,400px)] justify-items-stretch items-stretch">
@@ -39,18 +40,18 @@
           'row-span-2': debouncedViewSettings.showWaterfall && font.weightInfo.virtualWeights.length >2, 
           'row-span-3': debouncedViewSettings.showWaterfall && font.weightInfo.virtualWeights.length >4, 
           'lg:row-span-2 lg:col-span-2 row-span-4': debouncedViewSettings.showWaterfall && font.weightInfo.virtualWeights.length >6, 
-          }"
-          class="text-5xl">
+          }" class="text-5xl">
 
         <!-- todo: hand down complete object -->
         <app-preview-info-bar [font]="font"></app-preview-info-bar>
-        <app-fontpreview [font]="font"
-          [specimenText]="debouncedViewSettings.customText" [waterfall]="debouncedViewSettings.showWaterfall"
-          [showItalics]="debouncedViewSettings.showItalics" [ngClass]="{contents: debouncedViewSettings.specimenOnly}">
+        <app-fontpreview [font]="font" [specimenText]="debouncedViewSettings.customText"
+          [waterfall]="debouncedViewSettings.showWaterfall" [showItalics]="debouncedViewSettings.showItalics"
+          [ngClass]="{contents: debouncedViewSettings.specimenOnly}">
         </app-fontpreview>
       </span>
       }
     </div>
   </ul>
+  }
   }
 </div>
