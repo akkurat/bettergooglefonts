@@ -1,11 +1,11 @@
 <div>
     <ul class="flex flew-row flex-wrap justify-around items-center">
         <li>
-            <app-searchable-filterlist [availableFilters]="availableFilterNames" (activate)="activateFilter($event)">
+            <app-searchable-filterlist [availableFilters]="$unselectedFilterNames|async" (activate)="activateFilter($event)">
                 <mat-icon class="cursor-pointer">filter_list</mat-icon>
             </app-searchable-filterlist>
         </li>
-        <li *ngFor="let filter of activeFilters">
+        <li *ngFor="let filter of $activeFilters|async">
             <!-- In theory a factory instead of switching in template would be possible 
                 maybe if even more categories are to come
                 so far this seems more explicit and easier to understand

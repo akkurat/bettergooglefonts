@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PreviewInfoBarComponent } from './preview-info-bar/preview-info-bar.component';
+import { FontfilterService } from '../fontfilter.service';
 
 export type inor = '$or' | '$and' | '$in'
 export type MongoSelector = {
@@ -25,7 +26,7 @@ export type MongoSelector = {
     ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule, PreviewInfoBarComponent]
 })
 
-export class FontoverviewComponent implements AfterViewInit {
+export class FontoverviewComponent {
 
   @ViewChildren('gridElems')
   gridElems!: QueryList<ElementRef<HTMLElement>>
@@ -44,10 +45,8 @@ export class FontoverviewComponent implements AfterViewInit {
 
   transformedViewSettings?: typeof this.viewSettings.value
 
-  visiblePreviews: HTMLElement[] = [];
-  onWScroll = new Subject()
-
   selectedFilters = new BehaviorSubject('')
+  filterService = inject(FontfilterService)
 
   constructor(private fontService: MongofontService, private router: Router, private activatedRoute: ActivatedRoute) {
 
@@ -55,19 +54,6 @@ export class FontoverviewComponent implements AfterViewInit {
       .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
       .subscribe(v => this.transformedViewSettings = v)
 
-    this.viewSettings.reset()
-
-    activatedRoute.data.subscribe(console.log)
-    activatedRoute.queryParams.subscribe(
-      qp => {
-        console.log(qp, router.navigated)
-        if (!router.navigated) {
-          const { view, filters } = qp
-          this.viewSettings.setValue(JSON.parse(view))
-        }
-      })
-
-    this.fontService.getFonts({}).subscribe(this.$fonts)
 
     combineLatest([
       this.viewSettings.valueChanges,
@@ -76,26 +62,31 @@ export class FontoverviewComponent implements AfterViewInit {
       this.router.navigate(['browse'],
         { queryParams: { view: JSON.stringify(values), filters: JSON.stringify(filters) } })
     })
+    this.viewSettings.reset()
+
+    activatedRoute.data.subscribe(console.debug)
+    activatedRoute.queryParams.subscribe(
+      qp => {
+        console.debug(qp, router.navigated)
+        if (!router.navigated) {
+          const { view, filters } = qp
+          this.viewSettings.setValue(JSON.parse(view))
+        }
+      })
+
+    this.fontService.getFonts({}).subscribe(this.$fonts)
 
   }
 
-  trackFilterChange(selector: MongoSelector) {
-    this.selectedFilters.next(JSON.stringify(selector))
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  trackFilterChange(filters: any) {
+    this.selectedFilters.next(JSON.stringify(filters))
+    const selector = this.filterService.mapFormEvent(filters)
     this.fontService.getFonts(selector).subscribe(this.$fonts)
   }
 
   trackBy(i, f) {
     return f.idx
-  }
-
-  ngAfterViewInit() {
-    this.gridElems.changes.subscribe(ev => {
-      this.onWScroll.next('')
-    })
-  }
-
-  isInViewport(element: HTMLElement) {
-    return this.visiblePreviews.includes(element)
   }
 
 }

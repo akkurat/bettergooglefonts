@@ -2,10 +2,10 @@ import { AfterViewInit, Component, EventEmitter, Input, inject } from '@angular/
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 
-import { AFilter } from '../fontfilters.component';
 import { NgComponentOutlet, NgClass } from '@angular/common';
 import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { SelectionModel } from '@angular/cdk/collections';
+import { AFilter } from 'src/app/fontfilter.service';
 
 @Component({
   selector: 'app-select-filter',

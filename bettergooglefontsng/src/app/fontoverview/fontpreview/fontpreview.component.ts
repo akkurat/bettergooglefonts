@@ -1,8 +1,8 @@
-import { AfterRenderPhase, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild, ViewRef, afterNextRender, inject } from '@angular/core';
-import { appendStyleTag, FontNameUrlMulti, generateFontCss, generateFontCssWeight } from '../../FontNameUrl';
+import { AfterRenderPhase, ChangeDetectorRef, Component, ElementRef, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild, afterNextRender, inject } from '@angular/core';
+import { FontNameUrlMulti, generateFontCssWeight } from '../../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BehaviorSubject, Subject, bufferTime, combineLatest, debounceTime, delay, first, firstValueFrom, from, skipUntil, skipWhile } from 'rxjs';
+import { BehaviorSubject, Subject, combineLatest, debounceTime, first, from, skipWhile } from 'rxjs';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
 
 @Component({
@@ -75,6 +75,7 @@ export class FontpreviewComponent implements OnChanges {
 
     if (fontChange && fontChange.firstChange) {
       // TODO: if font already loaded, do not wait
+      // mabye tooggle debounce at all
       this.$intersection.pipe(
         skipWhile(v => !v),
         debounceTime(1500),
@@ -118,11 +119,12 @@ export class FontpreviewComponent implements OnChanges {
     fontfaces.forEach(ff => { document.fonts.add(ff); })
 
     // Waiting until font is loaded
+    console.debug(font.name)
     from(Promise.all(fontfaces.map(ff => ff.load())))
       .subscribe({
         next: all => {
           this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
-          console.debug("style set")
+          console.debug("style set", font.name)
           this._changeDetectorRef.detectChanges()
         }, error: e => console.error(e, font, fontfaces)
       })

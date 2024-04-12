@@ -4,9 +4,9 @@ import { BehaviorSubject, combineLatestWith, filter, first, firstValueFrom, from
 import { FontByWeight, FontNameUrlMulti } from './FontNameUrl';
 import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
-import { getSelectorForWeight } from './fontfilters/fontfilters.component';
 import { AssetServiceService } from './asset-service.service';
 import { environment } from 'src/environments/environment.development';
+import { getSelectorForWeight } from './fontfilter.service';
 
 export type AxesInfo = Map<string, { count: number, min: number, max: number }>
 
