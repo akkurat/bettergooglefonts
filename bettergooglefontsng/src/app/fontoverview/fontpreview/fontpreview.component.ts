@@ -2,8 +2,9 @@ import { AfterRenderPhase, ChangeDetectorRef, Component, ElementRef, Input, OnCh
 import { FontNameUrlMulti, generateFontCssWeight } from '../../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BehaviorSubject, Subject, combineLatest, debounceTime, first, from, skipWhile } from 'rxjs';
+import { BehaviorSubject, Subject, combineLatest, debounce, debounceTime, first, from, of, skipWhile, timer } from 'rxjs';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
+import { FontResourceService } from 'src/app/font-resource.service';
 
 @Component({
   selector: 'app-fontpreview',
@@ -65,6 +66,8 @@ export class FontpreviewComponent implements OnChanges {
   @Input()
   set specimenText(value: string | undefined) { }
 
+  fontResourceService = inject(FontResourceService)
+
   ngOnChanges(changes: SimpleChanges): void {
 
     const { specimenText: specimenTextChange, font: fontChange } = changes
@@ -76,9 +79,18 @@ export class FontpreviewComponent implements OnChanges {
     if (fontChange && fontChange.firstChange) {
       // TODO: if font already loaded, do not wait
       // mabye tooggle debounce at all
+      const loaded = () => {
+        const fontfaces = this.fontResourceService.getFontfaces(fontChange.currentValue);
+        const allLoaded = fontfaces.every(ff => ff.status === 'loaded');
+        return allLoaded ? of({}) : timer(1500);
+      }
+
+
+
       this.$intersection.pipe(
         skipWhile(v => !v),
-        debounceTime(1500),
+        debounce(v => loaded()),
+        // debounceTime(1500),
         first(v => v)
       ).subscribe(v => this.initFont(fontChange.currentValue))
     }
@@ -86,32 +98,7 @@ export class FontpreviewComponent implements OnChanges {
 
 
   private initFont(font) {
-    const weightAxis = font.axes?.find(a => a.tag === 'wght');
-    // let css = generateFontCssWeight({ ...this.font, weight: 400, style: 'normal' })
-    // Fontface rule is only possible in css and not in embedded styles. a style tag is appended to the header
-    // angular is doing the some for the scoped css outputs
-    // having 2000 different fonts in one app is a very special case so it's ok that angular has no way of doing it in an angular way
-    // new FontAPI FTW
-    let css = '';
-
-    let fontfaces: FontFace[] = []
-
-
-    // Webkit seems to add quotes around
-    // firefox does not
-    const qt = this.platform.FIREFOX ? "'" : ""
-
-    for (const f of font.fonts) {
-      const weights = weightAxis ? `${weightAxis.min_value} ${weightAxis.max_value}` : f.weight;
-
-      const fontFace = new FontFace(`${qt}${font.name}${qt}`, `url('${f.url}')`, { weight: weights, style: 'normal' });
-      fontfaces.push(fontFace)
-      css += generateFontCssWeight({ name: font.name, url: f.url, weight: weights, style: 'normal' });
-      if (f.italicUrl) {
-        fontfaces.push(new FontFace(`${qt}${font.name}${qt}`, `url('${f.italicUrl}')`, { weight: weights, style: 'italic' }))
-        css += generateFontCssWeight({ name: font.name, url: f.italicUrl, weight: weights, style: 'italic' });
-      }
-    }
+    const fontfaces = this.fontResourceService.getFontfaces(font)
 
     // document.fonts.addEventListener('loadingdone', ffs => {
     // })
@@ -120,18 +107,20 @@ export class FontpreviewComponent implements OnChanges {
 
     // Waiting until font is loaded
     console.debug(font.name)
-    from(Promise.all(fontfaces.map(ff => ff.load())))
-      .subscribe({
-        next: all => {
-          this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
-          console.debug("style set", font.name)
-          this._changeDetectorRef.detectChanges()
-        }, error: e => console.error(e, font, fontfaces)
-      })
+    if (fontfaces) {
+      from(Promise.all(fontfaces.map(ff => ff.load())))
+        .subscribe({
+          next: all => {
+            this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
+            console.debug("style set", font.name)
+            this._changeDetectorRef.detectChanges()
+          }, error: e => console.error(e, font, fontfaces)
+        })
+    }
     // appendStyleTag(css);
     // todo: italics
     // ) +(showItalics ? '; font-style: italic':'')">
   }
-}
 
+}
 
