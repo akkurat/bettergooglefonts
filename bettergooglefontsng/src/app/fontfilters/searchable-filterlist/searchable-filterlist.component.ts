@@ -16,7 +16,7 @@ import { Dialog, DialogModule } from '@angular/cdk/dialog';
 export class SearchableFilterlistComponent {
 
   @Input()
-  availableFilters: { name: string, caption: string, icon?: string }[] = []
+  availableFilters: { name: string, caption: string, icon?: string }[] | null = null 
 
   @Output()
   activate = new EventEmitter<string>()

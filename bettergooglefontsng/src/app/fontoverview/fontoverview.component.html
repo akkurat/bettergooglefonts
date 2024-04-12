@@ -1,43 +1,57 @@
 <div class="flex flex-col flex-nowrap gap-4">
   <div class="sticky top-0 basis-20 z-50 p-2 lg:p-9 bg-slate-50 flex flex-row flex-wrap ">
-    <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2  rounded">
-      <input [formControl]="fc" type="text" placeholder="Custom Lorem" />
-      <button class="btn" (click)="fc.setValue('')">
+    <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2  rounded" [formGroup]="viewSettings">
+      <input formControlName="customText" type="text" placeholder="Custom Lorem" />
+      <button class="btn" (click)="viewSettings.controls.customText.setValue('')">
         <mat-icon>settings_backup_restore</mat-icon>
       </button>
       <label>
-        <input type="checkbox" [(ngModel)]="showWaterfall" />Waterfall
+        <input type="checkbox" formControlName="showWaterfall" />Waterfall
       </label>
       <label>
-        <input type="checkbox" [(ngModel)]="showItalics" />Italics
+        <input type="checkbox" formControlName="showItalics" />Italics
       </label>
       <label>
-        <input type="checkbox" [(ngModel)]="specimenOnly" />No Meta
+        <input type="checkbox" formControlName="specimenOnly" />No Meta
       </label>
     </div>
     <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2 rounded">
       <app-fontfilters class="contents" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
     </div>
   </div>
+  @if( transformedViewSettings; as debouncedViewSettings ) {
+  @if( debouncedViewSettings.specimenOnly ) {
+  <div class="block text-9xl">
+    @for(font of $fonts|async; track trackBy) {
+    <app-fontpreview [font]="font" [specimenText]="debouncedViewSettings.customText"
+      [waterfall]="debouncedViewSettings.showWaterfall" [showItalics]="debouncedViewSettings.showItalics"
+      [ngClass]="{contents: debouncedViewSettings.specimenOnly}">
+    </app-fontpreview>
+    }
+  </div>
+  } @else {
   <ul class="flex-grow p-2 lg:p-9">
-    <div class=""
-      [ngClass]="specimenOnly ? 'block' : 'grid grid-flow-row-dense auto-rows-[200px] grid-cols-[repeat(auto-fill,400px)]'">
-      @for(font of fonts|async; track trackBy) {
+    <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fill,400px)] justify-items-stretch items-stretch">
+      @for(font of $fonts|async; track trackBy) {
       <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
       <!-- concatenation of css classes is not possible with tailwind -->
       <span #gridElems [ngClass]="{ 
-        'overflow-clip': !specimenOnly,
-          'row-span-2': showWaterfall && font.weightInfo.virtualWeights.length >2, 
-          'row-span-3': showWaterfall && font.weightInfo.virtualWeights.length >4, 
-          'lg:row-span-2 lg:col-span-2 row-span-4': showWaterfall && font.weightInfo.virtualWeights.length >6, 
-          }">
+        'overflow-clip': !debouncedViewSettings.specimenOnly,
+          'row-span-2': debouncedViewSettings.showWaterfall && font.weightInfo.virtualWeights.length >2, 
+          'row-span-3': debouncedViewSettings.showWaterfall && font.weightInfo.virtualWeights.length >4, 
+          'lg:row-span-2 lg:col-span-2 row-span-4': debouncedViewSettings.showWaterfall && font.weightInfo.virtualWeights.length >6, 
+          }" class="text-5xl">
 
-
-        <app-fontpreview [inViewPort]="isInViewport(gridElems)" [font]="font" [customText]="debouncedCustomText"
-          [waterfall]="showWaterfall" [showItalics]="showItalics" [specimenOnly]="specimenOnly"
-          [ngClass]="{contents: specimenOnly}"></app-fontpreview>
+        <!-- todo: hand down complete object -->
+        <app-preview-info-bar [font]="font"></app-preview-info-bar>
+        <app-fontpreview [font]="font" [specimenText]="debouncedViewSettings.customText"
+          [waterfall]="debouncedViewSettings.showWaterfall" [showItalics]="debouncedViewSettings.showItalics"
+          [ngClass]="{contents: debouncedViewSettings.specimenOnly}">
+        </app-fontpreview>
       </span>
       }
     </div>
   </ul>
+  }
+  }
 </div>

@@ -1,15 +1,17 @@
 import { AfterViewInit, Component, ElementRef, HostListener, QueryList, SecurityContext, ViewChildren, inject } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { BehaviorSubject, Observable, Subject, auditTime, debounceTime, first, map, shareReplay, startWith, tap, throttleTime } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject, auditTime, combineLatest, combineLatestAll, connect, connectable, debounceTime, first, map, merge, multicast, publishBehavior, publishReplay, share, shareReplay, startWith, tap, throttleTime } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
-import { FontpreviewComponent } from '../fontpreview/fontpreview.component';
-import { NgFor, AsyncPipe, NgClass } from '@angular/common';
+import { FontpreviewComponent } from './fontpreview/fontpreview.component';
+import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormsModule, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { Timer } from '../helpers';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PreviewInfoBarComponent } from './preview-info-bar/preview-info-bar.component';
+import { FontfilterService } from '../fontfilter.service';
 
 export type inor = '$or' | '$and' | '$in'
 export type MongoSelector = {
@@ -20,105 +22,71 @@ export type MongoSelector = {
   selector: 'app-fontoverview',
   templateUrl: './fontoverview.component.html',
   standalone: true,
-  imports: [NgClass, FontfiltersComponent, NgFor, FontpreviewComponent, AsyncPipe, ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule]
+  imports: [NgClass, FontfiltersComponent, NgFor, FontpreviewComponent, AsyncPipe, JsonPipe,
+    ScrollingModule, ReactiveFormsModule, MatIconModule, FormsModule, PreviewInfoBarComponent]
 })
 
-export class FontoverviewComponent implements AfterViewInit {
-
-  specimen = inject(DomSanitizer).sanitize(SecurityContext.HTML, '&excl;&quot;&num;&dollar;&percnt;&amp;&bsol;&apos;&lpar;&rpar;&ast;&plus;&comma;&#x2D;&period;&sol;&#x30;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&colon;&semi;&lt;&equals;&gt;&quest;&commat;&#x41;&#x42;&#x43;&#x44;&#x45;&#x46;&#x47;&#x48;&#x49;&#x4A;&#x4B;&#x4C;&#x4D;&#x4E;&#x4F;&#x50;&#x51;&#x52;&#x53;&#x54;&#x55;&#x56;&#x57;&#x58;&#x59;&#x5A;&lsqb;&bsol;&bsol;&rsqb;&Hat;&lowbar;&grave;&#x61;&#x62;&#x63;&#x64;&#x65;&#x66;&#x67;&#x68;&#x69;&#x6A;&#x6B;&#x6C;&#x6D;&#x6E;&#x6F;&#x70;&#x71;&#x72;&#x73;&#x74;&#x75;&#x76;&#x77;&#x78;&#x79;&#x7A;&lcub;&vert;&rcub;&#x7E;');
-
-  ngAfterViewInit() {
-
-    this.gridElems.changes.subscribe(ev => {
-      this.onWScroll.next('')
-    })
-  }
-
-  isInViewport(element: HTMLElement) {
-    return this.visiblePreviews.includes(element)
-  }
+export class FontoverviewComponent {
 
   @ViewChildren('gridElems')
   gridElems!: QueryList<ElementRef<HTMLElement>>
 
-  fonts: Observable<FontNameUrlMulti[]>
-  fc = new FormControl('')
+  defaultSpecimen = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
 
-  debouncedCustomText = ''
-  showItalics = false;
-  showWaterfall = true;
-  specimenOnly = false;
-  visiblePreviews: HTMLElement[] = [];
-  constructor(private fontService: MongofontService, private el: ElementRef) {
-    this.fonts = this.fontService.getFonts({})
-    this.fc.valueChanges.pipe(
-      startWith(''),
-      shareReplay(1),
-      map(v => v ? v : this.specimen || ''))
-      .subscribe(v => this.debouncedCustomText = v
-      )
+  $fonts: Subject<FontNameUrlMulti[]> = new BehaviorSubject([] as FontNameUrlMulti[])
 
-
-    this.onWScroll.pipe(auditTime(1000)).subscribe(ev => {
-
-      const inViewport = (element: HTMLElement) => {
-        const rect = element.getBoundingClientRect()
-        const html = document.documentElement;
-
-
-        return (
-          rect.bottom + window.innerHeight >= 0 &&
-          rect.top - window.innerHeight  <= 2* window.innerHeight 
-        )
-      }
-
-      const vis: HTMLElement[] = []
-
-      const timer = new Timer()
-      for (const elem of this.gridElems) {
-        if (inViewport(elem.nativeElement)) {
-          vis.push(elem.nativeElement)
-        }
-      }
-      // obviously enough performant for now
-      // ways to improve: estimate position of current element linearly
-      // start a few elements before... stop after first one is false (by the assumption of continuity)
-
-      console.log(vis, `vieport iterationg takes ${timer.measure()}ms`)
-      this.visiblePreviews = vis
-
+  viewSettings = inject(FormBuilder).nonNullable
+    .group({
+      customText: '',
+      showItalics: false,
+      showWaterfall: true,
+      specimenOnly: false,
     })
 
+  transformedViewSettings?: typeof this.viewSettings.value
+
+  selectedFilters = new BehaviorSubject('')
+  filterService = inject(FontfilterService)
+
+  constructor(private fontService: MongofontService, private router: Router, private activatedRoute: ActivatedRoute) {
+
+    this.viewSettings.valueChanges
+      .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
+      .subscribe(v => this.transformedViewSettings = v)
 
 
-    // if(visible) {
-    //   console.debug(this.font.name)
+    combineLatest([
+      this.viewSettings.valueChanges,
+      this.selectedFilters]
+    ).subscribe(([values, filters]) => {
+      this.router.navigate(['browse'],
+        { queryParams: { view: JSON.stringify(values), filters: JSON.stringify(filters) } })
+    })
+    this.viewSettings.reset()
 
-    // }
+    activatedRoute.data.subscribe(console.debug)
+    activatedRoute.queryParams.subscribe(
+      qp => {
+        console.debug(qp, router.navigated)
+        if (!router.navigated) {
+          const { view, filters } = qp
+          this.viewSettings.setValue(JSON.parse(view))
+        }
+      })
+
+    this.fontService.getFonts({}).subscribe(this.$fonts)
 
   }
 
-  trackFilterChange(selector: MongoSelector) {
-    this.fonts = this.fontService.getFonts(selector)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  trackFilterChange(filters: any) {
+    this.selectedFilters.next(JSON.stringify(filters))
+    const selector = this.filterService.mapFormEvent(filters)
+    this.fontService.getFonts(selector).subscribe(this.$fonts)
   }
+
   trackBy(i, f) {
     return f.idx
   }
-
-
-  onWScroll = new Subject()
-
-  @HostListener('window:scroll', ['$event'])
-  _onWScroll($event) {
-    // console.debug($event)
-    // idea for a more effienct boundary on where the viewport ends
-
-    this.onWScroll.next($event)
-
-  }
-
-
-
-
 
 }

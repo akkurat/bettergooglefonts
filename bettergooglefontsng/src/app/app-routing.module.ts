@@ -5,9 +5,10 @@ import { FontoverviewComponent } from './fontoverview/fontoverview.component';
 import { ClassifierJsonComponent } from './classifier-json/classifier-json.component';
 
 const routes: Routes = [
-  {path: '', component: FontoverviewComponent},
-  {path: 'classify/:name', component: ClassifierComponent},
-  {path: 'classify-json', component: ClassifierJsonComponent},
+  { path: '', redirectTo: '/browse', pathMatch: 'full' },
+  { path: 'browse', component: FontoverviewComponent },
+  { path: 'classify/:name', component: ClassifierComponent },
+  { path: 'classify-json', component: ClassifierJsonComponent },
 
 ];
 

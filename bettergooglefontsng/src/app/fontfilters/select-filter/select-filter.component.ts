@@ -2,16 +2,15 @@ import { AfterViewInit, Component, EventEmitter, Input, inject } from '@angular/
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 
-import { MatSelectModule } from '@angular/material/select';
-import { AFilter } from '../fontfilters.component';
 import { NgComponentOutlet, NgClass } from '@angular/common';
-import { Overlay, OverlayModule, ScrollStrategy } from '@angular/cdk/overlay';
+import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { SelectionModel } from '@angular/cdk/collections';
+import { AFilter } from 'src/app/fontfilter.service';
 
 @Component({
   selector: 'app-select-filter',
   standalone: true,
-  imports: [NgClass, MatSelectModule, FormsModule, ReactiveFormsModule, NgComponentOutlet, MatIconModule, OverlayModule],
+  imports: [NgClass, FormsModule, ReactiveFormsModule, NgComponentOutlet, MatIconModule, OverlayModule],
   templateUrl: './select-filter.component.html',
   providers: [
     {
@@ -85,7 +84,7 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
 
 
   ngAfterViewInit() {
-    this.model.changed.subscribe(v => { console.log(v, this.model); this.onChange.next(v.source.selected) })
+    this.model.changed.subscribe(v => { console.debug(v, this.model); this.onChange.next(v.source.selected) })
     if (this.filter.items?.length == 1) {
       this.isOpen = false
       this.model.select(this.filter.items[0])

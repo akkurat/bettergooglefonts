@@ -4,9 +4,9 @@ import { BehaviorSubject, combineLatestWith, filter, first, firstValueFrom, from
 import { FontByWeight, FontNameUrlMulti } from './FontNameUrl';
 import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
-import { getSelectorForWeight } from './fontfilters/fontfilters.component';
 import { AssetServiceService } from './asset-service.service';
 import { environment } from 'src/environments/environment.development';
+import { getSelectorForWeight } from './fontfilter.service';
 
 export type AxesInfo = Map<string, { count: number, min: number, max: number }>
 
@@ -74,10 +74,10 @@ export class MongofontService {
           types.add(meta['type'])
         }
         this.db.collections['fonts'].upsert(metas,
-          (docs) => { console.log(docs.length); this.dbready.next(true) },
-          (err) => { console.log(err); }
+          (docs) => { console.debug(docs.length); this.dbready.next(true) },
+          (err) => { console.debug(err); }
         )
-        console.log(types)
+        console.debug(types)
       })
   }
   /**
@@ -142,7 +142,7 @@ export class MongofontService {
             });
           })
           sub.next(metafonts)
-        }, err => console.log(err))
+        }, err => console.debug(err))
       })
     return sub.asObservable()
   }

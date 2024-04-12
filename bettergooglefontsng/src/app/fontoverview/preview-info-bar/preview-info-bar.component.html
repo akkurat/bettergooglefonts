@@ -1,5 +1,4 @@
 @if(font) {
-@if(!specimenOnly) {
 <h5 class="text-2xl font-semibold mb-2 ">
     <a class="variation-wild text-cyan-700"
         [href]="'https://fonts.google.com/specimen/'+font.name+'/tester'">{{font.name}}</a>
@@ -36,20 +35,4 @@
 
     <!-- </span> -->
 </h5>
-}
-<a [href]="'https://fonts.google.com/specimen/'+font.name+'/tester'" class="contents text-5xl" [title]="font.name" [style]="style">
-    @if(waterfall) {
-    @for( vweight of font.weightInfo.virtualWeights; track vweight) {
-    <span [style]="{fontWeight: vweight}">
-        <span [ngClass]="{'break-all': true}">{{specimentText}}</span>
-    </span>
-    }
-    } @else {
-        <span class="break-all">
-    {{specimentText}}
-        </span>
-    }
-</a>
-} @else {
-loading font...
 }
