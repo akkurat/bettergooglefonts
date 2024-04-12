@@ -86,6 +86,7 @@ export class FontoverviewComponent {
   }
 
   trackBy(i, f) {
+    console.log(i,f)
     return f.idx
   }
 

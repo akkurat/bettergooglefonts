@@ -32,7 +32,7 @@
   } @else {
   <ul class="flex-grow p-2 lg:p-9">
     <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fill,400px)] justify-items-stretch items-stretch">
-      @for(font of $fonts|async; track trackBy) {
+      @for(font of $fonts|async; track font.name) {
       <!-- todo: this info about virtual fontwieghts could be already precalculated in the meta json -->
       <!-- concatenation of css classes is not possible with tailwind -->
       <span #gridElems [ngClass]="{ 
