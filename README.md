@@ -78,28 +78,33 @@ ng serve
 
 # Roadmap
 ## Bugish / Cleanup
-* json files need a file hash when being modified, otherwise browser cache won't reload the file
-* move utility scripts to folder... or at least name them all with a prefix
-* document svg generation and manual copying
-* fontsize infinit scroll and custom text
-* infite scroll and sticky header not really working
-* layout of overlays (why tf is there a padding to the right?)
+* ~~json files need a file hash when being modified, otherwise browser cache won't reload the file~~
+* ~~move utility scripts to folder... or at least name them all with a prefix~~
+* ~~document svg generation and manual copying~~
+* ~~fontsize infinit scroll and custom text~~
+* ~~infite scroll and sticky header not really working~~
+* ~~layout of overlays (why tf is there a padding to the right?)~~
 
 
 ## Reasonable TODOs
+* queryparams for state for filter&display, also enables back/forth
+  * read state only from queryparams, on error: remove queryparams
 * number of fonts with this filter (trivial, lazyloading is only in dom, in js the array is already complete, just display ```.length```)
   * part that is less trivial (but still possible) is showing number of results beforehand
 * Detailview of font with something like this [https://www.axis-praxis.org/specimens/__DEFAULT__] -> Quickwin: Link to google fonts for now
 * ~~Custom specimen text -> Sofar only Ascii letters possible (due to subset woff)~~ -> load ttf from github raw?
   * Loading ttf from github raw is already done for classification view
   * First step however should be custom ascii preview text
-* Grid/List view
+* Grid/List view -> no meta view will do for now
 * Size / Width/ Weight Waterfall
-  * Size waterfall is trivial
-  * Iterating through all axes (or discrete fonts) is a bit more complicated but also manageable
+  * ~~Size waterfall is trivial~~
+  * ~~Iterating through all axes (or discrete fonts) is a bit more complicated but also manageable~~
 * Bigger View of font (or letter maybe?) upon hovering
   * Bigger view for single letters. good enough for now
-* Show classifications in overview
+* Show classifications in overview? not sure... seems too much
+  * own preview makes sense -> show all classifications
+  * classification should be a link to other fonts like that (no easy possible with queryparams)
+* MOve todos to issues
 
 ## Fancy Todos
 (not necessarily harder to implement, but lower prio)
