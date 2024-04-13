@@ -22,7 +22,7 @@
   @if( transformedViewSettings; as debouncedViewSettings ) {
   @if( debouncedViewSettings.specimenOnly ) {
   <div class="block text-9xl">
-    @for(font of $fonts|async; track trackBy) {
+    @for(font of $fonts|async; track font.name) {
     <app-fontpreview [font]="font" [specimenText]="debouncedViewSettings.customText"
       [waterfall]="debouncedViewSettings.showWaterfall" [showItalics]="debouncedViewSettings.showItalics"
       [ngClass]="{contents: debouncedViewSettings.specimenOnly}">

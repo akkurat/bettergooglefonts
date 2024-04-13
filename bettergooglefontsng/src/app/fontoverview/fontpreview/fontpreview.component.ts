@@ -1,9 +1,9 @@
 import { AfterRenderPhase, ChangeDetectorRef, Component, ElementRef, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild, afterNextRender, inject } from '@angular/core';
-import { FontNameUrlMulti, generateFontCssWeight } from '../../FontNameUrl';
+import { FontNameUrlMulti } from '../../FontNameUrl';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BehaviorSubject, Subject, combineLatest, debounce, debounceTime, first, from, of, skipWhile, timer } from 'rxjs';
-import { Platform, PlatformModule } from '@angular/cdk/platform';
+import { BehaviorSubject, Subject, combineLatest, debounce, first, from, of, skipWhile, timer } from 'rxjs';
+import { PlatformModule } from '@angular/cdk/platform';
 import { FontResourceService } from 'src/app/font-resource.service';
 
 @Component({
@@ -27,10 +27,9 @@ export class FontpreviewComponent implements OnChanges {
   @ViewChild('contents')
   contentRef!: ElementRef<HTMLDivElement | HTMLSpanElement>
 
-  protected style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans';"
+  protected style = "font-synthesis: none; font-weight: 400; font-family: 'Shantell Sans'; opacity:0.3"
   protected _specimenText = '___'
 
-  private platform = inject(Platform)
   private _changeDetectorRef: ChangeDetectorRef = inject(ChangeDetectorRef)
   private $intersection = new BehaviorSubject(false)
   private $specimen = new Subject<SimpleChange>()
@@ -111,7 +110,7 @@ export class FontpreviewComponent implements OnChanges {
       from(Promise.all(fontfaces.map(ff => ff.load())))
         .subscribe({
           next: all => {
-            this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu;`
+            this.style = `font-weight: 400; font-synthesis: none; font-family: '${font.name}', Tofu; opacity: 1`
             console.debug("style set", font.name)
             this._changeDetectorRef.detectChanges()
           }, error: e => console.error(e, font, fontfaces)

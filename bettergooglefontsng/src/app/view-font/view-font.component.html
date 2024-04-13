@@ -1,0 +1,27 @@
+<div class="p-5 w-lvw min-h-lvh flex flex-col items-stretch">
+    <div class="flex-none">
+        <h1>{{font?.name}}</h1>
+        {{font|json}}
+    </div>
+
+    <section name="specimen" class="flex-1 text-9xl break-all grid ">
+        <div #wrongFont class="w-full row-start-1 row-end-2 col-start-1 col-end-2 opacity-20 transition-opacity duration-1000"
+            style="font-family: 'Shantell Sans', Tofu; ">
+            {{specimen}}
+        </div>
+        <div #correctFont class="w-full row-start-1 row-end-2 col-start-1 col-end-2 opacity-0 transition-opacity duration-1000"
+            [style]="'font-family: \''+font?.name +'\', Tofu; '">
+            {{specimen}}
+        </div>
+    </section>
+    <section>
+        <table>
+            @for( entry of ot?.names|keyvalue; track entry.key) {
+            <tr>
+                <td>{{entry.key}}</td>
+                <td>{{entry.value|json}}</td>
+            </tr>
+            }
+        </table>
+    </section>
+</div>

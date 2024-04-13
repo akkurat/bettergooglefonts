@@ -57,11 +57,9 @@ export class ClassifierComponent implements OnInit {
     console.debug(this.route)
 
     this.route.params.subscribe(params => {
-      // FIXME: angular has some kind of issue
-      // this.questions = this.classifierService.getQuestions()
       this.fontNameByRouting = params['name']
       this.answers = this.classifierService.answersFor(params['name'])
-      // so far probably a memoryleak -> reuse the same subject at service... but how?
+      // so far probably a memoryleak -> reuse the same subject at service... but how? => switchMap
       this.fontService.getFontByName(params['name']).subscribe(f => {
         this.font = f
         const url = getTtfUrlForFirstFont(f)
