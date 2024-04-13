@@ -1,10 +1,14 @@
 import { AxisInfo } from "./mongofont.service";
 
 
+export type FontUrls = {
+  ascii: string
+  full: string
+}
 export type FontByWeight = {
   weight: number;
-  url: string;
-  italicUrl?: string;
+  urls: FontUrls;
+  italicUrls?: FontUrls;
 };
 
 export type FontNameUrlMulti = {

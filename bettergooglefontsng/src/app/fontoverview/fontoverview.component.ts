@@ -85,9 +85,4 @@ export class FontoverviewComponent {
     this.fontService.getFonts(selector).subscribe(this.$fonts)
   }
 
-  trackBy(i, f) {
-    console.log(i,f)
-    return f.idx
-  }
-
 }

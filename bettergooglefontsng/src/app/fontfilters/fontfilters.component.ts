@@ -47,7 +47,6 @@ export class FontfiltersComponent {
     this.fg.valueChanges.subscribe(v => this.selectionChange.emit(v))
     this.$unselectedFilterNames = this.filterService.$unselectedFilterNames
     this.$activeFilters = this.filterService.$activeFilters
-    this.$activeFilters.subscribe(console.log)
   }
 
   activateFilter(name: string) {
