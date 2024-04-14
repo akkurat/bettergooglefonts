@@ -1,0 +1,15 @@
+<div (click)="closeCallback()" class="w-full flex flex-col items-stretch">
+    <div class="flex-1 bg-slate-50 grid items-stretch justify-stretch">
+        <canvas [height]="cHeight" [width]="cWidth" #canvasFront class="h-[500px] w-auto"></canvas>
+    </div>
+    <div>
+        @if(glyph) {
+        {{glyph.name}} {{glyph.unicode}}
+        }
+    </div>
+    <div>
+        <a href="https://github.com/opentypejs/opentype.js/blob/master/docs/glyph-inspector.html">
+            Original Glyph Inspector
+        </a>
+    </div>
+</div>

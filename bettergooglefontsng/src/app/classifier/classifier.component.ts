@@ -6,7 +6,7 @@ import { FontFamilyInfo, MongofontService, getTtfUrlForFirstFont } from '../mong
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { JsonPipe, NgFor } from '@angular/common';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { combineLatestWith } from 'rxjs';
+import { combineLatest, combineLatestWith } from 'rxjs';
 import { MatIconRegistry } from '@angular/material/icon';
 import { SettingsStore } from '../helpers';
 
@@ -66,8 +66,11 @@ export class ClassifierComponent implements OnInit {
         const css = generateFontCss({ name: f.meta.name, url })
         appendStyleTag(css)
         this.fstyle = `font-family: "${f.meta.name}", Tofu`
-        this.fontService.getFontBySkip({ idx: { $lt: f.idx } }, { sort: { idx: -1 } })
-          .pipe(combineLatestWith(this.fontService.getFontBySkip({ idx: { $gt: f.idx } })))
+
+        combineLatest([
+          this.fontService.getFontBySkip({ idx: { $lt: f.idx } }, { sort: { idx: -1 } }),
+          this.fontService.getFontBySkip({ idx: { $gt: f.idx } })
+        ])
           .subscribe(([p, n]) => {
             this.fontNext = n
             this.fontPrev = p
