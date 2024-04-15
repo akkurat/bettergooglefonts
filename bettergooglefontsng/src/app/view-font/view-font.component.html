@@ -1,27 +1,36 @@
 <div class="p-5 w-lvw min-h-lvh flex flex-col items-stretch">
-    <div class="flex-none">
-        <h1>{{font?.name}}</h1>
-        {{font|json}}
+    <div class="flex-none flex flex-row justify-around p-10">
+        <a [routerLink]="'/view/'+fontPrev?.meta?.name" queryParamsHandling="merge">{{fontPrev?.meta?.name}}</a>
+        <a [routerLink]="'/view/'+fontNext?.meta?.name" queryParamsHandling="merge">{{fontNext?.meta?.name}}</a>
     </div>
 
-    <section name="specimen" class="flex-1 text-9xl break-all grid ">
-        <div #wrongFont class="w-full row-start-1 row-end-2 col-start-1 col-end-2 opacity-20 transition-opacity duration-1000"
-            style="font-family: 'Shantell Sans', Tofu; ">
-            {{specimen}}
-        </div>
-        <div #correctFont class="w-full row-start-1 row-end-2 col-start-1 col-end-2 opacity-0 transition-opacity duration-1000"
-            [style]="'font-family: \''+font?.name +'\', Tofu; '">
-            {{specimen}}
-        </div>
-    </section>
+    @if( table ) {
     <section>
-        <table>
-            @for( entry of ot?.names|keyvalue; track entry.key) {
-            <tr>
-                <td>{{entry.key}}</td>
-                <td>{{entry.value|json}}</td>
-            </tr>
+        <div class="w-full grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(80px,1fr))] justify-items-stretch items-stretch gap-5"
+            [style]="'font-family: \''+font?.name +'\', Tofu; '">
+            @for( glyph of glyphs; track glyph.unicode ){
+            <div #myself (click)="toggleGlyphOverlay(glyph.index, myself)" class="flex flex-col items-center">
+                <div class="text-9xl">
+                    {{glyph.string}}
+                </div>
+                <div class="text-xs">
+                    {{glyph.name}}
+                </div>
+            </div>
             }
-        </table>
+        </div>
     </section>
+
+    } @else {
+
+    <section name="specimen" class="flex-1 text-7xl" [style]="'font-family: \''+font?.name +'\', Tofu; '">
+        <h1 class="text-[12rem] m-3 float-left">{{font?.name}}</h1>
+        <div class="break-all">
+            {{specimen}}
+        </div>
+    </section>
+    }
+</div>
+<div class="flex flex-row justify-around">
+    <span>Powered by awesome <a href="https://opentype.js.org/">Opentype.js</a></span>
 </div>

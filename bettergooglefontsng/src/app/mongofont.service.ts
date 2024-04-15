@@ -339,6 +339,7 @@ export function mapFont(d: FontFamilyInfo): FontNameUrlMulti {
   }
 
   return ({
+    idx: d.idx,
     name: d.meta.name,
     url: getUrlForFirstFont(d),
     axes: d.meta.axes,
