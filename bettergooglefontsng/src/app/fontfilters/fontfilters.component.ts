@@ -1,14 +1,14 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, EventEmitter, Inject, Output, inject } from '@angular/core';
+import { FormArray, FormControl, FormGroup, FormRecord, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
 import { SearchableFilterlistComponent } from "./searchable-filterlist/searchable-filterlist.component";
 import { SelectFilterComponent } from "./select-filter/select-filter.component";
 import { MatIconModule } from '@angular/material/icon';
 import { RangeFilterComponent } from "./range-filter/range-filter.component";
-import { MongoSelector } from '../fontoverview/fontoverview.component';
 import { BoxplotComponent } from '../boxplot/boxplot.component';
-import { AFilter, FilterName, FontfilterService } from '../fontfilter.service';
-import { Observable, Subject } from 'rxjs';
+import { AFilter, FilterName, FilterSelection, FilterSelections, FontfilterService } from '../fontoverview/fontfilter.service'
+import { Observable } from 'rxjs';
 
 export type Axis = {
   tag: string
@@ -17,7 +17,7 @@ export type Axis = {
   max_value: number
 }
 
-export type FilterSelection = {
+export type FilterTypes = {
   classification
   axis
   type
@@ -34,33 +34,31 @@ export type FilterSelection = {
 
 export class FontfiltersComponent {
 
-  @Output()
-  selectionChange = new EventEmitter<MongoSelector>
   // maybe rather a function and just a string for the selection
   // fg!: FormGroup<{ [x: string]: FormControl<any> | FormGroup<any>; }>;
-  fg: FormGroup = new FormGroup({})
 
   $activeFilters: Observable<AFilter[]>;
   $unselectedFilterNames: Observable<FilterName[]>;
+  fg: FormRecord<FormControl<FilterSelection | null>>;
+
 
   constructor(private filterService: FontfilterService) {
-    this.fg.valueChanges.subscribe(v => this.selectionChange.emit(v))
+
+    this.fg = filterService.fg
+
     this.$unselectedFilterNames = this.filterService.$unselectedFilterNames
     this.$activeFilters = this.filterService.$activeFilters
   }
 
   activateFilter(name: string) {
     this.filterService.activateFilter(name)
-    const control = new FormControl()
     // TODO: use subscription on service for feature "reading filters from URL"
-    this.fg.addControl(name, control, { emitEvent: true })
   }
 
   removeFilter(name: string) {
     // TODO: use subscription on service for feature "reading filters from URL"
     this.filterService.removeFilter(name)
 
-    this.fg.removeControl(name)
   }
 
 }

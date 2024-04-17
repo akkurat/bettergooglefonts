@@ -6,10 +6,9 @@ import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
 import { AssetServiceService } from './asset-service.service';
 import { environment } from 'src/environments/environment';
-import { getSelectorForWeight } from './fontfilter.service';
+import { getSelectorForWeight } from './fontoverview/fontfilter.service';
 
 export type AxesInfo = Map<string, { count: number, min: number, max: number }>
-
 
 export type FontFilter = {
   name: string

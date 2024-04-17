@@ -42,8 +42,6 @@ export class ViewGlyphComponent implements AfterViewInit, AfterContentInit {
     this.cWidth = 0.3 * delta + metrics.xMax - metrics.xMin
 
     this.margin = 0.15 * delta
-
-
   }
 
   ngAfterViewInit(): void {
@@ -52,7 +50,6 @@ export class ViewGlyphComponent implements AfterViewInit, AfterContentInit {
     const glyphMargin = this.margin
     const font = this.fontIdx.font
     const glyph = this.glyph
-
 
     if (!ctx) {
       return
@@ -77,7 +74,6 @@ export class ViewGlyphComponent implements AfterViewInit, AfterContentInit {
     hline('Typo Ascender', font.tables['os2']['sTypoAscender']);
     hline('Typo Descender', font.tables['os2']['sTypoDescender']);
 
-
     console.log("checked", this.canvasFront)
     if (glyph && ctx) {
       // this.glyph?.draw( ctxt )
@@ -99,7 +95,6 @@ export class ViewGlyphComponent implements AfterViewInit, AfterContentInit {
       ctx.fillText(glyph.advanceWidth, xmax, glyphBaseline + markSize + 10);
 
       const options = Object.assign({}, font.defaultRenderOptions);
-
 
       ctx.fillStyle = '#000000';
       const path = glyph.getPath(x0, glyphBaseline, font.unitsPerEm, options, font);

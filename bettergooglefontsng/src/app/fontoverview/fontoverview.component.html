@@ -16,7 +16,8 @@
       </label>
     </div>
     <div class="flex flex-row flex-wrap items-center gap-2 p-3 m-3 ring-2 rounded">
-      <app-fontfilters class="contents" (selectionChange)="trackFilterChange($event)"></app-fontfilters>
+      <!-- not sure if injection is transparent enough -->
+      <app-fontfilters class="contents"></app-fontfilters>
     </div>
   </div>
   @if( transformedViewSettings; as debouncedViewSettings ) {
