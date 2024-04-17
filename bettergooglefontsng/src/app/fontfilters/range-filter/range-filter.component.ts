@@ -113,6 +113,18 @@ export class RangeFilterComponent implements ControlValueAccessor {
   }
 
   writeValue(obj: any): void {
+    if (obj) {
+    this.isOpen = false
+      if (obj.min) {
+        this._min = obj.min
+      }
+      if (obj.max) {
+        this._max = obj.max
+      }
+      if (Object.keys(obj).includes('flag')) {
+        this._flagValue = obj.flag
+      }
+    }
   }
 
   registerOnChange(fn: any): void {

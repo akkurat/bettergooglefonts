@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgComponentOutlet, NgClass } from '@angular/common';
 import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { SelectionModel } from '@angular/cdk/collections';
-import { AFilter } from 'src/app/fontfilter.service';
+import { AFilter } from 'src/app/fontoverview/fontfilter.service';
 
 @Component({
   selector: 'app-select-filter',
@@ -22,16 +22,13 @@ import { AFilter } from 'src/app/fontfilter.service';
 })
 export class SelectFilterComponent implements AfterViewInit, ControlValueAccessor {
 
-
-  constructor(private overlayService: Overlay) {
-
-
-  }
+  constructor(private overlayService: Overlay) { }
   onChange = new EventEmitter()
   sr = this.overlayService.scrollStrategies.reposition()
 
+  callback = (value: any) => { }
+
   createPosStrat(origin) {
-    console.debug(origin)
     return this.overlayService.position().flexibleConnectedTo(origin.elementRef)
       .withPositions([
         {
@@ -56,12 +53,18 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
 
   }
 
-  writeValue(selection: string[]): void {
-
+  writeValue(selection: string[] | null): void {
+    if (selection) {
+      this.model.setSelection(...selection)
+    this.isOpen =false
+    }
+    else{
+      this.model.clear()
+    }
   }
 
   registerOnChange(fn: any): void {
-    this.onChange.subscribe(fn)
+    this.callback = fn
   }
 
   registerOnTouched(fn: any): void {
@@ -71,7 +74,6 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
 
   @Input()
   filter!: AFilter;
-
 
   isOpen = true
   model = new SelectionModel(true, ([] as string[]))
@@ -84,7 +86,7 @@ export class SelectFilterComponent implements AfterViewInit, ControlValueAccesso
 
 
   ngAfterViewInit() {
-    this.model.changed.subscribe(v => { console.debug(v, this.model); this.onChange.next(v.source.selected) })
+    this.model.changed.subscribe(v => { console.debug(v, this.model); this.callback(v.source.selected) })
     if (this.filter.items?.length == 1) {
       this.isOpen = false
       this.model.select(this.filter.items[0])
