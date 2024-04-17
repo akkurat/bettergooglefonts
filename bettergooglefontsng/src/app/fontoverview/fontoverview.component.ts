@@ -1,7 +1,7 @@
 import { Component, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { BehaviorSubject, Subject, combineLatest, map, startWith } from 'rxjs';
+import { BehaviorSubject, Subject, combineLatest, firstValueFrom, map, pipe, startWith, take } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { FontpreviewComponent } from './fontpreview/fontpreview.component';
 import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
@@ -56,15 +56,18 @@ export class FontoverviewComponent {
       .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
       .subscribe(v => this.transformedViewSettings = v)
 
-    combineLatest([
-      this.viewSettings.valueChanges,
-      this.filterService.fg.valueChanges.pipe(startWith(null))]
-    ).subscribe(([values, filters]) => {
-      this.router.navigate(['browse'], {
-        queryParams: {
-          view: JSON.stringify(values),
-          filters: JSON.stringify(filters)
-        }
+    firstValueFrom(this.activatedRoute.queryParams).then(qp => {
+
+      combineLatest([
+        this.viewSettings.valueChanges.pipe(startWith(JSON.parse(qp['view']))),
+        this.filterService.fg.valueChanges.pipe(startWith(JSON.parse(qp['filters'])))]
+      ).subscribe(([values, filters]) => {
+        this.router.navigate(['browse'], {
+          queryParams: {
+            view: JSON.stringify(values),
+            filters: JSON.stringify(filters)
+          }
+        })
       })
     })
 
@@ -76,9 +79,7 @@ export class FontoverviewComponent {
         const { view: viewJSON, filters: filtersJSON } = qp
         this.viewSettings.setValue(JSON.parse(viewJSON))
         const filters = JSON.parse(filtersJSON);
-        if (!this.router.navigated) {
-          this.filterService.setSelection(filters)
-        }
+        this.filterService.setSelection(filters)
         console.debug(qp, this.router.navigated)
         const selector = this.filterService.mapFormEvent(filters)
         this.fontService.getFonts(selector).subscribe(this.$fonts)

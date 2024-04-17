@@ -1,6 +1,7 @@
 <div class="p-5 w-lvw min-h-lvh flex flex-col items-stretch">
     <div class="flex-none flex flex-row justify-around p-10">
         <a [routerLink]="'/view/'+fontPrev?.meta?.name" queryParamsHandling="merge">{{fontPrev?.meta?.name}}</a>
+        <a routerLink="/browse" queryParamsHandling="merge">Browse</a>
         <a [routerLink]="'/view/'+fontNext?.meta?.name" queryParamsHandling="merge">{{fontNext?.meta?.name}}</a>
     </div>
 
@@ -26,7 +27,9 @@
     <section name="specimen" class="flex-1 text-7xl" [style]="'font-family: \''+font?.name +'\', Tofu; '">
         <h1 class="text-[12rem] m-3 float-left">{{font?.name}}</h1>
         <div class="break-all">
-            {{specimen}}
+            @for( glyph of glyphs; track glyph.unicode ){
+            <span #myself (click)="toggleGlyphOverlay(glyph.index, myself)">{{glyph.string}}</span>
+            }
         </div>
     </section>
     }
