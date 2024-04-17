@@ -3,12 +3,12 @@
     class="transition-opacity duration-1000" [style]="style">
     @if(waterfall) {
     @for( vweight of font.weightInfo.virtualWeights; track vweight) {
-    <span [style]="{fontWeight: vweight}">
+    <span [style]="{fontWeight: vweight}" [ngClass]="{'italic': showItalics}">
         <span [ngClass]="{'break-all': true}">{{_specimenText}}</span>
     </span>
     }
     } @else {
-    <span class="break-all">
+    <span class="break-all" [ngClass]="{'italic': showItalics}">
         {{_specimenText}}
     </span>
     }
