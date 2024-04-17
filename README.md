@@ -150,3 +150,6 @@ ng serve
 * fontpreview -> One tile in the listing
 * fontfilters -> upper part of fontoverview
 * classifier -> questionnaire
+
+## building 
+```ng build --source-map --base-href /bettergooglefonts/ && git restore dist/bettergooglefonts/browser/404.html && git add -f dist/bettergooglefonts/browser && (cd dist/bettergooglefonts/; ln -s browser bettergooglefonts) && http-server dist/bettergooglefonts/ -o bettergooglefonts```
