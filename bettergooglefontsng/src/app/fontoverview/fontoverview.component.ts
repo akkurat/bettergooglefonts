@@ -1,7 +1,7 @@
 import { Component, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { BehaviorSubject, Subject, combineLatest, map } from 'rxjs';
+import { BehaviorSubject, Subject, combineLatest, map, startWith } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { FontpreviewComponent } from './fontpreview/fontpreview.component';
 import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
@@ -58,7 +58,7 @@ export class FontoverviewComponent {
 
     combineLatest([
       this.viewSettings.valueChanges,
-      this.filterService.fg.valueChanges]
+      this.filterService.fg.valueChanges.pipe(startWith(null))]
     ).subscribe(([values, filters]) => {
       this.router.navigate(['browse'], {
         queryParams: {
