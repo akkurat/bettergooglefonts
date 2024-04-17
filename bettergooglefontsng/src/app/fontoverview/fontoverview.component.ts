@@ -56,33 +56,34 @@ export class FontoverviewComponent {
       .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
       .subscribe(v => this.transformedViewSettings = v)
 
-    firstValueFrom(this.activatedRoute.queryParams).then(qp => {
+    firstValueFrom(this.activatedRoute.queryParams.pipe())
+      .then(qp => {
 
-      combineLatest([
-        this.viewSettings.valueChanges.pipe(startWith(JSON.parse(qp['view']))),
-        this.filterService.fg.valueChanges.pipe(startWith(JSON.parse(qp['filters'])))]
-      ).subscribe(([values, filters]) => {
-        this.router.navigate(['browse'], {
-          queryParams: {
-            view: JSON.stringify(values),
-            filters: JSON.stringify(filters)
-          }
+        combineLatest([
+          this.viewSettings.valueChanges.pipe(startWith(pJ(qp['view']))),
+          this.filterService.fg.valueChanges.pipe(startWith(pJ(qp['filters'])))]
+        ).subscribe(([view, filters]) => {
+          const queryParams = {}
+          if (view) { queryParams['view'] = JSON.stringify(view) }
+          if (filters) { queryParams['filters'] = JSON.stringify(filters) }
+          this.router.navigate(['browse'], { queryParams })
         })
       })
-    })
 
     this.viewSettings.reset()
 
-    this.activatedRoute.data.subscribe(console.debug)
     this.activatedRoute.queryParams.subscribe(
       qp => {
         const { view: viewJSON, filters: filtersJSON } = qp
-        this.viewSettings.setValue(JSON.parse(viewJSON))
-        const filters = JSON.parse(filtersJSON);
-        this.filterService.setSelection(filters)
-        console.debug(qp, this.router.navigated)
-        const selector = this.filterService.mapFormEvent(filters)
-        this.fontService.getFonts(selector).subscribe(this.$fonts)
+        if (viewJSON) {
+          this.viewSettings.setValue(JSON.parse(viewJSON))
+        }
+        if (filtersJSON) {
+          const filters = JSON.parse(filtersJSON);
+          this.filterService.setSelection(filters)
+          const selector = this.filterService.mapFormEvent(filters)
+          this.fontService.getFonts(selector).subscribe(this.$fonts)
+        }
       })
 
     this.fontService.getFonts({}).subscribe(this.$fonts)
@@ -90,4 +91,11 @@ export class FontoverviewComponent {
   }
 
 
+}
+
+function pJ(value: string) {
+  if (value) {
+    return JSON.parse(value)
+  }
+  return null
 }
