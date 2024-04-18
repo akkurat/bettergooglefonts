@@ -14,7 +14,7 @@ import { FontfilterService } from './fontfilter.service';
 
 export type inor = '$or' | '$and' | '$in'
 export type MongoSelector = {
-  [s in string]: MongoSelector | [MongoSelector] | string | number
+  [s: string]: MongoSelector | MongoSelector[] | string | number
 }
 
 @Component({
@@ -58,38 +58,29 @@ export class FontoverviewComponent {
 
     firstValueFrom(this.activatedRoute.queryParams.pipe())
       .then(qp => {
-
         combineLatest([
-          this.viewSettings.valueChanges.pipe(startWith(pJ(qp['view']))),
-          this.filterService.fg.valueChanges.pipe(startWith(pJ(qp['filters'])))]
+          this.viewSettings.valueChanges,
+          this.filterService.fg.valueChanges]
         ).subscribe(([view, filters]) => {
           const queryParams = {}
           if (view) { queryParams['view'] = JSON.stringify(view) }
           if (filters) { queryParams['filters'] = JSON.stringify(filters) }
           this.router.navigate(['browse'], { queryParams })
         })
+
+        const initView = pJ(qp['view'])
+        this.viewSettings.reset(initView)
+        const initFilter = pJ(qp['filters'])
+        this.filterService.setSelection(initFilter)
       })
 
-    this.viewSettings.reset()
+    // this.fontService.getFonts({}).subscribe(this.$fonts)
 
-    this.activatedRoute.queryParams.subscribe(
-      qp => {
-        const { view: viewJSON, filters: filtersJSON } = qp
-        if (viewJSON) {
-          this.viewSettings.setValue(JSON.parse(viewJSON))
-        }
-        if (filtersJSON) {
-          const filters = JSON.parse(filtersJSON);
-          this.filterService.setSelection(filters)
-          const selector = this.filterService.mapFormEvent(filters)
-          selector.pipe(
-            switchMap(selector => this.fontService.getFonts(selector))
-          )
-            .subscribe(this.$fonts)
-        }
-      })
+    this.filterService.fg.valueChanges.pipe(
+      switchMap(f => this.filterService.mapFormEvent(f)),
+      switchMap(selector => this.fontService.getFonts(selector))
+    ).subscribe(this.$fonts)
 
-    this.fontService.getFonts({}).subscribe(this.$fonts)
 
   }
 
@@ -100,5 +91,4 @@ function pJ(value: string) {
   if (value) {
     return JSON.parse(value)
   }
-  return null
 }

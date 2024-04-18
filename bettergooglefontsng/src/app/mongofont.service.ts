@@ -198,7 +198,7 @@ export class MongofontService {
 
     await firstValueFrom(this.dbready.pipe(skipWhile(e => !e)))
 
-    const selector = getSelectorForWeight({ flag: false })
+    const selector = getSelectorForWeight('wght', {flag: false })
     const _d1: { meta: { axes: AxisInfo[] } }[] = await this.db.collections['fonts'].find(selector, { fields: { 'meta.axes': 1 } }).fetch()
     const d2: { meta: { fonts: FontInfo[] } }[] = await this.db.collections['fonts'].find({ $nor: [selector] }, { fields: { 'meta.fonts': 1 } }).fetch()
 

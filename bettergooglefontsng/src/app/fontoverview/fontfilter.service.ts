@@ -18,6 +18,7 @@ export type AFilter = {
   items?: string[]
   min_value?: number
   max_value?: number
+  selectorFactory: (key: string, values: FilterSelection) => MongoSelector
 };
 
 export type FilterName = {
@@ -25,12 +26,14 @@ export type FilterName = {
   caption: string;
 };
 
+type RangeSelection = Partial<{
+  min: number;
+  max: number;
+  flag: boolean;
+}>;
+
 export type FilterSelection =
-  string[] | {
-    min?: number;
-    max?: number;
-    flag?: boolean;
-  }
+  string[] | RangeSelection | null | undefined
 
 export type FilterSelections = {
   [k: string]: FilterSelection
@@ -41,7 +44,6 @@ export class FontfilterService {
 
   $activeFilters = new BehaviorSubject<AFilter[]>([]);
   $unselectedFilterNames = new BehaviorSubject<FilterName[]>([]);
-
 
   // todo make private
   activeFilters: AFilter[] = []
@@ -60,13 +62,15 @@ export class FontfilterService {
 
   fg = this.formBuilder.record<FilterSelection>({})
 
+  // todo: properly register factories
   constructor() {
     this.allAvailableFilters.push({
       rendering: 'select',
       caption: 'Italic',
       title: 'italic',
       type: 'italic',
-      items: ['italic']
+      items: ['italic'],
+      selectorFactory: getItalicSelector
     })
 
     this.allAvailableFilters.push({
@@ -75,7 +79,8 @@ export class FontfilterService {
       type: "weight",
       rendering: 'rangeflag', // new type
       min_value: 1,
-      max_value: 1000
+      max_value: 1000,
+      selectorFactory: getSelectorForWeight
     })
 
     combineLatest([
@@ -83,7 +88,14 @@ export class FontfilterService {
       this.http.get('assets/axesmeta.json')
     ])
       .subscribe(([qs, a]) => {
-        this.allAvailableFilters.push(...qs.map<AFilter>(q => ({ ...q, caption: q.title, rendering: 'select', type: "classification" })))
+
+        this.allAvailableFilters.push(...qs.map<AFilter>(q => ({
+          ...q,
+          caption: q.title,
+          rendering: 'select',
+          type: "classification",
+          selectorFactory: getClassificationSelector
+        })))
 
         const axes: AFilter[] = (a as Axis[])
           .filter(a => a.tag.toLowerCase() === a.tag)
@@ -94,7 +106,8 @@ export class FontfilterService {
             type: "axis",
             rendering: 'range',
             min_value: a.min_value,
-            max_value: a.max_value
+            max_value: a.max_value,
+            selectorFactory: getSelectorForAxes
           }))
         this.allAvailableFilters.push(...axes)
         // copy?
@@ -112,7 +125,7 @@ export class FontfilterService {
   }
 
 
-  setSelection(filtersIn: FilterSelections) {
+  setSelection(filtersIn: FilterSelections = {}) {
     this.$ready.pipe(first(v => v)).subscribe(() => {
       const filterSelectionForSwap: FilterSelections = {}
       const activeFiltersForSwap = new Array<AFilter>()
@@ -132,12 +145,11 @@ export class FontfilterService {
       }
 
       this.activeFilters = activeFiltersForSwap
-      for (const c of Object.keys(this.fg.controls)) {
-        this.fg.removeControl(c, { emitEvent: false })
-      }
-      for (const [c, v] of Object.entries(filterSelectionForSwap)) {
-        this.fg.addControl(c, this.formBuilder.control(v), { emitEvent: false })
-      }
+
+      this.fg.controls = Object.entries(filterSelectionForSwap)
+        .reduce((out, [k, v]) => { out[k] = this.formBuilder.control(v); return out }, {})
+      // emit one event for all modifications
+      this.fg.updateValueAndValidity()
 
       this.updateAvailableFilterNames()
       // check filters in validity (vlaue of filter and selection)
@@ -163,42 +175,22 @@ export class FontfilterService {
     }
   }
 
-  mapFormEvent(values: Partial<{ [x: string]: FilterSelection; }>): Observable<MongoSelector> {
+  mapFormEvent(values: FilterSelections): Observable<MongoSelector> {
     return this.$ready.pipe(
       filter(v => v),
       map(() => this._mapFormEvent(values))
     )
   }
 
-  _mapFormEvent(values: Partial<{ [x: string]: any; }>): MongoSelector {
-    const out = { italic: {}, classification: {}, axis: {}, type: {}, weight: {} }
+  _mapFormEvent(values: FilterSelections): MongoSelector {
+    let selector = {}
     for (const [k, v] of Object.entries(values)) {
       const filter = this.allAvailableFilters.find(f => f.title === k)
-      if (filter?.type) {
-        out[filter.type][k] = v
+      if (filter?.selectorFactory) {
+        selector = { ...selector, ...filter.selectorFactory(k, v) }
       }
     }
-
-    let selector = {}
-    if (Object.keys(out.italic).length) {
-      selector = { ...selector, ...getItalicSelector() }
-    }
-    if (Object.keys(out.classification).length) {
-      selector = { ...selector, ...getClassificationSelector(out.classification) }
-    }
-    if (Object.keys(out.axis).length) {
-      selector = { ...selector, ...getSelectorForAxes(out.axis) }
-    }
-    if (Object.keys(out.type).length) {
-      selector = { ...selector, ...getSelectorForType(out.type) }
-    }
-    // known bug: axes filter will now overwrite themself..
-    if (Object.keys(out.weight).length) {
-      selector = { ...selector, ...getSelectorForWeight(out.weight['wght']) }
-    }
-
     return selector
-
   }
 
   /**
@@ -214,47 +206,37 @@ export class FontfilterService {
 
 }
 
-function getClassificationSelector(toggles) {
-  const selector = {}
-  for (const [name, values] of Object.entries(toggles)) {
-    selector['classification.' + name] = { $in: values }
-  }
-  return selector
+function getClassificationSelector(key, values) {
+  return { ['classification.' + key]: { $in: values } }
 }
 
-function getSelectorForAxes(ranges: { [k in string]: { min?: number, max?: number } }) {
+function getSelectorForAxes(param: string, value: any | { min?: number, max?: number }): MongoSelector {
   const selector = {}
   // const variationInfos = []
-  for (const [param, value] of Object.entries(ranges)) {
-    selector['meta.axes'] = { $elemMatch: { tag: param } } // cutting off 'a_'
-    if (value) {
-      const { min, max } = value
-      if (min && isFinite(min)) {
-        selector['meta.axes']['$elemMatch']['min_value'] = { $lte: min }
-        // variationInfos.push({ name: min })
-      }
-      if (max && isFinite(max)) {
-        selector['meta.axes']['$elemMatch']['max_value'] = { $gte: max }
-        // variationInfos.push({ name: max })
-      }
+  selector['meta.axes'] = { $elemMatch: { tag: param } }
+  if (value) {
+    const { min, max } = value
+    if (min && isFinite(min)) {
+      selector['meta.axes']['$elemMatch']['min_value'] = { $lte: min }
+      // variationInfos.push({ name: min })
+    }
+    if (max && isFinite(max)) {
+      selector['meta.axes']['$elemMatch']['max_value'] = { $gte: max }
+      // variationInfos.push({ name: max })
     }
   }
   return selector
 }
 
-function getSelectorForType(toggles) {
-  const selector = {}
-  for (const values of Object.values(toggles)) {
-    selector['type'] = { $in: values }
-  }
-  return selector
-}
+export function getSelectorForWeight(key: string, values: any): MongoSelector {
 
-export function getSelectorForWeight(values: { min?: number, max?: number, flag: boolean }) {
   if (!values) {
     return {}
   }
-  const rangeSelector = getSelectorForAxes({ 'wght': values })
+  if (key != 'wght') {
+    throw new Error(`Weight selector was illegaly instantiated with wrong key: ${key}`)
+  }
+  const rangeSelector = getSelectorForAxes('wght', values)
   const selectors = [rangeSelector]
   if (values.flag) {
     const discreteWeights: MongoSelector[] = []
