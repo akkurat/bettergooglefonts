@@ -3,14 +3,22 @@
         <a [routerLink]="'/view/'+fontPrev?.meta?.name" queryParamsHandling="merge">{{fontPrev?.meta?.name}}</a>
         <a routerLink="/browse" queryParamsHandling="merge">Browse</a>
         <a [routerLink]="'/view/'+fontNext?.meta?.name" queryParamsHandling="merge">{{fontNext?.meta?.name}}</a>
+        <app-fontfilters></app-fontfilters>
     </div>
-    <app-fontfilters></app-fontfilters>
 
-    <div class="flex flex-row items-start">
-        <section class="grid basis-[200px]">
-            @for( kv of font?.classification|keyvalue; track $index) {
-            <div class="col-start-1">{{kv.key}}</div>
-            <div class="col-start-2">{{kv.value}}</div>
+    <div class="flex flex-col lg:flex-row items-start gap-5">
+        <section class="basis-32 flex flex-row flex-wrap gap-2 lg:flex-col items-center">
+            @for( kv of attributes$|async|keyvalue; track $index) {
+            <!-- <div class="col-start-1">{{kv.key}}</div>
+            <div class="col-start-2">{{kv.value}}</div> -->
+            <a routerLink="/browse" [queryParams]="_jsonParam(kv)" queryParamsHandling="merge"
+                class="w-24 h-24 flex flex-col items-center text-center leading-none">
+                <div class="line-clamp-1 text-xs">{{kv.key}}</div>
+                <div class="w-16 h-16 rounded border-2 text-cyan-800">
+                    <mat-icon class="w-16 h-16 f-primary" [svgIcon]="kv.key + '-' + kv.value"></mat-icon>
+                </div>
+                <div class="line-clamp-1 text-sm"> <b>{{kv.value}}</b> </div>
+            </a>
             }
         </section>
         @if( table ) {
@@ -32,8 +40,8 @@
 
         } @else {
 
-        <section name="specimen" class="flex-grow-0 max-w-[calc(100vw_-_300px)] text-7xl " [style]="'font-family: \''+font?.name +'\', Tofu; '">
-            <h1 class="text-[12rem] m-3 float-left text-balance">{{font?.name}}</h1>
+        <section name="specimen" class="flex-grow-0 text-7xl " [style]="'font-family: \''+font?.name +'\', Tofu; '">
+            <h1 class="text-[clamp(6rem,15vw,12rem)] m-3 float-left text-balance">{{font?.name}}</h1>
             <div class="break-all">
                 @for( glyph of glyphs; track glyph.unicode ){
                 <span #myself (click)="toggleGlyphOverlay(glyph.index, myself)">{{glyph.string}}</span>

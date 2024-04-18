@@ -6,8 +6,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MongoSelector } from '../fontoverview/fontoverview.component';
 import { HttpClient } from '@angular/common/http';
 import { Axis } from '../fontfilters/fontfilters.component';
-import { BehaviorSubject, Observable, combineLatest, filter, first, last, lastValueFrom, map } from 'rxjs';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { BehaviorSubject, Observable, combineLatest, filter, first, last, lastValueFrom, map, switchAll, switchMap } from 'rxjs';
+import { FormBuilder, FormControl, FormRecord } from '@angular/forms';
+import { FontNameUrlMulti } from '../FontNameUrl';
 
 export type AFilter = {
   type: string
@@ -19,6 +20,7 @@ export type AFilter = {
   min_value?: number
   max_value?: number
   selectorFactory: (key: string, values: FilterSelection) => MongoSelector
+  fontValueExtractor?: (font: FontNameUrlMulti) => { [key: string]: FilterSelection }
 };
 
 export type FilterName = {
@@ -49,52 +51,56 @@ export class FontfilterService {
   activeFilters: AFilter[] = []
   unselectedFilterNames: FilterName[] = [];
 
-  classifier = inject(ClassificationService)
-  fontService = inject(MongofontService)
-  iconRegistry = inject(MatIconRegistry)
-  sanitizer = inject(DomSanitizer)
-  http = inject(HttpClient)
+  readonly fg: FormRecord<FormControl<FilterSelection>>
 
-  $ready = new BehaviorSubject(false)
+  #$ready = new BehaviorSubject(false)
 
-  private readonly formBuilder = inject(FormBuilder);
-  private allAvailableFilters: AFilter[] = []
+  #formBuilder = inject(FormBuilder);
+  #allAvailableFilters: AFilter[] = []
 
-  fg = this.formBuilder.record<FilterSelection>({})
+  #classifier = inject(ClassificationService)
+  #iconRegistry = inject(MatIconRegistry)
+  #sanitizer = inject(DomSanitizer)
+  #http = inject(HttpClient)
+
 
   // todo: properly register factories
   constructor() {
-    this.allAvailableFilters.push({
+    this.fg = this.#formBuilder.record<FilterSelection>({})
+    this.#allAvailableFilters.push({
       rendering: 'select',
       caption: 'Italic',
       title: 'italic',
       type: 'italic',
       items: ['italic'],
-      selectorFactory: getItalicSelector
+      selectorFactory: getItalicSelector,
+      fontValueExtractor: (font: FontNameUrlMulti) => ({ 'italic': font.hasItalics ? ['italic'] : [] })
     })
 
-    this.allAvailableFilters.push({
+    this.#allAvailableFilters.push({
       title: 'wght',
       caption: 'Weight',
       type: "weight",
       rendering: 'rangeflag', // new type
       min_value: 1,
       max_value: 1000,
-      selectorFactory: getSelectorForWeight
+      selectorFactory: getSelectorForWeight,
+      fontValueExtractor: extractWeightInfo
     })
 
     combineLatest([
-      this.classifier.getQuestions(),
-      this.http.get('assets/axesmeta.json')
+      this.#classifier.getQuestions(),
+      this.#http.get('assets/axesmeta.json')
     ])
       .subscribe(([qs, a]) => {
 
-        this.allAvailableFilters.push(...qs.map<AFilter>(q => ({
+        this.#allAvailableFilters.push(...qs.map<AFilter>(q => ({
           ...q,
           caption: q.title,
           rendering: 'select',
           type: "classification",
-          selectorFactory: getClassificationSelector
+          selectorFactory: getClassificationSelector,
+          fontValueExtractor: extractClassification
         })))
 
         const axes: AFilter[] = (a as Axis[])
@@ -107,31 +113,42 @@ export class FontfilterService {
             rendering: 'range',
             min_value: a.min_value,
             max_value: a.max_value,
-            selectorFactory: getSelectorForAxes
+            selectorFactory: getSelectorForAxes,
           }))
-        this.allAvailableFilters.push(...axes)
+        this.#allAvailableFilters.push(...axes)
         // copy?
 
         this.updateAvailableFilterNames();
-        this.$ready.next(true)
-        for (const filter of this.allAvailableFilters) {
-          this.iconRegistry.addSvgIcon(filter.title, this.sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${filter.title}.svg`))
+        // maybe observable of filters instead of ready flag...
+        this.#$ready.next(true)
+        for (const filter of this.#allAvailableFilters) {
+          this.#iconRegistry.addSvgIcon(filter.title, this.#sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${filter.title}.svg`))
           filter.items?.forEach(item => {
             const qualifier = filter.title + '-' + item;
-            this.iconRegistry.addSvgIcon(qualifier, this.sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${qualifier}.svg`))
+            this.#iconRegistry.addSvgIcon(qualifier, this.#sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${qualifier}.svg`))
           })
         }
       })
   }
 
+  getSelectedAttribute(font: FontNameUrlMulti) {
+    return this.#$ready.pipe(
+      map(() =>
+        this.#allAvailableFilters
+          .filter(f => f.fontValueExtractor)
+          //@ts-ignore function is guaranteed to be present
+          .reduce((out, f) => out = { ...out, ...f.fontValueExtractor(font) }, {})
+      )
+    )
+  }
 
   setSelection(filtersIn: FilterSelections = {}) {
-    this.$ready.pipe(first(v => v)).subscribe(() => {
+    this.#$ready.pipe(first(v => v)).subscribe(() => {
       const filterSelectionForSwap: FilterSelections = {}
       const activeFiltersForSwap = new Array<AFilter>()
       for (const entry of Object.entries(filtersIn)) {
         const [name, values] = entry
-        const filter = this.allAvailableFilters.find(v => v.title === name)
+        const filter = this.#allAvailableFilters.find(v => v.title === name)
         if (filter && values) {
           if (filter.rendering === 'select') {
             const valid = (values as string[]).every(v => filter.items?.includes(v))
@@ -147,7 +164,7 @@ export class FontfilterService {
       this.activeFilters = activeFiltersForSwap
 
       this.fg.controls = Object.entries(filterSelectionForSwap)
-        .reduce((out, [k, v]) => { out[k] = this.formBuilder.control(v); return out }, {})
+        .reduce((out, [k, v]) => { out[k] = this.#formBuilder.control(v); return out }, {})
       // emit one event for all modifications
       this.fg.updateValueAndValidity()
 
@@ -158,7 +175,7 @@ export class FontfilterService {
   }
 
   activateFilter(name: string) {
-    const filter = this.allAvailableFilters.find(v => v.title === name)
+    const filter = this.#allAvailableFilters.find(v => v.title === name)
     if (filter) {
       this.activeFilters.push(filter)
       this.fg.addControl(name, new FormControl())
@@ -176,7 +193,7 @@ export class FontfilterService {
   }
 
   mapFormEvent(values: FilterSelections): Observable<MongoSelector> {
-    return this.$ready.pipe(
+    return this.#$ready.pipe(
       filter(v => v),
       map(() => this._mapFormEvent(values))
     )
@@ -185,7 +202,7 @@ export class FontfilterService {
   _mapFormEvent(values: FilterSelections): MongoSelector {
     let selector = {}
     for (const [k, v] of Object.entries(values)) {
-      const filter = this.allAvailableFilters.find(f => f.title === k)
+      const filter = this.#allAvailableFilters.find(f => f.title === k)
       if (filter?.selectorFactory) {
         selector = { ...selector, ...filter.selectorFactory(k, v) }
       }
@@ -197,7 +214,7 @@ export class FontfilterService {
    * Publish
    */
   private updateAvailableFilterNames() {
-    this.unselectedFilterNames = this.allAvailableFilters
+    this.unselectedFilterNames = this.#allAvailableFilters
       .filter(av => !this.activeFilters.some(ac => ac.title === av.title))
       .map(t => ({ name: t.title, caption: t.caption }));
     this.$unselectedFilterNames.next(this.unselectedFilterNames)
@@ -208,6 +225,9 @@ export class FontfilterService {
 
 function getClassificationSelector(key, values) {
   return { ['classification.' + key]: { $in: values } }
+}
+function extractClassification(font: FontNameUrlMulti) {
+  return font.classification
 }
 
 function getSelectorForAxes(param: string, value: any | { min?: number, max?: number }): MongoSelector {
@@ -229,7 +249,6 @@ function getSelectorForAxes(param: string, value: any | { min?: number, max?: nu
 }
 
 export function getSelectorForWeight(key: string, values: any): MongoSelector {
-
   if (!values) {
     return {}
   }
@@ -253,6 +272,15 @@ export function getSelectorForWeight(key: string, values: any): MongoSelector {
   return { $or: selectors }
 }
 
+export function extractWeightInfo(font: FontNameUrlMulti) {
+  const wi = font.weightInfo
+  return { 'wght': { min: wi.min_value, max: wi.max_value, flag: true } }
+}
+
 function getItalicSelector() {
   return { 'meta.fonts': { $elemMatch: { style: 'italic' } } } // cutting off 'a_'
 }
+
+
+
+
