@@ -6,7 +6,7 @@
     </div>
     <app-fontfilters></app-fontfilters>
 
-    <div class="flex flex-row flex-wrap">
+    <div class="flex flex-row items-start">
         <section class="grid basis-[200px]">
             @for( kv of font?.classification|keyvalue; track $index) {
             <div class="col-start-1">{{kv.key}}</div>
@@ -32,8 +32,8 @@
 
         } @else {
 
-        <section name="specimen" class="flex-1 text-7xl" [style]="'font-family: \''+font?.name +'\', Tofu; '">
-            <h1 class="text-[12rem] m-3 float-left">{{font?.name}}</h1>
+        <section name="specimen" class="flex-grow-0 max-w-[calc(100vw_-_300px)] text-7xl " [style]="'font-family: \''+font?.name +'\', Tofu; '">
+            <h1 class="text-[12rem] m-3 float-left text-balance">{{font?.name}}</h1>
             <div class="break-all">
                 @for( glyph of glyphs; track glyph.unicode ){
                 <span #myself (click)="toggleGlyphOverlay(glyph.index, myself)">{{glyph.string}}</span>
