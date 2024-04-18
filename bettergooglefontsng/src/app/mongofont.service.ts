@@ -32,6 +32,7 @@ type FontInfo = {
 export type FontFamilyInfo = {
   idx: number
   dir: string
+  classification: Record<string, Record<string, string>>;
   meta: {
     category: string[];
     stroke?: string;
@@ -63,17 +64,19 @@ export class MongofontService {
 
     const aS = inject(AssetServiceService);
 
+    // todo make outer combinewith
     this.http.get((aS.bustUrl('assets/fontmeta.json')).toString())
       .pipe(combineLatestWith(this.http.get(aS.bustUrl('assets/classification.json').toString())))
-      .subscribe(([metas, classificationEntries]) => {
+      .subscribe(([fonts, classificationEntries]) => {
         const types = new Set()
         const classification = new Map((classificationEntries as []))
-        for (const meta of (metas as FontFamilyInfo[])) {
-          meta['classification'] = classification.get(meta.meta.name)
-          meta['type'] = meta.meta.stroke || meta.meta.category[0]
-          types.add(meta['type'])
+        for (const font of (fonts as FontFamilyInfo[])) {
+          //@ts-ignore
+          font['classification'] = classification.get(font.meta.name)
+          font['type'] = font.meta.stroke || font.meta.category[0]
+          types.add(font['type'])
         }
-        this.db.collections['fonts'].upsert(metas,
+        this.db.collections['fonts'].upsert(fonts,
           (docs) => { console.debug(docs.length); this.dbready.next(true) },
           (err) => { console.debug(err); }
         )
@@ -336,5 +339,6 @@ export function mapFont(d: FontFamilyInfo): FontNameUrlMulti {
     italics,
     hasItalics: italics.includes('italic'),
     fonts: groupFonts(d.dir, d.meta.fonts),
+    classification: d.classification
   });
 }

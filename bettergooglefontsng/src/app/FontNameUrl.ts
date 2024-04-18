@@ -15,21 +15,22 @@ export type FontNameUrlMulti = {
   idx: number
   axes?: AxisInfo[];
   weights: number[];
-  weightInfo: {min_value:number, max_value:number, all?: number[], virtualWeights: number[]};
+  weightInfo: { min_value: number, max_value: number, all?: number[], virtualWeights: number[] };
   italics: string[];
   hasItalics: boolean;
   name: string;
   url: string;
-  fonts: FontByWeight[] 
+  fonts: FontByWeight[]
+  classification: Record<string, Record<string, string>>;
 };
 
-export function generateFontCss(font: {name: string, url: string}) {
+export function generateFontCss(font: { name: string, url: string }) {
   return `@font-face {
     font-family: "${font.name}";
     src: url("${font.url}");
   }`;
 }
-export function generateFontCssWeight(font: {name: string, url: string, weight: string|number, style: string}) {
+export function generateFontCssWeight(font: { name: string, url: string, weight: string | number, style: string }) {
   return `@font-face {
     font-family: "${font.name}";
     src: url("${font.url}");
