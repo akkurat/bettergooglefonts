@@ -59,6 +59,11 @@ export class ViewFontComponent {
             this.filterService.setSelection(JSON.parse(filters))
           }
         })
+
+    this.filterService.fg.valueChanges.subscribe(selection => {
+      this.router.navigate(['.'], { relativeTo: this.route, queryParams: { filters: JSON.stringify(selection) } })
+    })
+
     this.route.queryParams
       .subscribe(params => {
         this.table = params['table'] === 'true'
