@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Injector, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Injector, Sanitizer, ViewChild, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FontFamilyInfo, MongofontService, mapFont } from '../mongofont.service';
 import { BehaviorSubject, Observable, combineLatest, combineLatestAll, forkJoin, map, of, switchMap, take, tap } from 'rxjs';
@@ -12,6 +12,8 @@ import { CALLBACK_TOKEN, GLYPH_TOKEN, ViewGlyphComponent } from './view-glyph/vi
 import { FilterSelection, FilterSelections, FontfilterService } from '../fontoverview/fontfilter.service';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { FormControl, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 type GlyphInfo = {
@@ -24,7 +26,7 @@ type GlyphInfo = {
 @Component({
   selector: 'app-view-font',
   standalone: true,
-  imports: [JsonPipe, KeyValuePipe, AsyncPipe, RouterLink, FontfiltersComponent, MatIconModule],
+  imports: [JsonPipe, KeyValuePipe, AsyncPipe, RouterLink, FontfiltersComponent, MatIconModule, ReactiveFormsModule],
   providers: [FontfilterService],
   templateUrl: './view-font.component.html',
 })
@@ -45,11 +47,14 @@ export class ViewFontComponent {
   fontResourceReady = new BehaviorSubject(false)
   ot?: opentype.Font;
   glyphs: GlyphInfo[] = [];
-  table = false
+  fcTable = new FormControl(false)
   fontNext?: FontFamilyInfo;
   fontPrev?: FontFamilyInfo;
   filterService = inject(FontfilterService)
   attributes$?: Observable<FilterSelections>
+  private readonly domSanitizer = inject(DomSanitizer);
+
+  fontname = this.domSanitizer.bypassSecurityTrustHtml('<br>')
 
   constructor() {
     this.route.queryParams.pipe(take(1))
@@ -61,12 +66,16 @@ export class ViewFontComponent {
         })
 
     this.filterService.fg.valueChanges.subscribe(selection => {
-      this.router.navigate(['.'], { relativeTo: this.route, queryParams: { filters: JSON.stringify(selection) } })
+      this.router.navigate(['.'], { relativeTo: this.route, queryParamsHandling: 'merge', queryParams: { filters: JSON.stringify(selection) } })
+    })
+
+    this.fcTable.valueChanges.subscribe(c => {
+      this.router.navigate(['.'], { relativeTo: this.route, queryParamsHandling: 'merge', queryParams: { table: c } })
     })
 
     this.route.queryParams
       .subscribe(params => {
-        this.table = params['table'] === 'true'
+        this.fcTable.setValue(params['table'] === 'true')
       })
     // exercise: flatten with only pipes
     combineLatest([
@@ -87,6 +96,7 @@ export class ViewFontComponent {
       switchMap(([font, _selector]) => {
 
         this.font = font
+        this.fontname = this.domSanitizer.bypassSecurityTrustHtml(font.name.replaceAll(' ', '<br>'))
         this.attributes$ = this.filterService.getSelectedAttribute(font)
 
         const ffs = this.fontResourceService.getFontfaces(font, 'full')
