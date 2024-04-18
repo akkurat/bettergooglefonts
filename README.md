@@ -94,8 +94,8 @@ ng serve
 * Detailview of font with something like this [https://www.axis-praxis.org/specimens/__DEFAULT__] -> Quickwin: Link to google fonts for now
 * ~~Custom specimen text -> Sofar only Ascii letters possible (due to subset woff)~~ -> load ttf from github raw?
   * Loading ttf from github raw is already done for classification view
-  * First step however should be custom ascii preview text
-* Grid/List view -> no meta view will do for now
+  * ~~First step however should be custom ascii preview text~~
+* ~~Grid/List view -> no meta view will do for now~~
 * Size / Width/ Weight Waterfall
   * ~~Size waterfall is trivial~~
   * ~~Iterating through all axes (or discrete fonts) is a bit more complicated but also manageable~~

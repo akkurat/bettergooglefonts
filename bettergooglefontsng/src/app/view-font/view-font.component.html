@@ -1,36 +1,60 @@
 <div class="p-5 w-lvw min-h-lvh flex flex-col items-stretch">
-    <div class="flex-none flex flex-row justify-around p-10">
+    <div class="flex-none flex flex-row justify-center gap-4 p-4">
         <a [routerLink]="'/view/'+fontPrev?.meta?.name" queryParamsHandling="merge">{{fontPrev?.meta?.name}}</a>
+        <a routerLink="/browse" queryParamsHandling="merge">Browse</a>
         <a [routerLink]="'/view/'+fontNext?.meta?.name" queryParamsHandling="merge">{{fontNext?.meta?.name}}</a>
+        <app-fontfilters></app-fontfilters>
+        <label>Table
+            <input type="checkbox" [formControl]="fcTable" />
+        </label>
     </div>
 
-    @if( table ) {
-    <section>
-        <div class="w-full grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(80px,1fr))] justify-items-stretch items-stretch gap-5"
-            [style]="'font-family: \''+font?.name +'\', Tofu; '">
-            @for( glyph of glyphs; track glyph.unicode ){
-            <div #myself (click)="toggleGlyphOverlay(glyph.index, myself)" class="flex flex-col items-center">
-                <div class="text-9xl">
-                    {{glyph.string}}
+    <div class="flex flex-col lg:flex-row items-start gap-5">
+        <section class="basis-32 flex flex-row flex-wrap gap-2 lg:flex-col items-center">
+            @for( kv of attributes$|async|keyvalue; track $index) {
+            <!-- <div class="col-start-1">{{kv.key}}</div>
+            <div class="col-start-2">{{kv.value}}</div> -->
+            <a routerLink="/browse" [queryParams]="_jsonParam(kv)" queryParamsHandling="merge"
+                class="w-24 h-24 flex flex-col items-center text-center leading-none">
+                <div class="line-clamp-1 text-xs">{{kv.key}}</div>
+                <div class="w-16 h-16 rounded border-2 text-cyan-800">
+                    <mat-icon class="w-16 h-16 f-primary" [svgIcon]="kv.key + '-' + kv.value"></mat-icon>
                 </div>
-                <div class="text-xs">
-                    {{glyph.name}}
-                </div>
-            </div>
+                <div class="line-clamp-1 text-sm"> <b>{{kv.value}}</b> </div>
+            </a>
             }
-        </div>
-    </section>
+        </section>
+        @if( fcTable.value ) {
+        <section class="w-full">
+            <div class="w-full grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(80px,1fr))] justify-items-stretch items-stretch gap-5"
+                [style]="'font-family: \''+font?.name +'\', Tofu; '">
+                @for( glyph of glyphs; track glyph.unicode ){
+                <div #myself (click)="toggleGlyphOverlay(glyph.index, myself)" class="flex flex-col items-center">
+                    <div class="text-9xl">
+                        {{glyph.string}}
+                    </div>
+                    <div class="text-xs">
+                        {{glyph.name}}
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
 
-    } @else {
+        } @else {
 
-    <section name="specimen" class="flex-1 text-7xl" [style]="'font-family: \''+font?.name +'\', Tofu; '">
-        <h1 class="text-[12rem] m-3 float-left">{{font?.name}}</h1>
-        <div class="break-all">
-            {{specimen}}
-        </div>
-    </section>
-    }
+        <section name="specimen" class="flex-grow-0 text-7xl " [style]="'font-family: \''+font?.name +'\', Tofu; '">
+            <h1 class="text-[clamp(6rem,15vw,12rem)] m-3 float-left text-balance" [innerHTML]="font?.name?.replaceAll(' ', '\<br>')"></h1>
+            <div class="break-all">
+                @for( glyph of glyphs; track glyph.unicode ){
+                <span #myself (click)="toggleGlyphOverlay(glyph.index, myself)">{{glyph.string}}</span>
+                }
+            </div>
+        </section>
+        }
+    </div>
 </div>
+
 <div class="flex flex-row justify-around">
     <span>Powered by awesome <a href="https://opentype.js.org/">Opentype.js</a></span>
 </div>

@@ -1,7 +1,7 @@
 import { Component, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { BehaviorSubject, Subject, combineLatest, map } from 'rxjs';
+import { BehaviorSubject, Subject, combineLatest, firstValueFrom, flatMap, map, pipe, startWith, switchMap, take } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { FontpreviewComponent } from './fontpreview/fontpreview.component';
 import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
@@ -14,7 +14,7 @@ import { FontfilterService } from './fontfilter.service';
 
 export type inor = '$or' | '$and' | '$in'
 export type MongoSelector = {
-  [s in string]: MongoSelector | [MongoSelector] | string | number
+  [s: string]: MongoSelector | MongoSelector[] | string | number
 }
 
 @Component({
@@ -56,37 +56,39 @@ export class FontoverviewComponent {
       .pipe(map(v => ({ ...v, customText: v.customText?.trimStart() || this.defaultSpecimen })))
       .subscribe(v => this.transformedViewSettings = v)
 
-    combineLatest([
-      this.viewSettings.valueChanges,
-      this.filterService.fg.valueChanges]
-    ).subscribe(([values, filters]) => {
-      this.router.navigate(['browse'], {
-        queryParams: {
-          view: JSON.stringify(values),
-          filters: JSON.stringify(filters)
-        }
-      })
-    })
+    firstValueFrom(this.activatedRoute.queryParams.pipe())
+      .then(qp => {
+        combineLatest([
+          this.viewSettings.valueChanges,
+          this.filterService.fg.valueChanges]
+        ).subscribe(([view, filters]) => {
+          const queryParams = {}
+          if (view) { queryParams['view'] = JSON.stringify(view) }
+          if (filters) { queryParams['filters'] = JSON.stringify(filters) }
+          this.router.navigate(['browse'], { queryParams })
+        })
 
-    this.viewSettings.reset()
-
-    this.activatedRoute.data.subscribe(console.debug)
-    this.activatedRoute.queryParams.subscribe(
-      qp => {
-        const { view: viewJSON, filters: filtersJSON } = qp
-        this.viewSettings.setValue(JSON.parse(viewJSON))
-        const filters = JSON.parse(filtersJSON);
-        if (!this.router.navigated) {
-          this.filterService.setSelection(filters)
-        }
-        console.debug(qp, this.router.navigated)
-        const selector = this.filterService.mapFormEvent(filters)
-        this.fontService.getFonts(selector).subscribe(this.$fonts)
+        const initView = pJ(qp['view'])
+        this.viewSettings.reset(initView)
+        const initFilter = pJ(qp['filters'])
+        this.filterService.setSelection(initFilter)
       })
 
-    this.fontService.getFonts({}).subscribe(this.$fonts)
+    // this.fontService.getFonts({}).subscribe(this.$fonts)
+
+    this.filterService.fg.valueChanges.pipe(
+      switchMap(f => this.filterService.mapFormEvent(f)),
+      switchMap(selector => this.fontService.getFonts(selector))
+    ).subscribe(this.$fonts)
+
 
   }
 
 
+}
+
+function pJ(value: string) {
+  if (value) {
+    return JSON.parse(value)
+  }
 }

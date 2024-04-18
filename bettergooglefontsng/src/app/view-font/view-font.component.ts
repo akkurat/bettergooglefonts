@@ -1,14 +1,19 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Injector, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Injector, Sanitizer, ViewChild, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FontFamilyInfo, MongofontService, mapFont } from '../mongofont.service';
-import { BehaviorSubject, combineLatest, forkJoin, map, switchMap } from 'rxjs';
+import { BehaviorSubject, Observable, combineLatest, combineLatestAll, forkJoin, map, of, switchMap, take, tap } from 'rxjs';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { FontResourceService } from '../font-resource.service';
-import { JsonPipe, KeyValuePipe } from '@angular/common';
+import { AsyncPipe, JsonPipe, KeyValuePipe } from '@angular/common';
 import * as opentype from 'opentype.js'
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { CALLBACK_TOKEN, GLYPH_TOKEN, ViewGlyphComponent } from './view-glyph/view-glyph.component';
+import { FilterSelection, FilterSelections, FontfilterService } from '../fontoverview/fontfilter.service';
+import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { FormControl, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 type GlyphInfo = {
@@ -21,7 +26,8 @@ type GlyphInfo = {
 @Component({
   selector: 'app-view-font',
   standalone: true,
-  imports: [JsonPipe, KeyValuePipe, RouterLink],
+  imports: [JsonPipe, KeyValuePipe, AsyncPipe, RouterLink, FontfiltersComponent, MatIconModule, ReactiveFormsModule],
+  providers: [FontfilterService],
   templateUrl: './view-font.component.html',
 })
 export class ViewFontComponent {
@@ -41,64 +47,99 @@ export class ViewFontComponent {
   fontResourceReady = new BehaviorSubject(false)
   ot?: opentype.Font;
   glyphs: GlyphInfo[] = [];
-  table = false
+  fcTable = new FormControl(false)
   fontNext?: FontFamilyInfo;
   fontPrev?: FontFamilyInfo;
+  filterService = inject(FontfilterService)
+  attributes$?: Observable<FilterSelections>
+  private readonly domSanitizer = inject(DomSanitizer);
+
+  fontname = this.domSanitizer.bypassSecurityTrustHtml('<br>')
 
   constructor() {
+    this.route.queryParams.pipe(take(1))
+      .subscribe(
+        ({ filters }) => {
+          if (filters) {
+            this.filterService.setSelection(JSON.parse(filters))
+          }
+        })
+
+    this.filterService.fg.valueChanges.subscribe(selection => {
+      this.router.navigate(['.'], { relativeTo: this.route, queryParamsHandling: 'merge', queryParams: { filters: JSON.stringify(selection) } })
+    })
+
+    this.fcTable.valueChanges.subscribe(c => {
+      this.router.navigate(['.'], { relativeTo: this.route, queryParamsHandling: 'merge', queryParams: { table: c } })
+    })
+
     this.route.queryParams
       .subscribe(params => {
-        this.table = params['table'] === 'true'
+        this.fcTable.setValue(params['table'] === 'true')
       })
     // exercise: flatten with only pipes
-    this.route.params.pipe(
-      // TODO: error case
-      switchMap(params => this.fontService.getFontByName(params['name'])),
-      map(mapFont)
-    ).subscribe(async font => {
-      this.font = font
-      const ffs = this.fontResourceService.getFontfaces(font, 'full')
-
-
-      combineLatest([
-        this.fontService.getFontBySkip({ idx: { $lt: font.idx } }, { sort: { idx: -1 } }),
-        this.fontService.getFontBySkip({ idx: { $gt: font.idx } })
-      ])
-        .subscribe(([p, n]) => {
-          this.fontNext = n
-          this.fontPrev = p
+    combineLatest([
+      this.route.params.pipe(
+        // TODO: error case
+        switchMap(params => this.fontService.getFontByName(params['name'])),
+        map(mapFont)
+      ),
+      this.route.queryParams.pipe(
+        switchMap(({ filters }) => {
+          if (filters) {
+            return this.filterService.mapFormEvent(JSON.parse(filters))
+          }
+          return [null]
         })
+      )]
+    ).pipe(
+      switchMap(([font, _selector]) => {
 
+        this.font = font
+        this.fontname = this.domSanitizer.bypassSecurityTrustHtml(font.name.replaceAll(' ', '<br>'))
+        this.attributes$ = this.filterService.getSelectedAttribute(font)
 
-      //@ts-ignore not yet in dom.ts
-      ffs.forEach(ff => document.fonts.add(ff))
-      // TODO: error case ;-)
-      forkJoin(ffs.map(ff => ff.load()))
-        .subscribe(ffs => {
-          this.fontResourceReady.next(true)
-        })
+        const ffs = this.fontResourceService.getFontfaces(font, 'full')
+        const selector = _selector || {}
+        //@ts-ignore not yet in dom.ts
 
-      const fullUrl = font.fonts[0].urls.full;
-      this.ot = await opentype.load(fullUrl)
-      this.glyphs = new Array<GlyphInfo>()
-      let _specimenBuffer = ''
-      for (let i = 0; i < this.ot.glyphs.length; i++) {
-        const glyph = this.ot.glyphs.get(i);
-        const unicode = glyph.unicode;
-        if (unicode) {
-          const string = String.fromCodePoint(unicode);
-          _specimenBuffer += string
-          this.glyphs.push({
-            unicode,
-            name: glyph.name,
-            string,
-            index: glyph.index
+        ffs.forEach(ff => document.fonts.add(ff))
+        // TODO: error case ;-)
+        forkJoin(ffs.map(ff => ff.load()))
+          .subscribe(ffs => {
+            this.fontResourceReady.next(true)
           })
-        }
-      }
-      this.specimen = _specimenBuffer
 
-    })
+        const fullUrl = font.fonts[0].urls.full;
+        opentype.load(fullUrl).then(ot => {
+          this.ot = ot
+          this.glyphs = new Array<GlyphInfo>()
+          let _specimenBuffer = ''
+          for (let i = 0; i < this.ot.glyphs.length; i++) {
+            const glyph = this.ot.glyphs.get(i);
+            const unicode = glyph.unicode;
+            if (unicode) {
+              const string = String.fromCodePoint(unicode);
+              _specimenBuffer += string
+              this.glyphs.push({
+                unicode,
+                name: glyph.name,
+                string,
+                index: glyph.index
+              })
+            }
+          }
+          this.specimen = _specimenBuffer
+        })
+        return combineLatest([
+          this.fontService.getFontBySkip({ ...selector, idx: { $lt: font.idx } }, { sort: { idx: -1 } }),
+          this.fontService.getFontBySkip({ ...selector, idx: { $gt: font.idx } })
+        ])
+      }))
+      .subscribe(([p, n]) => {
+        this.fontNext = n
+        this.fontPrev = p
+      })
   }
 
   toggleGlyphOverlay(glyphIndex: number, origin: HTMLElement) {
@@ -142,6 +183,12 @@ export class ViewFontComponent {
       const userProfilePortal = new ComponentPortal(ViewGlyphComponent, null, injector);
       overlayRef.attach(userProfilePortal);
     }
+  }
+  _jsonParam({ key, value }) {
+    if (typeof value === 'object') {
+      return { filters: JSON.stringify({ [key]: value }) }
+    }
+    return { filters: JSON.stringify({ [key]: [value] }) }
   }
 
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { BehaviorSubject, combineLatestWith, filter, firstValueFrom, Observable, skipWhile } from 'rxjs';
+import { BehaviorSubject, combineLatestWith, filter, firstValueFrom, map, Observable, skipWhile, switchMap } from 'rxjs';
 import { FontByWeight, FontNameUrlMulti, FontUrls } from './FontNameUrl';
 import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
@@ -32,6 +32,7 @@ type FontInfo = {
 export type FontFamilyInfo = {
   idx: number
   dir: string
+  classification: Record<string, Record<string, string>>;
   meta: {
     category: string[];
     stroke?: string;
@@ -63,17 +64,19 @@ export class MongofontService {
 
     const aS = inject(AssetServiceService);
 
+    // todo make outer combinewith
     this.http.get((aS.bustUrl('assets/fontmeta.json')).toString())
       .pipe(combineLatestWith(this.http.get(aS.bustUrl('assets/classification.json').toString())))
-      .subscribe(([metas, classificationEntries]) => {
+      .subscribe(([fonts, classificationEntries]) => {
         const types = new Set()
         const classification = new Map((classificationEntries as []))
-        for (const meta of (metas as FontFamilyInfo[])) {
-          meta['classification'] = classification.get(meta.meta.name)
-          meta['type'] = meta.meta.stroke || meta.meta.category[0]
-          types.add(meta['type'])
+        for (const font of (fonts as FontFamilyInfo[])) {
+          //@ts-ignore
+          font['classification'] = classification.get(font.meta.name)
+          font['type'] = font.meta.stroke || font.meta.category[0]
+          types.add(font['type'])
         }
-        this.db.collections['fonts'].upsert(metas,
+        this.db.collections['fonts'].upsert(fonts,
           (docs) => { console.debug(docs.length); this.dbready.next(true) },
           (err) => { console.debug(err); }
         )
@@ -91,22 +94,11 @@ export class MongofontService {
 
 
   getFonts(selector): Observable<FontNameUrlMulti[]> {
-
-    const sub = new Subject<FontNameUrlMulti[]>()
-
-    this.dbready.pipe(filter<boolean>(v => v))
-      .subscribe((/*dbready*/) => {
-        // ... maybe create a anbstract class for filter implementation
-        // and move it away from the service
-        this.db.collections['fonts'].find(selector).fetch(docs => {
-          // const fmeta = docs.map()
-          // TODO: map filename already in meta?
-          // or at least when populating mongo db...
-          const metafonts: FontNameUrlMulti[] = docs.map(mapFont)
-          sub.next(metafonts)
-        }, err => console.debug(err))
-      })
-    return sub.asObservable()
+    return this.dbready.pipe(
+      filter<boolean>(v => v),
+      switchMap(() => this.db.collections['fonts'].find(selector).fetch()),
+      map(docs => docs.map(mapFont))
+    );
   }
 
 
@@ -206,7 +198,7 @@ export class MongofontService {
 
     await firstValueFrom(this.dbready.pipe(skipWhile(e => !e)))
 
-    const selector = getSelectorForWeight({ flag: false })
+    const selector = getSelectorForWeight('wght', {flag: false })
     const _d1: { meta: { axes: AxisInfo[] } }[] = await this.db.collections['fonts'].find(selector, { fields: { 'meta.axes': 1 } }).fetch()
     const d2: { meta: { fonts: FontInfo[] } }[] = await this.db.collections['fonts'].find({ $nor: [selector] }, { fields: { 'meta.fonts': 1 } }).fetch()
 
@@ -347,5 +339,6 @@ export function mapFont(d: FontFamilyInfo): FontNameUrlMulti {
     italics,
     hasItalics: italics.includes('italic'),
     fonts: groupFonts(d.dir, d.meta.fonts),
+    classification: d.classification
   });
 }
