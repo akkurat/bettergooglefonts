@@ -6,7 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MongoSelector } from '../fontoverview/fontoverview.component';
 import { HttpClient } from '@angular/common/http';
 import { Axis } from '../fontfilters/fontfilters.component';
-import { BehaviorSubject, combineLatest, lastValueFrom } from 'rxjs';
+import { BehaviorSubject, Observable, combineLatest, filter, first, last, lastValueFrom, map } from 'rxjs';
 import { FormBuilder, FormControl } from '@angular/forms';
 
 export type AFilter = {
@@ -101,7 +101,6 @@ export class FontfilterService {
 
         this.updateAvailableFilterNames();
         this.$ready.next(true)
-        this.$ready.complete()
         for (const filter of this.allAvailableFilters) {
           this.iconRegistry.addSvgIcon(filter.title, this.sanitizer.bypassSecurityTrustResourceUrl(`assets/prev/${filter.title}.svg`))
           filter.items?.forEach(item => {
@@ -113,43 +112,44 @@ export class FontfilterService {
   }
 
 
-  async setSelection(filtersIn: FilterSelections) {
-    await lastValueFrom(this.$ready)
-    const filterSelectionForSwap: FilterSelections = {}
-    const activeFiltersForSwap = new Array<AFilter>()
-    for (const entry of Object.entries(filtersIn)) {
-      const [name, values] = entry
-      const filter = this.allAvailableFilters.find(v => v.title === name)
-      if (filter && values) {
-        if (filter.rendering === 'select') {
-          const valid = (values as string[]).every(v => filter.items?.includes(v))
-          if (!valid) {
-            continue
+  setSelection(filtersIn: FilterSelections) {
+    this.$ready.pipe(first(v => v)).subscribe(() => {
+      const filterSelectionForSwap: FilterSelections = {}
+      const activeFiltersForSwap = new Array<AFilter>()
+      for (const entry of Object.entries(filtersIn)) {
+        const [name, values] = entry
+        const filter = this.allAvailableFilters.find(v => v.title === name)
+        if (filter && values) {
+          if (filter.rendering === 'select') {
+            const valid = (values as string[]).every(v => filter.items?.includes(v))
+            if (!valid) {
+              continue
+            }
           }
+          filterSelectionForSwap[name] = values
+          activeFiltersForSwap.push(filter)
         }
-        filterSelectionForSwap[name] = values
-        activeFiltersForSwap.push(filter)
       }
-    }
 
-    this.activeFilters = activeFiltersForSwap
-    for(const c of Object.keys(this.fg.controls)) {
-      this.fg.removeControl(c, {emitEvent:false})
-    }
-    for( const [c,v] of Object.entries(filterSelectionForSwap)) {
-      this.fg.addControl(c, this.formBuilder.control(v), {emitEvent: false})
-    }
+      this.activeFilters = activeFiltersForSwap
+      for (const c of Object.keys(this.fg.controls)) {
+        this.fg.removeControl(c, { emitEvent: false })
+      }
+      for (const [c, v] of Object.entries(filterSelectionForSwap)) {
+        this.fg.addControl(c, this.formBuilder.control(v), { emitEvent: false })
+      }
 
-    this.updateAvailableFilterNames()
-    // check filters in validity (vlaue of filter and selection)
-    // todo set valid filters 
+      this.updateAvailableFilterNames()
+      // check filters in validity (vlaue of filter and selection)
+      // todo set valid filters 
+    })
   }
 
   activateFilter(name: string) {
     const filter = this.allAvailableFilters.find(v => v.title === name)
     if (filter) {
       this.activeFilters.push(filter)
-      this.fg.addControl(name, new FormControl() )
+      this.fg.addControl(name, new FormControl())
       this.updateAvailableFilterNames()
     }
   }
@@ -163,7 +163,14 @@ export class FontfilterService {
     }
   }
 
-  mapFormEvent(values: Partial<{ [x: string]: any; }>): any {
+  mapFormEvent(values: Partial<{ [x: string]: FilterSelection; }>): Observable<MongoSelector> {
+    return this.$ready.pipe(
+      filter(v => v),
+      map(() => this._mapFormEvent(values))
+    )
+  }
+
+  _mapFormEvent(values: Partial<{ [x: string]: any; }>): MongoSelector {
     const out = { italic: {}, classification: {}, axis: {}, type: {}, weight: {} }
     for (const [k, v] of Object.entries(values)) {
       const filter = this.allAvailableFilters.find(f => f.title === k)

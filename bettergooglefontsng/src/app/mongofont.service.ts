@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { BehaviorSubject, combineLatestWith, filter, firstValueFrom, Observable, skipWhile } from 'rxjs';
+import { BehaviorSubject, combineLatestWith, filter, firstValueFrom, map, Observable, skipWhile, switchMap } from 'rxjs';
 import { FontByWeight, FontNameUrlMulti, FontUrls } from './FontNameUrl';
 import { MemoryDb, MinimongoLocalDb } from 'minimongo';
 import { Subject } from 'rxjs/internal/Subject';
@@ -91,22 +91,11 @@ export class MongofontService {
 
 
   getFonts(selector): Observable<FontNameUrlMulti[]> {
-
-    const sub = new Subject<FontNameUrlMulti[]>()
-
-    this.dbready.pipe(filter<boolean>(v => v))
-      .subscribe((/*dbready*/) => {
-        // ... maybe create a anbstract class for filter implementation
-        // and move it away from the service
-        this.db.collections['fonts'].find(selector).fetch(docs => {
-          // const fmeta = docs.map()
-          // TODO: map filename already in meta?
-          // or at least when populating mongo db...
-          const metafonts: FontNameUrlMulti[] = docs.map(mapFont)
-          sub.next(metafonts)
-        }, err => console.debug(err))
-      })
-    return sub.asObservable()
+    return this.dbready.pipe(
+      filter<boolean>(v => v),
+      switchMap(() => this.db.collections['fonts'].find(selector).fetch()),
+      map(docs => docs.map(mapFont))
+    );
   }
 
 

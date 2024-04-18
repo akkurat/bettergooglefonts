@@ -1,7 +1,7 @@
 import { Component, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { MongofontService } from '../mongofont.service';
-import { BehaviorSubject, Subject, combineLatest, firstValueFrom, map, pipe, startWith, take } from 'rxjs';
+import { BehaviorSubject, Subject, combineLatest, firstValueFrom, flatMap, map, pipe, startWith, switchMap, take } from 'rxjs';
 import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 import { FontpreviewComponent } from './fontpreview/fontpreview.component';
 import { NgFor, AsyncPipe, NgClass, JsonPipe } from '@angular/common';
@@ -82,7 +82,10 @@ export class FontoverviewComponent {
           const filters = JSON.parse(filtersJSON);
           this.filterService.setSelection(filters)
           const selector = this.filterService.mapFormEvent(filters)
-          this.fontService.getFonts(selector).subscribe(this.$fonts)
+          selector.pipe(
+            switchMap(selector => this.fontService.getFonts(selector))
+          )
+            .subscribe(this.$fonts)
         }
       })
 

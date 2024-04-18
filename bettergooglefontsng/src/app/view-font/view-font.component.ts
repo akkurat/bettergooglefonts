@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, Injector, ViewChild, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FontFamilyInfo, MongofontService, mapFont } from '../mongofont.service';
-import { BehaviorSubject, combineLatest, forkJoin, map, switchMap } from 'rxjs';
+import { BehaviorSubject, combineLatest, forkJoin, map, of, switchMap } from 'rxjs';
 import { FontNameUrlMulti } from '../FontNameUrl';
 import { FontResourceService } from '../font-resource.service';
 import { JsonPipe, KeyValuePipe } from '@angular/common';
@@ -9,6 +9,8 @@ import * as opentype from 'opentype.js'
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { CALLBACK_TOKEN, GLYPH_TOKEN, ViewGlyphComponent } from './view-glyph/view-glyph.component';
+import { FontfilterService } from '../fontoverview/fontfilter.service';
+import { FontfiltersComponent } from '../fontfilters/fontfilters.component';
 
 
 type GlyphInfo = {
@@ -21,7 +23,8 @@ type GlyphInfo = {
 @Component({
   selector: 'app-view-font',
   standalone: true,
-  imports: [JsonPipe, KeyValuePipe, RouterLink],
+  imports: [JsonPipe, KeyValuePipe, RouterLink, FontfiltersComponent],
+  providers: [FontfilterService],
   templateUrl: './view-font.component.html',
 })
 export class ViewFontComponent {
@@ -46,29 +49,45 @@ export class ViewFontComponent {
   fontPrev?: FontFamilyInfo;
 
   constructor() {
+    this.route.queryParams.subscribe(
+      ({ filters }) => {
+        if (filters) {
+          inject(FontfilterService).setSelection(filters)
+        }
+      })
     this.route.queryParams
       .subscribe(params => {
         this.table = params['table'] === 'true'
       })
     // exercise: flatten with only pipes
-    this.route.params.pipe(
-      // TODO: error case
-      switchMap(params => this.fontService.getFontByName(params['name'])),
-      map(mapFont)
-    ).subscribe(async font => {
+    combineLatest([
+      this.route.params.pipe(
+        // TODO: error case
+        switchMap(params => this.fontService.getFontByName(params['name'])),
+        map(mapFont)
+      ),
+      this.route.queryParams.pipe(
+        switchMap(({ filters }) => {
+          if (filters) {
+            return inject(FontfilterService).mapFormEvent(JSON.parse(filters))
+          }
+          return [null]
+        })
+      )]
+
+    ).subscribe(async ([font, _selector]) => {
       this.font = font
       const ffs = this.fontResourceService.getFontfaces(font, 'full')
-
+      const selector = _selector || {}
 
       combineLatest([
-        this.fontService.getFontBySkip({ idx: { $lt: font.idx } }, { sort: { idx: -1 } }),
-        this.fontService.getFontBySkip({ idx: { $gt: font.idx } })
+        this.fontService.getFontBySkip({ ...selector, idx: { $lt: font.idx } }, { sort: { idx: -1 } }),
+        this.fontService.getFontBySkip({ ...selector, idx: { $gt: font.idx } })
       ])
         .subscribe(([p, n]) => {
           this.fontNext = n
           this.fontPrev = p
         })
-
 
       //@ts-ignore not yet in dom.ts
       ffs.forEach(ff => document.fonts.add(ff))

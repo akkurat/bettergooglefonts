@@ -1,9 +1,10 @@
 <div class="p-5 w-lvw min-h-lvh flex flex-col items-stretch">
-    <div class="flex-none flex flex-row justify-around p-10">
+    <div class="flex-none flex flex-row justify-around p-4">
         <a [routerLink]="'/view/'+fontPrev?.meta?.name" queryParamsHandling="merge">{{fontPrev?.meta?.name}}</a>
         <a routerLink="/browse" queryParamsHandling="merge">Browse</a>
         <a [routerLink]="'/view/'+fontNext?.meta?.name" queryParamsHandling="merge">{{fontNext?.meta?.name}}</a>
     </div>
+    <app-fontfilters></app-fontfilters>
 
     @if( table ) {
     <section>
