@@ -44,7 +44,12 @@
         } @else {
 
         <section name="specimen" class="flex-grow-0 text-7xl " [style]="'font-family: \''+font?.name +'\', Tofu; '">
-            <h1 class="text-[clamp(6rem,15vw,12rem)] m-3 float-left text-balance" [innerHTML]="font?.name?.replaceAll(' ', '\<br>')"></h1>
+            @for( part of font?.name?.split(' '); track part ) {
+            <h1 class="text-[clamp(6rem,15vw,12rem)] m-3 float-left clear-both">
+                {{part}}
+            </h1>
+
+            }
             <div class="break-all">
                 @for( glyph of glyphs; track glyph.unicode ){
                 <span #myself (click)="toggleGlyphOverlay(glyph.index, myself)">{{glyph.string}}</span>
